@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="14A343f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5Zu-ED-0Wm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5Zu-ED-0Wm">
     <dependencies>
         <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -10,7 +10,7 @@
             <objects>
                 <viewController storyboardIdentifier="MainContainer" id="5Zu-ED-0Wm" customClass="MainContainerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qrM-zG-MtL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Main Container" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bgR-mU-faq">
@@ -23,6 +23,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a87-qg-Xdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -33,7 +34,7 @@
             <objects>
                 <viewController storyboardIdentifier="Menu" id="E9I-cX-0UJ" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cVr-4e-zkT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Perfil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RW4-7x-mUd">
@@ -60,6 +61,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.56470588239999997" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEL-cu-jbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -70,7 +72,7 @@
             <objects>
                 <viewController storyboardIdentifier="Login" id="gwc-JE-nW5" customClass="LoginVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AmK-Fn-75D">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField appearanceType="aqua" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="rbX-uX-aCp">
@@ -109,6 +111,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxL-l3-RhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,7 +122,7 @@
             <objects>
                 <viewController storyboardIdentifier="Home" id="Pqu-0p-35V" customClass="BluetoothVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IAC-HU-wOm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BGX-6k-qsP">
@@ -151,17 +154,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" image="tabbar-02.png" id="zbK-qT-Cqd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycl-y4-uqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1816" y="-1718"/>
+            <point key="canvasLocation" x="1816" y="-1750"/>
         </scene>
         <!--Tab GeralVC-->
         <scene sceneID="71Z-LI-VIB">
             <objects>
                 <tabBarController storyboardIdentifier="TabGeral" definesPresentationContext="YES" id="5WB-DX-p3D" customClass="TabGeralVC" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <size key="freeformSize" width="320" height="480"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" backgroundImage="fundo.png" id="t4M-Re-BWe">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
@@ -184,17 +188,9 @@
             <objects>
                 <viewController id="dzc-HH-zak" customClass="MapaVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eVg-3u-ehg">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoo.png" id="eEQ-c3-Okk">
-                                <rect key="frame" x="105" y="20" width="110" height="78"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <mapView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="owy-tP-yyn">
-                                <rect key="frame" x="20" y="106" width="280" height="305"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </mapView>
                             <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aYf-Jz-OcJ">
                                 <rect key="frame" x="20" y="20" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -205,10 +201,64 @@
                                     <action selector="botaoMenu:" destination="dzc-HH-zak" eventType="touchUpInside" id="XRF-G4-ZxX"/>
                                 </connections>
                             </button>
+                            <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoo.png" id="eEQ-c3-Okk">
+                                <rect key="frame" x="105" y="20" width="110" height="78"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <mapView appearanceType="aqua" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="owy-tP-yyn">
+                                <rect key="frame" x="0.0" y="215" width="320" height="304"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </mapView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Buv-jD-Ie2">
+                                <rect key="frame" x="0.0" y="187" width="320" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Mapa"/>
+                                    <segment title="Satelite"/>
+                                    <segment title="Hibrido"/>
+                                </segments>
+                                <connections>
+                                    <action selector="estiloMapa:" destination="dzc-HH-zak" eventType="valueChanged" id="bZJ-6X-Sjc"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UoE-Nk-Ngx" userLabel="botao lixo papao">
+                                <rect key="frame" x="65" y="113" width="51" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="mapa-melhorlixopapao.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoMapaLixoPapao:" destination="dzc-HH-zak" eventType="touchUpInside" id="0RK-Jo-jD3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eoq-KM-Rpo" userLabel="botao coleta">
+                                <rect key="frame" x="135" y="113" width="51" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="mapa-melhorcoleta.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoMapaColeta:" destination="dzc-HH-zak" eventType="touchUpInside" id="txB-HE-0x0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bjO-qx-n7u" userLabel="botao cifrao">
+                                <rect key="frame" x="204" y="113" width="51" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="mapa-melhor$.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoMapaCifrao:" destination="dzc-HH-zak" eventType="touchUpInside" id="ETa-Bg-Fub"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" image="tabbar-04.png" id="5rb-de-RTk"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mapa" destination="owy-tP-yyn" id="I1c-uC-5wZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEn-rt-uuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -219,7 +269,7 @@
             <objects>
                 <viewController id="VRl-24-4k8" customClass="RankingVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dla-KK-edV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoo.png" id="vLA-HG-EVG">
@@ -240,17 +290,18 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabbar-06.png" id="ljq-cV-hpX"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9r-LX-zHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1816" y="-450"/>
+            <point key="canvasLocation" x="1816" y="-418"/>
         </scene>
         <!--TinderVC-->
         <scene sceneID="Fmi-ph-GyF">
             <objects>
                 <viewController id="gfa-2D-zZN" customClass="TinderVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EL9-kV-Aow">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView appearanceType="aqua" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoo.png" id="dxx-h9-7xA">
@@ -271,16 +322,20 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="tabbar-09.png" id="Cii-g8-whF"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0p-K9-LjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1829" y="174"/>
+            <point key="canvasLocation" x="1816" y="233"/>
         </scene>
     </scenes>
     <resources>
         <image name="bixos papoes-01.png" width="970" height="1011"/>
         <image name="fundo.png" width="180" height="35"/>
         <image name="logoo.png" width="1294" height="869"/>
+        <image name="mapa-melhor$.png" width="51" height="51"/>
+        <image name="mapa-melhorcoleta.png" width="51" height="51"/>
+        <image name="mapa-melhorlixopapao.png" width="51" height="51"/>
         <image name="settings-25.png" width="25" height="25"/>
         <image name="tabbar-02.png" width="30" height="30"/>
         <image name="tabbar-04.png" width="30" height="30"/>

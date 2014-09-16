@@ -18,8 +18,7 @@
 // how far to slide right to show the menu
 #define kSlideRightPoints 250.0
 
-@interface MainContainerViewController ()
-{
+@interface MainContainerViewController (){
     MenuViewController *_menuViewController;
     TabGeralVC *_tabGeralViewController;
     //LoginVC *_tabGeralViewController;
@@ -31,8 +30,7 @@
 
 @implementation MainContainerViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     _menuShowing = NO;
     

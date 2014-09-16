@@ -7,6 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F67ED4DE19C8B78000B266BD /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4A819C8B78000B266BD /* AYVibrantButton.m */; };
+		F67ED4DF19C8B78000B266BD /* CNBluetoothCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4AB19C8B78000B266BD /* CNBluetoothCentral.m */; };
+		F67ED4E019C8B78000B266BD /* CoinBLEDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4AC19C8B78000B266BD /* CoinBLEDemo-Info.plist */; };
+		F67ED4E119C8B78000B266BD /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4AF19C8B78000B266BD /* DraggableView.m */; };
+		F67ED4E219C8B78000B266BD /* M13Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4B119C8B78000B266BD /* M13Checkbox.m */; };
+		F67ED4E319C8B78000B266BD /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4B319C8B78000B266BD /* MyAnnotation.m */; };
+		F67ED4E419C8B78000B266BD /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4B519C8B78000B266BD /* OverlayView.m */; };
+		F67ED4E519C8B78000B266BD /* RankingProvBadges.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4B719C8B78000B266BD /* RankingProvBadges.m */; };
+		F67ED4E619C8B78000B266BD /* RankingProvPontos.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4B919C8B78000B266BD /* RankingProvPontos.m */; };
+		F67ED4E719C8B78000B266BD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4BB19C8B78000B266BD /* Reachability.m */; };
+		F67ED4E819C8B78000B266BD /* JMStaticContentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4C019C8B78000B266BD /* JMStaticContentTableViewCell.m */; };
+		F67ED4E919C8B78000B266BD /* JMStaticContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4C219C8B78000B266BD /* JMStaticContentTableViewController.m */; };
+		F67ED4EA19C8B78000B266BD /* JMStaticContentTableViewSection.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4C419C8B78000B266BD /* JMStaticContentTableViewSection.m */; };
+		F67ED4EB19C8B78000B266BD /* JMStaticContentTextFieldTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4C619C8B78000B266BD /* JMStaticContentTextFieldTableViewCell.m */; };
+		F67ED4EC19C8B78000B266BD /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4C819C8B78000B266BD /* NotificationsViewController.m */; };
+		F67ED4ED19C8B78000B266BD /* WifiNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4CA19C8B78000B266BD /* WifiNetwork.m */; };
+		F67ED4EE19C8B78000B266BD /* WifiNetworkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4CC19C8B78000B266BD /* WifiNetworkTableViewCell.m */; };
+		F67ED4EF19C8B78000B266BD /* WifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4CE19C8B78000B266BD /* WifiViewController.m */; };
+		F67ED4F019C8B78000B266BD /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4D119C8B78000B266BD /* SVProgressHUD.bundle */; };
+		F67ED4F119C8B78000B266BD /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4D319C8B78000B266BD /* SVProgressHUD.m */; };
+		F67ED4F319C8B78000B266BD /* UITextField+Shake.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4D819C8B78000B266BD /* UITextField+Shake.m */; };
+		F67ED4F419C8B78000B266BD /* webService.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4DA19C8B78000B266BD /* webService.m */; };
+		F67ED4F519C8B78000B266BD /* YLProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4DD19C8B78000B266BD /* YLProgressBar.m */; };
+		F67ED4F919C8CA2800B266BD /* mapa-melhorlixopapao.png in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4F619C8CA2800B266BD /* mapa-melhorlixopapao.png */; };
+		F67ED4FA19C8CA2800B266BD /* mapa-melhorcoleta.png in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4F719C8CA2800B266BD /* mapa-melhorcoleta.png */; };
+		F67ED4FB19C8CA2800B266BD /* mapa-melhor$.png in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4F819C8CA2800B266BD /* mapa-melhor$.png */; };
 		F76A114C19C8ACB800843A9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114B19C8ACB800843A9D /* Foundation.framework */; };
 		F76A114E19C8ACB800843A9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114D19C8ACB800843A9D /* CoreGraphics.framework */; };
 		F76A115019C8ACB800843A9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114F19C8ACB800843A9D /* UIKit.framework */; };
@@ -129,6 +155,56 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F67ED4A719C8B78000B266BD /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
+		F67ED4A819C8B78000B266BD /* AYVibrantButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYVibrantButton.m; sourceTree = "<group>"; };
+		F67ED4AA19C8B78000B266BD /* CNBluetoothCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNBluetoothCentral.h; sourceTree = "<group>"; };
+		F67ED4AB19C8B78000B266BD /* CNBluetoothCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNBluetoothCentral.m; sourceTree = "<group>"; };
+		F67ED4AC19C8B78000B266BD /* CoinBLEDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "CoinBLEDemo-Info.plist"; sourceTree = "<group>"; };
+		F67ED4AD19C8B78000B266BD /* CoinBLEDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoinBLEDemo-Prefix.pch"; sourceTree = "<group>"; };
+		F67ED4AE19C8B78000B266BD /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
+		F67ED4AF19C8B78000B266BD /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableView.m; sourceTree = "<group>"; };
+		F67ED4B019C8B78000B266BD /* M13Checkbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13Checkbox.h; sourceTree = "<group>"; };
+		F67ED4B119C8B78000B266BD /* M13Checkbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13Checkbox.m; sourceTree = "<group>"; };
+		F67ED4B219C8B78000B266BD /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		F67ED4B319C8B78000B266BD /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
+		F67ED4B419C8B78000B266BD /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		F67ED4B519C8B78000B266BD /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		F67ED4B619C8B78000B266BD /* RankingProvBadges.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingProvBadges.h; sourceTree = "<group>"; };
+		F67ED4B719C8B78000B266BD /* RankingProvBadges.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingProvBadges.m; sourceTree = "<group>"; };
+		F67ED4B819C8B78000B266BD /* RankingProvPontos.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingProvPontos.h; sourceTree = "<group>"; };
+		F67ED4B919C8B78000B266BD /* RankingProvPontos.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingProvPontos.m; sourceTree = "<group>"; };
+		F67ED4BA19C8B78000B266BD /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		F67ED4BB19C8B78000B266BD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		F67ED4BE19C8B78000B266BD /* JMStaticContentTableViewBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMStaticContentTableViewBlocks.h; sourceTree = "<group>"; };
+		F67ED4BF19C8B78000B266BD /* JMStaticContentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMStaticContentTableViewCell.h; sourceTree = "<group>"; };
+		F67ED4C019C8B78000B266BD /* JMStaticContentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMStaticContentTableViewCell.m; sourceTree = "<group>"; };
+		F67ED4C119C8B78000B266BD /* JMStaticContentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMStaticContentTableViewController.h; sourceTree = "<group>"; };
+		F67ED4C219C8B78000B266BD /* JMStaticContentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMStaticContentTableViewController.m; sourceTree = "<group>"; };
+		F67ED4C319C8B78000B266BD /* JMStaticContentTableViewSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMStaticContentTableViewSection.h; sourceTree = "<group>"; };
+		F67ED4C419C8B78000B266BD /* JMStaticContentTableViewSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMStaticContentTableViewSection.m; sourceTree = "<group>"; };
+		F67ED4C519C8B78000B266BD /* JMStaticContentTextFieldTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JMStaticContentTextFieldTableViewCell.h; sourceTree = "<group>"; };
+		F67ED4C619C8B78000B266BD /* JMStaticContentTextFieldTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JMStaticContentTextFieldTableViewCell.m; sourceTree = "<group>"; };
+		F67ED4C719C8B78000B266BD /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
+		F67ED4C819C8B78000B266BD /* NotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
+		F67ED4C919C8B78000B266BD /* WifiNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiNetwork.h; sourceTree = "<group>"; };
+		F67ED4CA19C8B78000B266BD /* WifiNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiNetwork.m; sourceTree = "<group>"; };
+		F67ED4CB19C8B78000B266BD /* WifiNetworkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiNetworkTableViewCell.h; sourceTree = "<group>"; };
+		F67ED4CC19C8B78000B266BD /* WifiNetworkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiNetworkTableViewCell.m; sourceTree = "<group>"; };
+		F67ED4CD19C8B78000B266BD /* WifiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiViewController.h; sourceTree = "<group>"; };
+		F67ED4CE19C8B78000B266BD /* WifiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiViewController.m; sourceTree = "<group>"; };
+		F67ED4D019C8B78000B266BD /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		F67ED4D119C8B78000B266BD /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		F67ED4D219C8B78000B266BD /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		F67ED4D319C8B78000B266BD /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		F67ED4D719C8B78000B266BD /* UITextField+Shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+Shake.h"; sourceTree = "<group>"; };
+		F67ED4D819C8B78000B266BD /* UITextField+Shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+Shake.m"; sourceTree = "<group>"; };
+		F67ED4D919C8B78000B266BD /* webService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = webService.h; sourceTree = "<group>"; };
+		F67ED4DA19C8B78000B266BD /* webService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = webService.m; sourceTree = "<group>"; };
+		F67ED4DC19C8B78000B266BD /* YLProgressBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YLProgressBar.h; sourceTree = "<group>"; };
+		F67ED4DD19C8B78000B266BD /* YLProgressBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YLProgressBar.m; sourceTree = "<group>"; };
+		F67ED4F619C8CA2800B266BD /* mapa-melhorlixopapao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-melhorlixopapao.png"; sourceTree = "<group>"; };
+		F67ED4F719C8CA2800B266BD /* mapa-melhorcoleta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-melhorcoleta.png"; sourceTree = "<group>"; };
+		F67ED4F819C8CA2800B266BD /* mapa-melhor$.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-melhor$.png"; sourceTree = "<group>"; };
 		F76A114819C8ACB800843A9D /* Lixo-Mestre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lixo-Mestre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76A114B19C8ACB800843A9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F76A114D19C8ACB800843A9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -280,6 +356,116 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F67ED4A519C8B78000B266BD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F67ED4A619C8B78000B266BD /* AYVibrantButton */,
+				F67ED4A919C8B78000B266BD /* Bluetooth */,
+				F67ED4AE19C8B78000B266BD /* DraggableView.h */,
+				F67ED4AF19C8B78000B266BD /* DraggableView.m */,
+				F67ED4B019C8B78000B266BD /* M13Checkbox.h */,
+				F67ED4B119C8B78000B266BD /* M13Checkbox.m */,
+				F67ED4B219C8B78000B266BD /* MyAnnotation.h */,
+				F67ED4B319C8B78000B266BD /* MyAnnotation.m */,
+				F67ED4B419C8B78000B266BD /* OverlayView.h */,
+				F67ED4B519C8B78000B266BD /* OverlayView.m */,
+				F67ED4B619C8B78000B266BD /* RankingProvBadges.h */,
+				F67ED4B719C8B78000B266BD /* RankingProvBadges.m */,
+				F67ED4B819C8B78000B266BD /* RankingProvPontos.h */,
+				F67ED4B919C8B78000B266BD /* RankingProvPontos.m */,
+				F67ED4BA19C8B78000B266BD /* Reachability.h */,
+				F67ED4BB19C8B78000B266BD /* Reachability.m */,
+				F67ED4BC19C8B78000B266BD /* Settings */,
+				F67ED4CF19C8B78000B266BD /* SVProgressHUD */,
+				F67ED4D619C8B78000B266BD /* UITextField-Shake */,
+				F67ED4D919C8B78000B266BD /* webService.h */,
+				F67ED4DA19C8B78000B266BD /* webService.m */,
+				F67ED4DB19C8B78000B266BD /* YLProgressBar */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		F67ED4A619C8B78000B266BD /* AYVibrantButton */ = {
+			isa = PBXGroup;
+			children = (
+				F67ED4A719C8B78000B266BD /* AYVibrantButton.h */,
+				F67ED4A819C8B78000B266BD /* AYVibrantButton.m */,
+			);
+			path = AYVibrantButton;
+			sourceTree = "<group>";
+		};
+		F67ED4A919C8B78000B266BD /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				F67ED4AA19C8B78000B266BD /* CNBluetoothCentral.h */,
+				F67ED4AB19C8B78000B266BD /* CNBluetoothCentral.m */,
+				F67ED4AC19C8B78000B266BD /* CoinBLEDemo-Info.plist */,
+				F67ED4AD19C8B78000B266BD /* CoinBLEDemo-Prefix.pch */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		F67ED4BC19C8B78000B266BD /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				F67ED4BD19C8B78000B266BD /* JMStaticContentTableViewController */,
+				F67ED4C719C8B78000B266BD /* NotificationsViewController.h */,
+				F67ED4C819C8B78000B266BD /* NotificationsViewController.m */,
+				F67ED4C919C8B78000B266BD /* WifiNetwork.h */,
+				F67ED4CA19C8B78000B266BD /* WifiNetwork.m */,
+				F67ED4CB19C8B78000B266BD /* WifiNetworkTableViewCell.h */,
+				F67ED4CC19C8B78000B266BD /* WifiNetworkTableViewCell.m */,
+				F67ED4CD19C8B78000B266BD /* WifiViewController.h */,
+				F67ED4CE19C8B78000B266BD /* WifiViewController.m */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		F67ED4BD19C8B78000B266BD /* JMStaticContentTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F67ED4BE19C8B78000B266BD /* JMStaticContentTableViewBlocks.h */,
+				F67ED4BF19C8B78000B266BD /* JMStaticContentTableViewCell.h */,
+				F67ED4C019C8B78000B266BD /* JMStaticContentTableViewCell.m */,
+				F67ED4C119C8B78000B266BD /* JMStaticContentTableViewController.h */,
+				F67ED4C219C8B78000B266BD /* JMStaticContentTableViewController.m */,
+				F67ED4C319C8B78000B266BD /* JMStaticContentTableViewSection.h */,
+				F67ED4C419C8B78000B266BD /* JMStaticContentTableViewSection.m */,
+				F67ED4C519C8B78000B266BD /* JMStaticContentTextFieldTableViewCell.h */,
+				F67ED4C619C8B78000B266BD /* JMStaticContentTextFieldTableViewCell.m */,
+			);
+			path = JMStaticContentTableViewController;
+			sourceTree = "<group>";
+		};
+		F67ED4CF19C8B78000B266BD /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F67ED4D019C8B78000B266BD /* SVProgressHUD-Prefix.pch */,
+				F67ED4D119C8B78000B266BD /* SVProgressHUD.bundle */,
+				F67ED4D219C8B78000B266BD /* SVProgressHUD.h */,
+				F67ED4D319C8B78000B266BD /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
+		F67ED4D619C8B78000B266BD /* UITextField-Shake */ = {
+			isa = PBXGroup;
+			children = (
+				F67ED4D719C8B78000B266BD /* UITextField+Shake.h */,
+				F67ED4D819C8B78000B266BD /* UITextField+Shake.m */,
+			);
+			path = "UITextField-Shake";
+			sourceTree = "<group>";
+		};
+		F67ED4DB19C8B78000B266BD /* YLProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				F67ED4DC19C8B78000B266BD /* YLProgressBar.h */,
+				F67ED4DD19C8B78000B266BD /* YLProgressBar.m */,
+			);
+			path = YLProgressBar;
+			sourceTree = "<group>";
+		};
 		F76A113F19C8ACB800843A9D = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +503,7 @@
 		F76A115119C8ACB800843A9D /* Lixo-Mestre */ = {
 			isa = PBXGroup;
 			children = (
+				F67ED4A519C8B78000B266BD /* Classes */,
 				F76A117B19C8ACF700843A9D /* Controllers */,
 				F76A118C19C8ACF700843A9D /* Recursos */,
 				F76A117A19C8ACF700843A9D /* LixoPapao.storyboard */,
@@ -459,6 +646,9 @@
 		F76A11A319C8ACF700843A9D /* pinos mapa */ = {
 			isa = PBXGroup;
 			children = (
+				F67ED4F619C8CA2800B266BD /* mapa-melhorlixopapao.png */,
+				F67ED4F719C8CA2800B266BD /* mapa-melhorcoleta.png */,
+				F67ED4F819C8CA2800B266BD /* mapa-melhor$.png */,
 				F76A11A419C8ACF700843A9D /* mapa-$.png */,
 				F76A11A519C8ACF700843A9D /* mapa-coleta.png */,
 				F76A11A619C8ACF700843A9D /* mapa-lixopapao.png */,
@@ -731,6 +921,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F76A123719C8ACF700843A9D /* settings-75.png in Resources */,
+				F67ED4FA19C8CA2800B266BD /* mapa-melhorcoleta.png in Resources */,
 				F76A124E19C8ACF700843A9D /* tinder-02.png in Resources */,
 				F76A123B19C8ACF700843A9D /* tabbar-02.png in Resources */,
 				F76A125019C8ACF700843A9D /* USUARIO-02.png in Resources */,
@@ -772,6 +963,7 @@
 				F76A121419C8ACF700843A9D /* mapa-lixopapao.png in Resources */,
 				F76A120119C8ACF700843A9D /* bixos papoes-01.png in Resources */,
 				F76A124D19C8ACF700843A9D /* tinder-01.png in Resources */,
+				F67ED4E019C8B78000B266BD /* CoinBLEDemo-Info.plist in Resources */,
 				F76A123C19C8ACF700843A9D /* tabbar-03.png in Resources */,
 				F76A124619C8ACF700843A9D /* 3.png in Resources */,
 				F76A124819C8ACF700843A9D /* 5.png in Resources */,
@@ -798,6 +990,7 @@
 				F76A121819C8ACF700843A9D /* ranking-04.png in Resources */,
 				F76A123A19C8ACF700843A9D /* tabbar-01.png in Resources */,
 				F76A122019C8ACF700843A9D /* redes-02.png in Resources */,
+				F67ED4F919C8CA2800B266BD /* mapa-melhorlixopapao.png in Resources */,
 				F76A122919C8ACF700843A9D /* settings-100.png in Resources */,
 				F76A120419C8ACF700843A9D /* conectividade-01.png in Resources */,
 				F76A123819C8ACF700843A9D /* tutorial.png in Resources */,
@@ -805,8 +998,10 @@
 				F76A122119C8ACF700843A9D /* redes-03.png in Resources */,
 				F76A121219C8ACF700843A9D /* mapa-$.png in Resources */,
 				F76A124A19C8ACF700843A9D /* 7.png in Resources */,
+				F67ED4FB19C8CA2800B266BD /* mapa-melhor$.png in Resources */,
 				F76A124F19C8ACF700843A9D /* USUARIO-01.png in Resources */,
 				F76A123019C8ACF700843A9D /* recycle_sign-32.png in Resources */,
+				F67ED4F019C8B78000B266BD /* SVProgressHUD.bundle in Resources */,
 				F76A120219C8ACF700843A9D /* bixos papoes-02.png in Resources */,
 				F76A124719C8ACF700843A9D /* 4.png in Resources */,
 				F76A121D19C8ACF700843A9D /* botao-game.png in Resources */,
@@ -835,16 +1030,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67ED4E119C8B78000B266BD /* DraggableView.m in Sources */,
 				F76A115C19C8ACB800843A9D /* AppDelegate.m in Sources */,
+				F67ED4EF19C8B78000B266BD /* WifiViewController.m in Sources */,
+				F67ED4E519C8B78000B266BD /* RankingProvBadges.m in Sources */,
 				F76A11FE19C8ACF700843A9D /* RankingVC.m in Sources */,
+				F67ED4E919C8B78000B266BD /* JMStaticContentTableViewController.m in Sources */,
+				F67ED4E619C8B78000B266BD /* RankingProvPontos.m in Sources */,
+				F67ED4EB19C8B78000B266BD /* JMStaticContentTextFieldTableViewCell.m in Sources */,
 				F76A120019C8ACF700843A9D /* TinderVC.m in Sources */,
 				F76A115819C8ACB800843A9D /* main.m in Sources */,
+				F67ED4E419C8B78000B266BD /* OverlayView.m in Sources */,
 				F76A11FA19C8ACF700843A9D /* LoginVC.m in Sources */,
+				F67ED4EA19C8B78000B266BD /* JMStaticContentTableViewSection.m in Sources */,
 				F76A11FC19C8ACF700843A9D /* MapaVC.m in Sources */,
+				F67ED4F319C8B78000B266BD /* UITextField+Shake.m in Sources */,
+				F67ED4F419C8B78000B266BD /* webService.m in Sources */,
+				F67ED4E719C8B78000B266BD /* Reachability.m in Sources */,
 				F76A11FD19C8ACF700843A9D /* MenuViewController.m in Sources */,
 				F76A11F919C8ACF700843A9D /* BluetoothVC.m in Sources */,
+				F67ED4F119C8B78000B266BD /* SVProgressHUD.m in Sources */,
+				F67ED4DE19C8B78000B266BD /* AYVibrantButton.m in Sources */,
+				F67ED4ED19C8B78000B266BD /* WifiNetwork.m in Sources */,
+				F67ED4EC19C8B78000B266BD /* NotificationsViewController.m in Sources */,
 				F76A11FF19C8ACF700843A9D /* TabGeralVC.m in Sources */,
+				F67ED4F519C8B78000B266BD /* YLProgressBar.m in Sources */,
+				F67ED4E319C8B78000B266BD /* MyAnnotation.m in Sources */,
 				F76A11FB19C8ACF700843A9D /* MainContainerViewController.m in Sources */,
+				F67ED4E219C8B78000B266BD /* M13Checkbox.m in Sources */,
+				F67ED4EE19C8B78000B266BD /* WifiNetworkTableViewCell.m in Sources */,
+				F67ED4E819C8B78000B266BD /* JMStaticContentTableViewCell.m in Sources */,
+				F67ED4DF19C8B78000B266BD /* CNBluetoothCentral.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1043,6 +1259,7 @@
 				F76A117619C8ACB900843A9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F76A117719C8ACB900843A9D /* Build configuration list for PBXNativeTarget "Lixo-MestreTests" */ = {
 			isa = XCConfigurationList;
@@ -1051,6 +1268,7 @@
 				F76A117919C8ACB900843A9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

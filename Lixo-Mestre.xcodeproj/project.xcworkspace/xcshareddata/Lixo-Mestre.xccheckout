@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>D63E653D-6F46-4070-8780-14B12F581A82</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Lixo-Mestre</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7DB9FB38-79B4-464E-9888-3296B689DDCF</key>
+		<string>https://github.com/ezefranca/Lixo-Mestre.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Lixo-Mestre.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7DB9FB38-79B4-464E-9888-3296B689DDCF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ezefranca/Lixo-Mestre.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7DB9FB38-79B4-464E-9888-3296B689DDCF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7DB9FB38-79B4-464E-9888-3296B689DDCF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Lixo-Mestre</string>
+		</dict>
+	</array>
+</dict>
+</plist>

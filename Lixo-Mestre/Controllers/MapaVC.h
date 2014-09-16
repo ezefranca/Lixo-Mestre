@@ -7,10 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+#import <CoreLocation/CoreLocation.h>
 #import "AppDelegate.h"
 
-@interface MapaVC : UIViewController
+@interface MapaVC : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>{
+    NSData *jsonDados;
+}
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapa;
+@property NSArray *viewDasAnnotations;
+@property MKPolyline *routeOverlay;
+@property MKRoute *currentRoute;
 
 - (IBAction)botaoMenu:(id)sender;
+
+- (IBAction)botaoMapaLixoPapao:(id)sender;
+- (IBAction)botaoMapaColeta:(id)sender;
+- (IBAction)botaoMapaCifrao:(id)sender;
+
 
 @end
