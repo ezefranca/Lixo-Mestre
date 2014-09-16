@@ -1,21 +1,22 @@
 //
 //  AppDelegate.m
-//  Lixo-Mestre
+//  SideMenuExample
 //
-//  Created by Ezequiel Franca dos Santos on 16/09/14.
-//  Copyright (c) 2014 Ezequiel Franca dos Santos. All rights reserved.
+//  Created by Peter Marks on 5/03/13.
+//  Copyright (c) 2013  Peter B Marks
 //
 
 #import "AppDelegate.h"
+#import "MainContainerViewController.h"
+
+NSString *const kShowMenuNotification = @"kShowMenuNotification";
+NSString *const kHideMenuNotification = @"kHideMenuNotification";
+NSString *const kShowHideMenuNotification = @"kShowHideMenuNotification";
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
     return YES;
 }
 
