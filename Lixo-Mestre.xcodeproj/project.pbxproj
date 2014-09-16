@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F76A114C19C8ACB800843A9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114B19C8ACB800843A9D /* Foundation.framework */; };
+		F76A114E19C8ACB800843A9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114D19C8ACB800843A9D /* CoreGraphics.framework */; };
+		F76A115019C8ACB800843A9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114F19C8ACB800843A9D /* UIKit.framework */; };
+		F76A115619C8ACB800843A9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F76A115419C8ACB800843A9D /* InfoPlist.strings */; };
+		F76A115819C8ACB800843A9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A115719C8ACB800843A9D /* main.m */; };
+		F76A115C19C8ACB800843A9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A115B19C8ACB800843A9D /* AppDelegate.m */; };
+		F76A115E19C8ACB800843A9D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F76A115D19C8ACB800843A9D /* Images.xcassets */; };
+		F76A116519C8ACB900843A9D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A116419C8ACB900843A9D /* XCTest.framework */; };
+		F76A116619C8ACB900843A9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114B19C8ACB800843A9D /* Foundation.framework */; };
+		F76A116719C8ACB900843A9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114F19C8ACB800843A9D /* UIKit.framework */; };
+		F76A116F19C8ACB900843A9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F76A116D19C8ACB900843A9D /* InfoPlist.strings */; };
+		F76A117119C8ACB900843A9D /* Lixo_MestreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A117019C8ACB900843A9D /* Lixo_MestreTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F76A116819C8ACB900843A9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F76A114019C8ACB800843A9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F76A114719C8ACB800843A9D;
+			remoteInfo = "Lixo-Mestre";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F76A114819C8ACB800843A9D /* Lixo-Mestre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lixo-Mestre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F76A114B19C8ACB800843A9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		F76A114D19C8ACB800843A9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		F76A114F19C8ACB800843A9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		F76A115319C8ACB800843A9D /* Lixo-Mestre-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lixo-Mestre-Info.plist"; sourceTree = "<group>"; };
+		F76A115519C8ACB800843A9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F76A115719C8ACB800843A9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F76A115919C8ACB800843A9D /* Lixo-Mestre-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lixo-Mestre-Prefix.pch"; sourceTree = "<group>"; };
+		F76A115A19C8ACB800843A9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F76A115B19C8ACB800843A9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F76A115D19C8ACB800843A9D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F76A116319C8ACB900843A9D /* Lixo-MestreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lixo-MestreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F76A116419C8ACB900843A9D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		F76A116C19C8ACB900843A9D /* Lixo-MestreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lixo-MestreTests-Info.plist"; sourceTree = "<group>"; };
+		F76A116E19C8ACB900843A9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F76A117019C8ACB900843A9D /* Lixo_MestreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lixo_MestreTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F76A114519C8ACB800843A9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F76A114E19C8ACB800843A9D /* CoreGraphics.framework in Frameworks */,
+				F76A115019C8ACB800843A9D /* UIKit.framework in Frameworks */,
+				F76A114C19C8ACB800843A9D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F76A116019C8ACB900843A9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F76A116519C8ACB900843A9D /* XCTest.framework in Frameworks */,
+				F76A116719C8ACB900843A9D /* UIKit.framework in Frameworks */,
+				F76A116619C8ACB900843A9D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F76A113F19C8ACB800843A9D = {
+			isa = PBXGroup;
+			children = (
+				F76A115119C8ACB800843A9D /* Lixo-Mestre */,
+				F76A116A19C8ACB900843A9D /* Lixo-MestreTests */,
+				F76A114A19C8ACB800843A9D /* Frameworks */,
+				F76A114919C8ACB800843A9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F76A114919C8ACB800843A9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F76A114819C8ACB800843A9D /* Lixo-Mestre.app */,
+				F76A116319C8ACB900843A9D /* Lixo-MestreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F76A114A19C8ACB800843A9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F76A114B19C8ACB800843A9D /* Foundation.framework */,
+				F76A114D19C8ACB800843A9D /* CoreGraphics.framework */,
+				F76A114F19C8ACB800843A9D /* UIKit.framework */,
+				F76A116419C8ACB900843A9D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F76A115119C8ACB800843A9D /* Lixo-Mestre */ = {
+			isa = PBXGroup;
+			children = (
+				F76A115A19C8ACB800843A9D /* AppDelegate.h */,
+				F76A115B19C8ACB800843A9D /* AppDelegate.m */,
+				F76A115D19C8ACB800843A9D /* Images.xcassets */,
+				F76A115219C8ACB800843A9D /* Supporting Files */,
+			);
+			path = "Lixo-Mestre";
+			sourceTree = "<group>";
+		};
+		F76A115219C8ACB800843A9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F76A115319C8ACB800843A9D /* Lixo-Mestre-Info.plist */,
+				F76A115419C8ACB800843A9D /* InfoPlist.strings */,
+				F76A115719C8ACB800843A9D /* main.m */,
+				F76A115919C8ACB800843A9D /* Lixo-Mestre-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F76A116A19C8ACB900843A9D /* Lixo-MestreTests */ = {
+			isa = PBXGroup;
+			children = (
+				F76A117019C8ACB900843A9D /* Lixo_MestreTests.m */,
+				F76A116B19C8ACB900843A9D /* Supporting Files */,
+			);
+			path = "Lixo-MestreTests";
+			sourceTree = "<group>";
+		};
+		F76A116B19C8ACB900843A9D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F76A116C19C8ACB900843A9D /* Lixo-MestreTests-Info.plist */,
+				F76A116D19C8ACB900843A9D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F76A114719C8ACB800843A9D /* Lixo-Mestre */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F76A117419C8ACB900843A9D /* Build configuration list for PBXNativeTarget "Lixo-Mestre" */;
+			buildPhases = (
+				F76A114419C8ACB800843A9D /* Sources */,
+				F76A114519C8ACB800843A9D /* Frameworks */,
+				F76A114619C8ACB800843A9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lixo-Mestre";
+			productName = "Lixo-Mestre";
+			productReference = F76A114819C8ACB800843A9D /* Lixo-Mestre.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F76A116219C8ACB900843A9D /* Lixo-MestreTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F76A117719C8ACB900843A9D /* Build configuration list for PBXNativeTarget "Lixo-MestreTests" */;
+			buildPhases = (
+				F76A115F19C8ACB900843A9D /* Sources */,
+				F76A116019C8ACB900843A9D /* Frameworks */,
+				F76A116119C8ACB900843A9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F76A116919C8ACB900843A9D /* PBXTargetDependency */,
+			);
+			name = "Lixo-MestreTests";
+			productName = "Lixo-MestreTests";
+			productReference = F76A116319C8ACB900843A9D /* Lixo-MestreTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F76A114019C8ACB800843A9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Ezequiel Franca dos Santos";
+				TargetAttributes = {
+					F76A116219C8ACB900843A9D = {
+						TestTargetID = F76A114719C8ACB800843A9D;
+					};
+				};
+			};
+			buildConfigurationList = F76A114319C8ACB800843A9D /* Build configuration list for PBXProject "Lixo-Mestre" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F76A113F19C8ACB800843A9D;
+			productRefGroup = F76A114919C8ACB800843A9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F76A114719C8ACB800843A9D /* Lixo-Mestre */,
+				F76A116219C8ACB900843A9D /* Lixo-MestreTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F76A114619C8ACB800843A9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F76A115619C8ACB800843A9D /* InfoPlist.strings in Resources */,
+				F76A115E19C8ACB800843A9D /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F76A116119C8ACB900843A9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F76A116F19C8ACB900843A9D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F76A114419C8ACB800843A9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F76A115C19C8ACB800843A9D /* AppDelegate.m in Sources */,
+				F76A115819C8ACB800843A9D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F76A115F19C8ACB900843A9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F76A117119C8ACB900843A9D /* Lixo_MestreTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F76A116919C8ACB900843A9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F76A114719C8ACB800843A9D /* Lixo-Mestre */;
+			targetProxy = F76A116819C8ACB900843A9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F76A115419C8ACB800843A9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F76A115519C8ACB800843A9D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F76A116D19C8ACB900843A9D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F76A116E19C8ACB900843A9D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F76A117219C8ACB900843A9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F76A117319C8ACB900843A9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F76A117519C8ACB900843A9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lixo-Mestre/Lixo-Mestre-Prefix.pch";
+				INFOPLIST_FILE = "Lixo-Mestre/Lixo-Mestre-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F76A117619C8ACB900843A9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lixo-Mestre/Lixo-Mestre-Prefix.pch";
+				INFOPLIST_FILE = "Lixo-Mestre/Lixo-Mestre-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		F76A117819C8ACB900843A9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lixo-Mestre.app/Lixo-Mestre";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lixo-Mestre/Lixo-Mestre-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Lixo-MestreTests/Lixo-MestreTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		F76A117919C8ACB900843A9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Lixo-Mestre.app/Lixo-Mestre";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lixo-Mestre/Lixo-Mestre-Prefix.pch";
+				INFOPLIST_FILE = "Lixo-MestreTests/Lixo-MestreTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F76A114319C8ACB800843A9D /* Build configuration list for PBXProject "Lixo-Mestre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F76A117219C8ACB900843A9D /* Debug */,
+				F76A117319C8ACB900843A9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F76A117419C8ACB900843A9D /* Build configuration list for PBXNativeTarget "Lixo-Mestre" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F76A117519C8ACB900843A9D /* Debug */,
+				F76A117619C8ACB900843A9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F76A117719C8ACB900843A9D /* Build configuration list for PBXNativeTarget "Lixo-MestreTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F76A117819C8ACB900843A9D /* Debug */,
+				F76A117919C8ACB900843A9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F76A114019C8ACB800843A9D /* Project object */;
+}
