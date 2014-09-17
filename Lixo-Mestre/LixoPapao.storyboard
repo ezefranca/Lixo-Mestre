@@ -150,12 +150,40 @@
                                 <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="tintColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="settings-25.png"/>
+                                <connections>
+                                    <action selector="botaoSettings:" destination="Pqu-0p-35V" eventType="touchUpInside" id="3tn-87-Rr1"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OTp-aH-Vw8" userLabel="Button - escolher lixo">
+                                <rect key="frame" x="40" y="403" width="240" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="conectividade-03.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoLixo:" destination="Pqu-0p-35V" eventType="touchUpInside" id="2pw-F2-KgR"/>
+                                </connections>
+                            </button>
+                            <button appearanceType="aqua" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Xuo-pP-hXr">
+                                <rect key="frame" x="40" y="403" width="240" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Conectar" image="conectividade-02.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoConectar:" destination="Pqu-0p-35V" eventType="touchUpInside" id="NUw-O4-tIm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" image="tabbar-02.png" id="zbK-qT-Cqd"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="botaoConectar" destination="Xuo-pP-hXr" id="cBz-yL-97X"/>
+                        <outlet property="botaoLixo" destination="OTp-aH-Vw8" id="Ckg-vW-JEL"/>
+                        <outlet property="imagemConectar" destination="x5C-tb-fj3" id="NRR-Uj-01T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycl-y4-uqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -332,6 +360,8 @@
     </scenes>
     <resources>
         <image name="bixos papoes-01.png" width="970" height="1011"/>
+        <image name="conectividade-02.png" width="920" height="210"/>
+        <image name="conectividade-03.png" width="920" height="210"/>
         <image name="fundo.png" width="180" height="35"/>
         <image name="logoo.png" width="1294" height="869"/>
         <image name="mapa-melhor$.png" width="51" height="51"/>
