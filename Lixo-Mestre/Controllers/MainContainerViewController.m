@@ -20,8 +20,8 @@
 
 @interface MainContainerViewController (){
     MenuViewController *_menuViewController;
-    TabGeralVC *_tabGeralViewController;
-    //LoginVC *_tabGeralViewController;
+    //TabGeralVC *_tabGeralViewController;
+    LoginVC *_tabGeralViewController;
     UIPanGestureRecognizer *_panGestureRecognizer;  // for pulling the menu open or closed
     BOOL _menuShowing;
     CGRect _frontViewClosedFrame;   // used for sliding it
@@ -43,7 +43,7 @@
     //_menuViewController.view.frame = self.view.bounds;
     [self.view addSubview:_menuViewController.view];
 
-    _tabGeralViewController = [storyBoard instantiateViewControllerWithIdentifier:@"TabGeral"];
+    _tabGeralViewController = [storyBoard instantiateViewControllerWithIdentifier:@"Login"];
     _tabGeralViewController.view.frame = self.view.bounds;
     _frontViewClosedFrame = _tabGeralViewController.view.frame;
     [self addChildViewController:_tabGeralViewController];
@@ -67,14 +67,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showHideMenuView:) name:kShowHideMenuNotification object:nil];
 }
 
-- (void)viewDidUnload
-{
+- (void)viewDidUnload{
     [super viewDidUnload];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 // slide the front view to the side so the menu view is visible
-- (void)showMenuView:(NSNotification *)notification
-{
+- (void)showMenuView:(NSNotification *)notification{
     CGRect destination = _frontViewClosedFrame;
     
     CGRect frame = self.view.bounds;
@@ -88,8 +86,7 @@
     } completion:nil];
 }
 
-- (void)hideMenuView:(NSNotification *)notification
-{
+- (void)hideMenuView:(NSNotification *)notification{
     CGRect destination = _frontViewClosedFrame;
     
     _menuShowing = NO;
@@ -101,16 +98,14 @@
     } completion:nil];
 }
 
-- (void)showHideMenuView:(NSNotification *)notification
-{
+- (void)showHideMenuView:(NSNotification *)notification{
     if(!_menuShowing)
         [self showMenuView:nil];
     else
         [self hideMenuView:nil];
 }
 
-- (void) handlePanGestures:(UIPanGestureRecognizer*)paramSender
-{
+- (void) handlePanGestures:(UIPanGestureRecognizer*)paramSender{
     static float initialXOffset = 0;
     if(paramSender.state == UIGestureRecognizerStateBegan)
         initialXOffset = [paramSender locationInView:paramSender.view].x;
@@ -138,8 +133,7 @@
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
