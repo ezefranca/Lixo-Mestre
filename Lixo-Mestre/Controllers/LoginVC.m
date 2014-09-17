@@ -7,6 +7,7 @@
 //
 
 #import "LoginVC.h"
+#import "TabGeralVC.h"
 #define rgb(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
 @interface LoginVC ()
@@ -101,7 +102,6 @@
     [preferencias synchronize];
 }
 
-
 - (BOOL)Login{
     if([webService login:self.user.text :self.pass.text]){
         NSLog(@"%@", [webService rankingUser:@"load" : self.user.text]);
@@ -112,27 +112,16 @@
             [preferencias setBool:senhaSalva forKey:@"senhaSalva"];
             [preferencias synchronize];
         }
-        //        int x = [webService login:self.user.text:self.pass.text];
-        //
-        //        if (x){
-        //            if (x == 2){
-        //                NSLog(@"usuario existe");
-        //            }
-        //            else{
-        //                NSLog(@"cadastrado");
-        //            }
-        //        }
-        //        else{
-        //            NSLog(@"falha ao inseirr");
-        //        }
+
         if ( ![webService carregarPontosUsuario: self.user.text] ) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Sem internet" message:@"nao foi possivel sincronizar os dados com o servidor" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
             alert.alertViewStyle = UIAlertViewStyleDefault;
             [alert show];
         }
         
-        [self performSegueWithIdentifier:@"Login" sender:self];
-        NSLog(@"Login");
+        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+        TabGeralVC* tab = [Board instantiateViewControllerWithIdentifier:@"TabGeral"];
+        [self presentViewController:tab animated:YES completion:nil];
         
     }
     else{
@@ -148,11 +137,10 @@
 #pragma cadastro
 - (IBAction)botaoCadastro:(id)sender {
 //    CadastroVC *cad = CadastroVC.new;
-  //  [self presentViewController:cad animated:YES completion:nil];
+//    [self presentViewController:cad animated:YES completion:nil];
 }
 - (IBAction)botaoLogin:(id)sender {
     [self Login];
-    
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
