@@ -98,11 +98,6 @@
                                     <action selector="botaoCadastro:" destination="gwc-JE-nW5" eventType="touchUpInside" id="SFY-gQ-QEy"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" id="1OD-2U-pfp" customClass="FBLoginView">
-                                <rect key="frame" x="51" y="399" width="218" height="46"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zxy-JD-x3K">
                                 <rect key="frame" x="137" y="208" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -113,12 +108,42 @@
                                     <action selector="botaoLogin:" destination="gwc-JE-nW5" eventType="touchUpInside" id="jnJ-4X-XnD"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" id="6Hp-kL-26L" customClass="FBLoginView">
+                                <rect key="frame" x="44" y="439" width="233" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gwc-JE-nW5" id="n8r-D1-Dyl"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jNl-kx-MN7">
+                                <rect key="frame" x="49" y="290" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Yak-9R-o9Z">
+                                <rect key="frame" x="116" y="337" width="131" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" id="tPY-Ky-MMY" customClass="FBProfilePictureView">
+                                <rect key="frame" x="33" y="319" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="loginView" destination="6Hp-kL-26L" id="BLu-gP-ZA8"/>
+                        <outlet property="nameLabel" destination="jNl-kx-MN7" id="TUy-wH-Vx7"/>
                         <outlet property="pass" destination="xPM-zM-QoD" id="t2i-nH-n2M"/>
+                        <outlet property="profilePictureView" destination="tPY-Ky-MMY" id="lZ2-ZN-NON"/>
+                        <outlet property="statusLabel" destination="Yak-9R-o9Z" id="SDA-iW-gKJ"/>
                         <outlet property="user" destination="rbX-uX-aCp" id="FF8-Nl-tsY"/>
                     </connections>
                 </viewController>

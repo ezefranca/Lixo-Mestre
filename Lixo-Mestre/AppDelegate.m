@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainContainerViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
 
 NSString *const kShowMenuNotification = @"kShowMenuNotification";
 NSString *const kHideMenuNotification = @"kHideMenuNotification";
@@ -15,8 +16,10 @@ NSString *const kShowHideMenuNotification = @"kShowHideMenuNotification";
 
 @implementation AppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions{
+    [FBLoginView class];
+    [FBProfilePictureView class];
+    
     return YES;
 }
 
