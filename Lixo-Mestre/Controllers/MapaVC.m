@@ -47,7 +47,7 @@
     double dx ;
     double dy;
     double dist;
-    double menor;
+    double menor = 0.0;
     CLLocationCoordinate2D c;
     
     x1 = self.mapa.userLocation.location.coordinate.latitude;

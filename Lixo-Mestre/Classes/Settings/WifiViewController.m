@@ -178,7 +178,7 @@
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
 			cell.textLabel.text = NSLocalizedString(@"Wi-Fi", @"Wi-Fi");
-			cell.accessoryView = self.wifiSwitch;
+			//cell.accessoryView = self.wifiSwitch;
 		}];
 	}];
 
@@ -200,7 +200,7 @@
 			cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
 			cell.textLabel.text = NSLocalizedString(@"Ask to Join Networks", @"Ask to Join Networks");
-			cell.accessoryView = self.askToJoinSwitch;
+			//cell.accessoryView = self.askToJoinSwitch;
 		}];
 	}];
 
