@@ -33,7 +33,7 @@
 		F67ED4F919C8CA2800B266BD /* mapa-melhorlixopapao.png in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4F619C8CA2800B266BD /* mapa-melhorlixopapao.png */; };
 		F67ED4FA19C8CA2800B266BD /* mapa-melhorcoleta.png in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4F719C8CA2800B266BD /* mapa-melhorcoleta.png */; };
 		F67ED4FB19C8CA2800B266BD /* mapa-melhor$.png in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4F819C8CA2800B266BD /* mapa-melhor$.png */; };
-		F67ED4FD19C8DC1900B266BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67ED4FC19C8DC1900B266BD /* FacebookSDK.framework */; };
+		F67ED50019C9F84700B266BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67ED4FF19C9F84700B266BD /* FacebookSDK.framework */; };
 		F76A114C19C8ACB800843A9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114B19C8ACB800843A9D /* Foundation.framework */; };
 		F76A114E19C8ACB800843A9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114D19C8ACB800843A9D /* CoreGraphics.framework */; };
 		F76A115019C8ACB800843A9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114F19C8ACB800843A9D /* UIKit.framework */; };
@@ -206,7 +206,7 @@
 		F67ED4F619C8CA2800B266BD /* mapa-melhorlixopapao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-melhorlixopapao.png"; sourceTree = "<group>"; };
 		F67ED4F719C8CA2800B266BD /* mapa-melhorcoleta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-melhorcoleta.png"; sourceTree = "<group>"; };
 		F67ED4F819C8CA2800B266BD /* mapa-melhor$.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-melhor$.png"; sourceTree = "<group>"; };
-		F67ED4FC19C8DC1900B266BD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		F67ED4FF19C9F84700B266BD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		F76A114819C8ACB800843A9D /* Lixo-Mestre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lixo-Mestre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76A114B19C8ACB800843A9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F76A114D19C8ACB800843A9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -340,7 +340,7 @@
 				F76A114C19C8ACB800843A9D /* Foundation.framework in Frameworks */,
 				F76A125819C8AD6E00843A9D /* CoreLocation.framework in Frameworks */,
 				F76A125619C8AD6500843A9D /* MapKit.framework in Frameworks */,
-				F67ED4FD19C8DC1900B266BD /* FacebookSDK.framework in Frameworks */,
+				F67ED50019C9F84700B266BD /* FacebookSDK.framework in Frameworks */,
 				F76A114E19C8ACB800843A9D /* CoreGraphics.framework in Frameworks */,
 				F76A115019C8ACB800843A9D /* UIKit.framework in Frameworks */,
 			);
@@ -469,6 +469,15 @@
 			path = YLProgressBar;
 			sourceTree = "<group>";
 		};
+		F67ED4FE19C9F84700B266BD /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F67ED4FF19C9F84700B266BD /* FacebookSDK.framework */,
+			);
+			name = frameworks;
+			path = "Lixo-Mestre/frameworks";
+			sourceTree = "<group>";
+		};
 		F76A113F19C8ACB800843A9D = {
 			isa = PBXGroup;
 			children = (
@@ -491,7 +500,7 @@
 		F76A114A19C8ACB800843A9D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F67ED4FC19C8DC1900B266BD /* FacebookSDK.framework */,
+				F67ED4FE19C9F84700B266BD /* frameworks */,
 				F76A125B19C8AD7F00843A9D /* CoreBluetooth.framework */,
 				F76A125919C8AD7800843A9D /* CoreFoundation.framework */,
 				F76A125719C8AD6E00843A9D /* CoreLocation.framework */,
@@ -1185,6 +1194,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/alessandrocamillogimenezdemenezes/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/Lixo-Mestre/frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lixo-Mestre/Lixo-Mestre-Prefix.pch";
@@ -1203,6 +1213,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/alessandrocamillogimenezdemenezes/Documents/FacebookSDK,
+					"$(PROJECT_DIR)/Lixo-Mestre/frameworks",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lixo-Mestre/Lixo-Mestre-Prefix.pch";
