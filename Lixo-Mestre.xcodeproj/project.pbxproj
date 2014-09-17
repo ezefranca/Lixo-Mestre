@@ -111,7 +111,7 @@
 		F76A123619C8ACF700843A9D /* recycle_sign-75.png in Resources */ = {isa = PBXBuildFile; fileRef = F76A11D519C8ACF700843A9D /* recycle_sign-75.png */; };
 		F76A123719C8ACF700843A9D /* settings-75.png in Resources */ = {isa = PBXBuildFile; fileRef = F76A11D619C8ACF700843A9D /* settings-75.png */; };
 		F76A123819C8ACF700843A9D /* tutorial.png in Resources */ = {isa = PBXBuildFile; fileRef = F76A11D719C8ACF700843A9D /* tutorial.png */; };
-		F76A123919C8ACF700843A9D /* fundo.png in Resources */ = {isa = PBXBuildFile; fileRef = F76A11D919C8ACF700843A9D /* fundo.png */; };
+		F76A123919C8ACF700843A9D /* fundo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F76A11D919C8ACF700843A9D /* fundo.jpg */; };
 		F76A123A19C8ACF700843A9D /* tabbar-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F76A11DA19C8ACF700843A9D /* tabbar-01.png */; };
 		F76A123B19C8ACF700843A9D /* tabbar-02.png in Resources */ = {isa = PBXBuildFile; fileRef = F76A11DB19C8ACF700843A9D /* tabbar-02.png */; };
 		F76A123C19C8ACF700843A9D /* tabbar-03.png in Resources */ = {isa = PBXBuildFile; fileRef = F76A11DC19C8ACF700843A9D /* tabbar-03.png */; };
@@ -296,7 +296,7 @@
 		F76A11D519C8ACF700843A9D /* recycle_sign-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "recycle_sign-75.png"; sourceTree = "<group>"; };
 		F76A11D619C8ACF700843A9D /* settings-75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-75.png"; sourceTree = "<group>"; };
 		F76A11D719C8ACF700843A9D /* tutorial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tutorial.png; sourceTree = "<group>"; };
-		F76A11D919C8ACF700843A9D /* fundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fundo.png; sourceTree = "<group>"; };
+		F76A11D919C8ACF700843A9D /* fundo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fundo.jpg; sourceTree = "<group>"; };
 		F76A11DA19C8ACF700843A9D /* tabbar-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-01.png"; sourceTree = "<group>"; };
 		F76A11DB19C8ACF700843A9D /* tabbar-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-02.png"; sourceTree = "<group>"; };
 		F76A11DC19C8ACF700843A9D /* tabbar-03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar-03.png"; sourceTree = "<group>"; };
@@ -799,7 +799,7 @@
 		F76A11D819C8ACF700843A9D /* tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				F76A11D919C8ACF700843A9D /* fundo.png */,
+				F76A11D919C8ACF700843A9D /* fundo.jpg */,
 				F76A11DA19C8ACF700843A9D /* tabbar-01.png */,
 				F76A11DB19C8ACF700843A9D /* tabbar-02.png */,
 				F76A11DC19C8ACF700843A9D /* tabbar-03.png */,
@@ -940,7 +940,7 @@
 				F76A124119C8ACF700843A9D /* tabbar-08.png in Resources */,
 				F76A124919C8ACF700843A9D /* 6.png in Resources */,
 				F76A124319C8ACF700843A9D /* tabbar-10.png in Resources */,
-				F76A123919C8ACF700843A9D /* fundo.png in Resources */,
+				F76A123919C8ACF700843A9D /* fundo.jpg in Resources */,
 				F76A120E19C8ACF700843A9D /* gabriel.png in Resources */,
 				F76A121619C8ACF700843A9D /* ranking-02.png in Resources */,
 				F76A125119C8ACF700843A9D /* USUARIO-03.png in Resources */,
