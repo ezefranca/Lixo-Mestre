@@ -30,13 +30,10 @@
 @property (weak, nonatomic) IBOutlet UITextField *pass;
 @property (weak, nonatomic) IBOutlet M13Checkbox *checkSenha;
 
-@property (weak, nonatomic) IBOutlet FBLoginView *loginView;
-@property (weak, nonatomic) IBOutlet FBProfilePictureView *profilePictureView;
-
+@property FBLoginView *loginView;
+@property FBProfilePictureView *profilePictureView;
 @property NSString *facebookUserID;
 
-@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
-@property (strong, nonatomic) IBOutlet UILabel *statusLabel;
 
 - (IBAction)salvaSenha:(id)sender;
 

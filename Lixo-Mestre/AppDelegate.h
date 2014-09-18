@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 extern NSString *const kShowMenuNotification;
 extern NSString *const kHideMenuNotification;

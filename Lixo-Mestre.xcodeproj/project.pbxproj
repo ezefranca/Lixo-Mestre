@@ -916,6 +916,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				he,
 			);
 			mainGroup = F76A113F19C8ACB800843A9D;
 			productRefGroup = F76A114919C8ACB800843A9D /* Products */;
@@ -1195,6 +1196,8 @@
 					"$(inherited)",
 					/Users/alessandrocamillogimenezdemenezes/Documents/FacebookSDK,
 					"$(PROJECT_DIR)/Lixo-Mestre/frameworks",
+					"$(PROJECT_DIR)/FacebookSDK",
+					"$(PROJECT_DIR)/FacebookSDK/FBAudienceNetwork",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lixo-Mestre/Lixo-Mestre-Prefix.pch";
@@ -1214,6 +1217,8 @@
 					"$(inherited)",
 					/Users/alessandrocamillogimenezdemenezes/Documents/FacebookSDK,
 					"$(PROJECT_DIR)/Lixo-Mestre/frameworks",
+					"$(PROJECT_DIR)/FacebookSDK",
+					"$(PROJECT_DIR)/FacebookSDK/FBAudienceNetwork",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lixo-Mestre/Lixo-Mestre-Prefix.pch";

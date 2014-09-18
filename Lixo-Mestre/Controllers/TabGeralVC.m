@@ -7,6 +7,7 @@
 //
 
 #import "TabGeralVC.h"
+#import "MenuViewController.h"
 
 @interface TabGeralVC ()
 
@@ -14,8 +15,7 @@
 
 @implementation TabGeralVC
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -23,14 +23,19 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+    _menuViewController = [storyBoard instantiateViewControllerWithIdentifier:@"Menu"];
+    
+    [self addChildViewController:_menuViewController];
+    [_menuViewController didMoveToParentViewController:self];
+    //_menuViewController.view.frame = self.view.bounds;
+    //[self.view addSubview:_menuViewController.view];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }

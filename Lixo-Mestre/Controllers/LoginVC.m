@@ -49,6 +49,11 @@
 		[obj setDelegate:self];
 	}];
     
+    _loginView = [[FBLoginView alloc] initWithReadPermissions: @[@"public_profile", @"user_friends", @"publish_actions"]];
+    _loginView.delegate = self;
+    _loginView.center = self.view.center;
+    [self.view addSubview:_loginView];
+
     
 }
 
@@ -113,6 +118,7 @@
         TabGeralVC* tab = [Board instantiateViewControllerWithIdentifier:@"TabGeral"];
         [self presentViewController:tab animated:YES completion:nil];
         
+        
     }
     else{
         [self shake];
@@ -146,25 +152,27 @@
 // This method will be called when the user information has been fetched
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
+    
     self.profilePictureView.profileID = user.id;
-    self.nameLabel.text = user.name;
+//    self.nameLabel.text = user.name;
     [self setFacebookUserID: user.id];
+    
+    
 }
 
-
-// Logged-in user experience
+// Logged-in from facebook user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    self.statusLabel.text = @"You're logged in as";
+//    self.statusLabel.text = @"You're logged in as";
 }
 
-// Logged-out user experience
+// Logged-out from facebook user experience
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
     self.profilePictureView.profileID = nil;
-    self.nameLabel.text = @"";
-    self.statusLabel.text= @"You're not logged in!";
+//    self.nameLabel.text = @"";
+//    self.statusLabel.text= @"You're not logged in!";
 }
 
-// Handle possible errors that can occur during login
+// Handle possible errors that can occur during facebook login
 - (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error {
     NSString *alertMessage, *alertTitle;
     
@@ -206,5 +214,6 @@
                           otherButtonTitles:nil] show];
     }
 }
+
 
 @end
