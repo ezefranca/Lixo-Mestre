@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *aLabel;
+@interface MenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *MenuTableView;
+
 
 @end

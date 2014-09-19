@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		252A91A219CCBADF004229F3 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 252A91A119CCBADF004229F3 /* MenuTableViewCell.m */; };
 		F63A7F3419CB55220076D574 /* CadastroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A7F3319CB55220076D574 /* CadastroVC.m */; };
 		F67ED4DE19C8B78000B266BD /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4A819C8B78000B266BD /* AYVibrantButton.m */; };
 		F67ED4DF19C8B78000B266BD /* CNBluetoothCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4AB19C8B78000B266BD /* CNBluetoothCentral.m */; };
@@ -157,6 +158,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		252A91A019CCBADF004229F3 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuTableViewCell.h; path = Classes/MenuTableViewCell.h; sourceTree = "<group>"; };
+		252A91A119CCBADF004229F3 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuTableViewCell.m; path = Classes/MenuTableViewCell.m; sourceTree = "<group>"; };
 		F63A7F3219CB55220076D574 /* CadastroVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastroVC.h; sourceTree = "<group>"; };
 		F63A7F3319CB55220076D574 /* CadastroVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastroVC.m; sourceTree = "<group>"; };
 		F67ED4A719C8B78000B266BD /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
@@ -523,6 +526,8 @@
 				F76A117B19C8ACF700843A9D /* Controllers */,
 				F76A118C19C8ACF700843A9D /* Recursos */,
 				F76A117A19C8ACF700843A9D /* LixoPapao.storyboard */,
+				252A91A019CCBADF004229F3 /* MenuTableViewCell.h */,
+				252A91A119CCBADF004229F3 /* MenuTableViewCell.m */,
 				F76A11F519C8ACF700843A9D /* Default-568h@2x.png */,
 				F76A11F619C8ACF700843A9D /* Default.png */,
 				F76A11F719C8ACF700843A9D /* Default@2x.png */,
@@ -1056,6 +1061,7 @@
 				F76A11FE19C8ACF700843A9D /* RankingVC.m in Sources */,
 				F67ED4E919C8B78000B266BD /* JMStaticContentTableViewController.m in Sources */,
 				F67ED4E619C8B78000B266BD /* RankingProvPontos.m in Sources */,
+				252A91A219CCBADF004229F3 /* MenuTableViewCell.m in Sources */,
 				F67ED4EB19C8B78000B266BD /* JMStaticContentTextFieldTableViewCell.m in Sources */,
 				F76A120019C8ACF700843A9D /* TinderVC.m in Sources */,
 				F76A115819C8ACB800843A9D /* main.m in Sources */,
