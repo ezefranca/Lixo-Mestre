@@ -42,15 +42,21 @@
     }
     
     cell.textLabel.text = [itemsMenu objectAtIndex:indexPath.row];
+    cell.imageView.image = [UIImage imageNamed:@"settings-100.png"];
     return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 5;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"Clicou em %d", indexPath.row);
 }
 
 @end
