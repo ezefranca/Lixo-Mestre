@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F63A7F3419CB55220076D574 /* CadastroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A7F3319CB55220076D574 /* CadastroVC.m */; };
 		F67ED4DE19C8B78000B266BD /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4A819C8B78000B266BD /* AYVibrantButton.m */; };
 		F67ED4DF19C8B78000B266BD /* CNBluetoothCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4AB19C8B78000B266BD /* CNBluetoothCentral.m */; };
 		F67ED4E019C8B78000B266BD /* CoinBLEDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4AC19C8B78000B266BD /* CoinBLEDemo-Info.plist */; };
@@ -156,6 +157,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F63A7F3219CB55220076D574 /* CadastroVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastroVC.h; sourceTree = "<group>"; };
+		F63A7F3319CB55220076D574 /* CadastroVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastroVC.m; sourceTree = "<group>"; };
 		F67ED4A719C8B78000B266BD /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
 		F67ED4A819C8B78000B266BD /* AYVibrantButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AYVibrantButton.m; sourceTree = "<group>"; };
 		F67ED4AA19C8B78000B266BD /* CNBluetoothCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNBluetoothCentral.h; sourceTree = "<group>"; };
@@ -378,11 +381,11 @@
 				F67ED4B919C8B78000B266BD /* RankingProvPontos.m */,
 				F67ED4BA19C8B78000B266BD /* Reachability.h */,
 				F67ED4BB19C8B78000B266BD /* Reachability.m */,
+				F67ED4D919C8B78000B266BD /* webService.h */,
+				F67ED4DA19C8B78000B266BD /* webService.m */,
 				F67ED4BC19C8B78000B266BD /* Settings */,
 				F67ED4CF19C8B78000B266BD /* SVProgressHUD */,
 				F67ED4D619C8B78000B266BD /* UITextField-Shake */,
-				F67ED4D919C8B78000B266BD /* webService.h */,
-				F67ED4DA19C8B78000B266BD /* webService.m */,
 				F67ED4DB19C8B78000B266BD /* YLProgressBar */,
 			);
 			path = Classes;
@@ -563,16 +566,18 @@
 		F76A117B19C8ACF700843A9D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F76A117C19C8ACF700843A9D /* BluetoothVC.h */,
-				F76A117D19C8ACF700843A9D /* BluetoothVC.m */,
-				F76A117E19C8ACF700843A9D /* LoginVC.h */,
-				F76A117F19C8ACF700843A9D /* LoginVC.m */,
 				F76A118019C8ACF700843A9D /* MainContainerViewController.h */,
 				F76A118119C8ACF700843A9D /* MainContainerViewController.m */,
-				F76A118219C8ACF700843A9D /* MapaVC.h */,
-				F76A118319C8ACF700843A9D /* MapaVC.m */,
+				F76A117E19C8ACF700843A9D /* LoginVC.h */,
+				F76A117F19C8ACF700843A9D /* LoginVC.m */,
+				F63A7F3219CB55220076D574 /* CadastroVC.h */,
+				F63A7F3319CB55220076D574 /* CadastroVC.m */,
 				F76A118419C8ACF700843A9D /* MenuViewController.h */,
 				F76A118519C8ACF700843A9D /* MenuViewController.m */,
+				F76A117C19C8ACF700843A9D /* BluetoothVC.h */,
+				F76A117D19C8ACF700843A9D /* BluetoothVC.m */,
+				F76A118219C8ACF700843A9D /* MapaVC.h */,
+				F76A118319C8ACF700843A9D /* MapaVC.m */,
 				F76A118619C8ACF700843A9D /* RankingVC.h */,
 				F76A118719C8ACF700843A9D /* RankingVC.m */,
 				F76A118819C8ACF700843A9D /* TabGeralVC.h */,
@@ -1061,6 +1066,7 @@
 				F67ED4F319C8B78000B266BD /* UITextField+Shake.m in Sources */,
 				F67ED4F419C8B78000B266BD /* webService.m in Sources */,
 				F67ED4E719C8B78000B266BD /* Reachability.m in Sources */,
+				F63A7F3419CB55220076D574 /* CadastroVC.m in Sources */,
 				F76A11FD19C8ACF700843A9D /* MenuViewController.m in Sources */,
 				F76A11F919C8ACF700843A9D /* BluetoothVC.m in Sources */,
 				F67ED4F119C8B78000B266BD /* SVProgressHUD.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "LoginVC.h"
-#import "TabGeralVC.h"
+
 #define rgb(r, g, b)  [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
 
 @interface LoginVC ()
@@ -50,9 +50,21 @@
 	}];
     
     _loginView = [[FBLoginView alloc] initWithReadPermissions: @[@"public_profile", @"user_friends", @"publish_actions"]];
+    _loginView.frame = CGRectMake(50, 380, 216, 48);
     _loginView.delegate = self;
-    _loginView.center = self.view.center;
     [self.view addSubview:_loginView];
+    
+    _statusLabel = [[UILabel alloc] init];
+    _statusLabel.frame = CGRectMake(30, 50, self.view.frame.size.width, 30);
+    //[self.view addSubview: _statusLabel];
+    
+    _profilePictureView = [[FBProfilePictureView alloc] init];
+    _profilePictureView.frame = CGRectMake(30, 80, 50, 50);
+    //[self.view addSubview: _profilePictureView];
+    
+    _nameLabel = [[UILabel alloc] init];
+    _nameLabel.frame = CGRectMake(30, 140, self.view.frame.size.width, 30);
+    //[self.view addSubview: _nameLabel];
 
     
 }
@@ -132,8 +144,9 @@
 
 #pragma cadastro
 - (IBAction)botaoCadastro:(id)sender {
-//    CadastroVC *cad = CadastroVC.new;
-//    [self presentViewController:cad animated:YES completion:nil];
+    UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+    CadastroVC* cad = [Board instantiateViewControllerWithIdentifier:@"Cadastro"];
+    [self presentViewController:cad animated:YES completion:nil];
 }
 - (IBAction)botaoLogin:(id)sender {
     [self Login];
@@ -148,28 +161,50 @@
     [self.user shake:10 withDelta:10 andSpeed:0.05 shakeDirection:ShakeDirectionHorizontal];
 }
 
+-(void)logarDoFace{
+    _image = nil;
+    //pega a imagem de perfil do face
+    for (NSObject *obj in [self.profilePictureView subviews]) {
+        if ([obj isMemberOfClass:[UIImageView class]]) {
+            UIImageView *objImg = (UIImageView *)obj;
+            _image = objImg.image;
+            break;
+        }
+    }
+    //teste pra ver se eh a imagem certa
+//    UIImageView *imgv = [[UIImageView alloc] initWithImage:_image];
+//    imgv.center = self.view.center;
+//    [self.view addSubview: imgv];
+    
+    if ([CadastroVC cadastraID:[self facebookUserID]
+                      password:[self facebookUserID]
+                          nick:self.nameLabel.text
+                         image:_image]) {
+        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+        TabGeralVC* tab = [Board instantiateViewControllerWithIdentifier:@"TabGeral"];
+        [self presentViewController:tab animated:YES completion:nil];
+    }
+}
 
-// This method will be called when the user information has been fetched
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
-    
     self.profilePictureView.profileID = user.id;
-//    self.nameLabel.text = user.name;
+    self.nameLabel.text = user.name;
     [self setFacebookUserID: user.id];
     
-    
+    [self performSelector:@selector(logarDoFace) withObject:nil afterDelay:0.3]; //com delay pq se nao vai pegar a imagem errada
 }
 
 // Logged-in from facebook user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-//    self.statusLabel.text = @"You're logged in as";
+    self.statusLabel.text = @"You're logged in as";
 }
 
 // Logged-out from facebook user experience
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
     self.profilePictureView.profileID = nil;
-//    self.nameLabel.text = @"";
-//    self.statusLabel.text= @"You're not logged in!";
+    self.nameLabel.text = @"";
+    self.statusLabel.text= @"You're not logged in!";
 }
 
 // Handle possible errors that can occur during facebook login
