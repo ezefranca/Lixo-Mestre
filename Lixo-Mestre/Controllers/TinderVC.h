@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
+#import "DraggableView.h"
+#import "webService.h"
 
-@interface TinderVC : UIViewController
+@interface TinderVC : UIViewController<DraggableViewDelegate>
 - (IBAction)botaoMenu:(id)sender;
+
+//methods called in DraggableView
+-(void)cardSwipedLeft:(UIView *)card;
+-(void)cardSwipedRight:(UIView *)card;
+
+@property (retain,nonatomic)NSArray* allCards;
+- (IBAction)botaoVoltar:(id)sender;
 
 @end
