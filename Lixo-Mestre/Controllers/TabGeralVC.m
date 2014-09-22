@@ -29,8 +29,8 @@
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
     _menuViewController = [storyBoard instantiateViewControllerWithIdentifier:@"Menu"];
     
-    [self addChildViewController:_menuViewController];
-    [_menuViewController didMoveToParentViewController:self];
+//    [self addChildViewController:_menuViewController];
+//    [_menuViewController didMoveToParentViewController:self];
     //_menuViewController.view.frame = self.view.bounds;
     //[self.view addSubview:_menuViewController.view];
 }
