@@ -9,30 +9,27 @@
 #import "MenuViewController.h"
 #import "MenuTableViewCell.h"
 
+
 @interface MenuViewController ()
 
 @end
 
-@implementation MenuViewController
-{
+@implementation MenuViewController{
     NSArray *itemsMenu;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     itemsMenu = [NSArray arrayWithObjects:@"Perfil",@"Recompensas", @"Total Reciclado", @"Estatistica", @"Configuracao", nil];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
     
     MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -54,9 +51,34 @@
     return 5;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"Clicou em %ld", (long)indexPath.row);
+    
+    UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+
+    
+    switch (indexPath.row) {
+        case 0:{
+            LoginVC* l = [Board instantiateViewControllerWithIdentifier:@"Login"];
+            [self presentViewController:l animated:YES completion:nil];
+            
+            break;
+        }
+        case 1:{
+            break;
+        }
+        case 2:{
+            break;
+        }
+        case 3:{
+            break;
+        }
+        default:{
+            break;
+        }
+    }
+    
+    
 }
 
 @end

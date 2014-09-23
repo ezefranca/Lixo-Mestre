@@ -36,11 +36,16 @@
 @property UILabel *nameLabel;
 @property UILabel *statusLabel;
 
+@property BOOL logado;
 
 - (IBAction)salvaSenha:(id)sender;
 
 
 - (IBAction)botaoLogin:(id)sender;
 - (IBAction)botaoCadastro:(id)sender;
+- (IBAction)botaoVoltar:(id)sender;
+
+
+
 
 @end

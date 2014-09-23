@@ -26,6 +26,7 @@
 
 
 @property int tipo;
+@property BOOL logado;
 @property BOOL conectado;
 @property (weak, nonatomic) IBOutlet UIButton *botaoLixo;
 @property (weak, nonatomic) IBOutlet UIButton *botaoConectar;

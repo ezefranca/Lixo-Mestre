@@ -143,6 +143,7 @@
     return TRUE;
 }
 
+
 #pragma cadastro
 - (IBAction)botaoCadastro:(id)sender {
     UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
@@ -151,6 +152,10 @@
 }
 - (IBAction)botaoLogin:(id)sender {
     [self Login];
+}
+
+- (IBAction)botaoVoltar:(id)sender{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -181,9 +186,14 @@
                       password:[self facebookUserID]
                           nick:self.nameLabel.text
                          image:_image]) {
-        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
-        TabGeralVC* tab = [Board instantiateViewControllerWithIdentifier:@"TabGeral"];
-        [self presentViewController:tab animated:YES completion:nil];
+        self.logado = TRUE;
+        [preferencias setBool:self.logado forKey:@"Logado"];
+        
+        [self performSelector:@selector(botaoVoltar:) withObject:nil];
+        
+//        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+//        TabGeralVC* tab = [Board instantiateViewControllerWithIdentifier:@"TabGeral"];
+//        [self presentViewController:tab animated:YES completion:nil];
     }
 }
 
@@ -206,6 +216,8 @@
     self.profilePictureView.profileID = nil;
     self.nameLabel.text = @"";
     self.statusLabel.text= @"You're not logged in!";
+    self.logado = FALSE;
+    [preferencias setBool:self.logado forKey:@"Logado"];
 }
 
 // Handle possible errors that can occur during facebook login
