@@ -54,13 +54,9 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"Clicou em %ld", (long)indexPath.row);
     
-    UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
-
-    
     switch (indexPath.row) {
         case 0:{
-            LoginVC* l = [Board instantiateViewControllerWithIdentifier:@"Login"];
-            [self presentViewController:l animated:YES completion:nil];
+            [self dismissViewControllerAnimated:YES completion:nil];
             
             break;
         }

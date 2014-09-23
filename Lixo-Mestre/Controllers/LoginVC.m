@@ -126,11 +126,9 @@
         }
         
 //        //tudo certo, vai pro resto do app
-//        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
-//        TabGeralVC* tab = [Board instantiateViewControllerWithIdentifier:@"TabGeral"];
-//        [self presentViewController:tab animated:YES completion:nil];
-        [self dismissViewControllerAnimated:YES completion:nil];
-        
+        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+        MainContainerViewController* main = [Board instantiateViewControllerWithIdentifier:@"MainContainer"];
+        [self presentViewController:main animated:YES completion:nil];
         
     }
     else{
@@ -189,10 +187,6 @@
                               nick:self.nameLabel.text
                              image:_image];
     if ( x == 2  || x == 1) {
-        self.logado = TRUE;
-        [preferencias setBool:self.logado forKey:@"Logado"];
-        [preferencias synchronize];
-        
         self.user.text = self.facebookUserID;
         self.pass.text = self.facebookUserID;
         
@@ -202,9 +196,6 @@
 //        [self presentViewController:tab animated:YES completion:nil];
     }
     else{
-        self.logado = false;
-        [preferencias setBool:self.logado forKey:@"Logado"];
-        [preferencias synchronize];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login com facebook" message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         alert.alertViewStyle = UIAlertViewStyleDefault;
         [alert show];
@@ -232,8 +223,6 @@
     self.profilePictureView.profileID = nil;
     self.nameLabel.text = @"";
     self.statusLabel.text= @"You're not logged in!";
-    self.logado = FALSE;
-    [preferencias setBool:self.logado forKey:@"Logado"];
 }
 
 // Handle possible errors that can occur during facebook login

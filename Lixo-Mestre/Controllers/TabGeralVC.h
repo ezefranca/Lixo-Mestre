@@ -7,11 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "MenuViewController.h"
 
+@interface TabGeralVC : UITabBarController{
+    
+}
 
-@interface TabGeralVC : UITabBarController
-
-//@property MenuViewController * menuViewController;
 
 @end

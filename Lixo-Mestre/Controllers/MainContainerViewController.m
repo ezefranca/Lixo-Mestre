@@ -10,9 +10,8 @@
 
 #import "MainContainerViewController.h"
 #import "MenuViewController.h"
-#import "BluetoothVC.h"
+//#import "BluetoothVC.h"
 #import "TabGeralVC.h"
-#import "LoginVC.h"
 #import "AppDelegate.h"
 
 // how far to slide right to show the menu
@@ -22,7 +21,6 @@
     NSUserDefaults *preferencias;
     MenuViewController *_menuViewController;
     TabGeralVC *_tabGeralViewController;
-    LoginVC *_loginViewController;
     UIPanGestureRecognizer *_panGestureRecognizer;  // for pulling the menu open or closed
     BOOL _menuShowing;
     CGRect _frontViewClosedFrame;   // used for sliding it
@@ -51,12 +49,6 @@
     [self.view addSubview:_tabGeralViewController.view];
     [_tabGeralViewController didMoveToParentViewController:self];
     
-//    _loginViewController = [storyBoard instantiateViewControllerWithIdentifier:@"Login"];
-//    _loginViewController.view.frame = self.view.bounds;
-//    _frontViewClosedFrame = _loginViewController.view.frame;
-//    [self addChildViewController:_loginViewController];
-//    [self.view addSubview:_loginViewController.view];
-//    [_loginViewController didMoveToParentViewController:self];
     
     _panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanGestures:)];
     _panGestureRecognizer.minimumNumberOfTouches = 1;   // one finger only

@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LoginVC.h"
 
 @interface MenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 

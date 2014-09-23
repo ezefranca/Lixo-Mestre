@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="SCP-b0-RWz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gwc-JE-nW5">
     <dependencies>
         <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -123,16 +123,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eUi-mg-fdU">
-                                <rect key="frame" x="112" y="246" width="96" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cadastro">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botaoCadastro:" destination="gwc-JE-nW5" eventType="touchUpInside" id="SFY-gQ-QEy"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zxy-JD-x3K">
                                 <rect key="frame" x="137" y="208" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -143,14 +133,14 @@
                                     <action selector="botaoLogin:" destination="gwc-JE-nW5" eventType="touchUpInside" id="jnJ-4X-XnD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Eiu-cA-uf5">
-                                <rect key="frame" x="0.0" y="441" width="320" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eUi-mg-fdU">
+                                <rect key="frame" x="112" y="246" width="96" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Voltar">
+                                <state key="normal" title="Cadastro">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="botaoVoltar:" destination="gwc-JE-nW5" eventType="touchUpInside" id="YXd-mP-e7Q"/>
+                                    <action selector="botaoCadastro:" destination="gwc-JE-nW5" eventType="touchUpInside" id="SFY-gQ-QEy"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -158,16 +148,13 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="buttonCadastro" destination="eUi-mg-fdU" id="x9y-0M-11M"/>
-                        <outlet property="buttonLogar" destination="Zxy-JD-x3K" id="oSE-ix-A9w"/>
-                        <outlet property="buttonVoltar" destination="Eiu-cA-uf5" id="UHz-yE-1zl"/>
                         <outlet property="pass" destination="xPM-zM-QoD" id="t2i-nH-n2M"/>
                         <outlet property="user" destination="rbX-uX-aCp" id="FF8-Nl-tsY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxL-l3-RhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-720" y="-1261"/>
+            <point key="canvasLocation" x="-656" y="-445"/>
         </scene>
         <!--BluetoothVC-->
         <scene sceneID="hfp-sI-Pwn">
@@ -245,7 +232,7 @@
             <objects>
                 <viewController storyboardIdentifier="Cadastro" id="hBa-O6-hN1" customClass="CadastroVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u7E-Bf-c04">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" minimumFontSize="17" id="om1-js-nSG">
@@ -289,6 +276,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="cancelar" destination="nVS-6F-U4v" id="RPI-vR-qou"/>
                         <outlet property="labelNome" destination="om1-js-nSG" id="zUX-hL-HpM"/>
@@ -298,33 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yom-bX-1pS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-233" y="-1217"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Hie-mc-MTd">
-            <objects>
-                <viewController id="SCP-b0-RWz" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="314-Cg-dSB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DOd-8g-s4y">
-                                <rect key="frame" x="137" y="381" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="5Zu-ED-0Wm" kind="modal" id="uG6-uW-V3y"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="t8M-ji-z9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-300" y="-471"/>
+            <point key="canvasLocation" x="-477" y="-1167"/>
         </scene>
         <!--Tab GeralVC-->
         <scene sceneID="71Z-LI-VIB">
@@ -597,6 +559,7 @@
                     <tabBarItem key="tabBarItem" title="" image="tabbar-06.png" id="ljq-cV-hpX"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="labelPapel" destination="u61-af-Ptv" id="qb2-2U-xKm"/>
                         <outlet property="tela1" destination="xGn-Yb-02g" id="VM7-PV-Xcz"/>
                         <outlet property="tela3" destination="6nv-Mc-fqQ" id="Ejc-0R-roB"/>
                     </connections>

@@ -8,14 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
-#import "LoginVC.h"
-#import "webService.h"
-
 #import "UITextField+Shake.h"
 #import "SVProgressHUD.h"
-#import "TabGeralVC.h"
+#import "MainContainerViewController.h"
 #import "CadastroVC.h"
-#import "TinderVC.h"
+#import "webService.h"
 #import "M13Checkbox.h"
 #import <FacebookSDK/FacebookSDK.h>
 
@@ -36,11 +33,6 @@
 @property UILabel *nameLabel;
 @property UILabel *statusLabel;
 
-@property (weak, nonatomic) IBOutlet UIButton *buttonLogar;
-@property (weak, nonatomic) IBOutlet UIButton *buttonCadastro;
-@property (weak, nonatomic) IBOutlet UIButton *buttonVoltar;
-
-@property BOOL logado;
 
 - (IBAction)salvaSenha:(id)sender;
 

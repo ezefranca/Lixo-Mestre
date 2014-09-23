@@ -633,12 +633,12 @@
 		F76A117B19C8ACF700843A9D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F76A118019C8ACF700843A9D /* MainContainerViewController.h */,
-				F76A118119C8ACF700843A9D /* MainContainerViewController.m */,
 				F76A117E19C8ACF700843A9D /* LoginVC.h */,
 				F76A117F19C8ACF700843A9D /* LoginVC.m */,
 				F63A7F3219CB55220076D574 /* CadastroVC.h */,
 				F63A7F3319CB55220076D574 /* CadastroVC.m */,
+				F76A118019C8ACF700843A9D /* MainContainerViewController.h */,
+				F76A118119C8ACF700843A9D /* MainContainerViewController.m */,
 				F76A118419C8ACF700843A9D /* MenuViewController.h */,
 				F76A118519C8ACF700843A9D /* MenuViewController.m */,
 				F76A118819C8ACF700843A9D /* TabGeralVC.h */,

@@ -23,7 +23,6 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    self.logado = [preferencias boolForKey:@"Logado"];
     self.conectado = FALSE;
     self.botaoLixo.hidden = TRUE;
     self.botaoConectar.hidden = FALSE;
@@ -90,29 +89,23 @@
     [[CNBluetoothCentral sharedBluetoothCentral] setDelegate:nil];
     [imagemConectar setImage:[UIImage imageNamed:@"bixos papoes-01.png"]];
 }
+
 -(void)viewDidAppear:(BOOL)animated{
     [SVProgressHUD dismiss];
 }
 
 - (IBAction)botaoConectar:(id)sender {
    // [self.statusLbl.text isEqualToString:@"Conectando..."];
-    if ([self logado]) {
-        [[CNBluetoothCentral sharedBluetoothCentral] startCentral];
-        [SVProgressHUD showWithStatus:@"Conectando... aguarde"];
-        
-    }
-    else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Você precisa estar logado para conectar-se." message:@"Vá ao perfil no menu na lateral e conecte-se!" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        alert.alertViewStyle = UIAlertViewStyleDefault;
-        [alert show];
-    }
-
+    [[CNBluetoothCentral sharedBluetoothCentral] startCentral];
+    [SVProgressHUD showWithStatus:@"Conectando... aguarde"];
+    
 }
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [SVProgressHUD dismiss];
 }

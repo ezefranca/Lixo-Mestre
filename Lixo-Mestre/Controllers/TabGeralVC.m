@@ -7,7 +7,6 @@
 //
 
 #import "TabGeralVC.h"
-#import "MenuViewController.h"
 
 @interface TabGeralVC ()
 
@@ -25,14 +24,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-//    UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
-//    _menuViewController = [storyBoard instantiateViewControllerWithIdentifier:@"Menu"];
     
-//    [self addChildViewController:_menuViewController];
-//    [_menuViewController didMoveToParentViewController:self];
-    //_menuViewController.view.frame = self.view.bounds;
-    //[self.view addSubview:_menuViewController.view];
 }
 
 - (void)didReceiveMemoryWarning{
