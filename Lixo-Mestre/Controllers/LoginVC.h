@@ -36,6 +36,10 @@
 @property UILabel *nameLabel;
 @property UILabel *statusLabel;
 
+@property (weak, nonatomic) IBOutlet UIButton *buttonLogar;
+@property (weak, nonatomic) IBOutlet UIButton *buttonCadastro;
+@property (weak, nonatomic) IBOutlet UIButton *buttonVoltar;
+
 @property BOOL logado;
 
 - (IBAction)salvaSenha:(id)sender;

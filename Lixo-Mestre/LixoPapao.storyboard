@@ -121,7 +121,7 @@
                                 <rect key="frame" x="20" y="162" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eUi-mg-fdU">
                                 <rect key="frame" x="112" y="246" width="96" height="30"/>
@@ -158,6 +158,9 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="buttonCadastro" destination="eUi-mg-fdU" id="x9y-0M-11M"/>
+                        <outlet property="buttonLogar" destination="Zxy-JD-x3K" id="oSE-ix-A9w"/>
+                        <outlet property="buttonVoltar" destination="Eiu-cA-uf5" id="UHz-yE-1zl"/>
                         <outlet property="pass" destination="xPM-zM-QoD" id="t2i-nH-n2M"/>
                         <outlet property="user" destination="rbX-uX-aCp" id="FF8-Nl-tsY"/>
                     </connections>

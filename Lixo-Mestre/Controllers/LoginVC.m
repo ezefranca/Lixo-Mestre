@@ -182,18 +182,33 @@
 //    imgv.center = self.view.center;
 //    [self.view addSubview: imgv];
     
-    if ([CadastroVC cadastraID:[self facebookUserID]
-                      password:[self facebookUserID]
-                          nick:self.nameLabel.text
-                         image:_image]) {
+//    [webService uploadImage:[UIImage imageNamed:@"teste.png"] :@"testeweb"];
+    
+    int x = [CadastroVC cadastraID:[self facebookUserID]
+                          password:[self facebookUserID]
+                              nick:self.nameLabel.text
+                             image:_image];
+    if ( x == 2  || x == 1) {
         self.logado = TRUE;
         [preferencias setBool:self.logado forKey:@"Logado"];
+        [preferencias synchronize];
         
-        [self performSelector:@selector(botaoVoltar:) withObject:nil];
+        self.user.text = self.facebookUserID;
+        self.pass.text = self.facebookUserID;
         
+        [self Login];
 //        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
 //        TabGeralVC* tab = [Board instantiateViewControllerWithIdentifier:@"TabGeral"];
 //        [self presentViewController:tab animated:YES completion:nil];
+    }
+    else{
+        self.logado = false;
+        [preferencias setBool:self.logado forKey:@"Logado"];
+        [preferencias synchronize];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login com facebook" message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        alert.alertViewStyle = UIAlertViewStyleDefault;
+        [alert show];
+        
     }
 }
 
@@ -204,6 +219,7 @@
     [self setFacebookUserID: user.id];
     
     [self performSelector:@selector(logarDoFace) withObject:nil afterDelay:0.3]; //com delay pq se nao vai pegar a imagem errada
+  
 }
 
 // Logged-in from facebook user experience

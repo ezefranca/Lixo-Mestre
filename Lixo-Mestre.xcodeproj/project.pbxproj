@@ -48,6 +48,7 @@
 		F69E386819D09A4300B64629 /* vidro.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F69E385919D09A4300B64629 /* vidro.jpg */; };
 		F69E386919D09A4300B64629 /* JogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F69E385B19D09A4300B64629 /* JogoViewController.m */; };
 		F69E386A19D09A4300B64629 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F69E385E19D09A4300B64629 /* MyScene.m */; };
+		F69E386E19D1F86200B64629 /* teste.png in Resources */ = {isa = PBXBuildFile; fileRef = F69E386D19D1F86200B64629 /* teste.png */; };
 		F76A114C19C8ACB800843A9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114B19C8ACB800843A9D /* Foundation.framework */; };
 		F76A114E19C8ACB800843A9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114D19C8ACB800843A9D /* CoreGraphics.framework */; };
 		F76A115019C8ACB800843A9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114F19C8ACB800843A9D /* UIKit.framework */; };
@@ -241,6 +242,7 @@
 		F69E385C19D09A4300B64629 /* MascarasColisao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MascarasColisao.h; sourceTree = "<group>"; };
 		F69E385D19D09A4300B64629 /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
 		F69E385E19D09A4300B64629 /* MyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		F69E386D19D1F86200B64629 /* teste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teste.png; sourceTree = "<group>"; };
 		F76A114819C8ACB800843A9D /* Lixo-Mestre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lixo-Mestre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76A114B19C8ACB800843A9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F76A114D19C8ACB800843A9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -656,6 +658,7 @@
 		F76A118C19C8ACF700843A9D /* Recursos */ = {
 			isa = PBXGroup;
 			children = (
+				F69E386D19D1F86200B64629 /* teste.png */,
 				F76A118D19C8ACF700843A9D /* Images */,
 			);
 			path = Recursos;
@@ -1057,6 +1060,7 @@
 				F69E386519D09A4300B64629 /* metal.jpg in Resources */,
 				F76A122A19C8ACF700843A9D /* recycle_sign-128.png in Resources */,
 				F76A122319C8ACF700843A9D /* redes-05.png in Resources */,
+				F69E386E19D1F86200B64629 /* teste.png in Resources */,
 				F76A121C19C8ACF700843A9D /* botao-estatistica.png in Resources */,
 				F69E386319D09A4300B64629 /* lixeira plastico.png in Resources */,
 				F76A123E19C8ACF700843A9D /* tabbar-05.png in Resources */,
