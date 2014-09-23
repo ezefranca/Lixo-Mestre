@@ -135,13 +135,20 @@
 }
 
 - (IBAction)botaoDislike:(id)sender {
+    
+    
+    
     [self performSelector:@selector(cardSwipedLeft:)
                withObject: [[self.view subviews] lastObject]];
 }
 
 - (IBAction)botaoLike:(id)sender {
+    
+    
+    /*
     [self performSelector:@selector(cardSwipedRight:)
                withObject: [[self.view subviews]  lastObject]];
+     */
 }
 
 -(void)updateTinder : (NSArray*)parans{
