@@ -28,11 +28,11 @@
     
     preferencias = [NSUserDefaults standardUserDefaults];
     
-    [self setQteMetal: [preferencias integerForKey:@"qteMetal"]];
-    [self setQtePapel: [preferencias integerForKey:@"qtePapel"]];
-    [self setQteVidro: [preferencias integerForKey:@"qteVidro"]];
-    [self setQtePlastico: [preferencias integerForKey:@"qtePlastico"]];
-    [self setMaiorPontuacao: [preferencias integerForKey:@"maiorPontuacao"] ];
+    [self setQteMetal: (int)[preferencias integerForKey:@"qteMetal"]];
+    [self setQtePapel: (int)[preferencias integerForKey:@"qtePapel"]];
+    [self setQteVidro: (int)[preferencias integerForKey:@"qteVidro"]];
+    [self setQtePlastico: (int)[preferencias integerForKey:@"qtePlastico"]];
+    [self setMaiorPontuacao: (int)[preferencias integerForKey:@"maiorPontuacao"] ];
     
     CGSize tamanho = self.view.frame.size;
     [self setBotaoDerp: [[UIButton alloc] initWithFrame:CGRectMake(tamanho.width/2 -50,tamanho.height/2 -25, 100, 50)]];
@@ -59,12 +59,19 @@
     [preferencias setInteger:[self qteVidro] forKey:@"qteVidro"];
     [preferencias setInteger:[self qtePlastico] forKey:@"qtePlastico"];
     [preferencias setInteger:[self maiorPontuacao] forKey:@"maiorPontuacao"];
+    
     if ([preferencias synchronize]) {
-        NSString* qtemetal = [NSString stringWithFormat:@"%d", [preferencias integerForKey:@"qteMetal"]];
-        NSString *qtepapel = [NSString stringWithFormat:@"%d", [preferencias integerForKey:@"qtePapel"]];
-        NSString *qtevidro = [NSString stringWithFormat:@"%d", [preferencias integerForKey:@"qteVidro"]];
-        NSString *qteplastico = [NSString stringWithFormat:@"%d", [preferencias integerForKey:@"qtePlastico"]];
-        NSString *pontos = [NSString stringWithFormat:@"%d", [preferencias integerForKey:@"maiorPontuacao"]];
+        NSString* qtemetal = [NSString stringWithFormat:@"%d",
+                              (int)[preferencias integerForKey:@"qteMetal"]];
+        NSString *qtepapel = [NSString stringWithFormat:@"%d",
+                              (int)[preferencias integerForKey:@"qtePapel"]];
+        NSString *qtevidro = [NSString stringWithFormat:@"%d",
+                              (int)[preferencias integerForKey:@"qteVidro"]];
+        NSString *qteplastico = [NSString stringWithFormat:@"%d",
+                                 (int)[preferencias integerForKey:@"qtePlastico"]];
+        NSString *pontos = [NSString stringWithFormat:@"%d",
+                            (int)[preferencias integerForKey:@"maiorPontuacao"]];
+        
         [webService salvaPontosJoguinho:[preferencias objectForKey:@"userName"] Papel:qtepapel Vidro:qtevidro Plastico:qteplastico Metal:qtemetal Pontuacao:pontos];
     }
 }

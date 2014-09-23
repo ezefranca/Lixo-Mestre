@@ -19,6 +19,7 @@
 #define kSlideRightPoints 250.0
 
 @interface MainContainerViewController (){
+    NSUserDefaults *preferencias;
     MenuViewController *_menuViewController;
     TabGeralVC *_tabGeralViewController;
     LoginVC *_loginViewController;
@@ -68,7 +69,6 @@
     _tabGeralViewController.view.layer.shadowRadius = 2;
     _tabGeralViewController.view.layer.shadowOpacity = 0.5;
 
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showMenuView:) name:kShowMenuNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideMenuView:) name:kHideMenuNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showHideMenuView:) name:kShowHideMenuNotification object:nil];

@@ -14,10 +14,10 @@
     self = [super init];
     if (self) {
         NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
-        self.metal = [preferencias integerForKey:@"qteMetal"];
-        self.papel = [preferencias integerForKey:@"qtePapel"];
-        self.vidro = [preferencias integerForKey:@"qteVidro"];
-        self.plastico = [preferencias integerForKey:@"qtePlastico"];
+        self.metal = (int)[preferencias integerForKey:@"qteMetal"];
+        self.papel = (int)[preferencias integerForKey:@"qtePapel"];
+        self.vidro = (int)[preferencias integerForKey:@"qteVidro"];
+        self.plastico = (int)[preferencias integerForKey:@"qtePlastico"];
         
         self.scores = [[NSMutableArray alloc] initWithObjects:[NSString stringWithFormat:@"metal: %d", self.metal],
                                                               [NSString stringWithFormat:@"papel: %d", self.papel],

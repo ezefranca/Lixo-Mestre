@@ -56,7 +56,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Clicou em %d", indexPath.row);
+    NSLog(@"Clicou em %ld", (long)indexPath.row);
 }
 
 @end

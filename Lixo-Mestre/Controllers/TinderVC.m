@@ -46,7 +46,7 @@
             NSDictionary *new = [a objectAtIndex:i];
 
             NSInteger coco = [[new objectForKey:@"id"] integerValue] ;
-            NSLog(@"%d", coco);
+            NSLog(@"%ld", (long)coco);
 
             NSString *s = @"http://172.246.16.27/fotos/";
 

@@ -392,7 +392,7 @@ const NSTimeInterval YLProgressBarProgressTime         = 0.25f;        // s
         CGContextClip(context);
         
         CFArrayRef colorRefs = (__bridge CFArrayRef)_colors;
-        int colorCount       = [_colors count];
+        int colorCount       = (int)[_colors count];
         
         float delta          = 1.0f / [_colors count];
         float semi_delta     = delta / 2.0f;

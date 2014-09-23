@@ -14,7 +14,7 @@
     self = [super init];
     if (self) {
         NSUserDefaults * preferencias = [NSUserDefaults standardUserDefaults];
-        self.pontuacao = [preferencias integerForKey:@"maiorPontuacao"];
+        self.pontuacao = (int)[preferencias integerForKey:@"maiorPontuacao"];
         
         self.scores = [[NSMutableArray alloc] initWithObjects: [NSString stringWithFormat:@"Maior pontuacao: %d", self.pontuacao], nil];
     }

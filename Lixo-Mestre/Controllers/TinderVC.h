@@ -19,6 +19,5 @@
 -(void)cardSwipedRight:(UIView *)card;
 
 @property (retain,nonatomic)NSArray* allCards;
-- (IBAction)botaoVoltar:(id)sender;
 
 @end

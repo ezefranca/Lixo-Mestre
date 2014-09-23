@@ -125,10 +125,11 @@
             [alert show];
         }
         
-        //tudo certo, vai pro resto do app
-        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
-        TabGeralVC* tab = [Board instantiateViewControllerWithIdentifier:@"TabGeral"];
-        [self presentViewController:tab animated:YES completion:nil];
+//        //tudo certo, vai pro resto do app
+//        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+//        TabGeralVC* tab = [Board instantiateViewControllerWithIdentifier:@"TabGeral"];
+//        [self presentViewController:tab animated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
         
         
     }

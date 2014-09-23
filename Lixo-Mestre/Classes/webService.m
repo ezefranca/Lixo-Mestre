@@ -63,7 +63,7 @@
          ret = s;
          }
          */
-        int x = [content integerValue];
+        int x = (int)[content integerValue];
         
         if (x){
         NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
@@ -99,7 +99,7 @@
         
         NSString *content = [NSString stringWithUTF8String:[returnData bytes]];
         
-         x = [content integerValue];
+         x = (int)[content integerValue];
 
         //se precisar de um json maneiro
         
@@ -274,7 +274,7 @@
         
         NSString *content = [NSString stringWithUTF8String:[returnData bytes]];
 
-        int x = [content integerValue];
+        int x = (int)[content integerValue];
         if (x){
             NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
             if (preferencias) {
