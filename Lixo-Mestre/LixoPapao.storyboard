@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="5Zu-ED-0Wm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="SCP-b0-RWz">
     <dependencies>
         <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
@@ -167,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxL-l3-RhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-68" y="-651"/>
+            <point key="canvasLocation" x="-720" y="-1261"/>
         </scene>
         <!--BluetoothVC-->
         <scene sceneID="hfp-sI-Pwn">
@@ -298,12 +298,39 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yom-bX-1pS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="159" y="-1289"/>
+            <point key="canvasLocation" x="-233" y="-1217"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Hie-mc-MTd">
+            <objects>
+                <viewController id="SCP-b0-RWz" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="314-Cg-dSB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DOd-8g-s4y">
+                                <rect key="frame" x="137" y="381" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5Zu-ED-0Wm" kind="modal" id="uG6-uW-V3y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t8M-ji-z9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-300" y="-471"/>
         </scene>
         <!--Tab GeralVC-->
         <scene sceneID="71Z-LI-VIB">
             <objects>
                 <tabBarController storyboardIdentifier="TabGeral" definesPresentationContext="YES" id="5WB-DX-p3D" customClass="TabGeralVC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Dkb-5u-FAF"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" backgroundImage="fundo.jpg" id="t4M-Re-BWe">
@@ -426,7 +453,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="6nv-Mc-fqQ" userLabel="View -3">
-                                <rect key="frame" x="8.5" y="148" width="300" height="370"/>
+                                <rect key="frame" x="9" y="148" width="300" height="370"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WEH-sS-F2Q" userLabel="jogo1">
@@ -503,7 +530,7 @@
                                 <color key="tintColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <view appearanceType="aqua" contentMode="scaleToFill" id="xGn-Yb-02g" userLabel="View -1">
-                                <rect key="frame" x="8.5" y="148" width="300" height="370"/>
+                                <rect key="frame" x="9" y="148" width="300" height="370"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label appearanceType="aqua" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u61-af-Ptv">
