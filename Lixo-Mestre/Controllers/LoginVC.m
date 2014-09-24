@@ -25,6 +25,8 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
+
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:SVProgressHUDWillAppearNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:SVProgressHUDDidAppearNotification object:nil];
@@ -43,14 +45,22 @@
     [self.view addSubview:tint];
     
     //Customizacao dos TextFields
-    [@[_user, _pass] enumerateObjectsUsingBlock:^(UITextField* obj, NSUInteger idx, BOOL *stop) {
-		[obj.layer setBorderWidth:2];
-		[obj.layer setBorderColor:[UIColor colorWithRed:41.0/255.0 green:128.0/255.0 blue:185.0/255.0 alpha:1].CGColor];
-		[obj setDelegate:self];
-	}];
+//    [@[_user, _pass] enumerateObjectsUsingBlock:^(UITextField* obj, NSUInteger idx, BOOL *stop) {
+//		[obj.layer setBorderWidth:2];
+//		[obj.layer setBorderColor:[UIColor colorWithRed:41.0/255.0 green:128.0/255.0 blue:185.0/255.0 alpha:1].CGColor];
+//		[obj setDelegate:self];
+//	}];
+    self.user.font = [UIFont fontWithName:@"Santor" size:17];
+    //[self.user.layer setBorderWidth:0];
+    self.user.delegate = self;
     
+    self.pass.font = [UIFont fontWithName:@"Santor" size:17];
+    //[self.pass .layer setBorderWidth:0];
+    self.pass.delegate = self;
+    
+    //login do facebook
     _loginView = [[FBLoginView alloc] initWithReadPermissions: @[@"public_profile", @"user_friends", @"publish_actions"]];
-    _loginView.frame = CGRectMake(50, 380, 216, 48);
+    _loginView.frame = CGRectMake(20, 405, 280, 53);
     _loginView.delegate = self;
     [self.view addSubview:_loginView];
     
@@ -65,10 +75,6 @@
     _nameLabel = [[UILabel alloc] init];
     _nameLabel.frame = CGRectMake(30, 140, self.view.frame.size.width, 30);
     //[self.view addSubview: _nameLabel];
-    
-    self.user.font = [UIFont fontWithName:@"Santor" size:17];
-    self.pass.font = [UIFont fontWithName:@"Santor" size:17];
-
     
 }
 
@@ -161,8 +167,12 @@
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self.view endEditing:YES]  ;
+    [self.view endEditing:YES] ;
     [SVProgressHUD dismiss];
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [self.view endEditing:YES];
+    return NO;
 }
 
 - (void)shake{
@@ -209,9 +219,9 @@
 
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
-    self.profilePictureView.profileID = user.id;
+    self.profilePictureView.profileID = [user objectID];
     self.nameLabel.text = user.name;
-    [self setFacebookUserID: user.id];
+    [self setFacebookUserID: [user objectID]];
     
     [self performSelector:@selector(logarDoFace) withObject:nil afterDelay:0.3]; //com delay pq se nao vai pegar a imagem errada
   
@@ -227,6 +237,9 @@
     self.profilePictureView.profileID = nil;
     self.nameLabel.text = @"";
     self.statusLabel.text= @"You're not logged in!";
+    
+    self.user.text = @"";
+    self.pass.text = @"";
 }
 
 // Handle possible errors that can occur during facebook login

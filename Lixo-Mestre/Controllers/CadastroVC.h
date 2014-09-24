@@ -9,14 +9,18 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface CadastroVC : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
+@interface CadastroVC : UIViewController <UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
     
 }
+@property (weak, nonatomic) IBOutlet UILabel *titulo;
 
 
 @property (weak, nonatomic) IBOutlet UITextField *labelNome;
 @property (weak, nonatomic) IBOutlet UITextField *labelUser;
 @property (weak, nonatomic) IBOutlet UITextField *labelPass;
+@property (weak, nonatomic) IBOutlet UITextField *labelPass2;
+
+
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 
 @property (weak, nonatomic) IBOutlet UIButton *cancelar;

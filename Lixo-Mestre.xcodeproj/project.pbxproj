@@ -36,6 +36,62 @@
 		F67ED4FA19C8CA2800B266BD /* mapa-melhorcoleta.png in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4F719C8CA2800B266BD /* mapa-melhorcoleta.png */; };
 		F67ED4FB19C8CA2800B266BD /* mapa-melhor$.png in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4F819C8CA2800B266BD /* mapa-melhor$.png */; };
 		F67ED50019C9F84700B266BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F67ED4FF19C9F84700B266BD /* FacebookSDK.framework */; };
+		F69D12A119D3511B00643122 /* perfil.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D125D19D3511A00643122 /* perfil.png */; };
+		F69D12A219D3511B00643122 /* botão.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D125F19D3511A00643122 /* botão.png */; };
+		F69D12A319D3511B00643122 /* Email.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126019D3511A00643122 /* Email.png */; };
+		F69D12A419D3511B00643122 /* voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126119D3511A00643122 /* voltar.png */; };
+		F69D12A519D3511B00643122 /* confirmar.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126319D3511A00643122 /* confirmar.png */; };
+		F69D12A619D3511B00643122 /* editar.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126419D3511A00643122 /* editar.png */; };
+		F69D12A719D3511B00643122 /* amarelo.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126619D3511A00643122 /* amarelo.png */; };
+		F69D12A819D3511B00643122 /* azul.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126719D3511A00643122 /* azul.png */; };
+		F69D12A919D3511B00643122 /* fundo.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126819D3511A00643122 /* fundo.png */; };
+		F69D12AA19D3511B00643122 /* verde.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126919D3511A00643122 /* verde.png */; };
+		F69D12AB19D3511B00643122 /* vermehlo.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126A19D3511A00643122 /* vermehlo.png */; };
+		F69D12AC19D3511B00643122 /* fundo.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126C19D3511A00643122 /* fundo.png */; };
+		F69D12AD19D3511B00643122 /* games.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126D19D3511A00643122 /* games.png */; };
+		F69D12AE19D3511B00643122 /* HOME.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126E19D3511A00643122 /* HOME.png */; };
+		F69D12AF19D3511B00643122 /* Mapa.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126F19D3511A00643122 /* Mapa.png */; };
+		F69D12B019D3511B00643122 /* menuzinho.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127019D3511A00643122 /* menuzinho.png */; };
+		F69D12B119D3511B00643122 /* ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127119D3511A00643122 /* ranking.png */; };
+		F69D12B219D3511B00643122 /* tinder.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127219D3511A00643122 /* tinder.png */; };
+		F69D12B319D3511B00643122 /* tirinha.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127319D3511A00643122 /* tirinha.png */; };
+		F69D12B419D3511B00643122 /* conectar.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127519D3511A00643122 /* conectar.png */; };
+		F69D12B519D3511B00643122 /* lixo papao desconectado.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127619D3511A00643122 /* lixo papao desconectado.png */; };
+		F69D12B619D3511B00643122 /* lixopapao conectado.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127719D3511A00643122 /* lixopapao conectado.png */; };
+		F69D12B719D3511B00643122 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127919D3511A00643122 /* 1.png */; };
+		F69D12B819D3511B00643122 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127A19D3511A00643122 /* 2.png */; };
+		F69D12B919D3511B00643122 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127B19D3511A00643122 /* 3.png */; };
+		F69D12BA19D3511B00643122 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127C19D3511A00643122 /* 4.png */; };
+		F69D12BB19D3511B00643122 /* cadeado.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127E19D3511A00643122 /* cadeado.png */; };
+		F69D12BC19D3511B00643122 /* layout-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127F19D3511A00643122 /* layout-01.png */; };
+		F69D12BD19D3511B00643122 /* layout-02.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128019D3511A00643122 /* layout-02.png */; };
+		F69D12BE19D3511B00643122 /* login com face.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128219D3511A00643122 /* login com face.png */; };
+		F69D12BF19D3511B00643122 /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128319D3511A00643122 /* login.png */; };
+		F69D12C019D3511B00643122 /* senha.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128419D3511A00643122 /* senha.png */; };
+		F69D12C119D3511B00643122 /* Usuario.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128519D3511A00643122 /* Usuario.png */; };
+		F69D12C219D3511B00643122 /* Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128619D3511A00643122 /* Logo.png */; };
+		F69D12C319D3511B00643122 /* 0080b0.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128819D3511A00643122 /* 0080b0.png */; };
+		F69D12C419D3511B00643122 /* conf.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128919D3511A00643122 /* conf.png */; };
+		F69D12C519D3511B00643122 /* estatistica.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128A19D3511A00643122 /* estatistica.png */; };
+		F69D12C619D3511B00643122 /* menuzinho branco.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128B19D3511A00643122 /* menuzinho branco.png */; };
+		F69D12C719D3511B00643122 /* recompensas.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128C19D3511A00643122 /* recompensas.png */; };
+		F69D12C819D3511B00643122 /* amigos.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128E19D3511A00643122 /* amigos.png */; };
+		F69D12C919D3511B00643122 /* b1bbbe.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D128F19D3511A00643122 /* b1bbbe.png */; };
+		F69D12CA19D3511B00643122 /* convidar.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129019D3511A00643122 /* convidar.png */; };
+		F69D12CB19D3511B00643122 /* eaeae9.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129119D3511A00643122 /* eaeae9.png */; };
+		F69D12CC19D3511B00643122 /* editar.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129219D3511A00643122 /* editar.png */; };
+		F69D12CD19D3511B00643122 /* metal.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129319D3511A00643122 /* metal.png */; };
+		F69D12CE19D3511B00643122 /* papel.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129419D3511A00643122 /* papel.png */; };
+		F69D12CF19D3511B00643122 /* plastico.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129519D3511A00643122 /* plastico.png */; };
+		F69D12D019D3511B00643122 /* vidro.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129619D3511A00643122 /* vidro.png */; };
+		F69D12D119D3511B00643122 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129819D3511B00643122 /* 1.png */; };
+		F69D12D219D3511B00643122 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129919D3511B00643122 /* 2.png */; };
+		F69D12D319D3511B00643122 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129A19D3511B00643122 /* 3.png */; };
+		F69D12D419D3511B00643122 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129B19D3511B00643122 /* 4.png */; };
+		F69D12D519D3511B00643122 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129C19D3511B00643122 /* 5.png */; };
+		F69D12D619D3511B00643122 /* setinha.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129D19D3511B00643122 /* setinha.png */; };
+		F69D12D719D3511B00643122 /* photos.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D129F19D3511B00643122 /* photos.png */; };
+		F69D12D819D3511B00643122 /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D12A019D3511B00643122 /* x.png */; };
 		F69E385F19D09A4300B64629 /* CriaNodes.m in Sources */ = {isa = PBXBuildFile; fileRef = F69E384F19D09A4300B64629 /* CriaNodes.m */; };
 		F69E386019D09A4300B64629 /* icone voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = F69E385119D09A4300B64629 /* icone voltar.png */; };
 		F69E386119D09A4300B64629 /* lixeira metal.png in Resources */ = {isa = PBXBuildFile; fileRef = F69E385219D09A4300B64629 /* lixeira metal.png */; };
@@ -227,6 +283,62 @@
 		F67ED4F719C8CA2800B266BD /* mapa-melhorcoleta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-melhorcoleta.png"; sourceTree = "<group>"; };
 		F67ED4F819C8CA2800B266BD /* mapa-melhor$.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mapa-melhor$.png"; sourceTree = "<group>"; };
 		F67ED4FF19C9F84700B266BD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		F69D125D19D3511A00643122 /* perfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perfil.png; sourceTree = "<group>"; };
+		F69D125F19D3511A00643122 /* botão.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "botão.png"; sourceTree = "<group>"; };
+		F69D126019D3511A00643122 /* Email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Email.png; sourceTree = "<group>"; };
+		F69D126119D3511A00643122 /* voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voltar.png; sourceTree = "<group>"; };
+		F69D126319D3511A00643122 /* confirmar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confirmar.png; sourceTree = "<group>"; };
+		F69D126419D3511A00643122 /* editar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editar.png; sourceTree = "<group>"; };
+		F69D126619D3511A00643122 /* amarelo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amarelo.png; sourceTree = "<group>"; };
+		F69D126719D3511A00643122 /* azul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azul.png; sourceTree = "<group>"; };
+		F69D126819D3511A00643122 /* fundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fundo.png; sourceTree = "<group>"; };
+		F69D126919D3511A00643122 /* verde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verde.png; sourceTree = "<group>"; };
+		F69D126A19D3511A00643122 /* vermehlo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vermehlo.png; sourceTree = "<group>"; };
+		F69D126C19D3511A00643122 /* fundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fundo.png; sourceTree = "<group>"; };
+		F69D126D19D3511A00643122 /* games.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = games.png; sourceTree = "<group>"; };
+		F69D126E19D3511A00643122 /* HOME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOME.png; sourceTree = "<group>"; };
+		F69D126F19D3511A00643122 /* Mapa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mapa.png; sourceTree = "<group>"; };
+		F69D127019D3511A00643122 /* menuzinho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuzinho.png; sourceTree = "<group>"; };
+		F69D127119D3511A00643122 /* ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ranking.png; sourceTree = "<group>"; };
+		F69D127219D3511A00643122 /* tinder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tinder.png; sourceTree = "<group>"; };
+		F69D127319D3511A00643122 /* tirinha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tirinha.png; sourceTree = "<group>"; };
+		F69D127519D3511A00643122 /* conectar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conectar.png; sourceTree = "<group>"; };
+		F69D127619D3511A00643122 /* lixo papao desconectado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lixo papao desconectado.png"; sourceTree = "<group>"; };
+		F69D127719D3511A00643122 /* lixopapao conectado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lixopapao conectado.png"; sourceTree = "<group>"; };
+		F69D127919D3511A00643122 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		F69D127A19D3511A00643122 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		F69D127B19D3511A00643122 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		F69D127C19D3511A00643122 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		F69D127E19D3511A00643122 /* cadeado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cadeado.png; sourceTree = "<group>"; };
+		F69D127F19D3511A00643122 /* layout-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "layout-01.png"; sourceTree = "<group>"; };
+		F69D128019D3511A00643122 /* layout-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "layout-02.png"; sourceTree = "<group>"; };
+		F69D128219D3511A00643122 /* login com face.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login com face.png"; sourceTree = "<group>"; };
+		F69D128319D3511A00643122 /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
+		F69D128419D3511A00643122 /* senha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = senha.png; sourceTree = "<group>"; };
+		F69D128519D3511A00643122 /* Usuario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Usuario.png; sourceTree = "<group>"; };
+		F69D128619D3511A00643122 /* Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Logo.png; sourceTree = "<group>"; };
+		F69D128819D3511A00643122 /* 0080b0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0080b0.png; sourceTree = "<group>"; };
+		F69D128919D3511A00643122 /* conf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conf.png; sourceTree = "<group>"; };
+		F69D128A19D3511A00643122 /* estatistica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estatistica.png; sourceTree = "<group>"; };
+		F69D128B19D3511A00643122 /* menuzinho branco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuzinho branco.png"; sourceTree = "<group>"; };
+		F69D128C19D3511A00643122 /* recompensas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recompensas.png; sourceTree = "<group>"; };
+		F69D128E19D3511A00643122 /* amigos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amigos.png; sourceTree = "<group>"; };
+		F69D128F19D3511A00643122 /* b1bbbe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b1bbbe.png; sourceTree = "<group>"; };
+		F69D129019D3511A00643122 /* convidar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = convidar.png; sourceTree = "<group>"; };
+		F69D129119D3511A00643122 /* eaeae9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = eaeae9.png; sourceTree = "<group>"; };
+		F69D129219D3511A00643122 /* editar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editar.png; sourceTree = "<group>"; };
+		F69D129319D3511A00643122 /* metal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metal.png; sourceTree = "<group>"; };
+		F69D129419D3511A00643122 /* papel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = papel.png; sourceTree = "<group>"; };
+		F69D129519D3511A00643122 /* plastico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plastico.png; sourceTree = "<group>"; };
+		F69D129619D3511A00643122 /* vidro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vidro.png; sourceTree = "<group>"; };
+		F69D129819D3511B00643122 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		F69D129919D3511B00643122 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		F69D129A19D3511B00643122 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		F69D129B19D3511B00643122 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		F69D129C19D3511B00643122 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		F69D129D19D3511B00643122 /* setinha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setinha.png; sourceTree = "<group>"; };
+		F69D129F19D3511B00643122 /* photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photos.png; sourceTree = "<group>"; };
+		F69D12A019D3511B00643122 /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
 		F69E384E19D09A4300B64629 /* CriaNodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CriaNodes.h; sourceTree = "<group>"; };
 		F69E384F19D09A4300B64629 /* CriaNodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CriaNodes.m; sourceTree = "<group>"; };
 		F69E385119D09A4300B64629 /* icone voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icone voltar.png"; sourceTree = "<group>"; };
@@ -516,6 +628,173 @@
 			path = "Lixo-Mestre/frameworks";
 			sourceTree = "<group>";
 		};
+		F69D125B19D3511A00643122 /* imagens Lixo Papao 2.0 */ = {
+			isa = PBXGroup;
+			children = (
+				F69D125C19D3511A00643122 /* amigos */,
+				F69D125E19D3511A00643122 /* Cadastro */,
+				F69D126219D3511A00643122 /* EDITAR */,
+				F69D126519D3511A00643122 /* Escolher o lixo */,
+				F69D126B19D3511A00643122 /* Fundo */,
+				F69D127419D3511A00643122 /* Inicio */,
+				F69D127819D3511A00643122 /* Instruções */,
+				F69D127D19D3511A00643122 /* Jogos */,
+				F69D127F19D3511A00643122 /* layout-01.png */,
+				F69D128019D3511A00643122 /* layout-02.png */,
+				F69D128119D3511A00643122 /* Login */,
+				F69D128619D3511A00643122 /* Logo.png */,
+				F69D128719D3511A00643122 /* Menuzinho */,
+				F69D128D19D3511A00643122 /* perfil */,
+				F69D129719D3511B00643122 /* ranking */,
+				F69D129D19D3511B00643122 /* setinha.png */,
+				F69D129E19D3511B00643122 /* tinder */,
+			);
+			path = "imagens Lixo Papao 2.0";
+			sourceTree = "<group>";
+		};
+		F69D125C19D3511A00643122 /* amigos */ = {
+			isa = PBXGroup;
+			children = (
+				F69D125D19D3511A00643122 /* perfil.png */,
+			);
+			path = amigos;
+			sourceTree = "<group>";
+		};
+		F69D125E19D3511A00643122 /* Cadastro */ = {
+			isa = PBXGroup;
+			children = (
+				F69D125F19D3511A00643122 /* botão.png */,
+				F69D126019D3511A00643122 /* Email.png */,
+				F69D126119D3511A00643122 /* voltar.png */,
+			);
+			path = Cadastro;
+			sourceTree = "<group>";
+		};
+		F69D126219D3511A00643122 /* EDITAR */ = {
+			isa = PBXGroup;
+			children = (
+				F69D126319D3511A00643122 /* confirmar.png */,
+				F69D126419D3511A00643122 /* editar.png */,
+			);
+			path = EDITAR;
+			sourceTree = "<group>";
+		};
+		F69D126519D3511A00643122 /* Escolher o lixo */ = {
+			isa = PBXGroup;
+			children = (
+				F69D126619D3511A00643122 /* amarelo.png */,
+				F69D126719D3511A00643122 /* azul.png */,
+				F69D126819D3511A00643122 /* fundo.png */,
+				F69D126919D3511A00643122 /* verde.png */,
+				F69D126A19D3511A00643122 /* vermehlo.png */,
+			);
+			path = "Escolher o lixo";
+			sourceTree = "<group>";
+		};
+		F69D126B19D3511A00643122 /* Fundo */ = {
+			isa = PBXGroup;
+			children = (
+				F69D126C19D3511A00643122 /* fundo.png */,
+				F69D126D19D3511A00643122 /* games.png */,
+				F69D126E19D3511A00643122 /* HOME.png */,
+				F69D126F19D3511A00643122 /* Mapa.png */,
+				F69D127019D3511A00643122 /* menuzinho.png */,
+				F69D127119D3511A00643122 /* ranking.png */,
+				F69D127219D3511A00643122 /* tinder.png */,
+				F69D127319D3511A00643122 /* tirinha.png */,
+			);
+			path = Fundo;
+			sourceTree = "<group>";
+		};
+		F69D127419D3511A00643122 /* Inicio */ = {
+			isa = PBXGroup;
+			children = (
+				F69D127519D3511A00643122 /* conectar.png */,
+				F69D127619D3511A00643122 /* lixo papao desconectado.png */,
+				F69D127719D3511A00643122 /* lixopapao conectado.png */,
+			);
+			path = Inicio;
+			sourceTree = "<group>";
+		};
+		F69D127819D3511A00643122 /* Instruções */ = {
+			isa = PBXGroup;
+			children = (
+				F69D127919D3511A00643122 /* 1.png */,
+				F69D127A19D3511A00643122 /* 2.png */,
+				F69D127B19D3511A00643122 /* 3.png */,
+				F69D127C19D3511A00643122 /* 4.png */,
+			);
+			path = "Instruções";
+			sourceTree = "<group>";
+		};
+		F69D127D19D3511A00643122 /* Jogos */ = {
+			isa = PBXGroup;
+			children = (
+				F69D127E19D3511A00643122 /* cadeado.png */,
+			);
+			path = Jogos;
+			sourceTree = "<group>";
+		};
+		F69D128119D3511A00643122 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				F69D128219D3511A00643122 /* login com face.png */,
+				F69D128319D3511A00643122 /* login.png */,
+				F69D128419D3511A00643122 /* senha.png */,
+				F69D128519D3511A00643122 /* Usuario.png */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F69D128719D3511A00643122 /* Menuzinho */ = {
+			isa = PBXGroup;
+			children = (
+				F69D128819D3511A00643122 /* 0080b0.png */,
+				F69D128919D3511A00643122 /* conf.png */,
+				F69D128A19D3511A00643122 /* estatistica.png */,
+				F69D128B19D3511A00643122 /* menuzinho branco.png */,
+				F69D128C19D3511A00643122 /* recompensas.png */,
+			);
+			path = Menuzinho;
+			sourceTree = "<group>";
+		};
+		F69D128D19D3511A00643122 /* perfil */ = {
+			isa = PBXGroup;
+			children = (
+				F69D128E19D3511A00643122 /* amigos.png */,
+				F69D128F19D3511A00643122 /* b1bbbe.png */,
+				F69D129019D3511A00643122 /* convidar.png */,
+				F69D129119D3511A00643122 /* eaeae9.png */,
+				F69D129219D3511A00643122 /* editar.png */,
+				F69D129319D3511A00643122 /* metal.png */,
+				F69D129419D3511A00643122 /* papel.png */,
+				F69D129519D3511A00643122 /* plastico.png */,
+				F69D129619D3511A00643122 /* vidro.png */,
+			);
+			path = perfil;
+			sourceTree = "<group>";
+		};
+		F69D129719D3511B00643122 /* ranking */ = {
+			isa = PBXGroup;
+			children = (
+				F69D129819D3511B00643122 /* 1.png */,
+				F69D129919D3511B00643122 /* 2.png */,
+				F69D129A19D3511B00643122 /* 3.png */,
+				F69D129B19D3511B00643122 /* 4.png */,
+				F69D129C19D3511B00643122 /* 5.png */,
+			);
+			path = ranking;
+			sourceTree = "<group>";
+		};
+		F69D129E19D3511B00643122 /* tinder */ = {
+			isa = PBXGroup;
+			children = (
+				F69D129F19D3511B00643122 /* photos.png */,
+				F69D12A019D3511B00643122 /* x.png */,
+			);
+			path = tinder;
+			sourceTree = "<group>";
+		};
 		F69E384D19D09A4300B64629 /* Jogo */ = {
 			isa = PBXGroup;
 			children = (
@@ -660,6 +939,7 @@
 		F76A118C19C8ACF700843A9D /* Recursos */ = {
 			isa = PBXGroup;
 			children = (
+				F69D125B19D3511A00643122 /* imagens Lixo Papao 2.0 */,
 				F69E386F19D3388F00B64629 /* santor 1.002.otf */,
 				F69E386D19D1F86200B64629 /* teste.png */,
 				F76A118D19C8ACF700843A9D /* Images */,
@@ -1010,100 +1290,153 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F69D12A319D3511B00643122 /* Email.png in Resources */,
 				F76A123719C8ACF700843A9D /* settings-75.png in Resources */,
 				F67ED4FA19C8CA2800B266BD /* mapa-melhorcoleta.png in Resources */,
+				F69D12D819D3511B00643122 /* x.png in Resources */,
 				F76A124E19C8ACF700843A9D /* tinder-02.png in Resources */,
 				F69E386019D09A4300B64629 /* icone voltar.png in Resources */,
 				F76A123B19C8ACF700843A9D /* tabbar-02.png in Resources */,
 				F76A125019C8ACF700843A9D /* USUARIO-02.png in Resources */,
 				F76A122B19C8ACF700843A9D /* settings-128.png in Resources */,
+				F69D12B119D3511B00643122 /* ranking.png in Resources */,
+				F69D12A119D3511B00643122 /* perfil.png in Resources */,
 				F76A120719C8ACF700843A9D /* conectividade-02.xcf in Resources */,
+				F69D12B919D3511B00643122 /* 3.png in Resources */,
 				F76A122219C8ACF700843A9D /* redes-04.png in Resources */,
 				F76A120A19C8ACF700843A9D /* conectividade-04.png in Resources */,
+				F69D12C119D3511B00643122 /* Usuario.png in Resources */,
 				F76A125219C8ACF700843A9D /* Default-568h@2x.png in Resources */,
 				F76A121119C8ACF700843A9D /* pedro.png in Resources */,
 				F76A120F19C8ACF700843A9D /* joao.png in Resources */,
 				F76A122719C8ACF700843A9D /* exit.png in Resources */,
 				F69E386619D09A4300B64629 /* papel.jpg in Resources */,
+				F69D12CF19D3511B00643122 /* plastico.png in Resources */,
+				F69D12D019D3511B00643122 /* vidro.png in Resources */,
 				F76A124119C8ACF700843A9D /* tabbar-08.png in Resources */,
+				F69D12AF19D3511B00643122 /* Mapa.png in Resources */,
 				F76A124919C8ACF700843A9D /* 6.png in Resources */,
 				F76A124319C8ACF700843A9D /* tabbar-10.png in Resources */,
+				F69D12C519D3511B00643122 /* estatistica.png in Resources */,
+				F69D12BB19D3511B00643122 /* cadeado.png in Resources */,
 				F76A123919C8ACF700843A9D /* fundo.jpg in Resources */,
 				F76A120E19C8ACF700843A9D /* gabriel.png in Resources */,
 				F76A121619C8ACF700843A9D /* ranking-02.png in Resources */,
 				F76A125119C8ACF700843A9D /* USUARIO-03.png in Resources */,
 				F76A120919C8ACF700843A9D /* conectividade-03.xcf in Resources */,
+				F69D12D319D3511B00643122 /* 3.png in Resources */,
+				F69D12BD19D3511B00643122 /* layout-02.png in Resources */,
+				F69D12B719D3511B00643122 /* 1.png in Resources */,
+				F69D12A519D3511B00643122 /* confirmar.png in Resources */,
+				F69D12C319D3511B00643122 /* 0080b0.png in Resources */,
 				F76A122F19C8ACF700843A9D /* settings-256.png in Resources */,
+				F69D12C719D3511B00643122 /* recompensas.png in Resources */,
 				F76A122619C8ACF700843A9D /* redes-08.png in Resources */,
+				F69D12B219D3511B00643122 /* tinder.png in Resources */,
+				F69D12C619D3511B00643122 /* menuzinho branco.png in Resources */,
 				F76A120D19C8ACF700843A9D /* ezequiel.png in Resources */,
+				F69D12AB19D3511B00643122 /* vermehlo.png in Resources */,
+				F69D12BF19D3511B00643122 /* login.png in Resources */,
 				F76A121A19C8ACF700843A9D /* ranking-06.png in Resources */,
 				F76A122819C8ACF700843A9D /* recycle_sign-100.png in Resources */,
 				F76A121019C8ACF700843A9D /* logoo.png in Resources */,
 				F76A123219C8ACF700843A9D /* recycle_sign-50.png in Resources */,
 				F76A122E19C8ACF700843A9D /* recycle_sign-256.png in Resources */,
 				F76A124419C8ACF700843A9D /* 1.png in Resources */,
+				F69D12B319D3511B00643122 /* tirinha.png in Resources */,
 				F76A125319C8ACF700843A9D /* Default.png in Resources */,
 				F76A123F19C8ACF700843A9D /* tabbar-06.png in Resources */,
+				F69D12C419D3511B00643122 /* conf.png in Resources */,
 				F76A121319C8ACF700843A9D /* mapa-coleta.png in Resources */,
 				F76A115619C8ACB800843A9D /* InfoPlist.strings in Resources */,
 				F76A122C19C8ACF700843A9D /* recycle_sign-25.png in Resources */,
 				F76A120819C8ACF700843A9D /* conectividade-03.png in Resources */,
 				F76A123119C8ACF700843A9D /* settings-32.png in Resources */,
+				F69D12AC19D3511B00643122 /* fundo.png in Resources */,
 				F76A120619C8ACF700843A9D /* conectividade-02.png in Resources */,
 				F76A124C19C8ACF700843A9D /* 9.png in Resources */,
 				F76A121919C8ACF700843A9D /* ranking-05.png in Resources */,
 				F76A121419C8ACF700843A9D /* mapa-lixopapao.png in Resources */,
+				F69D12D119D3511B00643122 /* 1.png in Resources */,
+				F69D12A219D3511B00643122 /* botão.png in Resources */,
 				F76A120119C8ACF700843A9D /* bixos papoes-01.png in Resources */,
 				F76A124D19C8ACF700843A9D /* tinder-01.png in Resources */,
 				F67ED4E019C8B78000B266BD /* CoinBLEDemo-Info.plist in Resources */,
 				F76A123C19C8ACF700843A9D /* tabbar-03.png in Resources */,
+				F69D12A719D3511B00643122 /* amarelo.png in Resources */,
+				F69D12AE19D3511B00643122 /* HOME.png in Resources */,
 				F76A124619C8ACF700843A9D /* 3.png in Resources */,
 				F76A124819C8ACF700843A9D /* 5.png in Resources */,
 				F76A122D19C8ACF700843A9D /* settings-25.png in Resources */,
 				F69E386519D09A4300B64629 /* metal.jpg in Resources */,
+				F69D12A919D3511B00643122 /* fundo.png in Resources */,
+				F69D12AA19D3511B00643122 /* verde.png in Resources */,
 				F76A122A19C8ACF700843A9D /* recycle_sign-128.png in Resources */,
+				F69D12D619D3511B00643122 /* setinha.png in Resources */,
 				F76A122319C8ACF700843A9D /* redes-05.png in Resources */,
 				F69E386E19D1F86200B64629 /* teste.png in Resources */,
 				F76A121C19C8ACF700843A9D /* botao-estatistica.png in Resources */,
+				F69D12BE19D3511B00643122 /* login com face.png in Resources */,
 				F69E386319D09A4300B64629 /* lixeira plastico.png in Resources */,
 				F76A123E19C8ACF700843A9D /* tabbar-05.png in Resources */,
+				F69D12CB19D3511B00643122 /* eaeae9.png in Resources */,
+				F69D12D419D3511B00643122 /* 4.png in Resources */,
+				F69D12D219D3511B00643122 /* 2.png in Resources */,
 				F76A121F19C8ACF700843A9D /* redes-01.png in Resources */,
 				F76A120B19C8ACF700843A9D /* JOGOS-01.png in Resources */,
+				F69D12BA19D3511B00643122 /* 4.png in Resources */,
 				F76A124519C8ACF700843A9D /* 2.png in Resources */,
 				F76A124019C8ACF700843A9D /* tabbar-07.png in Resources */,
 				F76A123519C8ACF700843A9D /* settings-512.png in Resources */,
 				F76A124B19C8ACF700843A9D /* 8.png in Resources */,
+				F69D12CD19D3511B00643122 /* metal.png in Resources */,
+				F69D12CE19D3511B00643122 /* papel.png in Resources */,
 				F76A124219C8ACF700843A9D /* tabbar-09.png in Resources */,
+				F69D12C919D3511B00643122 /* b1bbbe.png in Resources */,
 				F76A122519C8ACF700843A9D /* redes-07.png in Resources */,
 				F76A115E19C8ACB800843A9D /* Images.xcassets in Resources */,
 				F76A123619C8ACF700843A9D /* recycle_sign-75.png in Resources */,
 				F76A120519C8ACF700843A9D /* conectividade-01.xcf in Resources */,
+				F69D12AD19D3511B00643122 /* games.png in Resources */,
 				F76A121519C8ACF700843A9D /* ranking-01.png in Resources */,
+				F69D12B419D3511B00643122 /* conectar.png in Resources */,
 				F76A121E19C8ACF700843A9D /* balão.png in Resources */,
 				F76A121B19C8ACF700843A9D /* botao-amigos.png in Resources */,
 				F69E386719D09A4300B64629 /* plastico.png in Resources */,
 				F76A120C19C8ACF700843A9D /* JOGOS-02.png in Resources */,
 				F76A121819C8ACF700843A9D /* ranking-04.png in Resources */,
+				F69D12B019D3511B00643122 /* menuzinho.png in Resources */,
 				F76A123A19C8ACF700843A9D /* tabbar-01.png in Resources */,
 				F76A122019C8ACF700843A9D /* redes-02.png in Resources */,
+				F69D12C019D3511B00643122 /* senha.png in Resources */,
 				F67ED4F919C8CA2800B266BD /* mapa-melhorlixopapao.png in Resources */,
 				F76A122919C8ACF700843A9D /* settings-100.png in Resources */,
 				F76A120419C8ACF700843A9D /* conectividade-01.png in Resources */,
 				F76A123819C8ACF700843A9D /* tutorial.png in Resources */,
 				F69E386219D09A4300B64629 /* lixeira papel.png in Resources */,
+				F69D12A619D3511B00643122 /* editar.png in Resources */,
 				F69E387119D3489200B64629 /* LixoPapao.storyboard in Resources */,
 				F76A122119C8ACF700843A9D /* redes-03.png in Resources */,
 				F76A121219C8ACF700843A9D /* mapa-$.png in Resources */,
 				F76A124A19C8ACF700843A9D /* 7.png in Resources */,
+				F69D12C219D3511B00643122 /* Logo.png in Resources */,
 				F67ED4FB19C8CA2800B266BD /* mapa-melhor$.png in Resources */,
+				F69D12A419D3511B00643122 /* voltar.png in Resources */,
 				F76A124F19C8ACF700843A9D /* USUARIO-01.png in Resources */,
 				F69E386419D09A4300B64629 /* lixeira vidro.png in Resources */,
 				F76A123019C8ACF700843A9D /* recycle_sign-32.png in Resources */,
 				F67ED4F019C8B78000B266BD /* SVProgressHUD.bundle in Resources */,
+				F69D12CA19D3511B00643122 /* convidar.png in Resources */,
+				F69D12D719D3511B00643122 /* photos.png in Resources */,
+				F69D12B819D3511B00643122 /* 2.png in Resources */,
+				F69D12BC19D3511B00643122 /* layout-01.png in Resources */,
+				F69D12C819D3511B00643122 /* amigos.png in Resources */,
 				F76A120219C8ACF700843A9D /* bixos papoes-02.png in Resources */,
 				F76A124719C8ACF700843A9D /* 4.png in Resources */,
 				F76A121D19C8ACF700843A9D /* botao-game.png in Resources */,
+				F69D12D519D3511B00643122 /* 5.png in Resources */,
 				F76A123419C8ACF700843A9D /* recycle_sign-512.png in Resources */,
+				F69D12A819D3511B00643122 /* azul.png in Resources */,
 				F76A122419C8ACF700843A9D /* redes-06.png in Resources */,
 				F76A120319C8ACF700843A9D /* bixos papoes-03.png in Resources */,
 				F76A123D19C8ACF700843A9D /* tabbar-04.png in Resources */,
@@ -1113,6 +1446,9 @@
 				F76A121719C8ACF700843A9D /* ranking-03.png in Resources */,
 				F76A123319C8ACF700843A9D /* settings-50.png in Resources */,
 				F69E386819D09A4300B64629 /* vidro.jpg in Resources */,
+				F69D12CC19D3511B00643122 /* editar.png in Resources */,
+				F69D12B619D3511B00643122 /* lixopapao conectado.png in Resources */,
+				F69D12B519D3511B00643122 /* lixo papao desconectado.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,7 @@
 #import "M13Checkbox.h"
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface LoginVC : UIViewController<UITextFieldDelegate, FBLoginViewDelegate>{
+@interface LoginVC : UIViewController <UITextFieldDelegate, FBLoginViewDelegate>{
     NSUserDefaults *preferencias;
     BOOL senhaSalva;
 }
@@ -24,6 +24,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *user;
 @property (weak, nonatomic) IBOutlet UITextField *pass;
 @property (weak, nonatomic) IBOutlet M13Checkbox *checkSenha;
+@property (weak, nonatomic) IBOutlet UIButton *buttomLogar;
+
 
 @property __block UIImage *image;
 @property FBLoginView *loginView;

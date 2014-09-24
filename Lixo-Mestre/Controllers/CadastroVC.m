@@ -39,6 +39,14 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.titulo.font = [UIFont fontWithName:@"Santor" size:20];
+    
+    self.labelNome.delegate = self;
+    self.labelUser.delegate = self;
+    self.labelPass.delegate = self;
+    self.labelPass2.delegate = self;
+    
+    
     //Deixar imagem redonda
     CGRect x = self.profileImage.bounds;
     self.profileImage.layer.cornerRadius = CGRectGetHeight(x) / 2;
@@ -91,32 +99,44 @@
 }
 
 - (void)botaoCadastrar:(id)sender{
-    int x = [webService newUser:self.labelUser.text :self.labelPass.text :self.labelNome.text];
-    [webService uploadImage:self.profileImage.image:self.labelUser.text];
-    if(x == 0){//erro
-        NSLog(@"Algum erro");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        alert.alertViewStyle = UIAlertViewStyleDefault;
-        [alert show];
+    if ([[self.labelPass text] isEqualToString: [self.labelPass2 text]]) {
         
+        int x = [webService newUser:self.labelUser.text :self.labelPass.text :self.labelNome.text];
+        //nao manda a foto agr
+        //[webService uploadImage:self.profileImage.image:self.labelUser.text];
+        if(x == 0){//erro
+            NSLog(@"Algum erro");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            alert.alertViewStyle = UIAlertViewStyleDefault;
+            [alert show];
+            
+        }
+        if (x == 1) {//bls cadastrou
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Cadastro completo!" message:@"ainda eh por culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            alert.alertViewStyle = UIAlertViewStyleDefault;
+            [alert show];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        }
+        if(x == 2){//ja existe
+            NSLog(@"Erro");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            alert.alertViewStyle = UIAlertViewStyleDefault;
+            [alert show];
+        }
     }
-    if (x == 1) {//bls cadastrou
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Cadastro completo!" message:@"ainda eh por culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    else{
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"as senhas nao sao iguais" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         alert.alertViewStyle = UIAlertViewStyleDefault;
         [alert show];
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
-    if(x == 2){//ja existe
-        NSLog(@"Erro");
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        alert.alertViewStyle = UIAlertViewStyleDefault;
-        [alert show];
-
     }
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES];
+}
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
 }
 
 @end
