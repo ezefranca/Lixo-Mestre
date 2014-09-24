@@ -65,6 +65,9 @@
     _nameLabel = [[UILabel alloc] init];
     _nameLabel.frame = CGRectMake(30, 140, self.view.frame.size.width, 30);
     //[self.view addSubview: _nameLabel];
+    
+    self.user.font = [UIFont fontWithName:@"Santor" size:17];
+    self.pass.font = [UIFont fontWithName:@"Santor" size:17];
 
     
 }
@@ -129,6 +132,7 @@
         UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
         MainContainerViewController* main = [Board instantiateViewControllerWithIdentifier:@"MainContainer"];
         [self presentViewController:main animated:YES completion:nil];
+        
         
     }
     else{

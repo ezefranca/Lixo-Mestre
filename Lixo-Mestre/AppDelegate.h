@@ -13,7 +13,12 @@ extern NSString *const kShowMenuNotification;
 extern NSString *const kHideMenuNotification;
 extern NSString *const kShowHideMenuNotification;
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    NSUserDefaults *preferencias;
+    BOOL mostraTutorial;
+}
+
+
 
 @property (strong, nonatomic) UIWindow *window;
 

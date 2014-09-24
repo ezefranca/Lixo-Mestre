@@ -49,6 +49,8 @@
 		F69E386919D09A4300B64629 /* JogoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F69E385B19D09A4300B64629 /* JogoViewController.m */; };
 		F69E386A19D09A4300B64629 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F69E385E19D09A4300B64629 /* MyScene.m */; };
 		F69E386E19D1F86200B64629 /* teste.png in Resources */ = {isa = PBXBuildFile; fileRef = F69E386D19D1F86200B64629 /* teste.png */; };
+		F69E387019D3388F00B64629 /* santor 1.002.otf in Resources */ = {isa = PBXBuildFile; fileRef = F69E386F19D3388F00B64629 /* santor 1.002.otf */; };
+		F69E387119D3489200B64629 /* LixoPapao.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69E387319D3489200B64629 /* LixoPapao.storyboard */; };
 		F76A114C19C8ACB800843A9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114B19C8ACB800843A9D /* Foundation.framework */; };
 		F76A114E19C8ACB800843A9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114D19C8ACB800843A9D /* CoreGraphics.framework */; };
 		F76A115019C8ACB800843A9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114F19C8ACB800843A9D /* UIKit.framework */; };
@@ -61,7 +63,6 @@
 		F76A116719C8ACB900843A9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114F19C8ACB800843A9D /* UIKit.framework */; };
 		F76A116F19C8ACB900843A9D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F76A116D19C8ACB900843A9D /* InfoPlist.strings */; };
 		F76A117119C8ACB900843A9D /* Lixo_MestreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A117019C8ACB900843A9D /* Lixo_MestreTests.m */; };
-		F76A11F819C8ACF700843A9D /* LixoPapao.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76A117A19C8ACF700843A9D /* LixoPapao.storyboard */; };
 		F76A11F919C8ACF700843A9D /* BluetoothVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A117D19C8ACF700843A9D /* BluetoothVC.m */; };
 		F76A11FA19C8ACF700843A9D /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A117F19C8ACF700843A9D /* LoginVC.m */; };
 		F76A11FB19C8ACF700843A9D /* MainContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A118119C8ACF700843A9D /* MainContainerViewController.m */; };
@@ -243,6 +244,8 @@
 		F69E385D19D09A4300B64629 /* MyScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
 		F69E385E19D09A4300B64629 /* MyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
 		F69E386D19D1F86200B64629 /* teste.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = teste.png; sourceTree = "<group>"; };
+		F69E386F19D3388F00B64629 /* santor 1.002.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "santor 1.002.otf"; sourceTree = "<group>"; };
+		F69E387219D3489200B64629 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LixoPapao.storyboard; sourceTree = "<group>"; };
 		F76A114819C8ACB800843A9D /* Lixo-Mestre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lixo-Mestre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76A114B19C8ACB800843A9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F76A114D19C8ACB800843A9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -259,7 +262,6 @@
 		F76A116C19C8ACB900843A9D /* Lixo-MestreTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lixo-MestreTests-Info.plist"; sourceTree = "<group>"; };
 		F76A116E19C8ACB900843A9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F76A117019C8ACB900843A9D /* Lixo_MestreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lixo_MestreTests.m; sourceTree = "<group>"; };
-		F76A117A19C8ACF700843A9D /* LixoPapao.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LixoPapao.storyboard; sourceTree = "<group>"; };
 		F76A117C19C8ACF700843A9D /* BluetoothVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BluetoothVC.h; sourceTree = "<group>"; };
 		F76A117D19C8ACF700843A9D /* BluetoothVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothVC.m; sourceTree = "<group>"; };
 		F76A117E19C8ACF700843A9D /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
@@ -587,7 +589,7 @@
 				F67ED4A519C8B78000B266BD /* Classes */,
 				F76A117B19C8ACF700843A9D /* Controllers */,
 				F76A118C19C8ACF700843A9D /* Recursos */,
-				F76A117A19C8ACF700843A9D /* LixoPapao.storyboard */,
+				F69E387319D3489200B64629 /* LixoPapao.storyboard */,
 				252A91A019CCBADF004229F3 /* MenuTableViewCell.h */,
 				252A91A119CCBADF004229F3 /* MenuTableViewCell.m */,
 				F76A11F519C8ACF700843A9D /* Default-568h@2x.png */,
@@ -658,6 +660,7 @@
 		F76A118C19C8ACF700843A9D /* Recursos */ = {
 			isa = PBXGroup;
 			children = (
+				F69E386F19D3388F00B64629 /* santor 1.002.otf */,
 				F69E386D19D1F86200B64629 /* teste.png */,
 				F76A118D19C8ACF700843A9D /* Images */,
 			);
@@ -1088,7 +1091,7 @@
 				F76A120419C8ACF700843A9D /* conectividade-01.png in Resources */,
 				F76A123819C8ACF700843A9D /* tutorial.png in Resources */,
 				F69E386219D09A4300B64629 /* lixeira papel.png in Resources */,
-				F76A11F819C8ACF700843A9D /* LixoPapao.storyboard in Resources */,
+				F69E387119D3489200B64629 /* LixoPapao.storyboard in Resources */,
 				F76A122119C8ACF700843A9D /* redes-03.png in Resources */,
 				F76A121219C8ACF700843A9D /* mapa-$.png in Resources */,
 				F76A124A19C8ACF700843A9D /* 7.png in Resources */,
@@ -1104,6 +1107,7 @@
 				F76A122419C8ACF700843A9D /* redes-06.png in Resources */,
 				F76A120319C8ACF700843A9D /* bixos papoes-03.png in Resources */,
 				F76A123D19C8ACF700843A9D /* tabbar-04.png in Resources */,
+				F69E387019D3388F00B64629 /* santor 1.002.otf in Resources */,
 				F76A125419C8ACF700843A9D /* Default@2x.png in Resources */,
 				F69E386119D09A4300B64629 /* lixeira metal.png in Resources */,
 				F76A121719C8ACF700843A9D /* ranking-03.png in Resources */,
@@ -1185,6 +1189,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		F69E387319D3489200B64629 /* LixoPapao.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F69E387219D3489200B64629 /* en */,
+			);
+			name = LixoPapao.storyboard;
+			sourceTree = "<group>";
+		};
 		F76A115419C8ACB800843A9D /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (

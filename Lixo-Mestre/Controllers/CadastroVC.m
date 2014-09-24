@@ -45,6 +45,7 @@
     self.profileImage.layer.borderWidth = 1.0f;
     self.profileImage.layer.borderColor = [UIColor clearColor].CGColor;
     self.profileImage.clipsToBounds = YES;
+    self.profileImage.image = nil;
 }
 
 - (void)didReceiveMemoryWarning{
@@ -100,7 +101,7 @@
         
     }
     if (x == 1) {//bls cadastrou
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Cadastro completo!" message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Cadastro completo!" message:@"ainda eh por culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         alert.alertViewStyle = UIAlertViewStyleDefault;
         [alert show];
         [self dismissViewControllerAnimated:YES completion:nil];

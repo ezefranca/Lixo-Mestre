@@ -154,7 +154,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxL-l3-RhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-656" y="-445"/>
+            <point key="canvasLocation" x="-435" y="74"/>
         </scene>
         <!--BluetoothVC-->
         <scene sceneID="hfp-sI-Pwn">
@@ -286,7 +286,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yom-bX-1pS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-477" y="-1167"/>
+            <point key="canvasLocation" x="-267" y="-593"/>
         </scene>
         <!--Tab GeralVC-->
         <scene sceneID="71Z-LI-VIB">
@@ -651,7 +651,6 @@
         <image name="tinder-01.png" width="329" height="329"/>
         <image name="tinder-02.png" width="377" height="329"/>
     </resources>
-    <color key="tintColor" red="0.29019607843137257" green="0.63921568627450975" blue="0.87450980392156863" alpha="1" colorSpace="deviceRGB"/>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

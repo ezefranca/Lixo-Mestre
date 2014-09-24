@@ -35,6 +35,10 @@
 	<string>1494009864188916</string>
 	<key>FacebookDisplayName</key>
 	<string>lixoPapao</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>santor 1.002.otf</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIMainStoryboardFile</key>

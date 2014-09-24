@@ -24,7 +24,8 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    
+    // Custom initialization
+    [self.tabBar setSelectedImageTintColor: [UIColor whiteColor]];
 }
 
 - (void)didReceiveMemoryWarning{
