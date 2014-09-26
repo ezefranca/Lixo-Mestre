@@ -31,6 +31,10 @@
 @property (weak, nonatomic) IBOutlet UIButton *botaoConectar;
 //@property (weak, nonatomic) IBOutlet UILabel *statusLbl;
 
+@property (weak, nonatomic) IBOutlet UIView *viewEscolha;
+
+- (IBAction)botaoDissmissEscolha:(id)sender;
+
 - (IBAction)botaoConectar:(id)sender;
 - (IBAction)botaoLixo:(id)sender;
 

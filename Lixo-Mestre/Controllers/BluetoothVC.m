@@ -26,6 +26,9 @@
     self.conectado = FALSE;
     self.botaoLixo.hidden = TRUE;
     self.botaoConectar.hidden = FALSE;
+    
+    self.viewEscolha.hidden = YES;
+    
     //self.statusLbl.text = @"Desconectado";
     [[CNBluetoothCentral sharedBluetoothCentral] setDelegate:self];
     
@@ -87,11 +90,15 @@
     [SVProgressHUD dismiss];
     [[CNBluetoothCentral sharedBluetoothCentral] cleanup];
     [[CNBluetoothCentral sharedBluetoothCentral] setDelegate:nil];
-    [imagemConectar setImage:[UIImage imageNamed:@"bixos papoes-01.png"]];
+    [imagemConectar setImage:[UIImage imageNamed:@"lixo papao desconectado.png"]];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
     [SVProgressHUD dismiss];
+}
+
+- (IBAction)botaoDissmissEscolha:(id)sender {
+    self.viewEscolha.hidden = YES;
 }
 
 - (IBAction)botaoConectar:(id)sender {
@@ -100,6 +107,8 @@
     [SVProgressHUD showWithStatus:@"Conectando... aguarde"];
     
 }
+
+
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
@@ -131,7 +140,7 @@
     self.botaoLixo.hidden = FALSE;
     self.botaoConectar.hidden = TRUE;
     [SVProgressHUD showSuccessWithStatus:@"Conectado com Successo!"];
-    [imagemConectar setImage:[UIImage imageNamed:@"bixos papoes-02.png"]];
+    [imagemConectar setImage:[UIImage imageNamed:@"lixopapao conectado.png"]];
     [self setConectado:TRUE];
 }
 
@@ -300,14 +309,15 @@
 
 - (IBAction)botaoLixo:(id)sender {
     if ([self conectado]) {
-        UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"Selecione o tipo de lixo:" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
-                                @"Papel",
-                                @"Plastico",
-                                @"Metal",
-                                @"Vidro",
-                                nil];
-        popup.tag = 1;
-        [popup showInView:[UIApplication sharedApplication].keyWindow];
+//        UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle:@"Selecione o tipo de lixo:" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:nil otherButtonTitles:
+//                                @"Papel",
+//                                @"Plastico",
+//                                @"Metal",
+//                                @"Vidro",
+//                                nil];
+//        popup.tag = 1;
+//        [popup showInView:[UIApplication sharedApplication].keyWindow];
+        self.viewEscolha.hidden = NO;
     }
 }
 
