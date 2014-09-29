@@ -7,6 +7,8 @@
 //
 
 #import "MinigamesVC.h"
+#import "JogoViewController.h"
+#import "webService.h"
 
 @interface MinigamesVC ()
 
@@ -38,6 +40,56 @@
     [[NSNotificationCenter defaultCenter] postNotificationName:kShowHideMenuNotification object:self];
 }
 
+
+- (IBAction)jogo1:(id)sender{
+    JogoViewController *jogo = JogoViewController.new;
+    [self navegacaoManeira:jogo];
+}
+
+
+- (IBAction)bloqueado:(id)sender{
+    int num = [sender tag];
+    NSString *string;
+    
+    switch (num) {
+        case 2:
+            string = @"recicle 5 papeis para desbloquear!";
+            break;
+        case 3:
+            string = @"recicle 5 metais para desbloquear!";
+            break;
+        case 4:
+            string = @"recicle 5 vidros papeis para desbloquear!";
+            break;
+        case 5:
+            string = @"recicle 5 plasticos para desbloquear!";
+            break;
+        case 6:
+            string = @"conecte-se com 3 lixeiras diferentes para desbloquear!";
+            break;
+        case 7:
+            string = @"avalie 20 fotos para desbloquear!";
+            break;
+        case 8:
+            string = @"faca x para desbloquear!";
+            break;
+        case 9:
+            string = @"faca x para desbloquear!";
+            break;
+        default:
+            string = @"faca x para desbloquear!";
+            break;
+    }
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Jogo bloqueado!" message:string delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    alert.alertViewStyle = UIAlertViewStyleDefault;
+    [alert show];
+    
+}
+
+- (void)navegacaoManeira:(UIViewController*)tela{
+    [tela setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
+    [self presentViewController:tela animated:YES completion:nil];
+}
 /*
 #pragma mark - Navigation
 

@@ -65,6 +65,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hideMenuView:) name:kHideMenuNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(showHideMenuView:) name:kShowHideMenuNotification object:nil];
 }
+    
 
 - (void)viewDidUnload{
     [super viewDidUnload];

@@ -48,6 +48,10 @@
 }
 */
 
+- (void)navegacaoManeira:(UIViewController*)tela{
+    [tela setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
+    [self presentViewController:tela animated:YES completion:nil];
+}
 
 #pragma table view methods
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{

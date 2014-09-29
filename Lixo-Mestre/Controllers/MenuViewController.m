@@ -21,7 +21,23 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    itemsMenu = [NSArray arrayWithObjects:@"Perfil",@"Recompensas", @"Total Reciclado", @"Estatistica", @"Configuracao", nil];
+    self.nomeUsuario.font = [UIFont fontWithName:@"Santor" size:17];
+    itemsMenu = [NSArray arrayWithObjects:@"Perfil",@"Recompensas", @"Estatistica", @"Configuracoes", nil];
+    self.view.backgroundColor = [UIColor colorWithRed:0.0
+                                                 green:128/255.0
+                                                  blue:176/255.0
+                                                 alpha:1.0];
+    
+    self.profileview.layer.cornerRadius = self.profileview.frame.size.width/ 2;
+    self.profileview.layer.borderWidth = 1.0f;
+    self.profileview.layer.borderColor = [UIColor clearColor].CGColor;
+    self.profileview.clipsToBounds = YES;
+
+
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning{
@@ -38,8 +54,39 @@
         cell = [[MenuTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
+    switch (indexPath.row) {
+        case 0:
+            cell.imageView.image = [UIImage imageNamed:@"conf.png"];
+            break;
+        case 1:
+            cell.imageView.image = [UIImage imageNamed:@"recompensas.png"];
+            break;
+        case 2:
+            cell.imageView.image = [UIImage imageNamed:@"estatistica.png"];
+            break;
+        case 3:
+            cell.frame = CGRectMake(0, 0, 250, 250);
+            cell.imageView.image = [UIImage imageNamed:@"conf.png"];
+            break;
+            
+        default:
+            cell.imageView.image = [UIImage imageNamed:@"settings-100.png"];
+            break;
+    }
+    
     cell.textLabel.text = [itemsMenu objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageNamed:@"settings-100.png"];
+    
+    
+    if (indexPath.row%2 == 0){
+        cell.backgroundColor = [UIColor colorWithRed:234/255.0 green:232/255.0 blue:232/255.0 alpha:1.0];
+        
+    }
+    else{
+        cell.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+    }
+    
+
+
     return cell;
 }
 
@@ -48,28 +95,34 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 4;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"Clicou em %ld", (long)indexPath.row);
+    //NSLog(@"Clicou em %ld", (long)indexPath.row);
     
     switch (indexPath.row) {
         case 0:{
-            [self dismissViewControllerAnimated:YES completion:nil];
-            
+            //        //tudo certo, vai pro resto do app
+            UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+            MenuVCperfil * perfil = [Board instantiateViewControllerWithIdentifier:@"MenuPerfil"];
+            [self presentViewController:perfil animated:YES completion:nil];
             break;
         }
         case 1:{
+
             break;
         }
         case 2:{
+
             break;
         }
         case 3:{
+
             break;
         }
         default:{
+
             break;
         }
     }

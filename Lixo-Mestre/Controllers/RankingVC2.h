@@ -12,7 +12,9 @@
 @interface RankingVC2 : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 
+
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 
 - (IBAction)botaoMenu:(id)sender;

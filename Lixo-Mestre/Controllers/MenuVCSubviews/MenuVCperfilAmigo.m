@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  MenuVCperfilAmigo.m
 //  Lixo-Mestre
 //
-//  Created by GABRIEL VIEIRA on 23/09/14.
+//  Created by Alessandro Camillo Gimenez de Menezes on 29/09/14.
 //  Copyright (c) 2014 Ezequiel Franca dos Santos. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "MenuVCperfilAmigo.h"
 
-@interface ViewController ()
+@interface MenuVCperfilAmigo ()
 
 @end
 
-@implementation ViewController
+@implementation MenuVCperfilAmigo
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
