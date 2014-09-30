@@ -59,7 +59,8 @@
     self.pass.delegate = self;
     
     //login do facebook
-    _loginView = [[FBLoginView alloc] initWithReadPermissions: @[@"public_profile", @"user_friends", @"publish_actions"]];
+  //  _loginView = [[FBLoginView alloc] initWithReadPermissions: @[@"public_profile", @"user_friends", @"publish_actions"]];
+    _loginView = [[FBLoginView alloc] init];
     _loginView.frame = CGRectMake(20, 405, 280, 53);
     _loginView.delegate = self;
     [self.view addSubview:_loginView];

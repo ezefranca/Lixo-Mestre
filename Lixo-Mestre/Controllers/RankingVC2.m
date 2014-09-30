@@ -73,6 +73,37 @@
     [self presentViewController:self.friendPickerController animated:YES completion:nil];
 }
 
+- (void)facebookViewControllerDoneWasPressed:(id)sender {
+    NSMutableString *text = [[NSMutableString alloc] init];
+    
+    // we pick up the users from the selection, and create a string that we use to update the text view
+    // at the bottom of the display; note that self.selection is a property inherited from our base class
+    for (id<FBGraphUser> user in self.friendPickerController.selection) {
+        if ([text length]) {
+            [text appendString:@", "];
+        }
+        [text appendString:user.name];
+    }
+    
+    [self fillTextBoxAndDismiss:text.length > 0 ? text : @"<None>"];
+}
+
+- (void)facebookViewControllerCancelWasPressed:(id)sender {
+    [self fillTextBoxAndDismiss:@"<Cancelled>"];
+}
+
+- (void)fillTextBoxAndDismiss:(NSString *)text {
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
+-(void)friendPickerViewControllerSelectionDidChange:(FBFriendPickerViewController *)friendPicker
+{
+    NSArray *friends = friendPicker.selection;
+    NSLog(@"%@", friends);
+    
+}
+
+
 - (IBAction)botaoMenu:(id)sender{
     [[NSNotificationCenter defaultCenter] postNotificationName:kShowHideMenuNotification object:self];
 }
