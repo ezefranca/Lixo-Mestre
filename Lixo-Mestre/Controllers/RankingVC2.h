@@ -9,13 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
-@interface RankingVC2 : UIViewController <UITableViewDelegate, UITableViewDataSource>
+@interface RankingVC2 : UIViewController <UITableViewDelegate, UITableViewDataSource, FBLoginViewDelegate, FBViewControllerDelegate>
 
 
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
+- (IBAction)testes:(id)sender;
 
 - (IBAction)botaoMenu:(id)sender;
+
+
+@property (retain, nonatomic) FBFriendPickerViewController *friendPickerController;
 @end

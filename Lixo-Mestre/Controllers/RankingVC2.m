@@ -33,6 +33,46 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+- (IBAction)testes:(id)sender {
+    
+    //NSString *nomeAmigo = [[NSString alloc]init];
+    
+    // FBSample logic
+    // if the session is open, then load the data for our view controller
+    if (!FBSession.activeSession.isOpen) {
+        // if the session is closed, then we open it here, and establish a handler for state changes
+        [FBSession openActiveSessionWithReadPermissions:nil
+                                           allowLoginUI:YES
+                                      completionHandler:^(FBSession *session,
+                                                          FBSessionState state,
+                                                          NSError *error) {
+                                          if (error) {
+                                              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                                  message:error.localizedDescription
+                                                                                                 delegate:nil
+                                                                                        cancelButtonTitle:@"OK"
+                                                                                        otherButtonTitles:nil];
+                                              [alertView show];
+                                          } else if (session.isOpen) {
+                                              [self testes:sender];
+                                          }
+                                      }];
+        return;
+    }
+    
+    if (self.friendPickerController == nil) {
+        // Create friend picker, and get data loaded into it.
+        self.friendPickerController = [[FBFriendPickerViewController alloc] init];
+        self.friendPickerController.title = @"Selecionar Amigo";
+        self.friendPickerController.delegate = self;
+    }
+    
+    [self.friendPickerController loadData];
+    [self.friendPickerController clearSelection];
+    
+    [self presentViewController:self.friendPickerController animated:YES completion:nil];
+}
+
 - (IBAction)botaoMenu:(id)sender{
     [[NSNotificationCenter defaultCenter] postNotificationName:kShowHideMenuNotification object:self];
 }
