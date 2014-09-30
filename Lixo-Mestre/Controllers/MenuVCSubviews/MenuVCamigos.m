@@ -76,7 +76,7 @@
     NSLog(@"Clicou em %ld", (long)indexPath.row);
     
     UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
-    MenuVCperfilAmigo * perfil = [Board instantiateViewControllerWithIdentifier:@"PerfilAmigos"];
+    MenuVCperfilAmigo * perfil = [Board instantiateViewControllerWithIdentifier:@"PerfilAmigo"];
 
     
     [self presentViewController:perfil animated:YES completion:nil];

@@ -136,9 +136,10 @@
         }
         
 //        //tudo certo, vai pro resto do app
-        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
-        MainContainerViewController* main = [Board instantiateViewControllerWithIdentifier:@"MainContainer"];
-        [self presentViewController:main animated:YES completion:nil];
+        [self performSegueWithIdentifier:@"coco" sender:nil];
+//        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+//        MainContainerViewController* main = [Board instantiateViewControllerWithIdentifier:@"MainContainer"];
+//        [self presentViewController:main animated:YES completion:nil];
         
         
     }
@@ -218,6 +219,16 @@
     }
 }
 
+- (IBAction)unwindToLogin:(UIStoryboardSegue *)unwindSegue{
+    
+}
+
+- (IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue{
+    
+}
+
+
+#pragma  facebook methods
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
     self.profilePictureView.profileID = [user objectID];

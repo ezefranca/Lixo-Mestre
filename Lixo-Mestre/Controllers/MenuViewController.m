@@ -100,13 +100,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //NSLog(@"Clicou em %ld", (long)indexPath.row);
+
     
     switch (indexPath.row) {
         case 0:{
-            //        //tudo certo, vai pro resto do app
-            UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
-            MenuVCperfil * perfil = [Board instantiateViewControllerWithIdentifier:@"MenuPerfil"];
-            [self presentViewController:perfil animated:YES completion:nil];
+            [self performSegueWithIdentifier:@"aoPerfil" sender:nil];
+            
             break;
         }
         case 1:{
@@ -118,6 +117,7 @@
             break;
         }
         case 3:{
+            [self performSegueWithIdentifier:@"aoConfiguracoes" sender:nil];
 
             break;
         }

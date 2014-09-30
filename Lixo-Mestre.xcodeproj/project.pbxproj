@@ -113,6 +113,7 @@
 		F6ED61DE19DA02C7002CCE1E /* MenuVCamigos.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED61DD19DA02C7002CCE1E /* MenuVCamigos.m */; };
 		F6ED61E119DA039B002CCE1E /* MenuVCperfilAmigo.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED61E019DA039B002CCE1E /* MenuVCperfilAmigo.m */; };
 		F6ED61E319DB2870002CCE1E /* seta.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61E219DB2870002CCE1E /* seta.png */; };
+		F6ED61E619DB3217002CCE1E /* ConfiguracoesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED61E519DB3217002CCE1E /* ConfiguracoesVC.m */; };
 		F76A114C19C8ACB800843A9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114B19C8ACB800843A9D /* Foundation.framework */; };
 		F76A114E19C8ACB800843A9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114D19C8ACB800843A9D /* CoreGraphics.framework */; };
 		F76A115019C8ACB800843A9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114F19C8ACB800843A9D /* UIKit.framework */; };
@@ -376,6 +377,8 @@
 		F6ED61DF19DA039B002CCE1E /* MenuVCperfilAmigo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVCperfilAmigo.h; sourceTree = "<group>"; };
 		F6ED61E019DA039B002CCE1E /* MenuVCperfilAmigo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuVCperfilAmigo.m; sourceTree = "<group>"; };
 		F6ED61E219DB2870002CCE1E /* seta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seta.png; sourceTree = "<group>"; };
+		F6ED61E419DB3217002CCE1E /* ConfiguracoesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfiguracoesVC.h; sourceTree = "<group>"; };
+		F6ED61E519DB3217002CCE1E /* ConfiguracoesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfiguracoesVC.m; sourceTree = "<group>"; };
 		F76A114819C8ACB800843A9D /* Lixo-Mestre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lixo-Mestre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76A114B19C8ACB800843A9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F76A114D19C8ACB800843A9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -865,6 +868,8 @@
 				F6ED61DD19DA02C7002CCE1E /* MenuVCamigos.m */,
 				F6ED61DF19DA039B002CCE1E /* MenuVCperfilAmigo.h */,
 				F6ED61E019DA039B002CCE1E /* MenuVCperfilAmigo.m */,
+				F6ED61E419DB3217002CCE1E /* ConfiguracoesVC.h */,
+				F6ED61E519DB3217002CCE1E /* ConfiguracoesVC.m */,
 			);
 			path = MenuVCSubviews;
 			sourceTree = "<group>";
@@ -1552,6 +1557,7 @@
 				F67ED4E219C8B78000B266BD /* M13Checkbox.m in Sources */,
 				F69E385F19D09A4300B64629 /* CriaNodes.m in Sources */,
 				F67ED4EE19C8B78000B266BD /* WifiNetworkTableViewCell.m in Sources */,
+				F6ED61E619DB3217002CCE1E /* ConfiguracoesVC.m in Sources */,
 				F6ED61E119DA039B002CCE1E /* MenuVCperfilAmigo.m in Sources */,
 				F67ED4E819C8B78000B266BD /* JMStaticContentTableViewCell.m in Sources */,
 				F67ED4DF19C8B78000B266BD /* CNBluetoothCentral.m in Sources */,

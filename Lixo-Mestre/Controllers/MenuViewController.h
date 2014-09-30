@@ -8,12 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "MenuVCperfil.h"
+#import "ConfiguracoesVC.h"
+
 
 
 @interface MenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
     NSUserDefaults *preferencias;
 }
-
 
 
 @property (weak, nonatomic) IBOutlet UIView *profileview;
