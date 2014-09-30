@@ -60,9 +60,16 @@
 - (IBAction)editar:(id)sender {
     UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
     MenuVCeditarperfil * perfil = [Board instantiateViewControllerWithIdentifier:@"MenuEditar"];
-    [self presentViewController:perfil animated:YES completion:nil];}
+
+  
+    
+    [self presentViewController:perfil animated:YES completion:nil];
+}
 
 - (IBAction)amigos:(id)sender {
+    UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+    MenuVCamigos * migos = [Board instantiateViewControllerWithIdentifier:@"MenuAmigos"];
+    [self presentViewController: migos animated:YES completion:nil];
 }
 
 - (IBAction)convidar:(id)sender {

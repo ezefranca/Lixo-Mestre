@@ -23,14 +23,14 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.titulo.font = [UIFont fontWithName:@"Santor" size:20];
+    
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -45,5 +45,43 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)voltar:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)navegacaoManeira:(UIViewController*)tela{
+    [tela setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
+    [self presentViewController:tela animated:YES completion:nil];
+}
+
+#pragma table view methods
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    
+    return cell;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 5;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSLog(@"Clicou em %ld", (long)indexPath.row);
+    
+    UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+    MenuVCperfilAmigo * perfil = [Board instantiateViewControllerWithIdentifier:@"PerfilAmigos"];
+
+    
+    [self presentViewController:perfil animated:YES completion:nil];
+    
+}
+
 
 @end

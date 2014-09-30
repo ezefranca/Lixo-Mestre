@@ -112,9 +112,9 @@
             
         }
         if (x == 1) {//bls cadastrou
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Cadastro completo!" message:@"ainda eh por culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-            alert.alertViewStyle = UIAlertViewStyleDefault;
-            [alert show];
+//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Cadastro completo!" message:@"ainda eh por culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+//            alert.alertViewStyle = UIAlertViewStyleDefault;
+//            [alert show];
             [self dismissViewControllerAnimated:YES completion:nil];
         }
         if(x == 2){//ja existe

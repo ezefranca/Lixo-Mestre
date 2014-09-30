@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuVCperfilAmigo.h"
+#import <FacebookSDK/FacebookSDK.h>
 
-@interface MenuVCamigos : UIViewController
+
+@interface MenuVCamigos : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+
+@property (weak, nonatomic) IBOutlet UILabel *titulo;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+
+
+- (IBAction)voltar:(id)sender;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 #import "AppDelegate.h"
 
 @interface RankingVC2 : UIViewController <UITableViewDelegate, UITableViewDataSource, FBLoginViewDelegate, FBViewControllerDelegate>
