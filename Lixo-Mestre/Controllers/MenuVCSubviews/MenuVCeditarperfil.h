@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuVCeditarperfil : UIViewController<UITextFieldDelegate>{
+@interface MenuVCeditarperfil : UIViewController <UITextFieldDelegate>{
     NSUserDefaults *preferencias;
 }
 

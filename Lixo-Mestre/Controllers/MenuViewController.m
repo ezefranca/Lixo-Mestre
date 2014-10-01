@@ -21,7 +21,13 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    preferencias = [NSUserDefaults standardUserDefaults];
+
+    self.nomeUsuario.text = [preferencias objectForKey:@"userName"];
+
     self.nomeUsuario.font = [UIFont fontWithName:@"Santor" size:17];
+    
     itemsMenu = [NSArray arrayWithObjects:@"Perfil",@"Recompensas", @"Estatistica", @"Configuracoes", nil];
     self.view.backgroundColor = [UIColor colorWithRed:0.0
                                                  green:128/255.0

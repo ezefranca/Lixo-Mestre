@@ -12,6 +12,8 @@
 
 @interface MyScene : SKScene <SKPhysicsContactDelegate>
 
+@property SKSpriteNode * bg;
+
 @property SKSpriteNode *lixeiraMetal;
 @property SKSpriteNode *lixeiraPapel;
 @property SKSpriteNode *lixeiraVidro ;

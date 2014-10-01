@@ -217,7 +217,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="voltar:" destination="9lO-Ri-D1n" eventType="touchUpInside" id="EUY-4F-nh5"/>
+                                    <segue destination="Sxp-cz-Tpo" kind="unwind" unwindAction="unwindToPerfil:" id="JyG-mB-Gpc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Editar perfil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1in-I7-GYG">
@@ -303,6 +303,7 @@
                                         </state>
                                         <connections>
                                             <action selector="confirmar:" destination="9lO-Ri-D1n" eventType="touchUpInside" id="aRC-G7-3At"/>
+                                            <segue destination="Sxp-cz-Tpo" kind="unwind" unwindAction="unwindToPerfil:" id="MoC-Y3-Ncu"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -321,6 +322,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEH-WT-rMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Sxp-cz-Tpo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2194" y="1679"/>
         </scene>
@@ -1317,7 +1319,7 @@
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xJB-NZ-dWL" userLabel="jogo1">
                                 <rect key="frame" x="20" y="140" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" backgroundImage="iconjoguinho.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1514,6 +1516,7 @@
         <image name="editar.png" width="2025" height="2024"/>
         <image name="fundo.jpg" width="180" height="35"/>
         <image name="fundo.png" width="1568" height="2023"/>
+        <image name="iconjoguinho.png" width="100" height="100"/>
         <image name="lixo papao desconectado.png" width="1576" height="2019"/>
         <image name="login.png" width="2018" height="384"/>
         <image name="logoo.png" width="1294" height="869"/>

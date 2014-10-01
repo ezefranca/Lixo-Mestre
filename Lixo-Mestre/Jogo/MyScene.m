@@ -14,8 +14,12 @@
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
+        [self setBg: [SKSpriteNode spriteNodeWithImageNamed:@"fundo.png"]];
+        CGPoint bgponto = CGPointMake(self.size.width/2, self.size.height/2);
+        self.bg.position = bgponto;
+        [self addChild: self.bg];
         
-        self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        //self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
         self.physicsWorld.contactDelegate = self; // TORNA A COLISAO POSIVEL!!! TINHA ESQUECIDO ISSO >.<
         
         [self setValorPontuacao:0];

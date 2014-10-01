@@ -87,6 +87,10 @@
 - (IBAction)convidar:(id)sender {
 }
 
+- (IBAction)unwindToPerfil:(UIStoryboardSegue *)unwindSegue{
+    
+}
+
 //isso eh um metodo de view, nao de viewcontroller >.<
 //so criando uma uiview custom (ViewProgresso)
 //-(void)drawRect:(CGRect)rect{

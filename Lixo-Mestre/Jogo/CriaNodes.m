@@ -57,32 +57,33 @@
 
 +(SKSpriteNode *)lixoAleatorioNoFrame: (CGRect)frame{
     SKSpriteNode *nodeLixoNovo;
+    CGSize nodeSize= CGSizeMake(40, 50);
     
     switch (arc4random()%4) { //sorteia o tipo de lixo gerado
         case 0:
-            nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"metal.jpg"];
-            [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(30, 50) ]];
+            nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"metal2.png"];
+            [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: nodeSize ]];
             nodeLixoNovo.physicsBody.categoryBitMask = lixoMetal;
             //sortearia denovo uma imagem aleatoria deste tipo de lixo;
             break;
         case 1:
-            nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"papel.jpg"];
-            [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(30, 50) ]];
+            nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"papel2.png"];
+            [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: nodeSize ]];
             nodeLixoNovo.physicsBody.categoryBitMask = lixoPapel;
             break;
         case 2:
-            nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"vidro.jpg"];
-            [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(30, 50) ]];
+            nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"vidro2.png"];
+            [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: nodeSize ]];
             nodeLixoNovo.physicsBody.categoryBitMask = lixoVidro;
             break;
         case 3:
-            nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"plastico.png"];
-            [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(30, 50) ]];
+            nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"plastico2.png"];
+            [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(40, 66) ]];
             nodeLixoNovo.physicsBody.categoryBitMask = lixoPlastico;
             break;
     }
     
-    [nodeLixoNovo setSize:CGSizeMake(30, 50)];
+    [nodeLixoNovo setSize:nodeSize];
     nodeLixoNovo.position = CGPointMake( (frame.size.width/2 + 75), (frame.size.height + nodeLixoNovo.frame.size.height/2));
     
     nodeLixoNovo.physicsBody.dynamic = YES;
