@@ -75,11 +75,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"Clicou em %ld", (long)indexPath.row);
     
-    UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
-    MenuVCperfilAmigo * perfil = [Board instantiateViewControllerWithIdentifier:@"PerfilAmigo"];
-
-    
-    [self presentViewController:perfil animated:YES completion:nil];
+    [self performSegueWithIdentifier:@"aoPerfilAmigo" sender:self];
     
 }
 

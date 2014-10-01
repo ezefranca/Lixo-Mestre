@@ -26,7 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *cancelar;
 +(BOOL)cadastraID:(NSString *)user password:(NSString *)pass nick:(NSString *)nickName image:(UIImage *)imagemDoPerfil;
 
-- (IBAction)cancelar:(id)sender;
+
 - (IBAction)botaoCamera:(id)sender;
 - (IBAction)botaoAlbum:(id)sender;
 - (IBAction)botaoCadastrar:(id)sender;

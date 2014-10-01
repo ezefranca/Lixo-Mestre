@@ -25,16 +25,37 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    preferencias = [NSUserDefaults standardUserDefaults];
+    
 
-    //self.foto.image = [preferencias objectForKey:@""];
-    //self.nome.text = [preferencias objectForKey:@""];
-    //self.progresso.text = [preferencias objectForKey:@""];
+    
+    self.foto.image = [preferencias objectForKey:@"ProfileImage"];
+    self.nome.text = [preferencias objectForKey:@"userName"];
+    
+
+    
+    self.progresso.text = [preferencias objectForKey:@""];
     
     self.titulo.font = [UIFont fontWithName:@"Santor" size:20];
     self.nome.font = [UIFont fontWithName:@"Santor" size:17];
 
-    self.progressTitulo.font = [UIFont fontWithName:@"Santor" size:20];
+    self.labelPapel.font = [UIFont fontWithName:@"Santor" size:17];
+    self.labelVidro.font = [UIFont fontWithName:@"Santor" size:17];
+    self.labelPlastico.font = [UIFont fontWithName:@"Santor" size:17];
+    self.labelMetal.font = [UIFont fontWithName:@"Santor" size:17];
+    
+    
+    
+    self.progressTitulo.font = [UIFont fontWithName:@"Santor" size:30];
+    
+    int total = [preferencias integerForKey:@"qteMetal"]+
+    [preferencias integerForKey:@"qtePapel"]+
+    [preferencias integerForKey:@"qteVidro"]+
+    [preferencias integerForKey:@"qtePlastico"];
+    self.viewDesenho.totalLixos = total;
+    self.progresso.text = [NSString stringWithFormat:@"%d Lixos reciclados",total];
     self.progresso.font = [UIFont fontWithName:@"Santor" size:17];
+    
 }
 
 - (void)didReceiveMemoryWarning{
@@ -65,4 +86,11 @@
 
 - (IBAction)convidar:(id)sender {
 }
+
+//isso eh um metodo de view, nao de viewcontroller >.<
+//so criando uma uiview custom (ViewProgresso)
+//-(void)drawRect:(CGRect)rect{
+//    
+//}
+
 @end

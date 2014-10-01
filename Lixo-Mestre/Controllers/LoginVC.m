@@ -135,12 +135,8 @@
             [alert show];
         }
         
-//        //tudo certo, vai pro resto do app
+        //tudo certo, vai pro resto do app
         [self performSegueWithIdentifier:@"coco" sender:nil];
-//        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
-//        MainContainerViewController* main = [Board instantiateViewControllerWithIdentifier:@"MainContainer"];
-//        [self presentViewController:main animated:YES completion:nil];
-        
         
     }
     else{
@@ -155,11 +151,11 @@
 
 
 #pragma cadastro
-- (IBAction)botaoCadastro:(id)sender {
-    UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
-    CadastroVC* cad = [Board instantiateViewControllerWithIdentifier:@"Cadastro"];
-    [self presentViewController:cad animated:YES completion:nil];
-}
+//- (IBAction)botaoCadastro:(id)sender {
+//    UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
+//    CadastroVC* cad = [Board instantiateViewControllerWithIdentifier:@"Cadastro"];
+//    [self presentViewController:cad animated:YES completion:nil];
+//}
 - (IBAction)botaoLogin:(id)sender {
     [self Login];
 }
@@ -198,12 +194,12 @@
     
 //    [webService uploadImage:[UIImage imageNamed:@"teste.png"] :@"testeweb"];
     
-    int x = [CadastroVC cadastraID:[self facebookUserID]
+    int x = [CadastroVC cadastraID:self.nameLabel.text
                           password:[self facebookUserID]
                               nick:self.nameLabel.text
                              image:_image];
     if ( x == 2  || x == 1) {
-        self.user.text = self.facebookUserID;
+        self.user.text = self.nameLabel.text;
         self.pass.text = self.facebookUserID;
         
         [self Login];
@@ -222,11 +218,6 @@
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)unwindSegue{
     
 }
-
-- (IBAction)unwindToThisViewController:(UIStoryboardSegue *)unwindSegue{
-    
-}
-
 
 #pragma  facebook methods
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView

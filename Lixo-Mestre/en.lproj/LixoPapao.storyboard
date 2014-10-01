@@ -28,7 +28,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a87-qg-Xdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="816" y="-32"/>
+            <point key="canvasLocation" x="912" y="-32"/>
         </scene>
         <!--MenuV Cperfil-->
         <scene sceneID="KJX-Yt-fhl">
@@ -45,8 +45,8 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelar:" destination="hBa-O6-hN1" eventType="touchUpInside" id="eIb-AQ-t6c"/>
                                     <action selector="voltar:" destination="jIc-Ad-Mvr" eventType="touchUpInside" id="haf-3l-8PQ"/>
+                                    <segue destination="M0T-NW-2Oe" kind="unwind" unwindAction="unwindToMenu:" id="JJF-fa-575"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perfil" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yw5-LA-vsB">
@@ -57,18 +57,18 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="b1bbbe.png" id="KNd-tG-8Y6">
-                                <rect key="frame" x="85" y="50" width="150" height="150"/>
+                                <rect key="frame" x="110" y="50" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YC8-VK-zgw">
-                                <rect key="frame" x="35" y="200" width="250" height="25"/>
+                                <rect key="frame" x="35" y="150" width="250" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" id="CwQ-Td-5dT" userLabel="View1">
-                                <rect key="frame" x="0.0" y="230" width="320" height="85"/>
+                                <rect key="frame" x="0.0" y="180" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DnF-qD-Q8B">
@@ -104,28 +104,56 @@
                                 </subviews>
                                 <color key="backgroundColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" id="zad-Zf-28Y" userLabel="View2">
-                                <rect key="frame" x="0.0" y="315" width="320" height="198"/>
+                            <view contentMode="scaleToFill" id="zad-Zf-28Y" userLabel="View2" customClass="ViewProgresso">
+                                <rect key="frame" x="0.0" y="265" width="320" height="253"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vidro.png" id="sbw-5o-QrD">
-                                        <rect key="frame" x="190" y="40" width="50" height="50"/>
+                                        <rect key="frame" x="190" y="55" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="papel.png" id="BAv-gI-12P">
-                                        <rect key="frame" x="80" y="40" width="50" height="50"/>
+                                        <rect key="frame" x="80" y="55" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plasticoo.png" id="tkZ-nG-u7Z">
-                                        <rect key="frame" x="80" y="130" width="50" height="50"/>
+                                        <rect key="frame" x="80" y="160" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="metal.png" id="CQX-eX-NPM">
-                                        <rect key="frame" x="190" y="130" width="50" height="50"/>
+                                        <rect key="frame" x="190" y="160" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Progresso" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ibd-v4-g1I">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                                        <rect key="frame" x="0.0" y="5" width="320" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="papel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pVd-jz-dEn">
+                                        <rect key="frame" x="68" y="120" width="75" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vidro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ilg-2m-2H1">
+                                        <rect key="frame" x="178" y="120" width="75" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="plastico" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cme-NR-4zK">
+                                        <rect key="frame" x="68" y="225" width="75" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="metal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="idM-eM-VGY">
+                                        <rect key="frame" x="178" y="225" width="75" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -135,7 +163,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="IGM-37-ZIf" userLabel="View3">
-                                <rect key="frame" x="0.0" y="513" width="320" height="50"/>
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oAQ-Ds-iex">
@@ -154,15 +182,25 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="foto" destination="KNd-tG-8Y6" id="RVa-CB-Z9m"/>
+                        <outlet property="labelMetal" destination="idM-eM-VGY" id="XFV-vp-K8u"/>
+                        <outlet property="labelPapel" destination="pVd-jz-dEn" id="6qe-ng-H5D"/>
+                        <outlet property="labelPlastico" destination="cme-NR-4zK" id="Wgf-83-nYk"/>
+                        <outlet property="labelVidro" destination="Ilg-2m-2H1" id="uuI-z1-8Pa"/>
+                        <outlet property="metal" destination="CQX-eX-NPM" id="gWy-gG-7pn"/>
                         <outlet property="nome" destination="YC8-VK-zgw" id="uYm-mz-o3e"/>
+                        <outlet property="papel" destination="BAv-gI-12P" id="Qi7-xi-1nP"/>
+                        <outlet property="plastico" destination="tkZ-nG-u7Z" id="qzs-zK-N9F"/>
                         <outlet property="progressTitulo" destination="Ibd-v4-g1I" id="KfF-Tx-wBJ"/>
                         <outlet property="progresso" destination="oAQ-Ds-iex" id="ZYP-WT-8cr"/>
                         <outlet property="titulo" destination="yw5-LA-vsB" id="JOK-av-mlX"/>
+                        <outlet property="vidro" destination="sbw-5o-QrD" id="p1p-ro-mHJ"/>
+                        <outlet property="viewDesenho" destination="zad-Zf-28Y" id="Pzs-nI-dYe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hae-pe-7Um" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="M0T-NW-2Oe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1361" y="1229"/>
+            <point key="canvasLocation" x="1656" y="949"/>
         </scene>
         <!--MenuV Ceditarperfil-->
         <scene sceneID="259-TT-Pnf">
@@ -284,7 +322,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEH-WT-rMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1795" y="1975"/>
+            <point key="canvasLocation" x="2194" y="1679"/>
         </scene>
         <!--MenuV Camigos-->
         <scene sceneID="Nnb-DL-Xg9">
@@ -328,7 +366,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="70s-sq-EpV" kind="modal" id="g1v-wh-lr5"/>
+                                    <segue destination="70s-sq-EpV" kind="modal" identifier="aoPerfilAmigo" id="g1v-wh-lr5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -342,7 +380,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIz-52-sm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1989" y="1306"/>
+            <point key="canvasLocation" x="2228" y="946"/>
         </scene>
         <!--ConfiguracoesVC-->
         <scene sceneID="qFf-2p-GK9">
@@ -416,7 +454,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgA-1c-TH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eiG-SP-OBj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1723" y="589"/>
+            <point key="canvasLocation" x="1644" y="288"/>
         </scene>
         <!--MenuV Cperfil Amigo-->
         <scene sceneID="vUH-bB-AKz">
@@ -433,7 +471,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelar:" destination="hBa-O6-hN1" eventType="touchUpInside" id="qqD-2b-42Z"/>
                                     <action selector="voltar:" destination="70s-sq-EpV" eventType="touchUpInside" id="3Dx-iN-qhZ"/>
                                 </connections>
                             </button>
@@ -499,7 +536,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygf-Kp-Umw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2493" y="1335"/>
+            <point key="canvasLocation" x="2732" y="941"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="ZiT-WX-mZp">
@@ -608,7 +645,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEL-cu-jbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021" y="288"/>
+            <point key="canvasLocation" x="1117" y="288"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="8PJ-lV-xyP">
@@ -646,7 +683,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="botaoCadastro:" destination="gwc-JE-nW5" eventType="touchUpInside" id="SFY-gQ-QEy"/>
+                                    <segue destination="hBa-O6-hN1" kind="modal" identifier="toCadastro" id="yfs-fm-8I9"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Usuario.png" id="vF8-pk-sJy">
@@ -698,7 +735,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxL-l3-RhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114" y="-44"/>
+            <point key="canvasLocation" x="-26" y="-32"/>
         </scene>
         <!--BluetoothVC-->
         <scene sceneID="hfp-sI-Pwn">
@@ -827,7 +864,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycl-y4-uqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2116" y="-1495"/>
+            <point key="canvasLocation" x="2028" y="-2198"/>
         </scene>
         <!--CadastroVC-->
         <scene sceneID="WP7-tM-wv7">
@@ -848,7 +885,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelar:" destination="hBa-O6-hN1" eventType="touchUpInside" id="XUn-oM-g4t"/>
+                                    <segue destination="0Bs-2I-Xm1" kind="unwind" unwindAction="unwindToLogin:" id="Bvg-DO-Xpn"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastro" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pBN-ra-f8A">
@@ -917,7 +954,6 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="cancelar" destination="nVS-6F-U4v" id="RPI-vR-qou"/>
                         <outlet property="labelNome" destination="om1-js-nSG" id="zUX-hL-HpM"/>
                         <outlet property="labelPass" destination="nl3-gn-5LK" id="MOW-hq-Z2z"/>
                         <outlet property="labelPass2" destination="nNi-qX-Z6I" id="2H9-i8-VII"/>
@@ -926,8 +962,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yom-bX-1pS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0Bs-2I-Xm1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="182" y="-727"/>
+            <point key="canvasLocation" x="516" y="421"/>
         </scene>
         <!--Tab GeralVC-->
         <scene sceneID="71Z-LI-VIB">
@@ -951,7 +988,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEx-rY-Iry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="-340"/>
+            <point key="canvasLocation" x="1106" y="-340"/>
         </scene>
         <!--MapaVC-->
         <scene sceneID="87q-BI-bQy">
@@ -1028,7 +1065,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEn-rt-uuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2484" y="-1122"/>
+            <point key="canvasLocation" x="2388" y="-1825"/>
         </scene>
         <!--RankingVC-->
         <scene sceneID="gge-18-HIN">
@@ -1200,7 +1237,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m9r-LX-zHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3228" y="-708"/>
+            <point key="canvasLocation" x="3116" y="-1451"/>
         </scene>
         <!--RankingVC2-->
         <scene sceneID="krS-bA-kxH">
@@ -1220,8 +1257,8 @@
                                     <action selector="botaoMenu:" destination="Xap-I0-hu2" eventType="touchUpInside" id="RRo-Vq-Wy0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CMe-IJ-TzQ">
-                                <rect key="frame" x="258" y="41" width="46" height="30"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CMe-IJ-TzQ">
+                                <rect key="frame" x="254" y="30" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1250,7 +1287,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mb2-69-rPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2860" y="-708"/>
+            <point key="canvasLocation" x="2732" y="-1451"/>
         </scene>
         <!--MinigamesVC-->
         <scene sceneID="fgP-yh-Yab">
@@ -1389,7 +1426,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upe-d2-1zJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2484" y="-348"/>
+            <point key="canvasLocation" x="2372" y="-859"/>
         </scene>
         <!--TinderVC-->
         <scene sceneID="Fmi-ph-GyF">
@@ -1448,7 +1485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0p-K9-LjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2108" y="-32"/>
+            <point key="canvasLocation" x="2020" y="-348"/>
         </scene>
     </scenes>
     <resources>
