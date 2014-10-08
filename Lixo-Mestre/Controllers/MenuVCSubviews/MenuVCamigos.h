@@ -19,6 +19,4 @@
 
 
 
-- (IBAction)voltar:(id)sender;
-
 @end

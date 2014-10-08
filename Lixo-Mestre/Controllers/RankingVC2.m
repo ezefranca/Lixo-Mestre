@@ -27,6 +27,35 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //NSString *nomeAmigo = [[NSString alloc]init];
+    
+    // FBSample logic
+    // if the session is open, then load the data for our view controller
+    if (!FBSession.activeSession.isOpen) {
+        // if the session is closed, then we open it here, and establish a handler for state changes
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Nao há Ranking disponivel."
+                                                            message:@"Só é possivel ver o Ranking Logado com o Facebook"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OK"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+    
+    if (self.friendPickerController == nil) {
+        // Create friend picker, and get data loaded into it.
+        self.friendPickerController = [[FBFriendPickerViewController alloc] init];
+        self.friendPickerController.title = @"Selecionar Amigo";
+        self.friendPickerController.delegate = self;
+    }
+    
+    [self.friendPickerController loadData];
+    [self.friendPickerController clearSelection];
+    
+    self.friendPickerController.view.frame = CGRectMake(0, 68, 320, 450);
+    
+    [self.view addSubview: self.friendPickerController.view];
+
 }
 
 - (void)didReceiveMemoryWarning{
@@ -70,7 +99,11 @@
     [self.friendPickerController loadData];
     [self.friendPickerController clearSelection];
     
-    [self presentViewController:self.friendPickerController animated:YES completion:nil];
+    self.friendPickerController.view.frame = CGRectMake(0, 68, 320, 450);
+    
+    [self.view addSubview: self.friendPickerController.view];
+    
+    //[self presentViewController:self.friendPickerController animated:YES completion:nil];
 }
 
 - (void)facebookViewControllerDoneWasPressed:(id)sender {
@@ -96,8 +129,7 @@
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
--(void)friendPickerViewControllerSelectionDidChange:(FBFriendPickerViewController *)friendPicker
-{
+-(void)friendPickerViewControllerSelectionDidChange:(FBFriendPickerViewController *)friendPicker{
     NSArray *friends = friendPicker.selection;
     NSLog(@"%@", friends);
     

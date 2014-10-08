@@ -10,7 +10,9 @@
 #import "MenuVCeditarperfil.h"
 #import "MenuVCamigos.h"
 #import "ViewProgresso.h"
-@interface MenuVCperfil : UIViewController{
+#import "LocalData.h"
+
+@interface MenuVCperfil : UIViewController<FBLoginViewDelegate>{
     NSUserDefaults *preferencias;
 }
 
@@ -34,13 +36,10 @@
 
 
 
-
 @property (weak, nonatomic) IBOutlet UILabel *progresso;
 
 - (IBAction)voltar:(id)sender;
 
-- (IBAction)editar:(id)sender;
-- (IBAction)amigos:(id)sender;
 - (IBAction)convidar:(id)sender;
 
 

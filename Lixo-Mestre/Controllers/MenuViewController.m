@@ -25,7 +25,6 @@
     preferencias = [NSUserDefaults standardUserDefaults];
 
     self.nomeUsuario.text = [preferencias objectForKey:@"userName"];
-
     self.nomeUsuario.font = [UIFont fontWithName:@"Santor" size:17];
     
     itemsMenu = [NSArray arrayWithObjects:@"Perfil",@"Recompensas", @"Estatistica", @"Configuracoes", nil];
@@ -34,10 +33,13 @@
                                                   blue:176/255.0
                                                  alpha:1.0];
     
-    self.profileview.layer.cornerRadius = self.profileview.frame.size.width/ 2;
-    self.profileview.layer.borderWidth = 1.0f;
-    self.profileview.layer.borderColor = [UIColor clearColor].CGColor;
-    self.profileview.clipsToBounds = YES;
+    self.imagemPerfil.image = [LocalData loadFacePicture];
+    //Deixar imagem redonda 
+    CGRect x = self.imagemPerfil.bounds;
+    self.imagemPerfil.layer.cornerRadius = CGRectGetHeight(x) / 2;
+    self.imagemPerfil.layer.borderWidth = 1.0f;
+    self.imagemPerfil.layer.borderColor = [UIColor clearColor].CGColor;
+    self.imagemPerfil.clipsToBounds = YES;
 
 
 }
@@ -107,7 +109,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     //NSLog(@"Clicou em %ld", (long)indexPath.row);
 
-    
     switch (indexPath.row) {
         case 0:{
             [self performSegueWithIdentifier:@"aoPerfil" sender:nil];

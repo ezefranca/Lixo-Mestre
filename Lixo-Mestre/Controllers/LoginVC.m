@@ -25,7 +25,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-
+    self.logouPeloFace = false;
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:SVProgressHUDWillAppearNotification object:nil];
     
@@ -45,21 +45,13 @@
     [self.view addSubview:tint];
     
     //Customizacao dos TextFields
-//    [@[_user, _pass] enumerateObjectsUsingBlock:^(UITextField* obj, NSUInteger idx, BOOL *stop) {
-//		[obj.layer setBorderWidth:2];
-//		[obj.layer setBorderColor:[UIColor colorWithRed:41.0/255.0 green:128.0/255.0 blue:185.0/255.0 alpha:1].CGColor];
-//		[obj setDelegate:self];
-//	}];
     self.user.font = [UIFont fontWithName:@"Santor" size:17];
-    //[self.user.layer setBorderWidth:0];
     self.user.delegate = self;
     
     self.pass.font = [UIFont fontWithName:@"Santor" size:17];
-    //[self.pass .layer setBorderWidth:0];
     self.pass.delegate = self;
     
     //login do facebook
-  //  _loginView = [[FBLoginView alloc] initWithReadPermissions: @[@"public_profile", @"user_friends", @"publish_actions"]];
     _loginView = [[FBLoginView alloc] init];
     _loginView.frame = CGRectMake(20, 405, 280, 53);
     _loginView.delegate = self;
@@ -98,6 +90,10 @@
         self.pass.text = [preferencias stringForKey:@"password"];
         [self Login];
     }
+    else{
+        self.user.text = @"";
+        self.pass.text = @"";
+    }
 }
 
 
@@ -135,8 +131,13 @@
             [alert show];
         }
         
+        [preferencias setBool: self.logouPeloFace forKey:@"FaceLogin"];
+        [preferencias synchronize];
+        
         //tudo certo, vai pro resto do app
         [self performSegueWithIdentifier:@"coco" sender:nil];
+      
+        
         
     }
     else{
@@ -158,10 +159,6 @@
 //}
 - (IBAction)botaoLogin:(id)sender {
     [self Login];
-}
-
-- (IBAction)botaoVoltar:(id)sender{
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -188,11 +185,13 @@
         }
     }
     //teste pra ver se eh a imagem certa
-//    UIImageView *imgv = [[UIImageView alloc] initWithImage:_image];
-//    imgv.center = self.view.center;
+    UIImageView *imgv = [[UIImageView alloc] initWithImage:_image];
+    imgv.center = self.view.center;
 //    [self.view addSubview: imgv];
     
-//    [webService uploadImage:[UIImage imageNamed:@"teste.png"] :@"testeweb"];
+
+    [LocalData saveFacePic: imgv.image];
+
     
     int x = [CadastroVC cadastraID:self.nameLabel.text
                           password:[self facebookUserID]
@@ -201,11 +200,10 @@
     if ( x == 2  || x == 1) {
         self.user.text = self.nameLabel.text;
         self.pass.text = self.facebookUserID;
-        
+        [preferencias setObject: self.nameLabel.text forKey:@"FaceNome"];
+        self.logouPeloFace = TRUE;
         [self Login];
-//        UIStoryboard *Board = [UIStoryboard storyboardWithName:@"LixoPapao" bundle:nil];
-//        TabGeralVC* tab = [Board instantiateViewControllerWithIdentifier:@"TabGeral"];
-//        [self presentViewController:tab animated:YES completion:nil];
+        
     }
     else{
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login com facebook" message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
@@ -225,9 +223,9 @@
     self.profilePictureView.profileID = [user objectID];
     self.nameLabel.text = user.name;
     [self setFacebookUserID: [user objectID]];
+    [preferencias setObject: self.facebookUserID forKey:@"idfb"];
     
     [self performSelector:@selector(logarDoFace) withObject:nil afterDelay:0.3]; //com delay pq se nao vai pegar a imagem errada
-  
 }
 
 // Logged-in from facebook user experience

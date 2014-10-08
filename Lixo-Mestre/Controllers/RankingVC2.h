@@ -14,7 +14,7 @@
 
 
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+//@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 - (IBAction)testes:(id)sender;
@@ -23,4 +23,5 @@
 
 
 @property (retain, nonatomic) FBFriendPickerViewController *friendPickerController;
+
 @end

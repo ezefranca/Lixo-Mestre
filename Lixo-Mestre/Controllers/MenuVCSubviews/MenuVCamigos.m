@@ -14,8 +14,7 @@
 
 @implementation MenuVCamigos
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -27,6 +26,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.titulo.font = [UIFont fontWithName:@"Santor" size:20];
+    
+    self.tableView.delegate = self;
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
     
 }
 
@@ -46,19 +51,15 @@
 }
 */
 
-- (IBAction)voltar:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)navegacaoManeira:(UIViewController*)tela{
-    [tela setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
-    [self presentViewController:tela animated:YES completion:nil];
-}
-
 #pragma table view methods
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [[UITableViewCell alloc] init];
+    
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    label.text = @"hue";
+    
+    [cell addSubview: label];
     
     return cell;
 }
@@ -70,7 +71,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 5;
 }
-
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"Clicou em %ld", (long)indexPath.row);

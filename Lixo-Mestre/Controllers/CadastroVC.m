@@ -46,7 +46,6 @@
     self.labelPass.delegate = self;
     self.labelPass2.delegate = self;
     
-    
     //Deixar imagem redonda
     CGRect x = self.profileImage.bounds;
     self.profileImage.layer.cornerRadius = CGRectGetHeight(x) / 2;

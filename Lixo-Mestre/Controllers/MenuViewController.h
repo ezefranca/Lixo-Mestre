@@ -11,14 +11,13 @@
 #import "ConfiguracoesVC.h"
 
 
-
 @interface MenuViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>{
     NSUserDefaults *preferencias;
 }
 
 
-@property (weak, nonatomic) IBOutlet UIView *profileview;
 @property (weak, nonatomic) IBOutlet UILabel *nomeUsuario;
+@property (weak, nonatomic) IBOutlet UIImageView *imagemPerfil;
 
 @property (weak, nonatomic) IBOutlet UITableView *MenuTableView;
 

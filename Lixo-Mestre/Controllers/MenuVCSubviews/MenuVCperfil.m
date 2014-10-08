@@ -27,14 +27,22 @@
     // Do any additional setup after loading the view.
     preferencias = [NSUserDefaults standardUserDefaults];
     
+    if ([preferencias boolForKey:@"FaceLogin"]) {
+        self.nome.text = [preferencias objectForKey:@"FaceNome"];
+    }
+    else{
+        self.nome.text = [preferencias objectForKey:@"userName"];
 
+    }
     
-    self.foto.image = [preferencias objectForKey:@"ProfileImage"];
-    self.nome.text = [preferencias objectForKey:@"userName"];
+    self.foto.image = [LocalData loadFacePicture];
+    //Deixar imagem redonda
+    CGRect x = self.foto.bounds;
+    self.foto.layer.cornerRadius = CGRectGetHeight(x) / 2;
+    self.foto.layer.borderWidth = 1.0f;
+    self.foto.layer.borderColor = [UIColor clearColor].CGColor;
+    self.foto.clipsToBounds = YES;
     
-
-    
-    self.progresso.text = [preferencias objectForKey:@""];
     
     self.titulo.font = [UIFont fontWithName:@"Santor" size:20];
     self.nome.font = [UIFont fontWithName:@"Santor" size:17];
@@ -43,8 +51,6 @@
     self.labelVidro.font = [UIFont fontWithName:@"Santor" size:17];
     self.labelPlastico.font = [UIFont fontWithName:@"Santor" size:17];
     self.labelMetal.font = [UIFont fontWithName:@"Santor" size:17];
-    
-    
     
     self.progressTitulo.font = [UIFont fontWithName:@"Santor" size:30];
     
@@ -55,6 +61,8 @@
     self.viewDesenho.totalLixos = total;
     self.progresso.text = [NSString stringWithFormat:@"%d Lixos reciclados",total];
     self.progresso.font = [UIFont fontWithName:@"Santor" size:17];
+    
+
     
 }
 
@@ -78,13 +86,8 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)editar:(id)sender {
-}
-
-- (IBAction)amigos:(id)sender {
-}
-
 - (IBAction)convidar:(id)sender {
+    
 }
 
 - (IBAction)unwindToPerfil:(UIStoryboardSegue *)unwindSegue{
@@ -94,7 +97,7 @@
 //isso eh um metodo de view, nao de viewcontroller >.<
 //so criando uma uiview custom (ViewProgresso)
 //-(void)drawRect:(CGRect)rect{
-//    
 //}
+
 
 @end

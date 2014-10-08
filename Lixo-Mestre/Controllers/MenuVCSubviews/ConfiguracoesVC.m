@@ -30,22 +30,28 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    _statusLabel = [[UILabel alloc] init];
-    _statusLabel.frame = CGRectMake(20, 78, self.view.frame.size.width, 30);
-    [self.view addSubview: _statusLabel];
-    
-    _profilePictureView = [[FBProfilePictureView alloc] init];
-    _profilePictureView.frame = CGRectMake(20, 116, 50, 50);
-    [self.view addSubview: _profilePictureView];
-
-    _nameLabel = [[UILabel alloc] init];
-    _nameLabel.frame = CGRectMake(20, 174, self.view.frame.size.width, 30);
-    [self.view addSubview: _nameLabel];
-    
-    _loginView = [[FBLoginView alloc] init];
-    _loginView.frame = CGRectMake(20, 495, 280, 53);
-    _loginView.delegate = self;
-    [self.view addSubview:_loginView];
+    if ( [preferencias boolForKey:@"FaceLogin"] ) {
+        _statusLabel = [[UILabel alloc] init];
+        _statusLabel.frame = CGRectMake(20, 78, self.view.frame.size.width, 30);
+        [self.view addSubview: _statusLabel];
+        
+        _profilePictureView = [[FBProfilePictureView alloc] init];
+        _profilePictureView.frame = CGRectMake(20, 116, 50, 50);
+        [self.view addSubview: _profilePictureView];
+        
+        _nameLabel = [[UILabel alloc] init];
+        _nameLabel.frame = CGRectMake(20, 174, self.view.frame.size.width, 30);
+        [self.view addSubview: _nameLabel];
+        
+        _loginView = [[FBLoginView alloc] init];
+        _loginView.frame = CGRectMake(20, 495, 280, 53);
+        _loginView.delegate = self;
+        [self.view addSubview:_loginView];
+    }
+    else{
+        
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning{
@@ -77,25 +83,25 @@
     self.nameLabel.text = user.name;
     [self setFacebookUserID: [user objectID]];
     
-
-    
 }
 
 #pragma facebook methods
 
 // Logged-in from facebook user experience
 - (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
-    self.statusLabel.text = @"You're logged in as";
+    self.statusLabel.text = @"Você está logado como ";
+    [preferencias setBool: TRUE forKey: @"FaceLogin"];
 }
 
 // Logged-out from facebook user experience
 - (void)loginViewShowingLoggedOutUser:(FBLoginView *)loginView {
     self.profilePictureView.profileID = nil;
     self.nameLabel.text = @"";
-    self.statusLabel.text= @"You're not logged in!";
-    [self performSegueWithIdentifier:@"unwindProLogin" sender:self];
+    self.statusLabel.text= @"";
+    if ([preferencias boolForKey:@"FaceLogin"]) {
+            [self performSegueWithIdentifier:@"unwindProLogin" sender:self];
+    }
 }
-
 
 
 // Handle possible errors that can occur during facebook login
