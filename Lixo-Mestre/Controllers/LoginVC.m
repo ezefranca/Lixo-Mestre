@@ -104,21 +104,28 @@
 }
 
 #pragma Login
-- (IBAction)salvaSenha:(id)sender{
+- (IBAction)salvaSenha:(id)sender
+{
     if(senhaSalva){
         senhaSalva = 0;
     }
-    else{
+    else
+    {
         senhaSalva = 1;
     }
+    
     [preferencias setBool:senhaSalva forKey:@"senhaSalva"];
     [preferencias synchronize];
 }
 
 - (BOOL)Login{
-    if([webService login:self.logInfo.text :self.pass.text]){
+    
+    if([webService login:self.logInfo.text :self.pass.text])
+    {
         NSLog(@"%@", [webService rankingUser:@"load" : self.logInfo.text]);
-        if(senhaSalva){
+        
+        if(senhaSalva)
+        {
             // salvando a senha se a opcao estiver habilitada
             [preferencias setObject:self.logInfo.text forKey:@"LoginApp"];
             [preferencias setObject:self.pass.text forKey:@"password"];
@@ -126,7 +133,8 @@
             [preferencias synchronize];
         }
 
-        if ( ![webService carregarPontosUsuario: self.logInfo.text] ) {
+        if (![webService carregarPontosUsuario: self.logInfo.text])
+        {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Sem internet" message:@"nao foi possivel sincronizar os dados com o servidor" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
             alert.alertViewStyle = UIAlertViewStyleDefault;
             [alert show];
@@ -138,16 +146,17 @@
         [self loadImageforUser: self.email];
         //tudo certo, vai pro resto do app
         [self performSegueWithIdentifier:@"coco" sender:nil];
-      
         
     }
-    else{
+    else
+    {
         [self shake];
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login." message:@"Verifique o usuário ou a senha." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         alert.alertViewStyle = UIAlertViewStyleDefault;
         [alert show];
         return FALSE;
     }
+    
     return TRUE;
 }
 
