@@ -16,7 +16,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UITextField *labelNome;
-@property (weak, nonatomic) IBOutlet UITextField *labelUser;
+@property (weak, nonatomic) IBOutlet UITextField *labelEmail;
 @property (weak, nonatomic) IBOutlet UITextField *labelPass;
 @property (weak, nonatomic) IBOutlet UITextField *labelPass2;
 
@@ -24,7 +24,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *profileImage;
 
 @property (weak, nonatomic) IBOutlet UIButton *cancelar;
-+(BOOL)cadastraID:(NSString *)user password:(NSString *)pass nick:(NSString *)nickName image:(UIImage *)imagemDoPerfil;
++(int)cadastraID:(NSString *)user password:(NSString *)pass login:(NSString *)email image:(UIImage *)imagemDoPerfil;
 
 
 - (IBAction)botaoCamera:(id)sender;

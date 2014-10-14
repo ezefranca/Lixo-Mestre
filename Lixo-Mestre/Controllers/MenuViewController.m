@@ -24,7 +24,7 @@
     
     preferencias = [NSUserDefaults standardUserDefaults];
 
-    self.nomeUsuario.text = [preferencias objectForKey:@"userName"];
+    self.nomeUsuario.text = [preferencias objectForKey:@"Nome"];
     self.nomeUsuario.font = [UIFont fontWithName:@"Santor" size:17];
     
     itemsMenu = [NSArray arrayWithObjects:@"Perfil",@"Recompensas", @"Estatistica", @"Configuracoes", nil];
@@ -93,7 +93,6 @@
         cell.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
     }
     
-
 
     return cell;
 }

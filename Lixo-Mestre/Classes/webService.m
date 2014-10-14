@@ -26,11 +26,10 @@
     }
 }
 
-+(BOOL)login : (NSString *)user : (NSString *)pass{
++(BOOL)login : (NSString *)email : (NSString *)pass{
     if ([self check]){
-        
         NSString *url =  @"http://172.246.16.27/lixoPapao/loginManager.php";
-        NSString *post = [NSString stringWithFormat:@"type=login&user=%@&pass=%@",user , pass];
+        NSString *post = [NSString stringWithFormat:@"type=login&email=%@&pass=%@",email , pass];
         
         NSLog(@"%@" , post);
         
@@ -63,26 +62,79 @@
          ret = s;
          }
          */
-        int x = (int)[content integerValue];
-        
-        if (x){
-        NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
+        if ([content isEqualToString:@"0"]) {
+            return NO;
+        }
+        else{
+            NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
             if (preferencias) {
-                    [preferencias setObject:user forKey:@"userName"];
-                    [preferencias setObject:pass forKey:@"password"];
-                    [preferencias synchronize];
-                }
+                [preferencias setObject: content forKey:@"Nome"];
+                [preferencias setObject: email forKey:@"LoginAPP"];
+                [preferencias setObject: pass forKey:@"password"];
+                [preferencias synchronize];
+            }
             return YES;
         }
     }
     return NO;
 }
 
-+(int)newUser:(NSString *)user :(NSString *)pass :(NSString *)nickName{
++(NSString*)nameOfUserForEmail : (NSString *)email{
+    if ([self check]){
+        NSString *url =  @"http://172.246.16.27/lixoPapao/loginManager.php";
+        NSString *post = [NSString stringWithFormat:@"type=login&email=%@&pass=",email];
+        
+        //NSLog(@"%@" , post);
+        
+        NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+        NSMutableURLRequest *request = [ [ NSMutableURLRequest alloc ] initWithURL: [ NSURL URLWithString: url]];
+        
+        [ request setHTTPMethod: @"POST"];
+        [ request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
+        
+        [ request setHTTPBody: postData ];
+        NSURLResponse *response;
+        NSError *err;
+        NSData *returnData = [ NSURLConnection sendSynchronousRequest: request returningResponse:&response error:&err];
+        
+        NSString *content = [NSString stringWithUTF8String:[returnData bytes]];
+        
+        //se precisar de um json maneiro
+        /*
+         NSError* error;
+         NSDictionary* json = [NSJSONSerialization
+         JSONObjectWithData:returnData //1
+         
+         options:kNilOptions
+         error:&error];
+         
+         NSString *ret ;
+         
+         for (NSString *s in json) {
+         ret = s;
+         }
+         */
+        int x = (int)[content integerValue];
+        
+        if (x){
+            NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
+            if (preferencias) {
+                [preferencias setObject:email forKey:@"userName"];
+                [preferencias synchronize];
+            }
+            return @"oi";
+        }
+    }
+
+    
+    return @"oi";
+}
+
++(int)newUser:(NSString *)user :(NSString *)pass :(NSString *)email{
     int x = 0;
     if ([self check]){
         NSString *url =  @"http://172.246.16.27/lixoPapao/loginManager.php";
-        NSString *post = [NSString stringWithFormat:@"type=new&user=%@&pass=%@&nick_name=%@",user , pass, nickName];
+        NSString *post = [NSString stringWithFormat:@"type=new&user=%@&pass=%@&email=%@",user , pass, email];
         
         //NSLog(@"%@" , post);
         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];

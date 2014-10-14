@@ -21,10 +21,9 @@
 @interface LoginVC : UIViewController <UITextFieldDelegate, FBLoginViewDelegate>{
     NSUserDefaults *preferencias;
     BOOL senhaSalva;
-
 }
 
-@property (weak, nonatomic) IBOutlet UITextField *user;
+@property (weak, nonatomic) IBOutlet UITextField *logInfo;
 @property (weak, nonatomic) IBOutlet UITextField *pass;
 @property (weak, nonatomic) IBOutlet M13Checkbox *checkSenha;
 @property (weak, nonatomic) IBOutlet UIButton *buttomLogar;
@@ -37,6 +36,7 @@
 @property UILabel *nameLabel;
 @property UILabel *statusLabel;
 
+@property NSString *email;
 @property BOOL logouPeloFace;
 
 

@@ -9,6 +9,7 @@
 #import "CadastroVC.h"
 #import "webService.h"
 #import "LoginVC.h"
+#import "LocalData.h"
 
 @interface CadastroVC ()
 
@@ -24,16 +25,14 @@
     return self;
 }
 
-+(BOOL)cadastraID:(NSString *)user password:(NSString *)pass nick:(NSString *)nickName image:(UIImage *)imagemDoPerfil{
-    int x = [webService newUser:user :pass :nickName];
++(int)cadastraID:(NSString *)user password:(NSString *)pass login:(NSString *)email image:(UIImage *)imagemDoPerfil{
+    int x = [webService newUser:user :pass :email];
     if (x) {
-        if (x != 2 ) {
-            [webService uploadImage: imagemDoPerfil: user];
+        if ( x != 2 ) {
+            [webService uploadImage: [LocalData loadFacePicture] :email];
         }
-        
-        return YES;
     }
-    return NO;
+    return x;
 }
 
 - (void)viewDidLoad{
@@ -42,7 +41,7 @@
     self.titulo.font = [UIFont fontWithName:@"Santor" size:20];
     
     self.labelNome.delegate = self;
-    self.labelUser.delegate = self;
+    self.labelEmail.delegate = self;
     self.labelPass.delegate = self;
     self.labelPass2.delegate = self;
     
@@ -99,28 +98,33 @@
 
 - (void)botaoCadastrar:(id)sender{
     if ([[self.labelPass text] isEqualToString: [self.labelPass2 text]]) {
-        
-        int x = [webService newUser:self.labelUser.text :self.labelPass.text :self.labelNome.text];
-        //nao manda a foto agr
-        //[webService uploadImage:self.profileImage.image:self.labelUser.text];
-        if(x == 0){//erro
-            NSLog(@"Algum erro");
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        if ( [self NSStringIsValidEmail: self.labelEmail.text]) {
+
+            int x = [webService newUser:self.labelNome.text :self.labelPass.text :self.labelEmail.text];
+            //nao manda a foto agr
+            //[webService uploadImage:self.profileImage.image:self.labelUser.text];
+            if(x == 0){//erro
+                NSLog(@"Algum erro");
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                alert.alertViewStyle = UIAlertViewStyleDefault;
+                [alert show];
+                
+            }
+            if (x == 1) {//bls cadastrou
+                [self dismissViewControllerAnimated:YES completion:nil];
+            }
+            if(x == 2){//ja existe
+                NSLog(@"Erro");
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"o email ja esta sendo usado" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                alert.alertViewStyle = UIAlertViewStyleDefault;
+                [alert show];
+            }
+        }
+        else{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"email invalido" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
             alert.alertViewStyle = UIAlertViewStyleDefault;
             [alert show];
-            
-        }
-        if (x == 1) {//bls cadastrou
-//            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Cadastro completo!" message:@"ainda eh por culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-//            alert.alertViewStyle = UIAlertViewStyleDefault;
-//            [alert show];
-            [self dismissViewControllerAnimated:YES completion:nil];
-        }
-        if(x == 2){//ja existe
-            NSLog(@"Erro");
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-            alert.alertViewStyle = UIAlertViewStyleDefault;
-            [alert show];
+
         }
     }
     else{
@@ -128,6 +132,15 @@
         alert.alertViewStyle = UIAlertViewStyleDefault;
         [alert show];
     }
+}
+
+-(BOOL) NSStringIsValidEmail:(NSString *)checkString{
+    BOOL stricterFilter = NO; // Discussion http://blog.logichigh.com/2010/09/02/validating-an-e-mail-address/
+    NSString *stricterFilterString = @"[A-Z0-9a-z\\._%+-]+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2,4}";
+    NSString *laxString = @".+@([A-Za-z0-9-]+\\.)+[A-Za-z]{2}[A-Za-z]*";
+    NSString *emailRegex = stricterFilter ? stricterFilterString : laxString;
+    NSPredicate *emailTest = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", emailRegex];
+    return [emailTest evaluateWithObject:checkString];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{

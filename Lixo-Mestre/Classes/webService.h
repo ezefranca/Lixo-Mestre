@@ -12,7 +12,7 @@
 
 extern NSString *usuarioUniversal;
 
-+(BOOL)login : (NSString *)user : (NSString *)pass;
++(BOOL)login : (NSString *)email : (NSString *)pass;
 +(BOOL)check;
 +(int)newUser : (NSString *)user :  (NSString *)pass : (NSString *)nickName;
 +(void)uploadImage: (UIImage *)imagemDoPerfil : (NSString *)username;

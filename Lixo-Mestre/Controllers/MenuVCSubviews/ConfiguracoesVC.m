@@ -30,7 +30,7 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     
-    if ( [preferencias boolForKey:@"FaceLogin"] ) {
+    if ( ![preferencias boolForKey:@"FaceLogin"] ) {
         _statusLabel = [[UILabel alloc] init];
         _statusLabel.frame = CGRectMake(20, 78, self.view.frame.size.width, 30);
         [self.view addSubview: _statusLabel];
@@ -98,7 +98,7 @@
     self.profilePictureView.profileID = nil;
     self.nameLabel.text = @"";
     self.statusLabel.text= @"";
-    if ([preferencias boolForKey:@"FaceLogin"]) {
+    if (![preferencias boolForKey:@"FaceLogin"]) {
             [self performSegueWithIdentifier:@"unwindProLogin" sender:self];
     }
 }

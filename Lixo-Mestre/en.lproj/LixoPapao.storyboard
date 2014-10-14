@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gwc-JE-nW5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gwc-JE-nW5">
     <dependencies>
-        <deployment version="1792" defaultVersion="1792" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment version="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Main Container View Controller-->
@@ -61,7 +61,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YC8-VK-zgw">
-                                <rect key="frame" x="35" y="150" width="250" height="30"/>
+                                <rect key="frame" x="0.0" y="150" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -200,7 +200,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hae-pe-7Um" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="M0T-NW-2Oe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1656" y="949"/>
+            <point key="canvasLocation" x="2053" y="288"/>
         </scene>
         <!--MenuV Ceditarperfil-->
         <scene sceneID="259-TT-Pnf">
@@ -324,7 +324,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEH-WT-rMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Sxp-cz-Tpo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2194" y="1679"/>
+            <point key="canvasLocation" x="2053" y="961"/>
         </scene>
         <!--MenuV Camigos-->
         <scene sceneID="Nnb-DL-Xg9">
@@ -382,7 +382,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIz-52-sm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hpd-92-6it" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2228" y="946"/>
+            <point key="canvasLocation" x="2455" y="288"/>
         </scene>
         <!--ConfiguracoesVC-->
         <scene sceneID="qFf-2p-GK9">
@@ -456,7 +456,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgA-1c-TH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eiG-SP-OBj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1644" y="288"/>
+            <point key="canvasLocation" x="1133" y="1440"/>
         </scene>
         <!--MenuV Cperfil Amigo-->
         <scene sceneID="vUH-bB-AKz">
@@ -538,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygf-Kp-Umw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2732" y="941"/>
+            <point key="canvasLocation" x="2860" y="288"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="ZiT-WX-mZp">
@@ -657,19 +657,8 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zxy-JD-x3K">
-                                <rect key="frame" x="25" y="295" width="280" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                <state key="normal" backgroundImage="login.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botaoLogin:" destination="gwc-JE-nW5" eventType="touchUpInside" id="jnJ-4X-XnD"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eUi-mg-fdU">
                                 <rect key="frame" x="75" y="518" width="181" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -682,11 +671,11 @@
                                     <segue destination="hBa-O6-hN1" kind="modal" identifier="toCadastro" id="yfs-fm-8I9"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Usuario.png" id="vF8-pk-sJy">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Email.png" id="vF8-pk-sJy">
                                 <rect key="frame" x="25" y="178" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  nome" minimumFontSize="17" id="rbX-uX-aCp">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="  email" minimumFontSize="17" id="rbX-uX-aCp">
                                 <rect key="frame" x="69" y="178" width="236" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -719,14 +708,25 @@
                                     <segue destination="5Zu-ED-0Wm" kind="modal" identifier="coco" id="Cb0-b9-bXA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zxy-JD-x3K">
+                                <rect key="frame" x="25" y="295" width="280" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" backgroundImage="login.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoLogin:" destination="gwc-JE-nW5" eventType="touchUpInside" id="jnJ-4X-XnD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="buttomLogar" destination="Zxy-JD-x3K" id="dM6-YB-D9H"/>
+                        <outlet property="logInfo" destination="rbX-uX-aCp" id="1DJ-LG-buY"/>
                         <outlet property="pass" destination="xPM-zM-QoD" id="t2i-nH-n2M"/>
-                        <outlet property="user" destination="rbX-uX-aCp" id="FF8-Nl-tsY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxL-l3-RhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -950,17 +950,17 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="labelEmail" destination="eeU-FU-jnE" id="eXP-K7-ll0"/>
                         <outlet property="labelNome" destination="om1-js-nSG" id="zUX-hL-HpM"/>
                         <outlet property="labelPass" destination="nl3-gn-5LK" id="MOW-hq-Z2z"/>
                         <outlet property="labelPass2" destination="nNi-qX-Z6I" id="2H9-i8-VII"/>
-                        <outlet property="labelUser" destination="eeU-FU-jnE" id="zcX-bi-Jde"/>
                         <outlet property="titulo" destination="pBN-ra-f8A" id="WEj-aG-S8Z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yom-bX-1pS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="0Bs-2I-Xm1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="516" y="421"/>
+            <point key="canvasLocation" x="-26" y="728"/>
         </scene>
         <!--Tab GeralVC-->
         <scene sceneID="71Z-LI-VIB">

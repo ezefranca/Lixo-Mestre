@@ -45,14 +45,15 @@
     [self.view addSubview:tint];
     
     //Customizacao dos TextFields
-    self.user.font = [UIFont fontWithName:@"Santor" size:17];
-    self.user.delegate = self;
+    self.logInfo.font = [UIFont fontWithName:@"Santor" size:17];
+    self.logInfo.delegate = self;
     
     self.pass.font = [UIFont fontWithName:@"Santor" size:17];
     self.pass.delegate = self;
     
     //login do facebook
-    _loginView = [[FBLoginView alloc] init];
+    _loginView = [[FBLoginView alloc] initWithReadPermissions:
+                  @[@"public_profile", @"email", @"user_friends"]];
     _loginView.frame = CGRectMake(20, 405, 280, 53);
     _loginView.delegate = self;
     [self.view addSubview:_loginView];
@@ -86,12 +87,12 @@
     // Verifiva se o opcao de senha salva esta habilitada no settings
     if(senhaSalva){
         // pegando usuario e senha salvo e preenchendo nos labels
-        self.user.text = [preferencias stringForKey:@"userName"];
+        self.logInfo.text = [preferencias stringForKey:@"LoginApp"];
         self.pass.text = [preferencias stringForKey:@"password"];
         [self Login];
     }
     else{
-        self.user.text = @"";
+        self.logInfo.text = @"";
         self.pass.text = @"";
     }
 }
@@ -115,17 +116,17 @@
 }
 
 - (BOOL)Login{
-    if([webService login:self.user.text :self.pass.text]){
-        NSLog(@"%@", [webService rankingUser:@"load" : self.user.text]);
+    if([webService login:self.logInfo.text :self.pass.text]){
+        NSLog(@"%@", [webService rankingUser:@"load" : self.logInfo.text]);
         if(senhaSalva){
             // salvando a senha se a opcao estiver habilitada
-            [preferencias setObject:self.user.text forKey:@"userName"];
+            [preferencias setObject:self.logInfo.text forKey:@"LoginApp"];
             [preferencias setObject:self.pass.text forKey:@"password"];
             [preferencias setBool:senhaSalva forKey:@"senhaSalva"];
             [preferencias synchronize];
         }
 
-        if ( ![webService carregarPontosUsuario: self.user.text] ) {
+        if ( ![webService carregarPontosUsuario: self.logInfo.text] ) {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Sem internet" message:@"nao foi possivel sincronizar os dados com o servidor" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
             alert.alertViewStyle = UIAlertViewStyleDefault;
             [alert show];
@@ -134,10 +135,10 @@
         [preferencias setBool: self.logouPeloFace forKey:@"FaceLogin"];
         [preferencias synchronize];
         
+        [self loadImageforUser: self.email];
         //tudo certo, vai pro resto do app
         [self performSegueWithIdentifier:@"coco" sender:nil];
       
-        
         
     }
     else{
@@ -171,7 +172,7 @@
 }
 
 - (void)shake{
-    [self.user shake:10 withDelta:10 andSpeed:0.05 shakeDirection:ShakeDirectionHorizontal];
+    [self.logInfo shake:10 withDelta:10 andSpeed:0.05 shakeDirection:ShakeDirectionHorizontal];
 }
 
 -(void)logarDoFace{
@@ -186,21 +187,20 @@
     }
     //teste pra ver se eh a imagem certa
     UIImageView *imgv = [[UIImageView alloc] initWithImage:_image];
-    imgv.center = self.view.center;
+//    imgv.center = self.view.center;
 //    [self.view addSubview: imgv];
-    
 
     [LocalData saveFacePic: imgv.image];
-
     
-    int x = [CadastroVC cadastraID:self.nameLabel.text
-                          password:[self facebookUserID]
-                              nick:self.nameLabel.text
-                             image:_image];
+    int x = [CadastroVC cadastraID: self.nameLabel.text
+                          password: self.facebookUserID
+                             login: self.email
+                             image: _image];
+
     if ( x == 2  || x == 1) {
-        self.user.text = self.nameLabel.text;
+        self.logInfo.text = self.email;
         self.pass.text = self.facebookUserID;
-        [preferencias setObject: self.nameLabel.text forKey:@"FaceNome"];
+        [preferencias setObject: self.nameLabel.text forKey:@"Nome"];
         self.logouPeloFace = TRUE;
         [self Login];
         
@@ -217,12 +217,23 @@
     
 }
 
+-(void)loadImageforUser: (NSString *)email{
+    NSString* path = [NSString stringWithFormat:@"http://172.246.16.27/lixoPapao/perfil/%@.png",email];
+    NSURL *url = [NSURL URLWithString:path];
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    UIImage *img = [[UIImage alloc] initWithData:data];
+    [LocalData saveFacePic:img];
+}
+
+
 #pragma  facebook methods
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
                             user:(id<FBGraphUser>)user {
     self.profilePictureView.profileID = [user objectID];
     self.nameLabel.text = user.name;
     [self setFacebookUserID: [user objectID]];
+    self.email =  user[@"email"];
+    
     [preferencias setObject: self.facebookUserID forKey:@"idfb"];
     
     [self performSelector:@selector(logarDoFace) withObject:nil afterDelay:0.3]; //com delay pq se nao vai pegar a imagem errada
@@ -239,7 +250,7 @@
     self.nameLabel.text = @"";
     self.statusLabel.text= @"You're not logged in!";
     
-    self.user.text = @"";
+    self.logInfo.text = @"";
     self.pass.text = @"";
 }
 

@@ -27,13 +27,7 @@
     // Do any additional setup after loading the view.
     preferencias = [NSUserDefaults standardUserDefaults];
     
-    if ([preferencias boolForKey:@"FaceLogin"]) {
-        self.nome.text = [preferencias objectForKey:@"FaceNome"];
-    }
-    else{
-        self.nome.text = [preferencias objectForKey:@"userName"];
-
-    }
+    self.nome.text = [preferencias objectForKey:@"Nome"];
     
     self.foto.image = [LocalData loadFacePicture];
     //Deixar imagem redonda
@@ -63,7 +57,6 @@
     self.progresso.font = [UIFont fontWithName:@"Santor" size:17];
     
 
-    
 }
 
 - (void)didReceiveMemoryWarning{
