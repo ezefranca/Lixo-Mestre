@@ -56,7 +56,7 @@
     
     if([[NSFileManager defaultManager] fileExistsAtPath: path_to_file]){
         [[NSFileManager defaultManager] removeItemAtPath: path_to_file error:nil];
-        NSLog(@"axei e deletei");
+        //NSLog(@"axei e deletei");
     }
     
 }

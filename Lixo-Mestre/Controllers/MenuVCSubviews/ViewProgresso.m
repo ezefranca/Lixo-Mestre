@@ -38,10 +38,10 @@
     CGContextSetRGBStrokeColor(ctx, 0/255.0, 127/255.0, 177/255.0, 1.0);
     CGContextSetLineWidth(ctx, 6);
     
-    int qtePapel = [preferencias integerForKey:@"qtePapel"];
-    int qteMetal = [preferencias integerForKey:@"qteMetal"];
-    int qteVidro =  [preferencias integerForKey:@"qteVidro"];
-    int qtePlastico = [preferencias integerForKey:@"qtePlastico"];
+    int qtePapel = (int)[preferencias integerForKey:@"qtePapel"];
+    int qteMetal = (int)[preferencias integerForKey:@"qteMetal"];
+    int qteVidro =  (int)[preferencias integerForKey:@"qteVidro"];
+    int qtePlastico = (int)[preferencias integerForKey:@"qtePlastico"];
     
     float total = qteMetal + qtePapel + qtePlastico + qteVidro;
     

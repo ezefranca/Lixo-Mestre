@@ -20,7 +20,7 @@
 
 @interface LoginVC : UIViewController <UITextFieldDelegate, FBLoginViewDelegate>{
     NSUserDefaults *preferencias;
-    BOOL senhaSalva;
+    //BOOL senhaSalva;
 }
 
 @property (weak, nonatomic) IBOutlet UITextField *logInfo;
@@ -40,8 +40,6 @@
 
 @property BOOL logouPeloFace;
 
-
-- (IBAction)salvaSenha:(id)sender;
 
 - (IBAction)botaoLogin:(id)sender;
 

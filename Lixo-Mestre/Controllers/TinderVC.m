@@ -37,7 +37,7 @@
 //PRIMEIRO LOAD (CARREGA AS 3 PRIMEIRAS)
 -(void)loadCards{
     NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
-    NSString* usuario = [preferencias stringForKey:@"userName"];
+    NSString* usuario = [preferencias stringForKey:@"LoginApp"];
     NSDictionary *d = [webService carregarTinder:usuario];
     NSArray *a = (NSArray *)d;
 
@@ -83,7 +83,7 @@
 -(void)tinderCarregaManeiro{
     //CARREGA O USUARIO PARA CONSULTA - LO NO BANCO DE DADOS;
     NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
-    NSString* usuario = [preferencias stringForKey:@"userName"];
+    NSString* usuario = [preferencias stringForKey:@"LoginApp"];
     //WEB SERVICE Q RETORNA UMA IMAGEM SE ESTIVER DISPONIVEL;
     NSDictionary *d = [webService carregarTinder:usuario];
     //SE O RETORNAR CORRETAMENTE;

@@ -119,7 +119,7 @@
         if (x){
             NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
             if (preferencias) {
-                [preferencias setObject:email forKey:@"userName"];
+                [preferencias setObject:email forKey:@"LoginApp"];
                 [preferencias synchronize];
             }
             return @"oi";
@@ -330,7 +330,7 @@
         if (x){
             NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
             if (preferencias) {
-                [preferencias setObject:user forKey:@"userName"];
+                [preferencias setObject:user forKey:@"LoginApp"];
                 [preferencias synchronize];
             }
             return YES;
@@ -366,7 +366,7 @@
         //NSLog(@"%@",json);
         NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
         if (preferencias) {
-            [preferencias setObject:user forKey:@"userName"];
+            [preferencias setObject:user forKey:@"LoginApp"];
             
             [preferencias setInteger: [[json valueForKey:@"metal"] intValue] forKey:@"qteMetal"];
             [preferencias setInteger: [[json valueForKey:@"papel"] intValue] forKey:@"qtePapel"];

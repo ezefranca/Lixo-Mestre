@@ -48,7 +48,7 @@
 
 
 - (IBAction)bloqueado:(id)sender{
-    int num = [sender tag];
+    int num = (int)[sender tag];
     NSString *string;
     
     switch (num) {

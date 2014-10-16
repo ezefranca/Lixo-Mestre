@@ -83,19 +83,8 @@
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    preferencias = [NSUserDefaults standardUserDefaults];
-    senhaSalva = [preferencias boolForKey:@"senhaSalva"];
-    // Verifiva se o opcao de senha salva esta habilitada no settings
-    if(senhaSalva){
-        // pegando usuario e senha salvo e preenchendo nos labels
-        self.logInfo.text = [preferencias stringForKey:@"LoginApp"];
-        self.pass.text = [preferencias stringForKey:@"password"];
-        [self Login];
-    }
-    else{
-        self.logInfo.text = @"";
-        self.pass.text = @"";
-    }
+    self.logInfo.text = @"";
+    self.pass.text = @"";
 }
 
 
@@ -105,35 +94,19 @@
 }
 
 #pragma Login
-- (IBAction)salvaSenha:(id)sender
-{
-    if(senhaSalva){
-        senhaSalva = 0;
-    }
-    else
-    {
-        senhaSalva = 1;
-    }
-    
-    [preferencias setBool:senhaSalva forKey:@"senhaSalva"];
-    [preferencias synchronize];
-}
 
 - (BOOL)Login{
     
     if([webService login:self.logInfo.text :self.pass.text])
     {
         NSLog(@"%@", [webService rankingUser:@"load" : self.logInfo.text]);
-        
-        if(senhaSalva)
-        {
-            // salvando a senha se a opcao estiver habilitada
-            [preferencias setObject:self.logInfo.text forKey:@"LoginApp"];
-            [preferencias setObject:self.pass.text forKey:@"password"];
-            [preferencias setBool:senhaSalva forKey:@"senhaSalva"];
-            [preferencias synchronize];
-        }
 
+        // salvando a senha se a opcao estiver habilitada
+        [preferencias setObject:self.logInfo.text forKey:@"LoginApp"];
+        [preferencias setObject:self.pass.text forKey:@"password"];
+
+        [preferencias synchronize];
+    
         if (![webService carregarPontosUsuario: self.logInfo.text])
         {
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Sem internet" message:@"nao foi possivel sincronizar os dados com o servidor" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
