@@ -199,10 +199,10 @@
     return;
 }
 
-+(NSDictionary *)carregarTinder : (NSString *)user{
++(NSDictionary *)carregarTinder : (NSString *)email{
     if ([self check]){
         NSString *url =  @"http://172.246.16.27/lixoPapao/tinder.php";
-        NSString *post = [NSString stringWithFormat:@"type=first&user=%@",user];
+        NSString *post = [NSString stringWithFormat:@"type=first&email=%@",email];
         
         NSLog(@"%@" , post);
         
