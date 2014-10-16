@@ -85,7 +85,7 @@
     NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
     NSString* usuario = [preferencias stringForKey:@"LoginApp"];
     //WEB SERVICE Q RETORNA UMA IMAGEM SE ESTIVER DISPONIVEL;
-    NSDictionary *d = [webService carregarTinder:usuario];
+    NSDictionary *d = [webService carregarUmaFotoTinder:usuario];
     //SE O RETORNAR CORRETAMENTE;
     if (d){
         //DICIONARIO PARA ARRAY PARA USAR OS INDEX;

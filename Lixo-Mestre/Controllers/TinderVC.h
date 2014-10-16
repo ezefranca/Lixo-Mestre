@@ -18,6 +18,8 @@
 -(void)cardSwipedLeft:(UIView *)card;
 -(void)cardSwipedRight:(UIView *)card;
 
+@property NSMutableArray *idCards;
+
 @property (retain,nonatomic)NSArray* allCards;
 
 @end

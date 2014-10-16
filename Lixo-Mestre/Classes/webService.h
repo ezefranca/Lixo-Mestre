@@ -19,9 +19,9 @@ extern NSString *usuarioUniversal;
 +(BOOL)updateTinder : (int )evaluation : (int)idRecycled;
 
 +(NSDictionary *)rankingUser: (NSString *)type : (NSString *)user;
-+(NSDictionary *)carregarTinder : (NSString *)user;
++(NSDictionary *)carregarTinder : (NSString *)email;
 
 +(BOOL)salvaPontosJoguinho:(NSString *)user Papel:(NSString *)papel Vidro:(NSString *)vidro Plastico:(NSString *)plastico Metal:(NSString *)metal Pontuacao:(NSString *)total;
-
++(NSDictionary *)carregarUmaFotoTinder : (NSString *)email;
 +(BOOL)carregarPontosUsuario: (NSString *)user;
 @end

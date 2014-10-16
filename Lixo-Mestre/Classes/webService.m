@@ -236,6 +236,44 @@
 }
 
 
++(NSDictionary *)carregarUmaFotoTinder : (NSString *)email{
+    if ([self check]){
+        NSString *url =  @"http://172.246.16.27/lixoPapao/tinder.php";
+        NSString *post = [NSString stringWithFormat:@"type=simple&email=%@",email];
+        
+        NSLog(@"%@" , post);
+        
+        NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+        
+        NSMutableURLRequest *request = [ [ NSMutableURLRequest alloc ] initWithURL: [ NSURL URLWithString: url]];
+        
+        [ request setHTTPMethod: @"POST"];
+        [ request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
+        
+        [ request setHTTPBody: postData ];
+        NSURLResponse *response;
+        NSError *err;
+        NSData *returnData = [ NSURLConnection sendSynchronousRequest: request returningResponse:&response error:&err];
+        
+        // NSString *content = [NSString stringWithUTF8String:[returnData bytes]];
+        
+        //se precisar de um json maneiro
+        
+        NSError* error;
+        NSDictionary* json = [NSJSONSerialization
+                              JSONObjectWithData:returnData //1
+                              
+                              options:kNilOptions
+                              error:&error];
+        
+        //NSString *ret ;
+        return json;
+    }
+    return nil;
+}
+
+
+
 +(BOOL)updateTinder : (int )evaluation : (int)idRecycled{
     if ([self check]){
         NSString *url =  @"http://172.246.16.27/lixoPapao/tinder.php";
