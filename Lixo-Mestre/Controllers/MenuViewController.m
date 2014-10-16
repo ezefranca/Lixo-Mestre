@@ -27,7 +27,7 @@
     self.nomeUsuario.text = [preferencias objectForKey:@"Nome"];
     self.nomeUsuario.font = [UIFont fontWithName:@"Santor" size:17];
     
-    itemsMenu = [NSArray arrayWithObjects:@"Perfil",@"Recompensas", @"Estatistica", @"Configuracoes", nil];
+    itemsMenu = [NSArray arrayWithObjects:@"Perfil",@"Recompensas", @"Estatistica", @"Configuracoes", @"Sair",nil];
     self.view.backgroundColor = [UIColor colorWithRed:0.0
                                                  green:128/255.0
                                                   blue:176/255.0
@@ -56,10 +56,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
     
-    MenuTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
     
     if (cell == nil) {
-        cell = [[MenuTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
     switch (indexPath.row) {
@@ -73,16 +74,19 @@
             cell.imageView.image = [UIImage imageNamed:@"estatistica.png"];
             break;
         case 3:
-            cell.frame = CGRectMake(0, 0, 250, 250);
+            cell.imageView.frame = CGRectMake(0, 0, 250, 250);
             cell.imageView.image = [UIImage imageNamed:@"conf.png"];
             break;
-            
+        case 4:
+            cell.imageView.image = [UIImage imageNamed:@"perfil.png"];
+            break;
         default:
             cell.imageView.image = [UIImage imageNamed:@"settings-100.png"];
             break;
     }
     
     cell.textLabel.text = [itemsMenu objectAtIndex:indexPath.row];
+    
     
     
     if (indexPath.row%2 == 0){
@@ -102,7 +106,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 5;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -128,7 +132,11 @@
             break;
         }
         default:{
-
+            [FBSession.activeSession closeAndClearTokenInformation];
+            [FBSession.activeSession close];
+            [FBSession setActiveSession:nil];
+            
+            [self performSegueWithIdentifier:@"unwindLogout" sender:Nil];
             break;
         }
     }

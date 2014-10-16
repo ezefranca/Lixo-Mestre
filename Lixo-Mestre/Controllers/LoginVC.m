@@ -26,6 +26,7 @@
 
 -(void)viewWillAppear:(BOOL)animated{
     self.logouPeloFace = false;
+    [LocalData deleteFacePicture];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:SVProgressHUDWillAppearNotification object:nil];
     

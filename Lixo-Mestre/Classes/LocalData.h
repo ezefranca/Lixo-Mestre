@@ -13,5 +13,6 @@
 
 +(void)saveFacePic:(UIImage*) image;
 +(UIImage *)loadFacePicture;
++(void)deleteFacePicture;
 
 @end

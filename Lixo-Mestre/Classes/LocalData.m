@@ -49,5 +49,17 @@
 }
 
 
++(void)deleteFacePicture{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *path_to_file = [documentsDirectory stringByAppendingPathComponent:@"profileImage.png"];
+    
+    if([[NSFileManager defaultManager] fileExistsAtPath: path_to_file]){
+        [[NSFileManager defaultManager] removeItemAtPath: path_to_file error:nil];
+        NSLog(@"axei e deletei");
+    }
+    
+}
+
 
 @end

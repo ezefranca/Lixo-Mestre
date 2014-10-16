@@ -28,15 +28,16 @@
 @property (weak, nonatomic) IBOutlet M13Checkbox *checkSenha;
 @property (weak, nonatomic) IBOutlet UIButton *buttomLogar;
 
-@property __block UIImage *image;
 @property FBLoginView *loginView;
 @property FBProfilePictureView *profilePictureView;
+@property __block UIImage *image;
+
 @property NSString *facebookUserID;
 
 @property UILabel *nameLabel;
 @property UILabel *statusLabel;
-
 @property NSString *email;
+
 @property BOOL logouPeloFace;
 
 

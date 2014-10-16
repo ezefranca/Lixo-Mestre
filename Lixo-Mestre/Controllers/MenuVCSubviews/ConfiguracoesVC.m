@@ -103,6 +103,14 @@
     }
 }
 
+-(IBAction)logouty{
+    [FBSession.activeSession closeAndClearTokenInformation];
+    [FBSession.activeSession close];
+    [FBSession setActiveSession:nil];
+    
+    [self performSegueWithIdentifier:@"unwindProLogin" sender:Nil];
+}
+
 
 // Handle possible errors that can occur during facebook login
 - (void)loginView:(FBLoginView *)loginView handleError:(NSError *)error {
