@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		252A91A219CCBADF004229F3 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 252A91A119CCBADF004229F3 /* MenuTableViewCell.m */; };
+		F638133E19F56EAD0095ADB9 /* PrimeiraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F638133D19F56EAD0095ADB9 /* PrimeiraVC.m */; };
+		F638134119F5730E0095ADB9 /* TelaTutorial.m in Sources */ = {isa = PBXBuildFile; fileRef = F638134019F5730E0095ADB9 /* TelaTutorial.m */; };
+		F638134419F573660095ADB9 /* TelaTutorialFilha.m in Sources */ = {isa = PBXBuildFile; fileRef = F638134319F573660095ADB9 /* TelaTutorialFilha.m */; };
+		F638134719F5963A0095ADB9 /* segueManero.m in Sources */ = {isa = PBXBuildFile; fileRef = F638134619F5963A0095ADB9 /* segueManero.m */; };
 		F63A7F3419CB55220076D574 /* CadastroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A7F3319CB55220076D574 /* CadastroVC.m */; };
 		F652DF4D19E5AC13003FD830 /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = F652DF4C19E5AC13003FD830 /* LocalData.m */; };
 		F67ED4DE19C8B78000B266BD /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4A819C8B78000B266BD /* AYVibrantButton.m */; };
@@ -240,6 +244,14 @@
 /* Begin PBXFileReference section */
 		252A91A019CCBADF004229F3 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		252A91A119CCBADF004229F3 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
+		F638133C19F56EAD0095ADB9 /* PrimeiraVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeiraVC.h; sourceTree = "<group>"; };
+		F638133D19F56EAD0095ADB9 /* PrimeiraVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeiraVC.m; sourceTree = "<group>"; };
+		F638133F19F5730E0095ADB9 /* TelaTutorial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelaTutorial.h; sourceTree = "<group>"; };
+		F638134019F5730E0095ADB9 /* TelaTutorial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelaTutorial.m; sourceTree = "<group>"; };
+		F638134219F573660095ADB9 /* TelaTutorialFilha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TelaTutorialFilha.h; sourceTree = "<group>"; };
+		F638134319F573660095ADB9 /* TelaTutorialFilha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TelaTutorialFilha.m; sourceTree = "<group>"; };
+		F638134519F5963A0095ADB9 /* segueManero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = segueManero.h; sourceTree = "<group>"; };
+		F638134619F5963A0095ADB9 /* segueManero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = segueManero.m; sourceTree = "<group>"; };
 		F63A7F3219CB55220076D574 /* CadastroVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastroVC.h; sourceTree = "<group>"; };
 		F63A7F3319CB55220076D574 /* CadastroVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastroVC.m; sourceTree = "<group>"; };
 		F652DF4B19E5AC13003FD830 /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
@@ -981,6 +993,14 @@
 		F76A117B19C8ACF700843A9D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				F638133C19F56EAD0095ADB9 /* PrimeiraVC.h */,
+				F638133D19F56EAD0095ADB9 /* PrimeiraVC.m */,
+				F638134519F5963A0095ADB9 /* segueManero.h */,
+				F638134619F5963A0095ADB9 /* segueManero.m */,
+				F638133F19F5730E0095ADB9 /* TelaTutorial.h */,
+				F638134019F5730E0095ADB9 /* TelaTutorial.m */,
+				F638134219F573660095ADB9 /* TelaTutorialFilha.h */,
+				F638134319F573660095ADB9 /* TelaTutorialFilha.m */,
 				F76A117E19C8ACF700843A9D /* LoginVC.h */,
 				F76A117F19C8ACF700843A9D /* LoginVC.m */,
 				F63A7F3219CB55220076D574 /* CadastroVC.h */,
@@ -1565,8 +1585,11 @@
 				F67ED4F319C8B78000B266BD /* UITextField+Shake.m in Sources */,
 				F67ED4F419C8B78000B266BD /* webService.m in Sources */,
 				F67ED4E719C8B78000B266BD /* Reachability.m in Sources */,
+				F638133E19F56EAD0095ADB9 /* PrimeiraVC.m in Sources */,
 				F63A7F3419CB55220076D574 /* CadastroVC.m in Sources */,
+				F638134719F5963A0095ADB9 /* segueManero.m in Sources */,
 				F76A11FD19C8ACF700843A9D /* MenuViewController.m in Sources */,
+				F638134419F573660095ADB9 /* TelaTutorialFilha.m in Sources */,
 				F76A11F919C8ACF700843A9D /* BluetoothVC.m in Sources */,
 				F67ED4F119C8B78000B266BD /* SVProgressHUD.m in Sources */,
 				F67ED4DE19C8B78000B266BD /* AYVibrantButton.m in Sources */,
@@ -1579,6 +1602,7 @@
 				F67ED4E319C8B78000B266BD /* MyAnnotation.m in Sources */,
 				F76A11FB19C8ACF700843A9D /* MainContainerViewController.m in Sources */,
 				F67ED4E219C8B78000B266BD /* M13Checkbox.m in Sources */,
+				F638134119F5730E0095ADB9 /* TelaTutorial.m in Sources */,
 				F69E385F19D09A4300B64629 /* CriaNodes.m in Sources */,
 				F67ED4EE19C8B78000B266BD /* WifiNetworkTableViewCell.m in Sources */,
 				F6ED61E619DB3217002CCE1E /* ConfiguracoesVC.m in Sources */,

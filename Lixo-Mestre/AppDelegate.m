@@ -22,22 +22,7 @@ NSString *const kShowHideMenuNotification = @"kShowHideMenuNotification";
 //    [FBLoginView class];
 //    [FBProfilePictureView class];
     
-    
-//    preferencias = [NSUserDefaults standardUserDefaults];
-//    mostraTutorial = [preferencias boolForKey:@"tutorial"];
-//    // Verifiva se o opcao de mostrar tutorial esta habilitada no settings
-//    if(mostraTutorial){
-//        TelaTutorial *t = TelaTutorial.new;
-//        self.window.rootViewController = t;
-//        self.window.backgroundColor = [UIColor whiteColor];
-//        [self.window makeKeyAndVisible];
-//        
-//    }else{
-//        LoginVC *l = LoginVC.new;
-//        self.window.rootViewController = l;
-//        self.window.backgroundColor = [UIColor whiteColor];
-//        [self.window makeKeyAndVisible];
-//    }
+
     
     return YES;
 }
