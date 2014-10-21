@@ -21,10 +21,10 @@
 
 - (void)viewDidAppear:(BOOL)animated{
     preferencias = [NSUserDefaults standardUserDefaults];
-    mostraTutorial = [preferencias boolForKey:@"tutorial"];
+    estaLogado = [preferencias boolForKey:@"Logado"];
     // Verifiva se o opcao de mostrar tutorial esta habilitada no settings
-    if(mostraTutorial){
-        [self performSegueWithIdentifier:@"1stAoTutorial" sender:nil];
+    if( estaLogado ){
+        [self performSegueWithIdentifier:@"1stAoTabbar" sender:nil];
     
     }else{
         [self performSegueWithIdentifier:@"1stAoLogin" sender:nil];

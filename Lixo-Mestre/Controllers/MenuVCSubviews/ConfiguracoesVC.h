@@ -9,16 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface ConfiguracoesVC : UIViewController<UITextFieldDelegate, FBLoginViewDelegate>{
+@interface ConfiguracoesVC : UIViewController<UITextFieldDelegate>{
     NSUserDefaults *preferencias;
 }
-
-@property FBLoginView *loginView;
-@property FBProfilePictureView *profilePictureView;
-@property NSString *facebookUserID;
-
-@property UILabel *nameLabel;
-@property UILabel *statusLabel;
 
 - (IBAction)voltar:(id)sender;
 

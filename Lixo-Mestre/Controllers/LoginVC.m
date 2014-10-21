@@ -114,11 +114,12 @@
             [alert show];
         }
         
-        [preferencias setBool: self.logouPeloFace forKey:@"FaceLogin"];
+        [preferencias setBool: YES forKey:@"Logado"];
         [preferencias synchronize];
         
         [self loadImageforUser: self.email];
         //tudo certo, vai pro resto do app
+        
         [self performSegueWithIdentifier:@"coco" sender:nil];
         
     }
