@@ -324,7 +324,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEH-WT-rMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Sxp-cz-Tpo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1583" y="1481"/>
+            <point key="canvasLocation" x="1575" y="1441"/>
         </scene>
         <!--MenuV Camigos-->
         <scene sceneID="Nnb-DL-Xg9">
@@ -382,7 +382,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIz-52-sm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hpd-92-6it" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1583" y="728"/>
+            <point key="canvasLocation" x="1563" y="728"/>
         </scene>
         <!--ConfiguracoesVC-->
         <scene sceneID="qFf-2p-GK9">
@@ -441,7 +441,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgA-1c-TH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eiG-SP-OBj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="523" y="1488"/>
+            <point key="canvasLocation" x="523" y="1441"/>
         </scene>
         <!--MenuV Cperfil Amigo-->
         <scene sceneID="vUH-bB-AKz">
@@ -523,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygf-Kp-Umw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2238" y="728"/>
+            <point key="canvasLocation" x="2058" y="728"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="ZiT-WX-mZp">
@@ -674,7 +674,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-814" y="-850"/>
+            <point key="canvasLocation" x="-26" y="-750"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="8PJ-lV-xyP">
@@ -690,7 +690,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="eUi-mg-fdU">
                                 <rect key="frame" x="75" y="518" width="181" height="30"/>
@@ -1275,16 +1275,6 @@
                                 </state>
                                 <connections>
                                     <action selector="botaoMenu:" destination="Xap-I0-hu2" eventType="touchUpInside" id="RRo-Vq-Wy0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CMe-IJ-TzQ">
-                                <rect key="frame" x="254" y="30" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="testes:" destination="Xap-I0-hu2" eventType="touchUpInside" id="HOK-Mv-vT7"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" id="8zt-Oy-V4x">

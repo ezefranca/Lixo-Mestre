@@ -38,7 +38,6 @@
 @property UILabel *statusLabel;
 @property NSString *email;
 
-@property BOOL logouPeloFace;
 
 
 - (IBAction)botaoLogin:(id)sender;

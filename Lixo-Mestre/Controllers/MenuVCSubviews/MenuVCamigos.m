@@ -27,8 +27,52 @@
     // Do any additional setup after loading the view.
     self.titulo.font = [UIFont fontWithName:@"Santor" size:20];
     
+    
     self.tableView.delegate = self;
     
+    [self performSelector:@selector(testes:) withObject:nil];
+    
+}
+
+- (IBAction)testes:(id)sender {
+    // FBSample logic
+    // if the session is open, then load the data for our view controller
+    if (!FBSession.activeSession.isOpen) {
+        // if the session is closed, then we open it here, and establish a handler for state changes
+        [FBSession openActiveSessionWithReadPermissions: @[@"public_profile", @"email", @"user_friends"]
+                                           allowLoginUI: YES
+                                      completionHandler: ^(FBSession *session,
+                                                           FBSessionState state,
+                                                           NSError *error) {
+                                          if (error) {
+                                              UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                                                  message:error.localizedDescription
+                                                                                                 delegate:nil
+                                                                                        cancelButtonTitle:@"OK"
+                                                                                        otherButtonTitles:nil];
+                                              [alertView show];
+                                          } else if (session.isOpen) {
+                                              [self testes:sender];
+                                          }
+                                      }];
+        return;
+    }
+    
+    if (self.friendPickerController == nil) {
+        // Create friend picker, and get data loaded into it.
+        self.friendPickerController = [[FBFriendPickerViewController alloc] init];
+        self.friendPickerController.title = @"Amigos que usam Lixo Papão";
+        self.friendPickerController.delegate = self;
+    }
+    
+    [self.friendPickerController loadData];
+    [self.friendPickerController clearSelection];
+    
+    self.friendPickerController.view.frame = CGRectMake(0, 50, 320, 518);
+    
+    [self.view addSubview: self.friendPickerController.view];
+    
+    //[self presentViewController:self.friendPickerController animated:YES completion:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated{

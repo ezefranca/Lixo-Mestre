@@ -23,6 +23,7 @@
     preferencias = [NSUserDefaults standardUserDefaults];
     estaLogado = [preferencias boolForKey:@"Logado"];
     // Verifiva se o opcao de mostrar tutorial esta habilitada no settings
+
     if( estaLogado ){
         [self performSegueWithIdentifier:@"1stAoTabbar" sender:nil];
     

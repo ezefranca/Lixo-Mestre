@@ -25,7 +25,7 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    self.logouPeloFace = false;
+
     [LocalData deleteFacePicture];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:SVProgressHUDWillAppearNotification object:nil];
@@ -55,6 +55,7 @@
     //login do facebook
     _loginView = [[FBLoginView alloc] initWithReadPermissions:
                   @[@"public_profile", @"email", @"user_friends"]];
+    
     _loginView.frame = CGRectMake(20, 405, 280, 53);
     _loginView.delegate = self;
     [self.view addSubview:_loginView];
@@ -96,6 +97,7 @@
 #pragma Login
 
 - (BOOL)Login{
+    preferencias = [NSUserDefaults standardUserDefaults];
     
     if([webService login:self.logInfo.text :self.pass.text])
     {
@@ -105,7 +107,6 @@
         [preferencias setObject:self.logInfo.text forKey:@"LoginApp"];
         [preferencias setObject:self.pass.text forKey:@"password"];
 
-        [preferencias synchronize];
     
         if (![webService carregarPontosUsuario: self.logInfo.text])
         {
@@ -119,6 +120,7 @@
         
         [self loadImageforUser: self.email];
         //tudo certo, vai pro resto do app
+        
         
         [self performSegueWithIdentifier:@"coco" sender:nil];
         
@@ -185,7 +187,7 @@
         self.logInfo.text = self.email;
         self.pass.text = self.facebookUserID;
         [preferencias setObject: self.nameLabel.text forKey:@"Nome"];
-        self.logouPeloFace = TRUE;
+
         [self Login];
         
     }
@@ -211,16 +213,16 @@
 
 
 #pragma  facebook methods
-- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView
-                            user:(id<FBGraphUser>)user {
+- (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user
+{
+    preferencias = [NSUserDefaults standardUserDefaults];
     self.profilePictureView.profileID = [user objectID];
     self.nameLabel.text = user.name;
     [self setFacebookUserID: [user objectID]];
     self.email =  user[@"email"];
+
+    [self performSelector:@selector(logarDoFace) withObject:nil afterDelay:1]; //com delay pq se nao vai pegar a imagem errada
     
-    [preferencias setObject: self.facebookUserID forKey:@"idfb"];
-    
-    [self performSelector:@selector(logarDoFace) withObject:nil afterDelay:0.3]; //com delay pq se nao vai pegar a imagem errada
 }
 
 // Logged-in from facebook user experience
@@ -236,6 +238,7 @@
     
     self.logInfo.text = @"";
     self.pass.text = @"";
+    [preferencias setBool: NO forKey:@"Logado"];
 }
 
 // Handle possible errors that can occur during facebook login

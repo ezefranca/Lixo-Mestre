@@ -32,29 +32,31 @@
     
     // FBSample logic
     // if the session is open, then load the data for our view controller
-    if (!FBSession.activeSession.isOpen) {
-        // if the session is closed, then we open it here, and establish a handler for state changes
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Nao há Ranking disponivel."
-                                                            message:@"Só é possivel ver o Ranking Logado com o Facebook"
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"OK"
-                                                  otherButtonTitles:nil];
-        [alertView show];
-    }
+//    if (!FBSession.activeSession.isOpen) {
+//        // if the session is closed, then we open it here, and establish a handler for state changes
+//        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Nao há Ranking disponivel."
+//                                                            message:@"Só é possivel ver o Ranking Logado com o Facebook"
+//                                                           delegate:nil
+//                                                  cancelButtonTitle:@"OK"
+//                                                  otherButtonTitles:nil];
+//        [alertView show];
+//    }
+//    
+//    if (self.friendPickerController == nil) {
+//        // Create friend picker, and get data loaded into it.
+//        self.friendPickerController = [[FBFriendPickerViewController alloc] init];
+//        self.friendPickerController.title = @"Ranking";
+//        self.friendPickerController.delegate = self;
+//    }
+//    
+//    [self.friendPickerController loadData];
+//    [self.friendPickerController clearSelection];
+//    
+//    self.friendPickerController.view.frame = CGRectMake(0, 68, 320, 450);
+//    
+//    [self.view addSubview: self.friendPickerController.view];
     
-    if (self.friendPickerController == nil) {
-        // Create friend picker, and get data loaded into it.
-        self.friendPickerController = [[FBFriendPickerViewController alloc] init];
-        self.friendPickerController.title = @"Selecionar Amigo";
-        self.friendPickerController.delegate = self;
-    }
-    
-    [self.friendPickerController loadData];
-    [self.friendPickerController clearSelection];
-    
-    self.friendPickerController.view.frame = CGRectMake(0, 68, 320, 450);
-    
-    [self.view addSubview: self.friendPickerController.view];
+    [self performSelector:@selector(testes:) withObject:nil];
 
 }
 
@@ -70,11 +72,11 @@
     // if the session is open, then load the data for our view controller
     if (!FBSession.activeSession.isOpen) {
         // if the session is closed, then we open it here, and establish a handler for state changes
-        [FBSession openActiveSessionWithReadPermissions:nil
-                                           allowLoginUI:YES
-                                      completionHandler:^(FBSession *session,
-                                                          FBSessionState state,
-                                                          NSError *error) {
+        [FBSession openActiveSessionWithReadPermissions: @[@"public_profile", @"email", @"user_friends"]
+                                           allowLoginUI: YES
+                                      completionHandler: ^(FBSession *session,
+                                                           FBSessionState state,
+                                                           NSError *error) {
                                           if (error) {
                                               UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
                                                                                                   message:error.localizedDescription
@@ -173,11 +175,10 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    NSLog(@"Clicou em %ld", (long)indexPath.row);
+    //NSLog(@"Clicou em %ld", (long)indexPath.row);
     
     switch (indexPath.row) {
         case 0:{
-            [self dismissViewControllerAnimated:YES completion:nil];
             
             break;
         }

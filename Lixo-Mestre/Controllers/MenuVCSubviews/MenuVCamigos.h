@@ -11,12 +11,12 @@
 #import <FacebookSDK/FacebookSDK.h>
 
 
-@interface MenuVCamigos : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface MenuVCamigos : UIViewController<UITableViewDelegate, UITableViewDataSource, FBLoginViewDelegate, FBViewControllerDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UILabel *titulo;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-
+@property (retain, nonatomic) FBFriendPickerViewController *friendPickerController;
 
 @end

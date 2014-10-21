@@ -135,7 +135,7 @@
             [FBSession.activeSession closeAndClearTokenInformation];
             [FBSession.activeSession close];
             [FBSession setActiveSession:nil];
-            
+            [preferencias setBool: NO forKey:@"Logado"];
             [self performSegueWithIdentifier:@"unwindLogout" sender:Nil];
             break;
         }
