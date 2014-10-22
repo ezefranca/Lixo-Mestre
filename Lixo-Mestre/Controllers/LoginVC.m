@@ -26,8 +26,8 @@
 
 -(void)viewWillAppear:(BOOL)animated{
 
-    [LocalData deleteFacePicture];
     
+    /*
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:SVProgressHUDWillAppearNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:SVProgressHUDDidAppearNotification object:nil];
@@ -44,7 +44,21 @@
     tint.tintColor = [UIColor colorWithRed: 0.608 green: 0.967 blue: 0.646 alpha: 1];
     tint.frame = CGRectMake(1, self.view.frame.origin.y + self.view.frame.size.height + 8, tint.frame.size.width, tint.frame.size.height);
     [self.view addSubview:tint];
+    */
+   
+    self.logInfo.text = @"";
+    self.pass.text = @"";
+}
+
+- (void)handleNotification:(NSNotification *)notif{
+    //NSLog(@"Notification recieved: %@", notif.name);
+    //NSLog(@"Status user info key: %@", [notif.userInfo objectForKey:SVProgressHUDStatusUserInfoKey]);
+}
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
     
+    [LocalData deleteFacePicture];
     //Customizacao dos TextFields
     self.logInfo.font = [UIFont fontWithName:@"Santor" size:17];
     self.logInfo.delegate = self;
@@ -71,21 +85,10 @@
     _nameLabel = [[UILabel alloc] init];
     _nameLabel.frame = CGRectMake(30, 140, self.view.frame.size.width, 30);
     //[self.view addSubview: _nameLabel];
-    
-}
-
-- (void)handleNotification:(NSNotification *)notif{
-    //NSLog(@"Notification recieved: %@", notif.name);
-    //NSLog(@"Status user info key: %@", [notif.userInfo objectForKey:SVProgressHUDStatusUserInfoKey]);
-}
-
-- (void)viewDidLoad{
-    [super viewDidLoad];
 }
 
 -(void)viewDidAppear:(BOOL)animated{
-    self.logInfo.text = @"";
-    self.pass.text = @"";
+    
 }
 
 
@@ -96,11 +99,13 @@
 
 #pragma Login
 
+/*
 - (BOOL)Login{
     preferencias = [NSUserDefaults standardUserDefaults];
     
     if([webService login:self.logInfo.text :self.pass.text])
     {
+        
         NSLog(@"%@", [webService rankingUser:@"load" : self.logInfo.text]);
 
         // salvando a senha se a opcao estiver habilitada
@@ -136,7 +141,7 @@
     
     return TRUE;
 }
-
+*/
 
 #pragma cadastro
 //- (IBAction)botaoCadastro:(id)sender {
@@ -145,7 +150,26 @@
 //    [self presentViewController:cad animated:YES completion:nil];
 //}
 - (IBAction)botaoLogin:(id)sender {
-    [self Login];
+    
+    //VERIFICAR SE O USUARIO EXISTE NO BANCO
+    if ([webService login:self.logInfo.text :self.pass.text]) {
+        
+        //SETAR PREFERENCIAS DO USUARIO LOGADO
+        [preferencias setObject:self.logInfo.text forKey:@"LoginApp"];
+        [preferencias setObject:self.pass.text forKey:@"password"];
+        [preferencias setBool: YES forKey:@"Logado"];
+        [preferencias synchronize];
+        //PERFON SEGUE PARA TELA INICIAL
+        [self performSegueWithIdentifier:@"coco" sender:nil];
+    }
+    else
+    {
+        //SE DER ERRADOI  TA UMA MEXIDINHA
+        [self shake];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login." message:@"Verifique o usuário ou a senha." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        alert.alertViewStyle = UIAlertViewStyleDefault;
+        [alert show];
+    }
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -161,7 +185,8 @@
     [self.logInfo shake:10 withDelta:10 andSpeed:0.05 shakeDirection:ShakeDirectionHorizontal];
 }
 
--(void)logarDoFace{
+-(void)logarDoFace
+{
     _image = nil;
     //pega a imagem de perfil do face
     for (NSObject *obj in [self.profilePictureView subviews]) {
@@ -176,22 +201,30 @@
 //    imgv.center = self.view.center;
 //    [self.view addSubview: imgv];
 
+    //SALVA A IMAGEM DO PERFIL
     [LocalData saveFacePic: imgv.image];
     
+    //CADASTRA O CARA DO FACEBOOK
     int x = [CadastroVC cadastraID: self.nameLabel.text
                           password: self.facebookUserID
                              login: self.email
                              image: _image];
-
-    if ( x == 2  || x == 1) {
-        self.logInfo.text = self.email;
-        self.pass.text = self.facebookUserID;
+    
+    //VER SE RETORNA VERDADEIRO
+    if ( x == 2  || x == 1)
+    {
+        //self.logInfo.text = self.email;
+        //self.pass.text = self.facebookUserID;
         [preferencias setObject: self.nameLabel.text forKey:@"Nome"];
-
-        [self Login];
+        [preferencias setObject:self.email forKey:@"LoginApp"];
+        [preferencias setObject:self.facebookUserID forKey:@"password"];
+        [preferencias setBool: YES forKey:@"Logado"];
+        [preferencias synchronize];
+        [self performSegueWithIdentifier:@"coco" sender:nil];
         
     }
-    else{
+    else
+    {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login com facebook" message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         alert.alertViewStyle = UIAlertViewStyleDefault;
         [alert show];
