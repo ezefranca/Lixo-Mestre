@@ -1,35 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="iqF-Mb-b3Z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gwc-JE-nW5">
     <dependencies>
         <deployment version="1792" defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--Main Container View Controller-->
-        <scene sceneID="TU7-9v-Wlp">
-            <objects>
-                <viewController storyboardIdentifier="MainContainer" id="5Zu-ED-0Wm" customClass="MainContainerViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="qrM-zG-MtL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Main Container" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bgR-mU-faq">
-                                <rect key="frame" x="102" y="72" width="116" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="xUW-0N-aUo"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="a87-qg-Xdr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="499" y="-32"/>
-        </scene>
         <!--MenuV Cperfil-->
         <scene sceneID="KJX-Yt-fhl">
             <objects>
@@ -200,7 +175,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hae-pe-7Um" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="M0T-NW-2Oe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1046" y="728"/>
+            <point key="canvasLocation" x="1702" y="512"/>
         </scene>
         <!--MenuV Ceditarperfil-->
         <scene sceneID="259-TT-Pnf">
@@ -324,7 +299,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uEH-WT-rMG" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Sxp-cz-Tpo" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1575" y="1441"/>
+            <point key="canvasLocation" x="2231" y="1225"/>
         </scene>
         <!--MenuV Camigos-->
         <scene sceneID="Nnb-DL-Xg9">
@@ -382,7 +357,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HIz-52-sm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="hpd-92-6it" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1563" y="728"/>
+            <point key="canvasLocation" x="2219" y="512"/>
         </scene>
         <!--ConfiguracoesVC-->
         <scene sceneID="qFf-2p-GK9">
@@ -441,7 +416,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TgA-1c-TH6" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="eiG-SP-OBj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="523" y="1441"/>
+            <point key="canvasLocation" x="1179" y="1225"/>
         </scene>
         <!--MenuV Cperfil Amigo-->
         <scene sceneID="vUH-bB-AKz">
@@ -523,9 +498,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ygf-Kp-Umw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2058" y="728"/>
+            <point key="canvasLocation" x="2714" y="512"/>
         </scene>
-        <!--Menu View Controller-->
+        <!--MenuVC-->
         <scene sceneID="ZiT-WX-mZp">
             <objects>
                 <viewController storyboardIdentifier="Menu" id="E9I-cX-0UJ" customClass="MenuViewController" sceneMemberID="viewController">
@@ -538,7 +513,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" id="TXD-lm-7J6">
-                                <rect key="frame" x="0.0" y="214" width="320" height="354"/>
+                                <rect key="frame" x="0.0" y="214" width="320" height="304"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -627,6 +602,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="deviceRGB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="MenuVC" image="Ranking.png" id="BIX-bw-aOr"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="MenuTableView" destination="TXD-lm-7J6" id="t1f-Ng-YEK"/>
@@ -637,44 +613,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PEL-cu-jbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="69h-ZN-FXg" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="523" y="728"/>
-        </scene>
-        <!--PrimeiraVC-->
-        <scene sceneID="hHo-Ug-0hx">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ou4-mw-zyu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="iqF-Mb-b3Z" customClass="PrimeiraVC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9v3-Il-B5o">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="toP-1M-ZQX">
-                                <rect key="frame" x="98" y="334" width="125" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="tela BT">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="5Zu-ED-0Wm" kind="modal" identifier="1stAoTabbar" modalTransitionStyle="crossDissolve" animates="NO" id="PCb-UQ-mlu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zzI-dz-CuK">
-                                <rect key="frame" x="105" y="231" width="110" height="63"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="login">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="gwc-JE-nW5" kind="modal" identifier="1stAoLogin" modalTransitionStyle="crossDissolve" animates="NO" id="v3v-es-HpX"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-            </objects>
-            <point key="canvasLocation" x="-26" y="-750"/>
+            <point key="canvasLocation" x="1179" y="512"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="8PJ-lV-xyP">
@@ -738,7 +677,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5Zu-ED-0Wm" kind="modal" identifier="coco" id="Cb0-b9-bXA"/>
+                                    <segue destination="5WB-DX-p3D" kind="modal" identifier="coco" id="Gzb-S6-oSB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zxy-JD-x3K">
@@ -765,7 +704,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxL-l3-RhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-26" y="-32"/>
+            <point key="canvasLocation" x="-110" y="-24"/>
         </scene>
         <!--BluetoothVC-->
         <scene sceneID="hfp-sI-Pwn">
@@ -836,16 +775,6 @@
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BGX-6k-qsP">
-                                <rect key="frame" x="20" y="20" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Menuzinho.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botaoMenu:" destination="Pqu-0p-35V" eventType="touchUpInside" id="289-1X-bnb"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lixo papao desconectado.png" id="x5C-tb-fj3">
                                 <rect key="frame" x="28" y="60" width="263" height="337"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -884,7 +813,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ycl-y4-uqP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="-952"/>
+            <point key="canvasLocation" x="978" y="-1104"/>
         </scene>
         <!--CadastroVC-->
         <scene sceneID="WP7-tM-wv7">
@@ -984,11 +913,12 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yom-bX-1pS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="0Bs-2I-Xm1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-26" y="728"/>
+            <point key="canvasLocation" x="-110" y="728"/>
         </scene>
         <!--Tab GeralVC-->
         <scene sceneID="71Z-LI-VIB">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QEx-rY-Iry" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="TabGeral" definesPresentationContext="YES" id="5WB-DX-p3D" customClass="TabGeralVC" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Dkb-5u-FAF"/>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -1001,14 +931,13 @@
                     <connections>
                         <segue destination="Pqu-0p-35V" kind="relationship" relationship="viewControllers" id="pG2-3o-1aL"/>
                         <segue destination="dzc-HH-zak" kind="relationship" relationship="viewControllers" id="CS1-Ly-tdb"/>
-                        <segue destination="Xap-I0-hu2" kind="relationship" relationship="viewControllers" id="B6L-0F-gil"/>
                         <segue destination="OKb-DJ-iPs" kind="relationship" relationship="viewControllers" id="lfl-6c-0KV"/>
                         <segue destination="gfa-2D-zZN" kind="relationship" relationship="viewControllers" id="CzY-WZ-Kgu"/>
+                        <segue destination="E9I-cX-0UJ" kind="relationship" relationship="viewControllers" id="ccS-VZ-aoK"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QEx-rY-Iry" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="-32"/>
+            <point key="canvasLocation" x="523" y="-43"/>
         </scene>
         <!--MapaVC-->
         <scene sceneID="87q-BI-bQy">
@@ -1018,16 +947,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aYf-Jz-OcJ">
-                                <rect key="frame" x="20" y="20" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Menuzinho.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botaoMenu:" destination="dzc-HH-zak" eventType="touchUpInside" id="XRF-G4-ZxX"/>
-                                </connections>
-                            </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="owy-tP-yyn">
                                 <rect key="frame" x="0.0" y="161" width="320" height="358"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1085,213 +1004,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bEn-rt-uuK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1516" y="-1153"/>
-        </scene>
-        <!--RankingVC-->
-        <scene sceneID="gge-18-HIN">
-            <objects>
-                <viewController id="VRl-24-4k8" customClass="RankingVC" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dla-KK-edV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Wcd-4Y-ew8">
-                                <rect key="frame" x="20" y="20" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Menuzinho.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botaoMenu:" destination="VRl-24-4k8" eventType="touchUpInside" id="fSa-HI-YSy"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" id="6nv-Mc-fqQ" userLabel="View -3">
-                                <rect key="frame" x="9" y="148" width="300" height="370"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WEH-sS-F2Q" userLabel="jogo1">
-                                        <rect key="frame" x="6" y="20" width="95" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="JOGOS-01.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="botaoJogo1:" destination="VRl-24-4k8" eventType="touchUpInside" id="tfK-xC-nOB"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="Thn-nT-fan" userLabel="jogo2">
-                                        <rect key="frame" x="104" y="20" width="95" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Recicle 50 metais!" backgroundImage="JOGOS-02.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="Kan-Fe-KWK" userLabel="jogo3">
-                                        <rect key="frame" x="198" y="20" width="95" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Recicle 50 papeis!" backgroundImage="JOGOS-02.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" id="PhX-qx-gaE" userLabel="jogo4">
-                                        <rect key="frame" x="6" y="123" width="95" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="  Conecte-se com 3 lixeiras!" backgroundImage="JOGOS-02.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="CHr-Du-suT" userLabel="jogo5">
-                                        <rect key="frame" x="104" y="123" width="95" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Recicle 50 vidros!" backgroundImage="JOGOS-02.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="wgD-Hz-Lcw" userLabel="jogo6">
-                                        <rect key="frame" x="197" y="123" width="95" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Recicle 50 plasticos!" backgroundImage="JOGOS-02.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="ko0-8P-B32" userLabel="jogo7">
-                                        <rect key="frame" x="6" y="226" width="95" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Avalie 20 fotos!" backgroundImage="JOGOS-02.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="8Hg-fF-dKC" userLabel="jogo8">
-                                        <rect key="frame" x="104" y="226" width="95" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <state key="normal" title="  Compartilhe com 5 amigos!" backgroundImage="JOGOS-02.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" id="Jae-qC-ehV" userLabel="jogo9">
-                                        <rect key="frame" x="198" y="226" width="95" height="95"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <state key="normal" title=" Recicle 250 materiais!  " backgroundImage="JOGOS-02.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <view contentMode="scaleToFill" id="xGn-Yb-02g" userLabel="View -1">
-                                <rect key="frame" x="9" y="148" width="300" height="370"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u61-af-Ptv">
-                                        <rect key="frame" x="10" y="10" width="280" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plastico" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="erg-B4-V8F">
-                                        <rect key="frame" x="10" y="80" width="280" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vidro" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b5K-uI-S39">
-                                        <rect key="frame" x="10" y="150" width="280" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E9L-bB-Ka8">
-                                        <rect key="frame" x="10" y="220" width="280" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maior Pontuacao" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Azq-AO-Bk2">
-                                        <rect key="frame" x="10" y="290" width="280" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bQM-9j-E1o" userLabel="Button - estatisticas">
-                                <rect key="frame" x="53" y="80" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="ranking-01.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="actionBotaoPontos:" destination="VRl-24-4k8" eventType="touchUpInside" id="29h-Sa-fHJ"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="D1y-vP-zW4" userLabel="Button - jogos">
-                                <rect key="frame" x="183" y="85" width="60" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="ranking-03.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="actionBotaoJogos:" destination="VRl-24-4k8" eventType="touchUpInside" id="0ga-QL-zeW"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="Ranking.png" id="ljq-cV-hpX"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="labelPapel" destination="u61-af-Ptv" id="qb2-2U-xKm"/>
-                        <outlet property="tela1" destination="xGn-Yb-02g" id="VM7-PV-Xcz"/>
-                        <outlet property="tela3" destination="6nv-Mc-fqQ" id="Ejc-0R-roB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m9r-LX-zHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2518" y="-997"/>
-        </scene>
-        <!--RankingVC2-->
-        <scene sceneID="krS-bA-kxH">
-            <objects>
-                <viewController id="Xap-I0-hu2" customClass="RankingVC2" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VLE-fd-JhR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="uxC-dG-Wzp" userLabel="Button - menu">
-                                <rect key="frame" x="20" y="20" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Menuzinho.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botaoMenu:" destination="Xap-I0-hu2" eventType="touchUpInside" id="RRo-Vq-Wy0"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" id="8zt-Oy-V4x">
-                                <rect key="frame" x="0.0" y="68" width="320" height="450"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="Ranking.png" id="HbF-Mr-nk8"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mb2-69-rPH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2038" y="-997"/>
+            <point key="canvasLocation" x="1412" y="-961"/>
         </scene>
         <!--MinigamesVC-->
         <scene sceneID="fgP-yh-Yab">
@@ -1301,16 +1014,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="idb-XS-MFA" userLabel="Button - menu">
-                                <rect key="frame" x="20" y="20" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Menuzinho.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botaoMenu:" destination="OKb-DJ-iPs" eventType="touchUpInside" id="lTw-Sc-GRv"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione um jogo!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sAQ-Li-jcD">
                                 <rect key="frame" x="19" y="81" width="150" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1430,7 +1133,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upe-d2-1zJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2320" y="-277"/>
+            <point key="canvasLocation" x="1856" y="-813"/>
         </scene>
         <!--TinderVC-->
         <scene sceneID="Fmi-ph-GyF">
@@ -1444,16 +1147,6 @@
                                 <rect key="frame" x="105" y="20" width="110" height="78"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Z9b-a2-0jx">
-                                <rect key="frame" x="20" y="20" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="Menuzinho.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botaoMenu:" destination="gfa-2D-zZN" eventType="touchUpInside" id="udh-Fs-dz3"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Isto é reciclável?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EzS-PI-tEu">
                                 <rect key="frame" x="60" y="106" width="200" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1489,18 +1182,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0p-K9-LjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="-32"/>
+            <point key="canvasLocation" x="1708" y="-176"/>
         </scene>
     </scenes>
     <resources>
         <image name="Email.png" width="1417" height="1417"/>
         <image name="Games.png" width="30" height="30"/>
         <image name="HOME.png" width="30" height="30"/>
-        <image name="JOGOS-01.png" width="329" height="329"/>
-        <image name="JOGOS-02.png" width="322" height="322"/>
         <image name="Logo.png" width="1691" height="2087"/>
         <image name="Mapa.png" width="30" height="30"/>
-        <image name="Menuzinho.png" width="100" height="100"/>
         <image name="Ranking.png" width="30" height="30"/>
         <image name="Tinder.png" width="30" height="30"/>
         <image name="Usuario.png" width="1971" height="2024"/>
@@ -1528,8 +1218,6 @@
         <image name="metal.png" width="2030" height="2030"/>
         <image name="papel.png" width="2019" height="2019"/>
         <image name="plasticoo.png" width="2017" height="2017"/>
-        <image name="ranking-01.png" width="266" height="300"/>
-        <image name="ranking-03.png" width="326" height="326"/>
         <image name="senha.png" width="1970" height="2024"/>
         <image name="seta.png" width="99" height="90"/>
         <image name="settings-100.png" width="100" height="100"/>
@@ -1545,7 +1233,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="PCb-UQ-mlu"/>
-    </inferredMetricsTieBreakers>
 </document>

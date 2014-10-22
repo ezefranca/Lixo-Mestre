@@ -8,14 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		252A91A219CCBADF004229F3 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 252A91A119CCBADF004229F3 /* MenuTableViewCell.m */; };
-		F638133E19F56EAD0095ADB9 /* PrimeiraVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F638133D19F56EAD0095ADB9 /* PrimeiraVC.m */; };
 		F63A7F3419CB55220076D574 /* CadastroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A7F3319CB55220076D574 /* CadastroVC.m */; };
 		F652DF4D19E5AC13003FD830 /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = F652DF4C19E5AC13003FD830 /* LocalData.m */; };
 		F67ED4DE19C8B78000B266BD /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4A819C8B78000B266BD /* AYVibrantButton.m */; };
 		F67ED4DF19C8B78000B266BD /* CNBluetoothCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4AB19C8B78000B266BD /* CNBluetoothCentral.m */; };
 		F67ED4E019C8B78000B266BD /* CoinBLEDemo-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F67ED4AC19C8B78000B266BD /* CoinBLEDemo-Info.plist */; };
 		F67ED4E119C8B78000B266BD /* DraggableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4AF19C8B78000B266BD /* DraggableView.m */; };
-		F67ED4E219C8B78000B266BD /* M13Checkbox.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4B119C8B78000B266BD /* M13Checkbox.m */; };
 		F67ED4E319C8B78000B266BD /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4B319C8B78000B266BD /* MyAnnotation.m */; };
 		F67ED4E419C8B78000B266BD /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4B519C8B78000B266BD /* OverlayView.m */; };
 		F67ED4E519C8B78000B266BD /* RankingProvBadges.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4B719C8B78000B266BD /* RankingProvBadges.m */; };
@@ -99,7 +97,6 @@
 		F6ED61B319D5E5F9002CCE1E /* Menuzinho.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61AD19D5E5F9002CCE1E /* Menuzinho.png */; };
 		F6ED61B419D5E5F9002CCE1E /* Ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61AE19D5E5F9002CCE1E /* Ranking.png */; };
 		F6ED61B519D5E5F9002CCE1E /* Tinder.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61AF19D5E5F9002CCE1E /* Tinder.png */; };
-		F6ED61B819D5E92E002CCE1E /* RankingVC2.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED61B719D5E92E002CCE1E /* RankingVC2.m */; };
 		F6ED61BE19D5EE16002CCE1E /* MinigamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED61BD19D5EE16002CCE1E /* MinigamesVC.m */; };
 		F6ED61D819D9DC0C002CCE1E /* MenuVCperfil.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED61D719D9DC0C002CCE1E /* MenuVCperfil.m */; };
 		F6ED61DB19D9DD0B002CCE1E /* MenuVCeditarperfil.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED61DA19D9DD0B002CCE1E /* MenuVCeditarperfil.m */; };
@@ -132,10 +129,8 @@
 		F76A117119C8ACB900843A9D /* Lixo_MestreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A117019C8ACB900843A9D /* Lixo_MestreTests.m */; };
 		F76A11F919C8ACF700843A9D /* BluetoothVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A117D19C8ACF700843A9D /* BluetoothVC.m */; };
 		F76A11FA19C8ACF700843A9D /* LoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A117F19C8ACF700843A9D /* LoginVC.m */; };
-		F76A11FB19C8ACF700843A9D /* MainContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A118119C8ACF700843A9D /* MainContainerViewController.m */; };
 		F76A11FC19C8ACF700843A9D /* MapaVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A118319C8ACF700843A9D /* MapaVC.m */; };
 		F76A11FD19C8ACF700843A9D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A118519C8ACF700843A9D /* MenuViewController.m */; };
-		F76A11FE19C8ACF700843A9D /* RankingVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A118719C8ACF700843A9D /* RankingVC.m */; };
 		F76A11FF19C8ACF700843A9D /* TabGeralVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A118919C8ACF700843A9D /* TabGeralVC.m */; };
 		F76A120019C8ACF700843A9D /* TinderVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F76A118B19C8ACF700843A9D /* TinderVC.m */; };
 		F76A120119C8ACF700843A9D /* bixos papoes-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F76A118F19C8ACF700843A9D /* bixos papoes-01.png */; };
@@ -241,8 +236,6 @@
 /* Begin PBXFileReference section */
 		252A91A019CCBADF004229F3 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		252A91A119CCBADF004229F3 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
-		F638133C19F56EAD0095ADB9 /* PrimeiraVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrimeiraVC.h; sourceTree = "<group>"; };
-		F638133D19F56EAD0095ADB9 /* PrimeiraVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrimeiraVC.m; sourceTree = "<group>"; };
 		F63A7F3219CB55220076D574 /* CadastroVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastroVC.h; sourceTree = "<group>"; };
 		F63A7F3319CB55220076D574 /* CadastroVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastroVC.m; sourceTree = "<group>"; };
 		F652DF4B19E5AC13003FD830 /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
@@ -255,8 +248,6 @@
 		F67ED4AD19C8B78000B266BD /* CoinBLEDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoinBLEDemo-Prefix.pch"; sourceTree = "<group>"; };
 		F67ED4AE19C8B78000B266BD /* DraggableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraggableView.h; sourceTree = "<group>"; };
 		F67ED4AF19C8B78000B266BD /* DraggableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraggableView.m; sourceTree = "<group>"; };
-		F67ED4B019C8B78000B266BD /* M13Checkbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = M13Checkbox.h; sourceTree = "<group>"; };
-		F67ED4B119C8B78000B266BD /* M13Checkbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13Checkbox.m; sourceTree = "<group>"; };
 		F67ED4B219C8B78000B266BD /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
 		F67ED4B319C8B78000B266BD /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 		F67ED4B419C8B78000B266BD /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
@@ -363,8 +354,6 @@
 		F6ED61AD19D5E5F9002CCE1E /* Menuzinho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menuzinho.png; sourceTree = "<group>"; };
 		F6ED61AE19D5E5F9002CCE1E /* Ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ranking.png; sourceTree = "<group>"; };
 		F6ED61AF19D5E5F9002CCE1E /* Tinder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tinder.png; sourceTree = "<group>"; };
-		F6ED61B619D5E92E002CCE1E /* RankingVC2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingVC2.h; sourceTree = "<group>"; };
-		F6ED61B719D5E92E002CCE1E /* RankingVC2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingVC2.m; sourceTree = "<group>"; };
 		F6ED61BC19D5EE16002CCE1E /* MinigamesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinigamesVC.h; sourceTree = "<group>"; };
 		F6ED61BD19D5EE16002CCE1E /* MinigamesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MinigamesVC.m; sourceTree = "<group>"; };
 		F6ED61D619D9DC0C002CCE1E /* MenuVCperfil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuVCperfil.h; sourceTree = "<group>"; };
@@ -410,14 +399,10 @@
 		F76A117D19C8ACF700843A9D /* BluetoothVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BluetoothVC.m; sourceTree = "<group>"; };
 		F76A117E19C8ACF700843A9D /* LoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginVC.h; sourceTree = "<group>"; };
 		F76A117F19C8ACF700843A9D /* LoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginVC.m; sourceTree = "<group>"; };
-		F76A118019C8ACF700843A9D /* MainContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainContainerViewController.h; sourceTree = "<group>"; };
-		F76A118119C8ACF700843A9D /* MainContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainContainerViewController.m; sourceTree = "<group>"; };
 		F76A118219C8ACF700843A9D /* MapaVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapaVC.h; sourceTree = "<group>"; };
 		F76A118319C8ACF700843A9D /* MapaVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapaVC.m; sourceTree = "<group>"; };
 		F76A118419C8ACF700843A9D /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		F76A118519C8ACF700843A9D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
-		F76A118619C8ACF700843A9D /* RankingVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingVC.h; sourceTree = "<group>"; };
-		F76A118719C8ACF700843A9D /* RankingVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingVC.m; sourceTree = "<group>"; };
 		F76A118819C8ACF700843A9D /* TabGeralVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabGeralVC.h; sourceTree = "<group>"; };
 		F76A118919C8ACF700843A9D /* TabGeralVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabGeralVC.m; sourceTree = "<group>"; };
 		F76A118A19C8ACF700843A9D /* TinderVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TinderVC.h; sourceTree = "<group>"; };
@@ -550,8 +535,6 @@
 				F67ED4A919C8B78000B266BD /* Bluetooth */,
 				F67ED4AE19C8B78000B266BD /* DraggableView.h */,
 				F67ED4AF19C8B78000B266BD /* DraggableView.m */,
-				F67ED4B019C8B78000B266BD /* M13Checkbox.h */,
-				F67ED4B119C8B78000B266BD /* M13Checkbox.m */,
 				F67ED4B219C8B78000B266BD /* MyAnnotation.h */,
 				F67ED4B319C8B78000B266BD /* MyAnnotation.m */,
 				F67ED4B419C8B78000B266BD /* OverlayView.h */,
@@ -984,17 +967,10 @@
 		F76A117B19C8ACF700843A9D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F638133C19F56EAD0095ADB9 /* PrimeiraVC.h */,
-				F638133D19F56EAD0095ADB9 /* PrimeiraVC.m */,
 				F76A117E19C8ACF700843A9D /* LoginVC.h */,
 				F76A117F19C8ACF700843A9D /* LoginVC.m */,
 				F63A7F3219CB55220076D574 /* CadastroVC.h */,
 				F63A7F3319CB55220076D574 /* CadastroVC.m */,
-				F76A118019C8ACF700843A9D /* MainContainerViewController.h */,
-				F76A118119C8ACF700843A9D /* MainContainerViewController.m */,
-				F76A118419C8ACF700843A9D /* MenuViewController.h */,
-				F76A118519C8ACF700843A9D /* MenuViewController.m */,
-				F6ED61D519D9DBFD002CCE1E /* MenuVCSubviews */,
 				F76A118819C8ACF700843A9D /* TabGeralVC.h */,
 				F76A118919C8ACF700843A9D /* TabGeralVC.m */,
 				F76A117C19C8ACF700843A9D /* BluetoothVC.h */,
@@ -1003,12 +979,11 @@
 				F76A118319C8ACF700843A9D /* MapaVC.m */,
 				F6ED61BC19D5EE16002CCE1E /* MinigamesVC.h */,
 				F6ED61BD19D5EE16002CCE1E /* MinigamesVC.m */,
-				F76A118619C8ACF700843A9D /* RankingVC.h */,
-				F76A118719C8ACF700843A9D /* RankingVC.m */,
-				F6ED61B619D5E92E002CCE1E /* RankingVC2.h */,
-				F6ED61B719D5E92E002CCE1E /* RankingVC2.m */,
 				F76A118A19C8ACF700843A9D /* TinderVC.h */,
 				F76A118B19C8ACF700843A9D /* TinderVC.m */,
+				F6ED61D519D9DBFD002CCE1E /* MenuVCSubviews */,
+				F76A118419C8ACF700843A9D /* MenuViewController.h */,
+				F76A118519C8ACF700843A9D /* MenuViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1552,7 +1527,6 @@
 				F67ED4EF19C8B78000B266BD /* WifiViewController.m in Sources */,
 				F6ED61E919DC653D002CCE1E /* ViewProgresso.m in Sources */,
 				F67ED4E519C8B78000B266BD /* RankingProvBadges.m in Sources */,
-				F76A11FE19C8ACF700843A9D /* RankingVC.m in Sources */,
 				F6ED61D819D9DC0C002CCE1E /* MenuVCperfil.m in Sources */,
 				F67ED4E919C8B78000B266BD /* JMStaticContentTableViewController.m in Sources */,
 				F67ED4E619C8B78000B266BD /* RankingProvPontos.m in Sources */,
@@ -1565,12 +1539,10 @@
 				F67ED4E419C8B78000B266BD /* OverlayView.m in Sources */,
 				F76A11FA19C8ACF700843A9D /* LoginVC.m in Sources */,
 				F67ED4EA19C8B78000B266BD /* JMStaticContentTableViewSection.m in Sources */,
-				F6ED61B819D5E92E002CCE1E /* RankingVC2.m in Sources */,
 				F76A11FC19C8ACF700843A9D /* MapaVC.m in Sources */,
 				F67ED4F319C8B78000B266BD /* UITextField+Shake.m in Sources */,
 				F67ED4F419C8B78000B266BD /* webService.m in Sources */,
 				F67ED4E719C8B78000B266BD /* Reachability.m in Sources */,
-				F638133E19F56EAD0095ADB9 /* PrimeiraVC.m in Sources */,
 				F63A7F3419CB55220076D574 /* CadastroVC.m in Sources */,
 				F76A11FD19C8ACF700843A9D /* MenuViewController.m in Sources */,
 				F76A11F919C8ACF700843A9D /* BluetoothVC.m in Sources */,
@@ -1583,8 +1555,6 @@
 				F69E386919D09A4300B64629 /* JogoViewController.m in Sources */,
 				F67ED4F519C8B78000B266BD /* YLProgressBar.m in Sources */,
 				F67ED4E319C8B78000B266BD /* MyAnnotation.m in Sources */,
-				F76A11FB19C8ACF700843A9D /* MainContainerViewController.m in Sources */,
-				F67ED4E219C8B78000B266BD /* M13Checkbox.m in Sources */,
 				F69E385F19D09A4300B64629 /* CriaNodes.m in Sources */,
 				F67ED4EE19C8B78000B266BD /* WifiNetworkTableViewCell.m in Sources */,
 				F6ED61E619DB3217002CCE1E /* ConfiguracoesVC.m in Sources */,
