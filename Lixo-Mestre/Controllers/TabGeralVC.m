@@ -26,6 +26,12 @@
     [super viewDidLoad];
     // Custom initialization
     [self.tabBar setSelectedImageTintColor: [UIColor whiteColor]];
+    
+    
+    //vai ser util pra designer
+    //[[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"Menuzinho.png"]];
+
+
 }
 
 - (void)didReceiveMemoryWarning{

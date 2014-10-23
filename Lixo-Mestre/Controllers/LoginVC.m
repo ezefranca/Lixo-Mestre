@@ -25,8 +25,6 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-
-    
     /*
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:SVProgressHUDWillAppearNotification object:nil];
     
@@ -90,7 +88,6 @@
 -(void)viewDidAppear:(BOOL)animated{
     
 }
-
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
