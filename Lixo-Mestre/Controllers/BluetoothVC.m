@@ -23,34 +23,10 @@
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     
-    self.conectado = FALSE;
-    self.botaoLixo.hidden = TRUE;
-    self.botaoConectar.hidden = FALSE;
-    
-    self.viewEscolha.hidden = YES;
     
     //self.statusLbl.text = @"Desconectado";
-    [[CNBluetoothCentral sharedBluetoothCentral] setDelegate:self];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleNotification:)
-                                                 name:SVProgressHUDWillAppearNotification
-                                               object:nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleNotification:)
-                                                 name:SVProgressHUDDidAppearNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleNotification:)
-                                                 name:SVProgressHUDWillDisappearNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleNotification:)
-                                                 name:SVProgressHUDDidDisappearNotification
-                                               object:nil];
     
     //    (void)setBackgroundColor:(UIColor*)color; // default is [UIColor whiteColor]
     //    + (void)setForegroundColor:(UIColor*)color; // default is [UIColor blackColor]
@@ -73,6 +49,34 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
+    self.conectado = FALSE;
+    self.botaoLixo.hidden = TRUE;
+    self.botaoConectar.hidden = FALSE;
+    self.viewEscolha.hidden = YES;
+
+    [[CNBluetoothCentral sharedBluetoothCentral] setDelegate:self];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleNotification:)
+                                                 name:SVProgressHUDWillAppearNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleNotification:)
+                                                 name:SVProgressHUDDidAppearNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleNotification:)
+                                                 name:SVProgressHUDWillDisappearNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleNotification:)
+                                                 name:SVProgressHUDDidDisappearNotification
+                                               object:nil];
+
 //    UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftGesture)];
 //    left.direction = UISwipeGestureRecognizerDirectionLeft;
 //    [[self view] addGestureRecognizer:left];

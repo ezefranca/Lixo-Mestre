@@ -28,8 +28,14 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    
     self.mapa.delegate = self;
     self.mapa.showsUserLocation = TRUE;
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appToBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appReturnsActive) name:UIApplicationDidBecomeActiveNotification object:nil];
+
+    [self performSelectorInBackground:@selector(conectar) withObject:nil];
     
 //    UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftGesture)];
 //    left.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -39,8 +45,7 @@
 //    right.direction = UISwipeGestureRecognizerDirectionRight;
 //    [[self view] addGestureRecognizer:right];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appToBackground) name:UIApplicationDidEnterBackgroundNotification object:nil];
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appReturnsActive) name:UIApplicationDidBecomeActiveNotification object:nil];
+    /*
     
     BOOL first = TRUE;
     double x1,x2,y1,y2;
@@ -107,10 +112,6 @@
         [self plotRouteOnMap:_currentRoute];
     }];
     
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
     
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = -23.669569;
@@ -119,20 +120,62 @@
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(zoomLocation, 1.5*METERS_PER_MILE, 1.5*METERS_PER_MILE);
     [self.mapa setRegion:viewRegion animated:YES];
     
-    [self performSelector:@selector(conectar) withObject:nil afterDelay:1];
+    
     //com delay pra nao "travar" antes de abrir a view do mapa
     self.routeOverlay = nil;
+    */
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
 }
 
 -(void)conectar{
-    NSLog(@"Inicializando...");
-    [SVProgressHUD showWithStatus:@"Conectando"];
+    
     NSString *url = [NSString stringWithFormat:@"http://172.246.16.27/lixoPapao/retornaPontos.php"];
     jsonDados = [[NSData alloc] initWithContentsOfURL:
                  [NSURL URLWithString:url]];
-    [self parseDados];
+    
+    
+    NSError *error;
+    
+    NSMutableDictionary *jsonDadosUsuario = [NSJSONSerialization
+                                             JSONObjectWithData:jsonDados
+                                             options:NSJSONReadingMutableContainers
+                                             error:&error];
+    NSMutableArray *arraydaora;
+    arraydaora = [[NSMutableArray alloc] init];
+    arraydaora = (NSMutableArray *)jsonDadosUsuario;
+    //NSLog(@"%@", [arraydaora[1]objectForKey:@"latitude"]);
+    //NSLog(@"%@", [arraydaora[1]objectForKey:@"longitude"]);
+    
+    
+     for (id local in arraydaora) {
+     CLLocationCoordinate2D coordinate1;
+     coordinate1.latitude = [[local objectForKey:@"latitude"] doubleValue];
+     coordinate1.longitude = [[local objectForKey:@"longitude"] doubleValue];
+     NSString *tipo = [local objectForKey:@"tipo"];
+     
+     if ([[local objectForKey:@"nome"] isEqualToString: @"type"]) {
+     [local setObject: tipo forKey:@"nome"];
+     }
+     //        MyAnnotation *annotation = [[MyAnnotation alloc] initWithCoordinate:coordinate1 title:[local objectForKey:@"nome"] subtitle: tipo];
+     //        [self.mapa addAnnotation: annotation];
+     
+     MKPointAnnotation * ann = [[MKPointAnnotation alloc] init];
+     [ann setTitle: [local objectForKey:@"nome"]];
+     [ann setSubtitle: tipo];
+     [ann setCoordinate:coordinate1];
+     [self.mapa addAnnotation: ann];
+     }
+    
+    
+    [self setViewDasAnnotations: [self.mapa annotations]];
+    //[SVProgressHUD dismiss];
+    //float x = [arraydaora objectAtIndex:0];
 }
 
+  /*
 -(void)parseDados{
     NSError *error;
     
@@ -146,6 +189,7 @@
     NSLog(@"%@", [arraydaora[1]objectForKey:@"latitude"]);
     NSLog(@"%@", [arraydaora[1]objectForKey:@"longitude"]);
     
+  
     for (id local in arraydaora) {
         CLLocationCoordinate2D coordinate1;
         coordinate1.latitude = [[local objectForKey:@"latitude"] doubleValue];
@@ -164,12 +208,14 @@
         [ann setCoordinate:coordinate1];
         [self.mapa addAnnotation: ann];
     }
+   
     
     [self setViewDasAnnotations: [self.mapa annotations]];
     [SVProgressHUD dismiss];
     //float x = [arraydaora objectAtIndex:0];
 }
 
+*/
 -(void) viewWillDisappear:(BOOL)animated{
     //[self.mapa removeAnnotations: [self.mapa annotations]];
 }
