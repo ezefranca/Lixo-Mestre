@@ -45,8 +45,8 @@
 //    right.direction = UISwipeGestureRecognizerDirectionRight;
 //    [[self view] addGestureRecognizer:right];
     
-    /*
     
+    /*
     BOOL first = TRUE;
     double x1,x2,y1,y2;
     double dx ;
@@ -85,6 +85,7 @@
             }
         }
     }
+     
     
     MKDirectionsRequest *directionsRequest = [MKDirectionsRequest new];
     // Start at our current location
@@ -111,7 +112,7 @@
         _currentRoute = [response.routes firstObject];
         [self plotRouteOnMap:_currentRoute];
     }];
-    
+    */
     
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = -23.669569;
@@ -123,7 +124,7 @@
     
     //com delay pra nao "travar" antes de abrir a view do mapa
     self.routeOverlay = nil;
-    */
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
