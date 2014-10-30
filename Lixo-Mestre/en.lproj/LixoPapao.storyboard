@@ -500,7 +500,7 @@
             </objects>
             <point key="canvasLocation" x="2506" y="516"/>
         </scene>
-        <!--MenuVC-->
+        <!--Opções-->
         <scene sceneID="ZiT-WX-mZp">
             <objects>
                 <viewController storyboardIdentifier="Menu" id="E9I-cX-0UJ" customClass="MenuViewController" sceneMemberID="viewController">
@@ -602,7 +602,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.16078431369999999" green="0.50196078430000002" blue="0.72549019609999998" alpha="1" colorSpace="deviceRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MenuVC" image="Ranking.png" id="BIX-bw-aOr"/>
+                    <tabBarItem key="tabBarItem" title="Opções" image="canfig.png" id="BIX-bw-aOr"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="MenuTableView" destination="TXD-lm-7J6" id="t1f-Ng-YEK"/>
@@ -706,7 +706,7 @@
             </objects>
             <point key="canvasLocation" x="-110" y="-24"/>
         </scene>
-        <!--BluetoothVC-->
+        <!--Home-->
         <scene sceneID="hfp-sI-Pwn">
             <objects>
                 <viewController storyboardIdentifier="Home" id="Pqu-0p-35V" customClass="BluetoothVC" sceneMemberID="viewController">
@@ -802,7 +802,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.91764705882352937" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="HOME.png" id="zbK-qT-Cqd"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="HOME.png" id="zbK-qT-Cqd"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="botaoConectar" destination="Xuo-pP-hXr" id="cBz-yL-97X"/>
@@ -922,10 +922,11 @@
                     <navigationItem key="navigationItem" id="Dkb-5u-FAF"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" backgroundImage="fundo.jpg" id="t4M-Re-BWe">
+                    <tabBar key="tabBar" contentMode="scaleToFill" selectionIndicatorImage="fundo tab selecionado.png" id="t4M-Re-BWe">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="Pqu-0p-35V" kind="relationship" relationship="viewControllers" id="pG2-3o-1aL"/>
@@ -939,7 +940,7 @@
             </objects>
             <point key="canvasLocation" x="483" y="-164"/>
         </scene>
-        <!--MapaVC-->
+        <!--Mapa-->
         <scene sceneID="87q-BI-bQy">
             <objects>
                 <viewController id="dzc-HH-zak" customClass="MapaVC" sceneMemberID="viewController">
@@ -948,11 +949,41 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="owy-tP-yyn">
-                                <rect key="frame" x="0.0" y="161" width="320" height="358"/>
+                                <rect key="frame" x="0.0" y="122" width="320" height="397"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UoE-Nk-Ngx" userLabel="botao lixo papao">
+                                <rect key="frame" x="53" y="25" width="51" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="mapa-melhorlixopapao.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoMapaLixoPapao:" destination="dzc-HH-zak" eventType="touchUpInside" id="0RK-Jo-jD3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eoq-KM-Rpo" userLabel="botao coleta">
+                                <rect key="frame" x="137" y="25" width="51" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="mapa-melhorcoleta.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoMapaColeta:" destination="dzc-HH-zak" eventType="touchUpInside" id="txB-HE-0x0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bjO-qx-n7u" userLabel="botao cifrao">
+                                <rect key="frame" x="226" y="25" width="51" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="mapa-melhor$.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="botaoMapaCifrao:" destination="dzc-HH-zak" eventType="touchUpInside" id="ETa-Bg-Fub"/>
+                                </connections>
+                            </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="Buv-jD-Ie2">
-                                <rect key="frame" x="0.0" y="133" width="320" height="29"/>
+                                <rect key="frame" x="0.0" y="93" width="320" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Mapa"/>
@@ -964,40 +995,10 @@
                                     <action selector="estiloMapa:" destination="dzc-HH-zak" eventType="valueChanged" id="bZJ-6X-Sjc"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UoE-Nk-Ngx" userLabel="botao lixo papao">
-                                <rect key="frame" x="55" y="64" width="51" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="mapa-melhorlixopapao.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botaoMapaLixoPapao:" destination="dzc-HH-zak" eventType="touchUpInside" id="0RK-Jo-jD3"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eoq-KM-Rpo" userLabel="botao coleta">
-                                <rect key="frame" x="139" y="64" width="51" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="mapa-melhorcoleta.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botaoMapaColeta:" destination="dzc-HH-zak" eventType="touchUpInside" id="txB-HE-0x0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bjO-qx-n7u" userLabel="botao cifrao">
-                                <rect key="frame" x="228" y="64" width="51" height="51"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="mapa-melhor$.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="botaoMapaCifrao:" destination="dzc-HH-zak" eventType="touchUpInside" id="ETa-Bg-Fub"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="Mapa.png" id="5rb-de-RTk"/>
+                    <tabBarItem key="tabBarItem" title="Mapa" image="Mapa.png" id="5rb-de-RTk"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="mapa" destination="owy-tP-yyn" id="I1c-uC-5wZ"/>
@@ -1007,7 +1008,7 @@
             </objects>
             <point key="canvasLocation" x="1372" y="-753"/>
         </scene>
-        <!--MinigamesVC-->
+        <!--Minigames-->
         <scene sceneID="fgP-yh-Yab">
             <objects>
                 <viewController id="OKb-DJ-iPs" customClass="MinigamesVC" sceneMemberID="viewController">
@@ -1035,7 +1036,7 @@
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sq4-k6-hT3" userLabel="jogo2">
                                 <rect key="frame" x="125" y="140" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cadeado.png">
+                                <state key="normal" backgroundImage="cadeado do jogo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1045,7 +1046,7 @@
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g2u-Fi-74y" userLabel="jogo3">
                                 <rect key="frame" x="230" y="140" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cadeado.png">
+                                <state key="normal" backgroundImage="cadeado do jogo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1055,7 +1056,7 @@
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lMm-u1-6uB" userLabel="jogo4">
                                 <rect key="frame" x="20" y="245" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cadeado.png">
+                                <state key="normal" backgroundImage="cadeado do jogo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1065,7 +1066,7 @@
                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gzz-3a-EI8" userLabel="jogo5">
                                 <rect key="frame" x="125" y="245" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cadeado.png">
+                                <state key="normal" backgroundImage="cadeado do jogo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1075,7 +1076,7 @@
                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gCl-i0-SxA" userLabel="jogo6">
                                 <rect key="frame" x="230" y="245" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cadeado.png">
+                                <state key="normal" backgroundImage="cadeado do jogo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1085,7 +1086,7 @@
                             <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="DSN-39-fsA" userLabel="jogo7">
                                 <rect key="frame" x="20" y="350" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cadeado.png">
+                                <state key="normal" backgroundImage="cadeado do jogo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1095,7 +1096,7 @@
                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d2C-Or-jmV" userLabel="jogo8">
                                 <rect key="frame" x="125" y="350" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cadeado.png">
+                                <state key="normal" backgroundImage="cadeado do jogo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1105,7 +1106,7 @@
                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Qim-HR-APf" userLabel="jogo9">
                                 <rect key="frame" x="230" y="350" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="cadeado.png">
+                                <state key="normal" backgroundImage="cadeado do jogo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -1115,7 +1116,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Games.png" id="Bnn-f9-tPu"/>
+                    <tabBarItem key="tabBarItem" title="Minigames" image="Games.png" id="Bnn-f9-tPu"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -1136,7 +1137,7 @@
             </objects>
             <point key="canvasLocation" x="1780" y="-465"/>
         </scene>
-        <!--TinderVC-->
+        <!--Avaliação-->
         <scene sceneID="Fmi-ph-GyF">
             <objects>
                 <viewController id="gfa-2D-zZN" customClass="TinderVC" sceneMemberID="viewController">
@@ -1178,7 +1179,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="Tinder.png" id="Cii-g8-whF"/>
+                    <tabBarItem key="tabBarItem" title="Avaliação" image="Tinder.png" id="Cii-g8-whF"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0p-K9-LjI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1192,7 +1193,6 @@
         <image name="HOME.png" width="30" height="30"/>
         <image name="Logo.png" width="1691" height="2087"/>
         <image name="Mapa.png" width="30" height="30"/>
-        <image name="Ranking.png" width="30" height="30"/>
         <image name="Tinder.png" width="30" height="30"/>
         <image name="Usuario.png" width="1971" height="2024"/>
         <image name="amarelo.png" width="1576" height="2019"/>
@@ -1201,13 +1201,14 @@
         <image name="b1bbbe.png" width="1978" height="1978"/>
         <image name="botaoeditar.png" width="1389" height="2027"/>
         <image name="btn_Cadastre-se.png" width="458" height="94"/>
-        <image name="cadeado.png" width="126" height="115"/>
+        <image name="cadeado do jogo.png" width="165" height="165"/>
+        <image name="canfig.png" width="46" height="46"/>
         <image name="conectar.png" width="2018" height="384"/>
         <image name="conectividade-03.png" width="920" height="210"/>
         <image name="confirmar.png" width="1742" height="1740"/>
         <image name="convidar.png" width="1726" height="2013"/>
         <image name="editar.png" width="2025" height="2024"/>
-        <image name="fundo.jpg" width="180" height="35"/>
+        <image name="fundo tab selecionado.png" width="65" height="50"/>
         <image name="fundo.png" width="1568" height="2023"/>
         <image name="iconjoguinho.png" width="100" height="100"/>
         <image name="lixo papao desconectado.png" width="1576" height="2019"/>
