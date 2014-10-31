@@ -27,7 +27,7 @@
     self.nomeUsuario.text = [preferencias objectForKey:@"Nome"];
     self.nomeUsuario.font = [UIFont fontWithName:@"Santor" size:17];
     
-    itemsMenu = [NSArray arrayWithObjects:@"Perfil",@"Recompensas", @"Estatistica", @"Configuracoes", @"Sair",nil];
+    itemsMenu = [NSArray arrayWithObjects:@"          Perfil",@"          Recompensas", @"          Estatistica", @"         Configuracoes", @"          Sair",nil];
     self.view.backgroundColor = [UIColor colorWithRed:0.0
                                                  green:128/255.0
                                                   blue:176/255.0
@@ -58,36 +58,41 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 200, 40)];
+//    label.text = [itemsMenu objectAtIndex:indexPath.row];
+    
+    UIImageView *imgview= [[UIImageView alloc] initWithFrame: CGRectMake(10, 15, 40, 40)];
+    UIImage *imagem;
+    
     switch (indexPath.row) {
         case 0:
-            cell.imageView.image = [UIImage imageNamed:@"conf.png"];
+            imagem = [UIImage imageNamed:@"icone perfil.png"];
             break;
         case 1:
-            cell.imageView.image = [UIImage imageNamed:@"recompensas.png"];
+            imagem = [UIImage imageNamed:@"icone recompensa.png"];
             break;
         case 2:
-            cell.imageView.image = [UIImage imageNamed:@"estatistica.png"];
+            imagem = [UIImage imageNamed:@"atividade.png"];
             break;
         case 3:
-            cell.imageView.frame = CGRectMake(0, 0, 250, 250);
-            cell.imageView.image = [UIImage imageNamed:@"conf.png"];
+            imagem = [UIImage imageNamed:@"icone confg.png"];
             break;
         case 4:
-            cell.imageView.image = [UIImage imageNamed:@"perfil.png"];
+            imagem = [UIImage imageNamed:@"icone sair.png"];
             break;
         default:
-            cell.imageView.image = [UIImage imageNamed:@"settings-100.png"];
+            imagem = [UIImage imageNamed:@"settings-100.png"];
             break;
     }
+    imgview.image = imagem;
+    [cell addSubview: imgview];
+    
     
     cell.textLabel.text = [itemsMenu objectAtIndex:indexPath.row];
-    
-    
     
     if (indexPath.row%2 == 0){
         cell.backgroundColor = [UIColor colorWithRed:234/255.0 green:232/255.0 blue:232/255.0 alpha:1.0];

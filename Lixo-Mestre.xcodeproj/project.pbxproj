@@ -35,7 +35,6 @@
 		F6414C161A02B60B001C3C2E /* fundo F3F4F4.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BA21A02B60B001C3C2E /* fundo F3F4F4.png */; };
 		F6414C171A02B60B001C3C2E /* fundo joguinho.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BA31A02B60B001C3C2E /* fundo joguinho.png */; };
 		F6414C181A02B60B001C3C2E /* fundo lixos.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BA41A02B60B001C3C2E /* fundo lixos.png */; };
-		F6414C191A02B60B001C3C2E /* games selecionado.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BA51A02B60B001C3C2E /* games selecionado.png */; };
 		F6414C1A1A02B60B001C3C2E /* games.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BA61A02B60B001C3C2E /* games.png */; };
 		F6414C1B1A02B60B001C3C2E /* garrafa - selecione o lixo.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BA71A02B60B001C3C2E /* garrafa - selecione o lixo.png */; };
 		F6414C1E1A02B60B001C3C2E /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BAA1A02B60B001C3C2E /* home.png */; };
@@ -114,6 +113,7 @@
 		F6414C6C1A02B60B001C3C2E /* vidro-perfil.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BF91A02B60B001C3C2E /* vidro-perfil.png */; };
 		F6414C6D1A02B60B001C3C2E /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BFA1A02B60B001C3C2E /* x.png */; };
 		F6414C6F1A02B6BF001C3C2E /* fundo tab selecionado.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414C6E1A02B6BF001C3C2E /* fundo tab selecionado.png */; };
+		F6414C711A040127001C3C2E /* hamburguer.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414C701A040127001C3C2E /* hamburguer.png */; };
 		F652DF4D19E5AC13003FD830 /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = F652DF4C19E5AC13003FD830 /* LocalData.m */; };
 		F67ED4DE19C8B78000B266BD /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4A819C8B78000B266BD /* AYVibrantButton.m */; };
 		F67ED4DF19C8B78000B266BD /* CNBluetoothCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4AB19C8B78000B266BD /* CNBluetoothCentral.m */; };
@@ -303,7 +303,6 @@
 		F6414BA21A02B60B001C3C2E /* fundo F3F4F4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fundo F3F4F4.png"; sourceTree = "<group>"; };
 		F6414BA31A02B60B001C3C2E /* fundo joguinho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fundo joguinho.png"; sourceTree = "<group>"; };
 		F6414BA41A02B60B001C3C2E /* fundo lixos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fundo lixos.png"; sourceTree = "<group>"; };
-		F6414BA51A02B60B001C3C2E /* games selecionado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "games selecionado.png"; sourceTree = "<group>"; };
 		F6414BA61A02B60B001C3C2E /* games.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = games.png; sourceTree = "<group>"; };
 		F6414BA71A02B60B001C3C2E /* garrafa - selecione o lixo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "garrafa - selecione o lixo.png"; sourceTree = "<group>"; };
 		F6414BAA1A02B60B001C3C2E /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
@@ -382,6 +381,7 @@
 		F6414BF91A02B60B001C3C2E /* vidro-perfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vidro-perfil.png"; sourceTree = "<group>"; };
 		F6414BFA1A02B60B001C3C2E /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
 		F6414C6E1A02B6BF001C3C2E /* fundo tab selecionado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fundo tab selecionado.png"; sourceTree = "<group>"; };
+		F6414C701A040127001C3C2E /* hamburguer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburguer.png; sourceTree = "<group>"; };
 		F652DF4B19E5AC13003FD830 /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
 		F652DF4C19E5AC13003FD830 /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
 		F67ED4A719C8B78000B266BD /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
@@ -607,6 +607,7 @@
 		F6414B861A02B60B001C3C2E /* Lixo Papão 3.0 */ = {
 			isa = PBXGroup;
 			children = (
+				F6414C701A040127001C3C2E /* hamburguer.png */,
 				F6414C6E1A02B6BF001C3C2E /* fundo tab selecionado.png */,
 				F6414B871A02B60B001C3C2E /* $.png */,
 				F6414B881A02B60B001C3C2E /* amigos.png */,
@@ -634,7 +635,6 @@
 				F6414BA21A02B60B001C3C2E /* fundo F3F4F4.png */,
 				F6414BA31A02B60B001C3C2E /* fundo joguinho.png */,
 				F6414BA41A02B60B001C3C2E /* fundo lixos.png */,
-				F6414BA51A02B60B001C3C2E /* games selecionado.png */,
 				F6414BA61A02B60B001C3C2E /* games.png */,
 				F6414BA71A02B60B001C3C2E /* garrafa - selecione o lixo.png */,
 				F6414BAA1A02B60B001C3C2E /* home.png */,
@@ -1388,7 +1388,6 @@
 				F6414C361A02B60B001C3C2E /* joguinho plastico 2.png in Resources */,
 				F67ED4FA19C8CA2800B266BD /* mapa-melhorcoleta.png in Resources */,
 				F6414C471A02B60B001C3C2E /* Lixo papão - SENAC-01.png in Resources */,
-				F6414C191A02B60B001C3C2E /* games selecionado.png in Resources */,
 				F6414C491A02B60B001C3C2E /* Lixo papão - SENAC-03.png in Resources */,
 				F69E386019D09A4300B64629 /* icone voltar.png in Resources */,
 				F6ED621C19DC8A7C002CCE1E /* lixeira plastico.png in Resources */,
@@ -1453,6 +1452,7 @@
 				F6414C441A02B60B001C3C2E /* metal - selecione o lixo.png in Resources */,
 				F6414C2D1A02B60B001C3C2E /* joguinho lixo verde.png in Resources */,
 				F76A122C19C8ACF700843A9D /* recycle_sign-25.png in Resources */,
+				F6414C711A040127001C3C2E /* hamburguer.png in Resources */,
 				F6414C271A02B60B001C3C2E /* joguinho botão play.png in Resources */,
 				F6414C0E1A02B60B001C3C2E /* email.png in Resources */,
 				F6414C391A02B60B001C3C2E /* joguinho voltar.png in Resources */,
