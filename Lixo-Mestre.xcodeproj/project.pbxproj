@@ -10,7 +10,6 @@
 		252A91A219CCBADF004229F3 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 252A91A119CCBADF004229F3 /* MenuTableViewCell.m */; };
 		F63A7F3419CB55220076D574 /* CadastroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A7F3319CB55220076D574 /* CadastroVC.m */; };
 		F6414BFB1A02B60B001C3C2E /* $.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414B871A02B60B001C3C2E /* $.png */; };
-		F6414BFC1A02B60B001C3C2E /* amigos.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414B881A02B60B001C3C2E /* amigos.png */; };
 		F6414BFD1A02B60B001C3C2E /* atividade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414B891A02B60B001C3C2E /* atividade.png */; };
 		F6414BFF1A02B60B001C3C2E /* barrinha 639,751 x 121,939.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414B8B1A02B60B001C3C2E /* barrinha 639,751 x 121,939.png */; };
 		F6414C001A02B60B001C3C2E /* Barrinha cinza do perfil (editar, amigos) 640x158.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414B8C1A02B60B001C3C2E /* Barrinha cinza do perfil (editar, amigos) 640x158.png */; };
@@ -278,7 +277,6 @@
 		F63A7F3219CB55220076D574 /* CadastroVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastroVC.h; sourceTree = "<group>"; };
 		F63A7F3319CB55220076D574 /* CadastroVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastroVC.m; sourceTree = "<group>"; };
 		F6414B871A02B60B001C3C2E /* $.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = $.png; sourceTree = "<group>"; };
-		F6414B881A02B60B001C3C2E /* amigos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amigos.png; sourceTree = "<group>"; };
 		F6414B891A02B60B001C3C2E /* atividade.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = atividade.png; sourceTree = "<group>"; };
 		F6414B8B1A02B60B001C3C2E /* barrinha 639,751 x 121,939.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "barrinha 639,751 x 121,939.png"; sourceTree = "<group>"; };
 		F6414B8C1A02B60B001C3C2E /* Barrinha cinza do perfil (editar, amigos) 640x158.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Barrinha cinza do perfil (editar, amigos) 640x158.png"; sourceTree = "<group>"; };
@@ -610,7 +608,6 @@
 				F6414C701A040127001C3C2E /* hamburguer.png */,
 				F6414C6E1A02B6BF001C3C2E /* fundo tab selecionado.png */,
 				F6414B871A02B60B001C3C2E /* $.png */,
-				F6414B881A02B60B001C3C2E /* amigos.png */,
 				F6414B891A02B60B001C3C2E /* atividade.png */,
 				F6414B8B1A02B60B001C3C2E /* barrinha 639,751 x 121,939.png */,
 				F6414B8C1A02B60B001C3C2E /* Barrinha cinza do perfil (editar, amigos) 640x158.png */,
@@ -1409,7 +1406,6 @@
 				F69D12D019D3511B00643122 /* vidro.png in Resources */,
 				F6414C341A02B60B001C3C2E /* joguinho papel 3.png in Resources */,
 				F6414C4D1A02B60B001C3C2E /* Lixo papão - SENAC-07.png in Resources */,
-				F6414BFC1A02B60B001C3C2E /* amigos.png in Resources */,
 				F69D12C519D3511B00643122 /* estatistica.png in Resources */,
 				F6414C531A02B60B001C3C2E /* Lixo papão - SENAC-13.png in Resources */,
 				F6414C5C1A02B60B001C3C2E /* ok.png in Resources */,

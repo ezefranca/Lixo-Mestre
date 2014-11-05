@@ -22,8 +22,15 @@
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *senha;
 
-- (IBAction)voltar:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UIButton *editNome;
+@property (weak, nonatomic) IBOutlet UIButton *editEmail;
+@property (weak, nonatomic) IBOutlet UIButton *editSenha;
+
+@property UIImage *botaoSelected;
+@property UIImage *botaoUnselected;
+
+- (IBAction)voltar:(id)sender;
 
 
 
