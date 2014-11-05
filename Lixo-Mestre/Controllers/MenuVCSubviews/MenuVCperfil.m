@@ -26,17 +26,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     preferencias = [NSUserDefaults standardUserDefaults];
-    
-    self.nome.text = [preferencias objectForKey:@"Nome"];
-    
-    self.foto.image = [LocalData loadFacePicture];
+
     //Deixar imagem redonda
     CGRect x = self.foto.bounds;
     self.foto.layer.cornerRadius = CGRectGetHeight(x) / 2;
     self.foto.layer.borderWidth = 1.0f;
     self.foto.layer.borderColor = [UIColor clearColor].CGColor;
     self.foto.clipsToBounds = YES;
-    
     
     self.titulo.font = [UIFont fontWithName:@"Santor" size:20];
     self.nome.font = [UIFont fontWithName:@"Santor" size:17];
@@ -57,6 +53,12 @@
     self.progresso.font = [UIFont fontWithName:@"Santor" size:17];
     
 
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    self.foto.image = [LocalData loadFacePicture];
+    self.nome.text = [preferencias objectForKey:@"Nome"];
+    
 }
 
 - (void)didReceiveMemoryWarning{

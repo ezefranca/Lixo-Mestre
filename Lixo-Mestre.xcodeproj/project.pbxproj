@@ -113,6 +113,7 @@
 		F6414C6D1A02B60B001C3C2E /* x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BFA1A02B60B001C3C2E /* x.png */; };
 		F6414C6F1A02B6BF001C3C2E /* fundo tab selecionado.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414C6E1A02B6BF001C3C2E /* fundo tab selecionado.png */; };
 		F6414C711A040127001C3C2E /* hamburguer.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414C701A040127001C3C2E /* hamburguer.png */; };
+		F6414CB81A0A969F001C3C2E /* editarfundo.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414CB71A0A969F001C3C2E /* editarfundo.png */; };
 		F652DF4D19E5AC13003FD830 /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = F652DF4C19E5AC13003FD830 /* LocalData.m */; };
 		F67ED4DE19C8B78000B266BD /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4A819C8B78000B266BD /* AYVibrantButton.m */; };
 		F67ED4DF19C8B78000B266BD /* CNBluetoothCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4AB19C8B78000B266BD /* CNBluetoothCentral.m */; };
@@ -380,6 +381,7 @@
 		F6414BFA1A02B60B001C3C2E /* x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = x.png; sourceTree = "<group>"; };
 		F6414C6E1A02B6BF001C3C2E /* fundo tab selecionado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fundo tab selecionado.png"; sourceTree = "<group>"; };
 		F6414C701A040127001C3C2E /* hamburguer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburguer.png; sourceTree = "<group>"; };
+		F6414CB71A0A969F001C3C2E /* editarfundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editarfundo.png; sourceTree = "<group>"; };
 		F652DF4B19E5AC13003FD830 /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
 		F652DF4C19E5AC13003FD830 /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
 		F67ED4A719C8B78000B266BD /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
@@ -607,6 +609,7 @@
 			children = (
 				F6414C701A040127001C3C2E /* hamburguer.png */,
 				F6414C6E1A02B6BF001C3C2E /* fundo tab selecionado.png */,
+				F6414CB71A0A969F001C3C2E /* editarfundo.png */,
 				F6414B871A02B60B001C3C2E /* $.png */,
 				F6414B891A02B60B001C3C2E /* atividade.png */,
 				F6414B8B1A02B60B001C3C2E /* barrinha 639,751 x 121,939.png */,
@@ -1378,6 +1381,7 @@
 			files = (
 				F69D12A319D3511B00643122 /* Email.png in Resources */,
 				F6414C331A02B60B001C3C2E /* joguinho papel 2.png in Resources */,
+				F6414CB81A0A969F001C3C2E /* editarfundo.png in Resources */,
 				F6414C181A02B60B001C3C2E /* fundo lixos.png in Resources */,
 				F6414C131A02B60B001C3C2E /* foto editar.png in Resources */,
 				F76A123719C8ACF700843A9D /* settings-75.png in Resources */,

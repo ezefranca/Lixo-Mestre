@@ -173,6 +173,92 @@
     return x;
 }
 
++(int)updateNomeUser:(NSString *)user :(NSString *)pass :(NSString *)email{
+    int x = 0;
+    if ([self check]){
+        NSString *url =  @"http://172.246.16.27/lixoPapao/editar.php";
+        NSString *post = [NSString stringWithFormat:@"type=name&user=%@&pass=%@&email=%@",user , pass, email];
+        
+        //NSLog(@"%@" , post);
+        NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+        
+        NSMutableURLRequest *request = [ [ NSMutableURLRequest alloc ] initWithURL: [ NSURL URLWithString: url]];
+        
+        [ request setHTTPMethod: @"POST"];
+        [ request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
+        
+        [ request setHTTPBody: postData ];
+        NSURLResponse *response;
+        NSError *err;
+        NSData *returnData = [ NSURLConnection sendSynchronousRequest: request returningResponse:&response error:&err];
+        
+        NSString *content = [NSString stringWithUTF8String:[returnData bytes]];
+        
+        x = (int)[content integerValue];
+        
+        //se precisar de um json maneiro
+        
+        /*
+         NSError* error;
+         NSDictionary* json = [NSJSONSerialization
+         JSONObjectWithData:returnData //1
+         
+         options:kNilOptions
+         error:&error];
+         
+         NSString *ret ;
+         
+         for (NSString *s in json) {
+         ret = s;
+         }
+         */
+    }
+    return x;
+}
+
++(int)updatePassUser:(NSString *)user :(NSString *)pass :(NSString *)email{
+    int x = 0;
+    if ([self check]){
+        NSString *url =  @"http://172.246.16.27/lixoPapao/editar.php";
+        NSString *post = [NSString stringWithFormat:@"type=password&user=%@&pass=%@&email=%@",user , pass, email];
+        
+        //NSLog(@"%@" , post);
+        NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+        
+        NSMutableURLRequest *request = [ [ NSMutableURLRequest alloc ] initWithURL: [ NSURL URLWithString: url]];
+        
+        [ request setHTTPMethod: @"POST"];
+        [ request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
+        
+        [ request setHTTPBody: postData ];
+        NSURLResponse *response;
+        NSError *err;
+        NSData *returnData = [ NSURLConnection sendSynchronousRequest: request returningResponse:&response error:&err];
+        
+        NSString *content = [NSString stringWithUTF8String:[returnData bytes]];
+        
+        x = (int)[content integerValue];
+        
+        //se precisar de um json maneiro
+        
+        /*
+         NSError* error;
+         NSDictionary* json = [NSJSONSerialization
+         JSONObjectWithData:returnData //1
+         
+         options:kNilOptions
+         error:&error];
+         
+         NSString *ret ;
+         
+         for (NSString *s in json) {
+         ret = s;
+         }
+         */
+    }
+    return x;
+}
+
 +(void)uploadImage: (UIImage *)imagemDoPerfil : (NSString *)username{
     NSData *imageData = UIImagePNGRepresentation(imagemDoPerfil);
     

@@ -21,10 +21,9 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    
+
     preferencias = [NSUserDefaults standardUserDefaults];
 
-    self.nomeUsuario.text = [preferencias objectForKey:@"Nome"];
     self.nomeUsuario.font = [UIFont fontWithName:@"Santor" size:17];
     
     itemsMenu = [NSArray arrayWithObjects:@"          Perfil",@"          Recompensas", @"          Estatistica", @"         Configuracoes", @"          Sair",nil];
@@ -32,8 +31,7 @@
                                                  green:128/255.0
                                                   blue:176/255.0
                                                  alpha:1.0];
-    
-    self.imagemPerfil.image = [LocalData loadFacePicture];
+
     //Deixar imagem redonda 
     CGRect x = self.imagemPerfil.bounds;
     self.imagemPerfil.layer.cornerRadius = CGRectGetHeight(x) / 2;
@@ -41,11 +39,12 @@
     self.imagemPerfil.layer.borderColor = [UIColor clearColor].CGColor;
     self.imagemPerfil.clipsToBounds = YES;
 
-
 }
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    self.nomeUsuario.text = [preferencias objectForKey:@"Nome"];
+    self.imagemPerfil.image = [LocalData loadFacePicture];
 }
 
 - (void)didReceiveMemoryWarning{
@@ -95,11 +94,10 @@
     cell.textLabel.text = [itemsMenu objectAtIndex:indexPath.row];
     
     if (indexPath.row%2 == 0){
-        cell.backgroundColor = [UIColor colorWithRed:234/255.0 green:232/255.0 blue:232/255.0 alpha:1.0];
-        
+        cell.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
     }
     else{
-        cell.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        cell.backgroundColor = [UIColor colorWithRed:234/255.0 green:232/255.0 blue:232/255.0 alpha:1.0];
     }
     
 
@@ -140,6 +138,7 @@
             [FBSession.activeSession closeAndClearTokenInformation];
             [FBSession.activeSession close];
             [FBSession setActiveSession:nil];
+            [LocalData deleteFacePicture];
             [preferencias setBool: NO forKey:@"Logado"];
             [self performSegueWithIdentifier:@"unwindLogout" sender:Nil];
             break;

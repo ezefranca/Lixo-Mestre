@@ -15,6 +15,10 @@ extern NSString *usuarioUniversal;
 +(BOOL)login : (NSString *)email : (NSString *)pass;
 +(BOOL)check;
 +(int)newUser : (NSString *)user :  (NSString *)pass : (NSString *)nickName;
+
++(int)updateNomeUser:(NSString *)user :(NSString *)pass :(NSString *)email;
++(int)updatePassUser:(NSString *)user :(NSString *)pass :(NSString *)email;
+
 +(void)uploadImage: (UIImage *)imagemDoPerfil : (NSString *)username;
 +(BOOL)updateTinder : (int )evaluation : (int)idRecycled;
 

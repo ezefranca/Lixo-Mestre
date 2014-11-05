@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Ezequiel Franca dos Santos. All rights reserved.
 //
 
+#import "LocalData.h"
+#import "webService.h"
 #import "MenuVCeditarperfil.h"
 
 @interface MenuVCeditarperfil ()
@@ -30,6 +32,17 @@
 //    self.email.text = [preferencias objectForKey:@""];
 //    self.senha.text = [preferencias objectForKey:@""];
     
+    preferencias = [NSUserDefaults standardUserDefaults];
+    
+    self.foto.image = [LocalData loadFacePicture];
+    //Deixar imagem redonda
+    CGRect x = self.foto.bounds;
+    self.foto.layer.cornerRadius = CGRectGetHeight(x) / 2;
+    self.foto.layer.borderWidth = 1.0f;
+    self.foto.layer.borderColor = [UIColor clearColor].CGColor;
+    self.foto.clipsToBounds = YES;
+    
+    
     self.titulo.font = [UIFont fontWithName:@"Santor" size:17];
     self.nome.font = [UIFont fontWithName:@"Santor" size:17];
     self.email.font = [UIFont fontWithName:@"Santor" size:17];
@@ -48,13 +61,16 @@
     self.senha.delegate = self;
     
     self.botaoUnselected = [UIImage imageNamed:@"editar.png"];
-    self.botaoSelected = [UIImage imageNamed:@"editar-perfil.png"];
+    self.botaoSelected = [UIImage imageNamed:@"confirmar.png"];
 
 }
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated{
 }
 
 /*
@@ -72,6 +88,31 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (IBAction)botaoAlbum:(UIButton *)sender {
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
+#pragma mark - Image Picker Controller delegate methods
+
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+    self.foto.image = chosenImage;
+    
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+    
+}
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
+    [picker dismissViewControllerAnimated:YES completion:NULL];
+}
+
+
 - (IBAction)editarNome:(id)sender
 {
     self.nome.enabled = !self.nome.enabled;
@@ -81,20 +122,9 @@
     }
     else{
         [self.editNome setBackgroundImage: self.botaoUnselected forState:UIControlStateNormal];
+        [webService updateNomeUser:self.nome.text :self.senha.text : [preferencias objectForKey:@"LoginApp"] ];
+        [preferencias setObject:self.nome.text forKey:@"Nome"];
 
-    }
-}
-
-- (IBAction)editarEmail:(id)sender
-{
-    self.email.enabled = !self.email.enabled;
-    //self.editEmail.selected = !self.editEmail.selected;
-    if ( self.email.enabled ) {
-        [self.editEmail setBackgroundImage: self.botaoSelected forState:UIControlStateNormal];
-    }
-    else{
-        [self.editEmail setBackgroundImage: self.botaoUnselected forState:UIControlStateNormal];
-        
     }
 }
 
@@ -107,16 +137,9 @@
     }
     else{
         [self.editSenha setBackgroundImage: self.botaoUnselected forState:UIControlStateNormal];
-        
     }
 }
 
-- (IBAction)confirmar:(id)sender {
-//    [preferencias setObject: self.nome.text forKey:@""];
-//    [preferencias setObject: self.email.text forKey:@""];
-//    [ preferencias setObject: self.senha.text forKey:@""];
-    
-}
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing:YES] ;

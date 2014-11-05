@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuVCeditarperfil : UIViewController <UITextFieldDelegate>{
+@interface MenuVCeditarperfil : UIViewController <UITextFieldDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate>{
     NSUserDefaults *preferencias;
 }
 
@@ -31,8 +31,6 @@
 @property UIImage *botaoUnselected;
 
 - (IBAction)voltar:(id)sender;
-
-
 
 
 - (IBAction)confirmar:(id)sender;
