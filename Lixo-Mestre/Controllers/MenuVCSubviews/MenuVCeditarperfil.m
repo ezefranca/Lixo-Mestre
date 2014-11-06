@@ -99,10 +99,13 @@
 
 #pragma mark - Image Picker Controller delegate methods
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    [LocalData deleteFacePicture];
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     self.foto.image = chosenImage;
+
+    [LocalData saveFacePic: chosenImage];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
@@ -120,10 +123,19 @@
     if ( self.nome.enabled ) {
         [self.editNome setBackgroundImage: self.botaoSelected forState:UIControlStateNormal];
     }
-    else{
+    else
+    {
         [self.editNome setBackgroundImage: self.botaoUnselected forState:UIControlStateNormal];
-        [webService updateNomeUser:self.nome.text :self.senha.text : [preferencias objectForKey:@"LoginApp"] ];
-        [preferencias setObject:self.nome.text forKey:@"Nome"];
+        
+        if ( [webService updateNomeUser:self.nome.text :self.senha.text : [preferencias objectForKey:@"LoginApp"] ] )
+        {
+            [preferencias setObject:self.nome.text forKey:@"Nome"];
+
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nome alterado com sucesso." message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            alert.alertViewStyle = UIAlertViewStyleDefault;
+            [alert show];
+        }
+
 
     }
 }
@@ -137,6 +149,16 @@
     }
     else{
         [self.editSenha setBackgroundImage: self.botaoUnselected forState:UIControlStateNormal];
+        
+        if ( [webService updatePassUser: self.nome.text :self.senha.text : [preferencias objectForKey:@"LoginApp"] ] )
+        {
+            [preferencias setObject:self.nome.text forKey:@"password"];
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Senha alterada com sucesso." message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            alert.alertViewStyle = UIAlertViewStyleDefault;
+            [alert show];
+        }
+        
     }
 }
 
