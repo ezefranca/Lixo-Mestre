@@ -114,6 +114,7 @@
 		F6414C6F1A02B6BF001C3C2E /* fundo tab selecionado.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414C6E1A02B6BF001C3C2E /* fundo tab selecionado.png */; };
 		F6414C711A040127001C3C2E /* hamburguer.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414C701A040127001C3C2E /* hamburguer.png */; };
 		F6414CB81A0A969F001C3C2E /* editarfundo.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414CB71A0A969F001C3C2E /* editarfundo.png */; };
+		F6414CBC1A0BE2DF001C3C2E /* RecompensasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6414CBB1A0BE2DF001C3C2E /* RecompensasViewController.m */; };
 		F652DF4D19E5AC13003FD830 /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = F652DF4C19E5AC13003FD830 /* LocalData.m */; };
 		F67ED4DE19C8B78000B266BD /* AYVibrantButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4A819C8B78000B266BD /* AYVibrantButton.m */; };
 		F67ED4DF19C8B78000B266BD /* CNBluetoothCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = F67ED4AB19C8B78000B266BD /* CNBluetoothCentral.m */; };
@@ -382,6 +383,8 @@
 		F6414C6E1A02B6BF001C3C2E /* fundo tab selecionado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fundo tab selecionado.png"; sourceTree = "<group>"; };
 		F6414C701A040127001C3C2E /* hamburguer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hamburguer.png; sourceTree = "<group>"; };
 		F6414CB71A0A969F001C3C2E /* editarfundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editarfundo.png; sourceTree = "<group>"; };
+		F6414CBA1A0BE2DF001C3C2E /* RecompensasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecompensasViewController.h; sourceTree = "<group>"; };
+		F6414CBB1A0BE2DF001C3C2E /* RecompensasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecompensasViewController.m; sourceTree = "<group>"; };
 		F652DF4B19E5AC13003FD830 /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
 		F652DF4C19E5AC13003FD830 /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
 		F67ED4A719C8B78000B266BD /* AYVibrantButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AYVibrantButton.h; sourceTree = "<group>"; };
@@ -724,6 +727,21 @@
 			path = Mockup;
 			sourceTree = "<group>";
 		};
+		F6414CB91A0BE2A2001C3C2E /* subviews perfil */ = {
+			isa = PBXGroup;
+			children = (
+				F6ED61E719DC653D002CCE1E /* ViewProgresso.h */,
+				F6ED61E819DC653D002CCE1E /* ViewProgresso.m */,
+				F6ED61D919D9DD0B002CCE1E /* MenuVCeditarperfil.h */,
+				F6ED61DA19D9DD0B002CCE1E /* MenuVCeditarperfil.m */,
+				F6ED61DC19DA02C7002CCE1E /* MenuVCamigos.h */,
+				F6ED61DD19DA02C7002CCE1E /* MenuVCamigos.m */,
+				F6ED61DF19DA039B002CCE1E /* MenuVCperfilAmigo.h */,
+				F6ED61E019DA039B002CCE1E /* MenuVCperfilAmigo.m */,
+			);
+			name = "subviews perfil";
+			sourceTree = "<group>";
+		};
 		F67ED4A519C8B78000B266BD /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1023,14 +1041,9 @@
 			children = (
 				F6ED61D619D9DC0C002CCE1E /* MenuVCperfil.h */,
 				F6ED61D719D9DC0C002CCE1E /* MenuVCperfil.m */,
-				F6ED61E719DC653D002CCE1E /* ViewProgresso.h */,
-				F6ED61E819DC653D002CCE1E /* ViewProgresso.m */,
-				F6ED61D919D9DD0B002CCE1E /* MenuVCeditarperfil.h */,
-				F6ED61DA19D9DD0B002CCE1E /* MenuVCeditarperfil.m */,
-				F6ED61DC19DA02C7002CCE1E /* MenuVCamigos.h */,
-				F6ED61DD19DA02C7002CCE1E /* MenuVCamigos.m */,
-				F6ED61DF19DA039B002CCE1E /* MenuVCperfilAmigo.h */,
-				F6ED61E019DA039B002CCE1E /* MenuVCperfilAmigo.m */,
+				F6414CB91A0BE2A2001C3C2E /* subviews perfil */,
+				F6414CBA1A0BE2DF001C3C2E /* RecompensasViewController.h */,
+				F6414CBB1A0BE2DF001C3C2E /* RecompensasViewController.m */,
 				F6ED61E419DB3217002CCE1E /* ConfiguracoesVC.h */,
 				F6ED61E519DB3217002CCE1E /* ConfiguracoesVC.m */,
 			);
@@ -1625,6 +1638,7 @@
 				F67ED4F119C8B78000B266BD /* SVProgressHUD.m in Sources */,
 				F67ED4DE19C8B78000B266BD /* AYVibrantButton.m in Sources */,
 				F6ED61BE19D5EE16002CCE1E /* MinigamesVC.m in Sources */,
+				F6414CBC1A0BE2DF001C3C2E /* RecompensasViewController.m in Sources */,
 				F67ED4ED19C8B78000B266BD /* WifiNetwork.m in Sources */,
 				F67ED4EC19C8B78000B266BD /* NotificationsViewController.m in Sources */,
 				F76A11FF19C8ACF700843A9D /* TabGeralVC.m in Sources */,

@@ -122,6 +122,7 @@
             break;
         }
         case 1:{
+            [self performSegueWithIdentifier:@"aoRecompensas" sender:nil];
 
             break;
         }
