@@ -8,24 +8,36 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecompensasViewController : UIViewController  <UITableViewDelegate, UITableViewDataSource>{
+@interface RecompensasViewController : UIViewController <UIScrollViewDelegate>{
     NSUserDefaults *preferencias;
     NSDictionary *rankingJson;
     NSString *usuario;
 }
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (weak, nonatomic) IBOutlet UIScrollView *viewS;
 
-@property UIProgressView *papel;
-@property UIProgressView *plastico;
-@property UIProgressView *vidro;
-@property UIProgressView *metal;
-@property UIProgressView *pontos;
 
-@property UILabel *labelMetalProgress;
-@property UILabel *labelPapelProgress;
-@property UILabel *labelPlasticoProgress;
-@property UILabel *labelVidroProgress;
-@property UILabel *labelPontosProgress;
+@property (weak, nonatomic) IBOutlet UIProgressView *papel;
+@property (weak, nonatomic) IBOutlet UIProgressView *plastico;
+@property (weak, nonatomic) IBOutlet UIProgressView *vidro;
+@property (weak, nonatomic) IBOutlet UIProgressView *metal;
+
+@property (weak, nonatomic) IBOutlet UIProgressView *papelCert;
+@property (weak, nonatomic) IBOutlet UIProgressView *plasticoCert;
+@property (weak, nonatomic) IBOutlet UIProgressView *vidroCert;
+@property (weak, nonatomic) IBOutlet UIProgressView *metalCert;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *labelPapelProgress;
+@property (weak, nonatomic) IBOutlet UILabel *labelPlasticoProgress;
+@property (weak, nonatomic) IBOutlet UILabel *labelVidroProgress;
+@property (weak, nonatomic) IBOutlet UILabel *labelMetalProgress;
+
+@property (weak, nonatomic) IBOutlet UILabel *labelPapelCertProgress;
+@property (weak, nonatomic) IBOutlet UILabel *labelPlasticoCertProgress;
+@property (weak, nonatomic) IBOutlet UILabel *labelVidroCertProgress;
+@property (weak, nonatomic) IBOutlet UILabel *labelMetalCertProgress;
+
+
 
 @end

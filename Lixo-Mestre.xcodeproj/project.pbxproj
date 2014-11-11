@@ -72,7 +72,7 @@
 		F6414C421A02B60B001C3C2E /* mapa.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BCE1A02B60B001C3C2E /* mapa.png */; };
 		F6414C431A02B60B001C3C2E /* metal - recompensa.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BCF1A02B60B001C3C2E /* metal - recompensa.png */; };
 		F6414C441A02B60B001C3C2E /* metal - selecione o lixo.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BD01A02B60B001C3C2E /* metal - selecione o lixo.png */; };
-		F6414C451A02B60B001C3C2E /* metal recompensa.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BD11A02B60B001C3C2E /* metal recompensa.png */; };
+		F6414C451A02B60B001C3C2E /* metal certificado.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BD11A02B60B001C3C2E /* metal certificado.png */; };
 		F6414C461A02B60B001C3C2E /* metal-perfil.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BD21A02B60B001C3C2E /* metal-perfil.png */; };
 		F6414C471A02B60B001C3C2E /* Lixo papão - SENAC-01.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BD41A02B60B001C3C2E /* Lixo papão - SENAC-01.png */; };
 		F6414C481A02B60B001C3C2E /* Lixo papão - SENAC-02.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BD51A02B60B001C3C2E /* Lixo papão - SENAC-02.png */; };
@@ -105,7 +105,7 @@
 		F6414C631A02B60B001C3C2E /* plastico-perfil.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BF01A02B60B001C3C2E /* plastico-perfil.png */; };
 		F6414C641A02B60B001C3C2E /* setinha.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BF11A02B60B001C3C2E /* setinha.png */; };
 		F6414C651A02B60B001C3C2E /* tabbar .png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BF21A02B60B001C3C2E /* tabbar .png */; };
-		F6414C681A02B60B001C3C2E /* vidro - recompensa.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BF51A02B60B001C3C2E /* vidro - recompensa.png */; };
+		F6414C681A02B60B001C3C2E /* plastico-recompensa.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BF51A02B60B001C3C2E /* plastico-recompensa.png */; };
 		F6414C691A02B60B001C3C2E /* vidro - selecione o lixo.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BF61A02B60B001C3C2E /* vidro - selecione o lixo.png */; };
 		F6414C6A1A02B60B001C3C2E /* vidro certificado.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BF71A02B60B001C3C2E /* vidro certificado.png */; };
 		F6414C6B1A02B60B001C3C2E /* vidro- recompensa.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BF81A02B60B001C3C2E /* vidro- recompensa.png */; };
@@ -341,7 +341,7 @@
 		F6414BCE1A02B60B001C3C2E /* mapa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapa.png; sourceTree = "<group>"; };
 		F6414BCF1A02B60B001C3C2E /* metal - recompensa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal - recompensa.png"; sourceTree = "<group>"; };
 		F6414BD01A02B60B001C3C2E /* metal - selecione o lixo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal - selecione o lixo.png"; sourceTree = "<group>"; };
-		F6414BD11A02B60B001C3C2E /* metal recompensa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal recompensa.png"; sourceTree = "<group>"; };
+		F6414BD11A02B60B001C3C2E /* metal certificado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal certificado.png"; sourceTree = "<group>"; };
 		F6414BD21A02B60B001C3C2E /* metal-perfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal-perfil.png"; sourceTree = "<group>"; };
 		F6414BD41A02B60B001C3C2E /* Lixo papão - SENAC-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lixo papão - SENAC-01.png"; sourceTree = "<group>"; };
 		F6414BD51A02B60B001C3C2E /* Lixo papão - SENAC-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Lixo papão - SENAC-02.png"; sourceTree = "<group>"; };
@@ -374,7 +374,7 @@
 		F6414BF01A02B60B001C3C2E /* plastico-perfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plastico-perfil.png"; sourceTree = "<group>"; };
 		F6414BF11A02B60B001C3C2E /* setinha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setinha.png; sourceTree = "<group>"; };
 		F6414BF21A02B60B001C3C2E /* tabbar .png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar .png"; sourceTree = "<group>"; };
-		F6414BF51A02B60B001C3C2E /* vidro - recompensa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vidro - recompensa.png"; sourceTree = "<group>"; };
+		F6414BF51A02B60B001C3C2E /* plastico-recompensa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plastico-recompensa.png"; sourceTree = "<group>"; };
 		F6414BF61A02B60B001C3C2E /* vidro - selecione o lixo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vidro - selecione o lixo.png"; sourceTree = "<group>"; };
 		F6414BF71A02B60B001C3C2E /* vidro certificado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vidro certificado.png"; sourceTree = "<group>"; };
 		F6414BF81A02B60B001C3C2E /* vidro- recompensa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "vidro- recompensa.png"; sourceTree = "<group>"; };
@@ -676,7 +676,7 @@
 				F6414BCE1A02B60B001C3C2E /* mapa.png */,
 				F6414BCF1A02B60B001C3C2E /* metal - recompensa.png */,
 				F6414BD01A02B60B001C3C2E /* metal - selecione o lixo.png */,
-				F6414BD11A02B60B001C3C2E /* metal recompensa.png */,
+				F6414BD11A02B60B001C3C2E /* metal certificado.png */,
 				F6414BD21A02B60B001C3C2E /* metal-perfil.png */,
 				F6414BD31A02B60B001C3C2E /* Mockup */,
 				F6414BE91A02B60B001C3C2E /* ok.png */,
@@ -689,7 +689,7 @@
 				F6414BF01A02B60B001C3C2E /* plastico-perfil.png */,
 				F6414BF11A02B60B001C3C2E /* setinha.png */,
 				F6414BF21A02B60B001C3C2E /* tabbar .png */,
-				F6414BF51A02B60B001C3C2E /* vidro - recompensa.png */,
+				F6414BF51A02B60B001C3C2E /* plastico-recompensa.png */,
 				F6414BF61A02B60B001C3C2E /* vidro - selecione o lixo.png */,
 				F6414BF71A02B60B001C3C2E /* vidro certificado.png */,
 				F6414BF81A02B60B001C3C2E /* vidro- recompensa.png */,
@@ -1542,7 +1542,7 @@
 				F76A122919C8ACF700843A9D /* settings-100.png in Resources */,
 				F6414C031A02B60B001C3C2E /* btn_Cadastre-se.png in Resources */,
 				F76A123819C8ACF700843A9D /* tutorial.png in Resources */,
-				F6414C451A02B60B001C3C2E /* metal recompensa.png in Resources */,
+				F6414C451A02B60B001C3C2E /* metal certificado.png in Resources */,
 				F69D12A619D3511B00643122 /* editar.png in Resources */,
 				F6414C381A02B60B001C3C2E /* joguinho replay.png in Resources */,
 				F6ED61B119D5E5F9002CCE1E /* HOME.png in Resources */,
@@ -1567,7 +1567,7 @@
 				F69D12D719D3511B00643122 /* photos.png in Resources */,
 				F6ED621619DC8A7C002CCE1E /* fundo.png in Resources */,
 				F6414C6F1A02B6BF001C3C2E /* fundo tab selecionado.png in Resources */,
-				F6414C681A02B60B001C3C2E /* vidro - recompensa.png in Resources */,
+				F6414C681A02B60B001C3C2E /* plastico-recompensa.png in Resources */,
 				F6414C0B1A02B60B001C3C2E /* convidar-face.png in Resources */,
 				F69D12C819D3511B00643122 /* amigos.png in Resources */,
 				F6414C101A02B60B001C3C2E /* estrela.png in Resources */,
