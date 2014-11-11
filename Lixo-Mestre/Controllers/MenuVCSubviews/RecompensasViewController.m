@@ -14,45 +14,73 @@
 
 @implementation RecompensasViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
+    
+    preferencias = [NSUserDefaults standardUserDefaults];
+    
+    self.nomeUsuario.font = [UIFont fontWithName:@"Santor" size:17];
+    self.nomeUsuario.text = [preferencias objectForKey:@"Nome"];
+    
+    self.qteMoedas.font = [UIFont fontWithName:@"Santor" size:14];
+    self.qteMoedas.text = [NSString stringWithFormat:@"%ld moedas", (long)[preferencias integerForKey:@"userMoedas"]];
+    
+    self.qteEstrelas.font = [UIFont fontWithName:@"Santor" size:14];
+    self.qteEstrelas.text = [NSString stringWithFormat:@"%ld estrelas", (long)[preferencias integerForKey:@"userEstrelas"]];
+    
+    [self setAllProgressViews: [NSArray arrayWithObjects:
+                             self.papel,
+                             self.plastico,
+                             self.vidro,
+                             self.metal,
+                             self.papelCert,
+                             self.plasticoCert,
+                             self.vidroCert,
+                             self.metalCert,nil]];
+    
+    [self setAllProgressLabels:[NSArray arrayWithObjects:
+                                self.labelPapelProgress,
+                                self.labelPlasticoProgress,
+                                self.labelVidroProgress,
+                                self.labelMetalProgress,
+                                self.labelPapelCertProgress,
+                                self.labelPlasticoCertProgress,
+                                self.labelVidroCertProgress,
+                                self.labelMetalCertProgress,
+                                nil]];
+    [self inicializarManero];
     // Do any additional setup after loading the view.
+    
+
+    NSNumber *a = [[NSNumber alloc] initWithInt:5];
+    NSNumber *b = [[NSNumber alloc] initWithInt:10];
+    NSNumber *c = [[NSNumber alloc] initWithInt:15];
+    NSNumber *d = [[NSNumber alloc] initWithInt:20];
+    NSNumber *e = [[NSNumber alloc] initWithInt:25];
+
+    qteLixosAmounts = [NSMutableArray arrayWithObjects: a,b,c,d,e, nil];
+    
+   
+    
     
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidLayoutSubviews{
-    [self.viewS setContentSize: CGSizeMake(320, 790)];
-    [self inicializarManero];
+- (void)viewDidLayoutSubviews
+{
+    [self.viewS setContentSize: CGSizeMake(320, 800)];
 }
 
--(void)viewDidAppear:(BOOL)animated{
-    //coloca os valores nas progressview
-    CGFloat npapel = [preferencias integerForKey:@"qtePapel"];
-    CGFloat nplastico = [preferencias integerForKey:@"qtePlastico"];
-    CGFloat nvidro = [preferencias integerForKey:@"qteVidro"] ;
-    CGFloat nmetal = [preferencias integerForKey:@"qtePapel"] ;
-
-    //NSLog(@"%0.2f %0.2f %0.2f %0.2f",npapel, nplastico, nvidro, nmetal);
-    
-    [[self papel] setProgress: npapel/50.0 animated:YES];
-    [[self plastico] setProgress: nplastico/50.0 animated:YES];
-    [[self vidro] setProgress: nvidro/50.0 animated:YES];
-    [[self metal] setProgress: nmetal/50.0 animated:YES];
-    
-    [[self labelPapelProgress] setText: [NSString stringWithFormat:@"%0.0f/50", npapel]];
-    [[self labelPlasticoProgress] setText: [NSString stringWithFormat:@"%0.0f/50", nplastico]];
-    [[self labelVidroProgress] setText: [NSString stringWithFormat:@"%0.0f/50", nvidro]];
-    [[self labelMetalProgress] setText: [NSString stringWithFormat:@"%0.0f/50", nmetal]];
-
+-(void)viewDidAppear:(BOOL)animated
+{
+    [self setValoresProgress];
 }
-
-
-
 
 
 #pragma mark coisitas da progressview
@@ -60,60 +88,70 @@
 {
     CGAffineTransform trans = CGAffineTransformMakeScale(1.0f, 10.0f);
     UIColor *progressColour = [UIColor colorWithRed:0/255.0 green:127/255.0 blue:177/255.0 alpha:1.0];
+
+    for (UIProgressView *progress in [self allProgressViews]) {
+        [progress setProgressTintColor: progressColour];
+        progress.transform = trans;
+        // pra "arredondar"a borda
+//        self.papel.layer.cornerRadius = 10;
+//        self.papel.layer.masksToBounds = YES;
+//        self.papel.layer.borderWidth = 0;
+    }
     
     UIFont *labelProgFont = [UIFont fontWithName:@"Santor" size:17];
     
-    //progressview e label da qte de papel
-    [[self labelPapelProgress] setFont: labelProgFont];
-    [[self papel] setProgressTintColor: progressColour];
-    [self papel].transform = trans;
+    for (UILabel *label in [self allProgressLabels]) {
+        [label setFont: labelProgFont];
+    }
 
-    // pra "arredondar"a borda
-//    self.papel.layer.cornerRadius = 10;
-//    self.papel.layer.masksToBounds = YES;
-//    self.papel.layer.borderWidth = 0;
-    
-    //progressview e label da qte de plastico
-    [[self labelPlasticoProgress] setFont: labelProgFont];
-    [[self plastico] setProgressTintColor: progressColour];
-    [self plastico].transform = trans;
+}
 
-    
-    //progressview e label da qte de vidro
-    [[self labelVidroProgress] setFont: labelProgFont];
-    [[self vidro] setProgressTintColor: progressColour];
-    [self vidro].transform = trans;
-    
 
-    //progressview e label da qte de metal
-    [[self labelMetalProgress] setFont: labelProgFont];
-    [[self metal] setProgressTintColor: progressColour];
-    [self metal].transform = trans;
+-(void)setValoresProgress
+{
+    //coloca os valores nas progressview
+    CGFloat npapel = [preferencias integerForKey:@"qtePapel"];
+    CGFloat nplastico = [preferencias integerForKey:@"qtePlastico"];
+    CGFloat nvidro = [preferencias integerForKey:@"qteVidro"] ;
+    CGFloat nmetal = [preferencias integerForKey:@"qtePapel"] ;
+    
+    CGFloat nPapelC = [preferencias integerForKey:@"qtePapelCerto"];
+    CGFloat nPlasticoC = [preferencias integerForKey:@"qtePlasticoCerto"];
+    CGFloat nVidroC = [preferencias integerForKey:@"qteVidroCerto"] ;
+    CGFloat nMetalC = [preferencias integerForKey:@"qtePapelCerto"] ;
+    
+    CGFloat tpapel = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey:@"qteCiclosPapel"]] integerValue];
+    CGFloat tplastico = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey:@"qteCiclosPlastico"]] integerValue];
+    CGFloat tvidro = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey:@"qteCiclosVidro"]] integerValue];
+    CGFloat tmetal = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey:@"qteCiclosMetal"]] integerValue];
+    
+    CGFloat tPapelC = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey:@"qteCiclosPapelCert"]] integerValue];
+    CGFloat tPlasticoC = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey:@"qteCiclosPapelCert"]] integerValue];
+    CGFloat tVidroC = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey:@"qteCiclosPapelCert"]] integerValue];
+    CGFloat tMetalC = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey:@"qteCiclosPapelCert"]] integerValue];
     
     
-    //progressview e label da qte de metal
-    [[self labelPapelCertProgress] setFont: labelProgFont];
-    [[self papelCert] setProgressTintColor: progressColour];
-    [self papelCert].transform = trans;
+    [self.papel setProgress: npapel/tpapel animated:YES];
+    [self.plastico setProgress: nplastico/tplastico animated:YES];
+    [self.vidro setProgress: nvidro/tvidro animated:YES];
+    [self.metal setProgress: nmetal/tmetal animated:YES];
+    
+    [self.papelCert setProgress: nPapelC/tPapelC animated:YES];
+    [self.plasticoCert setProgress: nPlasticoC/tPlasticoC animated:YES];
+    [self.vidroCert setProgress: nVidroC/tVidroC animated:YES];
+    [self.metalCert setProgress: nMetalC/tMetalC animated:YES];
     
     
-        //progressview e label da qte de metal
-    [[self labelPlasticoCertProgress] setFont: labelProgFont];
-    [[self plasticoCert] setProgressTintColor: progressColour];
-    [self plasticoCert].transform = trans;
+    self.labelPapelProgress.text = [NSString stringWithFormat: @"%0.0f/%0.0f", npapel, tpapel];
+    self.labelPlasticoProgress.text = [NSString stringWithFormat: @"%0.0f/%0.0f", nplastico, tplastico];
+    self.labelVidroProgress.text = [NSString stringWithFormat: @"%0.0f/%0.0f", nvidro, tvidro ];
+    self.labelMetalProgress.text = [NSString stringWithFormat: @"%0.0f/%0.0f", nmetal, tmetal ];
     
-    
-    //progressview e label da qte de metal
-    [[self labelVidroCertProgress] setFont: labelProgFont];
-    [[self vidroCert] setProgressTintColor: progressColour];
-    [self vidroCert].transform = trans;
-    
-    
-    //progressview e label da qte de metal
-    [[self labelMetalCertProgress] setFont: labelProgFont];
-    [[self metalCert] setProgressTintColor: progressColour];
-    [self metalCert].transform = trans;
-    
+    self.labelPapelCertProgress.text = [NSString stringWithFormat: @"%0.0f/%0.0f", nPapelC, tPapelC ];
+    self.labelPlasticoCertProgress.text = [NSString stringWithFormat: @"%0.0f/%0.0f", nPlasticoC, tPlasticoC];
+    self.labelVidroCertProgress.text = [NSString stringWithFormat: @"%0.0f/%0.0f", nVidroC, tVidroC];
+    self.labelMetalCertProgress.text = [NSString stringWithFormat: @"%0.0f/%0.0f", nMetalC, tMetalC];
+
 }
 
 

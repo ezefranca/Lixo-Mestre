@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="gwc-JE-nW5">
     <dependencies>
-        <deployment version="1792" defaultVersion="1808" identifier="iOS"/>
+        <deployment version="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -211,7 +211,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="Km8-Me-m03" userLabel="Papel Prog view">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                                        <rect key="frame" x="0.0" y="10" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="papel-recompensa.png" id="bOZ-oF-vVm">
@@ -222,13 +222,6 @@
                                                 <rect key="frame" x="74" y="45" width="129" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </progressView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="egR-sw-aC7" userLabel="Labelprog">
-                                                <rect key="frame" x="117" y="63" width="42" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recompensa:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rRu-v6-AS3">
                                                 <rect key="frame" x="211" y="8" width="101" height="20"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -264,11 +257,18 @@
                                                 <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="egR-sw-aC7" userLabel="Labelprog">
+                                                <rect key="frame" x="108" y="61" width="60" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="Por-JJ-Ewm" userLabel="vidro Prog view">
-                                        <rect key="frame" x="0.0" y="200" width="320" height="90"/>
+                                        <rect key="frame" x="0.0" y="210" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vidro- recompensa.png" id="AcY-8s-E6n">
@@ -280,7 +280,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Sif-2t-d0v" userLabel="Labelprog">
-                                                <rect key="frame" x="117" y="63" width="42" height="21"/>
+                                                <rect key="frame" x="108" y="61" width="60" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -325,7 +325,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="FIK-bW-3qm" userLabel="metal Prog view">
-                                        <rect key="frame" x="0.0" y="300" width="320" height="90"/>
+                                        <rect key="frame" x="0.0" y="310" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="metal - recompensa.png" id="oec-CB-Zq7">
@@ -337,7 +337,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ke0-Yx-18q" userLabel="Labelprog">
-                                                <rect key="frame" x="117" y="63" width="42" height="21"/>
+                                                <rect key="frame" x="108" y="61" width="60" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -382,7 +382,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="rdZ-Vk-rw9" userLabel="Papel Cert view">
-                                        <rect key="frame" x="0.0" y="400" width="320" height="90"/>
+                                        <rect key="frame" x="0.0" y="410" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="papel certificado.png" id="Fkx-D6-H1u">
@@ -394,7 +394,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KVV-tg-IwE" userLabel="Labelprog">
-                                                <rect key="frame" x="117" y="63" width="42" height="21"/>
+                                                <rect key="frame" x="108" y="61" width="60" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -439,7 +439,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="slf-l7-eMD" userLabel="plastico Cert view">
-                                        <rect key="frame" x="-0.5" y="500" width="320" height="90"/>
+                                        <rect key="frame" x="-0.5" y="510" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plastico certificado.png" id="uaS-OH-xzl">
@@ -451,7 +451,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SQ4-27-kbW" userLabel="Labelprog">
-                                                <rect key="frame" x="117" y="63" width="42" height="21"/>
+                                                <rect key="frame" x="108" y="61" width="60" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -496,19 +496,19 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="8Nu-OR-HE8" userLabel="vidro Cert view">
-                                        <rect key="frame" x="-0.5" y="600" width="320" height="90"/>
+                                        <rect key="frame" x="-0.5" y="610" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vidro certificado.png" id="PcJ-6U-kTX">
                                                 <rect key="frame" x="8" y="21" width="50" height="50"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" id="eDb-cc-fxB">
+                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" id="eDb-cc-fxB">
                                                 <rect key="frame" x="74" y="45" width="129" height="2"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Pvc-Lq-O8z" userLabel="Labelprog">
-                                                <rect key="frame" x="117" y="63" width="42" height="21"/>
+                                                <rect key="frame" x="108" y="61" width="60" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -553,7 +553,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="p2c-A8-tub" userLabel="metal Cert view">
-                                        <rect key="frame" x="-0.5" y="700" width="320" height="90"/>
+                                        <rect key="frame" x="-0.5" y="710" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="metal certificado.png" id="ZkT-CY-kug">
@@ -565,7 +565,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ru3-a1-A9H" userLabel="Labelprog">
-                                                <rect key="frame" x="117" y="63" width="42" height="21"/>
+                                                <rect key="frame" x="108" y="61" width="60" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -610,7 +610,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" id="AhH-Y4-bMt" userLabel="plastico Prog view">
-                                        <rect key="frame" x="0.0" y="100" width="320" height="90"/>
+                                        <rect key="frame" x="0.0" y="110" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plastico-recompensa.png" id="maH-Jg-rHV">
@@ -622,7 +622,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </progressView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mVm-kS-Ieg" userLabel="Labelprog">
-                                                <rect key="frame" x="117" y="63" width="42" height="21"/>
+                                                <rect key="frame" x="108" y="61" width="60" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -672,6 +672,42 @@
                                     <outlet property="delegate" destination="VAj-gM-9J7" id="Aiq-au-Jcl"/>
                                 </connections>
                             </scrollView>
+                            <view contentMode="scaleToFill" id="5As-KD-XJk">
+                                <rect key="frame" x="0.0" y="62" width="320" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="usuario" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u55-Th-0Dn">
+                                        <rect key="frame" x="8" y="26" width="174" height="42"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x moedas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="leP-b6-gl9">
+                                        <rect key="frame" x="228" y="10" width="84" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="$.png" id="14U-0f-HyG">
+                                        <rect key="frame" x="190" y="10" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="estrela.png" id="p5b-qc-zxI">
+                                        <rect key="frame" x="190" y="50" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x estrelas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fp4-p8-MoK">
+                                        <rect key="frame" x="228" y="50" width="84" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.49803921569999998" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.91764705879999997" green="0.90980392160000001" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -687,10 +723,13 @@
                         <outlet property="labelVidroProgress" destination="Sif-2t-d0v" id="ZXk-X7-ZZ8"/>
                         <outlet property="metal" destination="XRN-BD-TLv" id="ej6-sj-LYe"/>
                         <outlet property="metalCert" destination="1hL-wa-Pg8" id="k3l-Zu-2jl"/>
+                        <outlet property="nomeUsuario" destination="u55-Th-0Dn" id="Prk-W8-hf4"/>
                         <outlet property="papel" destination="yhE-iC-eZP" id="997-fh-CpD"/>
                         <outlet property="papelCert" destination="4Ti-bc-61x" id="qtw-b7-y5I"/>
                         <outlet property="plastico" destination="PHs-PH-ofV" id="i3S-Wt-mVg"/>
                         <outlet property="plasticoCert" destination="Ckp-Xd-Ss4" id="mOp-qw-YjI"/>
+                        <outlet property="qteEstrelas" destination="fp4-p8-MoK" id="yFy-lV-eEO"/>
+                        <outlet property="qteMoedas" destination="leP-b6-gl9" id="VFh-KR-yzJ"/>
                         <outlet property="vidro" destination="4iX-JM-Rew" id="6CK-iT-CN9"/>
                         <outlet property="vidroCert" destination="eDb-cc-fxB" id="B24-nK-3uw"/>
                         <outlet property="viewS" destination="vKm-Wp-s4s" id="MZ5-cR-d1L"/>
@@ -1692,6 +1731,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="$.png" width="57" height="57"/>
         <image name="Email.png" width="1417" height="1417"/>
         <image name="Games.png" width="30" height="30"/>
         <image name="HOME.png" width="30" height="30"/>
@@ -1709,6 +1749,7 @@
         <image name="editar.png" width="94" height="94"/>
         <image name="editarfundo.png" width="642" height="1136"/>
         <image name="escolha o lixo.png" width="408" height="79"/>
+        <image name="estrela.png" width="58" height="58"/>
         <image name="fundo lixos.png" width="552" height="712"/>
         <image name="fundo tab selecionado.png" width="65" height="49"/>
         <image name="garrafa - selecione o lixo.png" width="81" height="211"/>

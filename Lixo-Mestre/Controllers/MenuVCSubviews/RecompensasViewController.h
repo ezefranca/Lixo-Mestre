@@ -12,11 +12,20 @@
     NSUserDefaults *preferencias;
     NSDictionary *rankingJson;
     NSString *usuario;
+    NSArray *moedasAmounts;
+    NSArray *qteLixosAmounts;
 }
+
+@property (weak, nonatomic) IBOutlet UILabel *nomeUsuario;
+@property (weak, nonatomic) IBOutlet UILabel *qteMoedas;
+
+@property (weak, nonatomic) IBOutlet UILabel *qteEstrelas;
+
+
 
 @property (weak, nonatomic) IBOutlet UIScrollView *viewS;
 
-
+@property NSArray *allProgressViews;
 @property (weak, nonatomic) IBOutlet UIProgressView *papel;
 @property (weak, nonatomic) IBOutlet UIProgressView *plastico;
 @property (weak, nonatomic) IBOutlet UIProgressView *vidro;
@@ -27,7 +36,7 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *vidroCert;
 @property (weak, nonatomic) IBOutlet UIProgressView *metalCert;
 
-
+@property NSArray *allProgressLabels;
 @property (weak, nonatomic) IBOutlet UILabel *labelPapelProgress;
 @property (weak, nonatomic) IBOutlet UILabel *labelPlasticoProgress;
 @property (weak, nonatomic) IBOutlet UILabel *labelVidroProgress;
