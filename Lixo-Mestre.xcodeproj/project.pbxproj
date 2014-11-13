@@ -34,16 +34,14 @@
 		F6414C161A02B60B001C3C2E /* fundo F3F4F4.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BA21A02B60B001C3C2E /* fundo F3F4F4.png */; };
 		F6414C171A02B60B001C3C2E /* fundo joguinho.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BA31A02B60B001C3C2E /* fundo joguinho.png */; };
 		F6414C181A02B60B001C3C2E /* fundo lixos.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BA41A02B60B001C3C2E /* fundo lixos.png */; };
-		F6414C1A1A02B60B001C3C2E /* games.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BA61A02B60B001C3C2E /* games.png */; };
 		F6414C1B1A02B60B001C3C2E /* garrafa - selecione o lixo.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BA71A02B60B001C3C2E /* garrafa - selecione o lixo.png */; };
-		F6414C1E1A02B60B001C3C2E /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BAA1A02B60B001C3C2E /* home.png */; };
 		F6414C1F1A02B60B001C3C2E /* icone confg.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BAB1A02B60B001C3C2E /* icone confg.png */; };
 		F6414C201A02B60B001C3C2E /* icone perfil.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BAC1A02B60B001C3C2E /* icone perfil.png */; };
 		F6414C211A02B60B001C3C2E /* icone recompensa.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BAD1A02B60B001C3C2E /* icone recompensa.png */; };
 		F6414C221A02B60B001C3C2E /* icone sair.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BAE1A02B60B001C3C2E /* icone sair.png */; };
 		F6414C231A02B60B001C3C2E /* iconJoguinho.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BAF1A02B60B001C3C2E /* iconJoguinho.png */; };
-		F6414C251A02B60B001C3C2E /* Joguinho - vidro 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BB11A02B60B001C3C2E /* Joguinho - vidro 2.png */; };
-		F6414C261A02B60B001C3C2E /* joguinho - vidro 3.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BB21A02B60B001C3C2E /* joguinho - vidro 3.png */; };
+		F6414C251A02B60B001C3C2E /* Joguinho vidro 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BB11A02B60B001C3C2E /* Joguinho vidro 2.png */; };
+		F6414C261A02B60B001C3C2E /* joguinho vidro 3.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BB21A02B60B001C3C2E /* joguinho vidro 3.png */; };
 		F6414C271A02B60B001C3C2E /* joguinho botão play.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BB31A02B60B001C3C2E /* joguinho botão play.png */; };
 		F6414C281A02B60B001C3C2E /* joguinho botão pontos.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BB41A02B60B001C3C2E /* joguinho botão pontos.png */; };
 		F6414C291A02B60B001C3C2E /* joguinho fundo game over.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BB51A02B60B001C3C2E /* joguinho fundo game over.png */; };
@@ -63,7 +61,7 @@
 		F6414C371A02B60B001C3C2E /* joguinho plastico 3.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BC31A02B60B001C3C2E /* joguinho plastico 3.png */; };
 		F6414C381A02B60B001C3C2E /* joguinho replay.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BC41A02B60B001C3C2E /* joguinho replay.png */; };
 		F6414C391A02B60B001C3C2E /* joguinho voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BC51A02B60B001C3C2E /* joguinho voltar.png */; };
-		F6414C3A1A02B60B001C3C2E /* Joguinho-vidro1.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BC61A02B60B001C3C2E /* Joguinho-vidro1.png */; };
+		F6414C3A1A02B60B001C3C2E /* Joguinho vidro 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BC61A02B60B001C3C2E /* Joguinho vidro 1.png */; };
 		F6414C3B1A02B60B001C3C2E /* lapis-editar.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BC71A02B60B001C3C2E /* lapis-editar.png */; };
 		F6414C3C1A02B60B001C3C2E /* lixopapao-conectado.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BC81A02B60B001C3C2E /* lixopapao-conectado.png */; };
 		F6414C3D1A02B60B001C3C2E /* lixopapao-desconectado.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BC91A02B60B001C3C2E /* lixopapao-desconectado.png */; };
@@ -148,11 +146,6 @@
 		F69D12A419D3511B00643122 /* voltar.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126119D3511A00643122 /* voltar.png */; };
 		F69D12A519D3511B00643122 /* confirmar.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126319D3511A00643122 /* confirmar.png */; };
 		F69D12A619D3511B00643122 /* editar.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126419D3511A00643122 /* editar.png */; };
-		F69D12A719D3511B00643122 /* amarelo.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126619D3511A00643122 /* amarelo.png */; };
-		F69D12A819D3511B00643122 /* azul.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126719D3511A00643122 /* azul.png */; };
-		F69D12A919D3511B00643122 /* fundo.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126819D3511A00643122 /* fundo.png */; };
-		F69D12AA19D3511B00643122 /* verde.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126919D3511A00643122 /* verde.png */; };
-		F69D12AB19D3511B00643122 /* vermehlo.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126A19D3511A00643122 /* vermehlo.png */; };
 		F69D12AC19D3511B00643122 /* fundo.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D126C19D3511A00643122 /* fundo.png */; };
 		F69D12B319D3511B00643122 /* tirinha.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127319D3511A00643122 /* tirinha.png */; };
 		F69D12B419D3511B00643122 /* conectar.png in Resources */ = {isa = PBXBuildFile; fileRef = F69D127519D3511A00643122 /* conectar.png */; };
@@ -188,10 +181,10 @@
 		F69E386A19D09A4300B64629 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F69E385E19D09A4300B64629 /* MyScene.m */; };
 		F69E387019D3388F00B64629 /* santor 1.002.otf in Resources */ = {isa = PBXBuildFile; fileRef = F69E386F19D3388F00B64629 /* santor 1.002.otf */; };
 		F69E387119D3489200B64629 /* LixoPapao.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69E387319D3489200B64629 /* LixoPapao.storyboard */; };
+		F6BDD53F1A152ED0004A3403 /* MenuMG1.m in Sources */ = {isa = PBXBuildFile; fileRef = F6BDD53E1A152ED0004A3403 /* MenuMG1.m */; };
 		F6ED61B019D5E5F9002CCE1E /* Games.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61AA19D5E5F9002CCE1E /* Games.png */; };
 		F6ED61B119D5E5F9002CCE1E /* HOME.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61AB19D5E5F9002CCE1E /* HOME.png */; };
 		F6ED61B219D5E5F9002CCE1E /* Mapa.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61AC19D5E5F9002CCE1E /* Mapa.png */; };
-		F6ED61B319D5E5F9002CCE1E /* Menuzinho.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61AD19D5E5F9002CCE1E /* Menuzinho.png */; };
 		F6ED61B419D5E5F9002CCE1E /* Ranking.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61AE19D5E5F9002CCE1E /* Ranking.png */; };
 		F6ED61B519D5E5F9002CCE1E /* Tinder.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61AF19D5E5F9002CCE1E /* Tinder.png */; };
 		F6ED61BE19D5EE16002CCE1E /* MinigamesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED61BD19D5EE16002CCE1E /* MinigamesVC.m */; };
@@ -202,16 +195,6 @@
 		F6ED61E319DB2870002CCE1E /* seta.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61E219DB2870002CCE1E /* seta.png */; };
 		F6ED61E619DB3217002CCE1E /* ConfiguracoesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED61E519DB3217002CCE1E /* ConfiguracoesVC.m */; };
 		F6ED61E919DC653D002CCE1E /* ViewProgresso.m in Sources */ = {isa = PBXBuildFile; fileRef = F6ED61E819DC653D002CCE1E /* ViewProgresso.m */; };
-		F6ED621519DC8A7C002CCE1E /* lixeira papel.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED620B19DC8A7C002CCE1E /* lixeira papel.png */; };
-		F6ED621619DC8A7C002CCE1E /* fundo.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED620C19DC8A7C002CCE1E /* fundo.png */; };
-		F6ED621719DC8A7C002CCE1E /* iconjoguinho.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED620D19DC8A7C002CCE1E /* iconjoguinho.png */; };
-		F6ED621B19DC8A7C002CCE1E /* lixeira vidro.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED621119DC8A7C002CCE1E /* lixeira vidro.png */; };
-		F6ED621C19DC8A7C002CCE1E /* lixeira plastico.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED621219DC8A7C002CCE1E /* lixeira plastico.png */; };
-		F6ED621F19DC8B50002CCE1E /* lixeira metal.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED621E19DC8B50002CCE1E /* lixeira metal.png */; };
-		F6ED622419DC9EFC002CCE1E /* vidro2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED622019DC9EFC002CCE1E /* vidro2.png */; };
-		F6ED622519DC9EFC002CCE1E /* plastico2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED622119DC9EFC002CCE1E /* plastico2.png */; };
-		F6ED622619DC9EFC002CCE1E /* papel2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED622219DC9EFC002CCE1E /* papel2.png */; };
-		F6ED622719DC9EFC002CCE1E /* metal2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED622319DC9EFC002CCE1E /* metal2.png */; };
 		F76A114C19C8ACB800843A9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114B19C8ACB800843A9D /* Foundation.framework */; };
 		F76A114E19C8ACB800843A9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114D19C8ACB800843A9D /* CoreGraphics.framework */; };
 		F76A115019C8ACB800843A9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F76A114F19C8ACB800843A9D /* UIKit.framework */; };
@@ -303,16 +286,14 @@
 		F6414BA21A02B60B001C3C2E /* fundo F3F4F4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fundo F3F4F4.png"; sourceTree = "<group>"; };
 		F6414BA31A02B60B001C3C2E /* fundo joguinho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fundo joguinho.png"; sourceTree = "<group>"; };
 		F6414BA41A02B60B001C3C2E /* fundo lixos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fundo lixos.png"; sourceTree = "<group>"; };
-		F6414BA61A02B60B001C3C2E /* games.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = games.png; sourceTree = "<group>"; };
 		F6414BA71A02B60B001C3C2E /* garrafa - selecione o lixo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "garrafa - selecione o lixo.png"; sourceTree = "<group>"; };
-		F6414BAA1A02B60B001C3C2E /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		F6414BAB1A02B60B001C3C2E /* icone confg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icone confg.png"; sourceTree = "<group>"; };
 		F6414BAC1A02B60B001C3C2E /* icone perfil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icone perfil.png"; sourceTree = "<group>"; };
 		F6414BAD1A02B60B001C3C2E /* icone recompensa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icone recompensa.png"; sourceTree = "<group>"; };
 		F6414BAE1A02B60B001C3C2E /* icone sair.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icone sair.png"; sourceTree = "<group>"; };
 		F6414BAF1A02B60B001C3C2E /* iconJoguinho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconJoguinho.png; sourceTree = "<group>"; };
-		F6414BB11A02B60B001C3C2E /* Joguinho - vidro 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Joguinho - vidro 2.png"; sourceTree = "<group>"; };
-		F6414BB21A02B60B001C3C2E /* joguinho - vidro 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joguinho - vidro 3.png"; sourceTree = "<group>"; };
+		F6414BB11A02B60B001C3C2E /* Joguinho vidro 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Joguinho vidro 2.png"; sourceTree = "<group>"; };
+		F6414BB21A02B60B001C3C2E /* joguinho vidro 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joguinho vidro 3.png"; sourceTree = "<group>"; };
 		F6414BB31A02B60B001C3C2E /* joguinho botão play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joguinho botão play.png"; sourceTree = "<group>"; };
 		F6414BB41A02B60B001C3C2E /* joguinho botão pontos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joguinho botão pontos.png"; sourceTree = "<group>"; };
 		F6414BB51A02B60B001C3C2E /* joguinho fundo game over.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joguinho fundo game over.png"; sourceTree = "<group>"; };
@@ -332,7 +313,7 @@
 		F6414BC31A02B60B001C3C2E /* joguinho plastico 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joguinho plastico 3.png"; sourceTree = "<group>"; };
 		F6414BC41A02B60B001C3C2E /* joguinho replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joguinho replay.png"; sourceTree = "<group>"; };
 		F6414BC51A02B60B001C3C2E /* joguinho voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "joguinho voltar.png"; sourceTree = "<group>"; };
-		F6414BC61A02B60B001C3C2E /* Joguinho-vidro1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Joguinho-vidro1.png"; sourceTree = "<group>"; };
+		F6414BC61A02B60B001C3C2E /* Joguinho vidro 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Joguinho vidro 1.png"; sourceTree = "<group>"; };
 		F6414BC71A02B60B001C3C2E /* lapis-editar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lapis-editar.png"; sourceTree = "<group>"; };
 		F6414BC81A02B60B001C3C2E /* lixopapao-conectado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lixopapao-conectado.png"; sourceTree = "<group>"; };
 		F6414BC91A02B60B001C3C2E /* lixopapao-desconectado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lixopapao-desconectado.png"; sourceTree = "<group>"; };
@@ -442,11 +423,6 @@
 		F69D126119D3511A00643122 /* voltar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voltar.png; sourceTree = "<group>"; };
 		F69D126319D3511A00643122 /* confirmar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confirmar.png; sourceTree = "<group>"; };
 		F69D126419D3511A00643122 /* editar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = editar.png; sourceTree = "<group>"; };
-		F69D126619D3511A00643122 /* amarelo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = amarelo.png; sourceTree = "<group>"; };
-		F69D126719D3511A00643122 /* azul.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = azul.png; sourceTree = "<group>"; };
-		F69D126819D3511A00643122 /* fundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fundo.png; sourceTree = "<group>"; };
-		F69D126919D3511A00643122 /* verde.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verde.png; sourceTree = "<group>"; };
-		F69D126A19D3511A00643122 /* vermehlo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vermehlo.png; sourceTree = "<group>"; };
 		F69D126C19D3511A00643122 /* fundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fundo.png; sourceTree = "<group>"; };
 		F69D127319D3511A00643122 /* tirinha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tirinha.png; sourceTree = "<group>"; };
 		F69D127519D3511A00643122 /* conectar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = conectar.png; sourceTree = "<group>"; };
@@ -486,10 +462,11 @@
 		F69E385E19D09A4300B64629 /* MyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
 		F69E386F19D3388F00B64629 /* santor 1.002.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "santor 1.002.otf"; sourceTree = "<group>"; };
 		F69E387219D3489200B64629 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LixoPapao.storyboard; sourceTree = "<group>"; };
+		F6BDD53D1A152ED0004A3403 /* MenuMG1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuMG1.h; sourceTree = "<group>"; };
+		F6BDD53E1A152ED0004A3403 /* MenuMG1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuMG1.m; sourceTree = "<group>"; };
 		F6ED61AA19D5E5F9002CCE1E /* Games.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Games.png; sourceTree = "<group>"; };
 		F6ED61AB19D5E5F9002CCE1E /* HOME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOME.png; sourceTree = "<group>"; };
 		F6ED61AC19D5E5F9002CCE1E /* Mapa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mapa.png; sourceTree = "<group>"; };
-		F6ED61AD19D5E5F9002CCE1E /* Menuzinho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Menuzinho.png; sourceTree = "<group>"; };
 		F6ED61AE19D5E5F9002CCE1E /* Ranking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ranking.png; sourceTree = "<group>"; };
 		F6ED61AF19D5E5F9002CCE1E /* Tinder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tinder.png; sourceTree = "<group>"; };
 		F6ED61BC19D5EE16002CCE1E /* MinigamesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MinigamesVC.h; sourceTree = "<group>"; };
@@ -507,16 +484,6 @@
 		F6ED61E519DB3217002CCE1E /* ConfiguracoesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfiguracoesVC.m; sourceTree = "<group>"; };
 		F6ED61E719DC653D002CCE1E /* ViewProgresso.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewProgresso.h; sourceTree = "<group>"; };
 		F6ED61E819DC653D002CCE1E /* ViewProgresso.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewProgresso.m; sourceTree = "<group>"; };
-		F6ED620B19DC8A7C002CCE1E /* lixeira papel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lixeira papel.png"; sourceTree = "<group>"; };
-		F6ED620C19DC8A7C002CCE1E /* fundo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fundo.png; sourceTree = "<group>"; };
-		F6ED620D19DC8A7C002CCE1E /* iconjoguinho.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iconjoguinho.png; sourceTree = "<group>"; };
-		F6ED621119DC8A7C002CCE1E /* lixeira vidro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lixeira vidro.png"; sourceTree = "<group>"; };
-		F6ED621219DC8A7C002CCE1E /* lixeira plastico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lixeira plastico.png"; sourceTree = "<group>"; };
-		F6ED621E19DC8B50002CCE1E /* lixeira metal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lixeira metal.png"; sourceTree = "<group>"; };
-		F6ED622019DC9EFC002CCE1E /* vidro2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vidro2.png; sourceTree = "<group>"; };
-		F6ED622119DC9EFC002CCE1E /* plastico2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plastico2.png; sourceTree = "<group>"; };
-		F6ED622219DC9EFC002CCE1E /* papel2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = papel2.png; sourceTree = "<group>"; };
-		F6ED622319DC9EFC002CCE1E /* metal2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = metal2.png; sourceTree = "<group>"; };
 		F76A114819C8ACB800843A9D /* Lixo-Mestre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lixo-Mestre.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76A114B19C8ACB800843A9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F76A114D19C8ACB800843A9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -638,16 +605,15 @@
 				F6414BA21A02B60B001C3C2E /* fundo F3F4F4.png */,
 				F6414BA31A02B60B001C3C2E /* fundo joguinho.png */,
 				F6414BA41A02B60B001C3C2E /* fundo lixos.png */,
-				F6414BA61A02B60B001C3C2E /* games.png */,
 				F6414BA71A02B60B001C3C2E /* garrafa - selecione o lixo.png */,
-				F6414BAA1A02B60B001C3C2E /* home.png */,
 				F6414BAB1A02B60B001C3C2E /* icone confg.png */,
 				F6414BAC1A02B60B001C3C2E /* icone perfil.png */,
 				F6414BAD1A02B60B001C3C2E /* icone recompensa.png */,
 				F6414BAE1A02B60B001C3C2E /* icone sair.png */,
 				F6414BAF1A02B60B001C3C2E /* iconJoguinho.png */,
-				F6414BB11A02B60B001C3C2E /* Joguinho - vidro 2.png */,
-				F6414BB21A02B60B001C3C2E /* joguinho - vidro 3.png */,
+				F6414BC61A02B60B001C3C2E /* Joguinho vidro 1.png */,
+				F6414BB11A02B60B001C3C2E /* Joguinho vidro 2.png */,
+				F6414BB21A02B60B001C3C2E /* joguinho vidro 3.png */,
 				F6414BB31A02B60B001C3C2E /* joguinho botão play.png */,
 				F6414BB41A02B60B001C3C2E /* joguinho botão pontos.png */,
 				F6414BB51A02B60B001C3C2E /* joguinho fundo game over.png */,
@@ -667,7 +633,6 @@
 				F6414BC31A02B60B001C3C2E /* joguinho plastico 3.png */,
 				F6414BC41A02B60B001C3C2E /* joguinho replay.png */,
 				F6414BC51A02B60B001C3C2E /* joguinho voltar.png */,
-				F6414BC61A02B60B001C3C2E /* Joguinho-vidro1.png */,
 				F6414BC71A02B60B001C3C2E /* lapis-editar.png */,
 				F6414BC81A02B60B001C3C2E /* lixopapao-conectado.png */,
 				F6414BC91A02B60B001C3C2E /* lixopapao-desconectado.png */,
@@ -869,7 +834,6 @@
 				F69D125C19D3511A00643122 /* amigos */,
 				F69D125E19D3511A00643122 /* Cadastro */,
 				F69D126219D3511A00643122 /* EDITAR */,
-				F69D126519D3511A00643122 /* Escolher o lixo */,
 				F69D126B19D3511A00643122 /* Fundo */,
 				F69D127419D3511A00643122 /* Inicio */,
 				F69D128119D3511A00643122 /* Login */,
@@ -908,18 +872,6 @@
 				F69D126419D3511A00643122 /* editar.png */,
 			);
 			path = EDITAR;
-			sourceTree = "<group>";
-		};
-		F69D126519D3511A00643122 /* Escolher o lixo */ = {
-			isa = PBXGroup;
-			children = (
-				F69D126619D3511A00643122 /* amarelo.png */,
-				F69D126719D3511A00643122 /* azul.png */,
-				F69D126819D3511A00643122 /* fundo.png */,
-				F69D126919D3511A00643122 /* verde.png */,
-				F69D126A19D3511A00643122 /* vermehlo.png */,
-			);
-			path = "Escolher o lixo";
 			sourceTree = "<group>";
 		};
 		F69D126B19D3511A00643122 /* Fundo */ = {
@@ -1011,6 +963,8 @@
 				F69E385C19D09A4300B64629 /* MascarasColisao.h */,
 				F69E385D19D09A4300B64629 /* MyScene.h */,
 				F69E385E19D09A4300B64629 /* MyScene.m */,
+				F6BDD53D1A152ED0004A3403 /* MenuMG1.h */,
+				F6BDD53E1A152ED0004A3403 /* MenuMG1.m */,
 			);
 			path = Jogo;
 			sourceTree = "<group>";
@@ -1029,7 +983,6 @@
 				F6ED61AA19D5E5F9002CCE1E /* Games.png */,
 				F6ED61AB19D5E5F9002CCE1E /* HOME.png */,
 				F6ED61AC19D5E5F9002CCE1E /* Mapa.png */,
-				F6ED61AD19D5E5F9002CCE1E /* Menuzinho.png */,
 				F6ED61AE19D5E5F9002CCE1E /* Ranking.png */,
 				F6ED61AF19D5E5F9002CCE1E /* Tinder.png */,
 			);
@@ -1048,23 +1001,6 @@
 				F6ED61E519DB3217002CCE1E /* ConfiguracoesVC.m */,
 			);
 			path = MenuVCSubviews;
-			sourceTree = "<group>";
-		};
-		F6ED620919DC8A7C002CCE1E /* imagens jogo */ = {
-			isa = PBXGroup;
-			children = (
-				F6ED622019DC9EFC002CCE1E /* vidro2.png */,
-				F6ED622119DC9EFC002CCE1E /* plastico2.png */,
-				F6ED622219DC9EFC002CCE1E /* papel2.png */,
-				F6ED622319DC9EFC002CCE1E /* metal2.png */,
-				F6ED620C19DC8A7C002CCE1E /* fundo.png */,
-				F6ED621E19DC8B50002CCE1E /* lixeira metal.png */,
-				F6ED620B19DC8A7C002CCE1E /* lixeira papel.png */,
-				F6ED621119DC8A7C002CCE1E /* lixeira vidro.png */,
-				F6ED621219DC8A7C002CCE1E /* lixeira plastico.png */,
-				F6ED620D19DC8A7C002CCE1E /* iconjoguinho.png */,
-			);
-			path = "imagens jogo";
 			sourceTree = "<group>";
 		};
 		F76A113F19C8ACB800843A9D = {
@@ -1178,7 +1114,6 @@
 			isa = PBXGroup;
 			children = (
 				F6414B861A02B60B001C3C2E /* Lixo Papão 3.0 */,
-				F6ED620919DC8A7C002CCE1E /* imagens jogo */,
 				F69D125B19D3511A00643122 /* imagens Lixo Papao 2.0 */,
 				F69E386F19D3388F00B64629 /* santor 1.002.otf */,
 				F76A118D19C8ACF700843A9D /* Images */,
@@ -1398,13 +1333,11 @@
 				F6414C181A02B60B001C3C2E /* fundo lixos.png in Resources */,
 				F6414C131A02B60B001C3C2E /* foto editar.png in Resources */,
 				F76A123719C8ACF700843A9D /* settings-75.png in Resources */,
-				F6ED622419DC9EFC002CCE1E /* vidro2.png in Resources */,
 				F6414C361A02B60B001C3C2E /* joguinho plastico 2.png in Resources */,
 				F67ED4FA19C8CA2800B266BD /* mapa-melhorcoleta.png in Resources */,
 				F6414C471A02B60B001C3C2E /* Lixo papão - SENAC-01.png in Resources */,
 				F6414C491A02B60B001C3C2E /* Lixo papão - SENAC-03.png in Resources */,
 				F69E386019D09A4300B64629 /* icone voltar.png in Resources */,
-				F6ED621C19DC8A7C002CCE1E /* lixeira plastico.png in Resources */,
 				F76A125019C8ACF700843A9D /* USUARIO-02.png in Resources */,
 				F76A122B19C8ACF700843A9D /* settings-128.png in Resources */,
 				F6414C161A02B60B001C3C2E /* fundo F3F4F4.png in Resources */,
@@ -1438,13 +1371,11 @@
 				F76A122F19C8ACF700843A9D /* settings-256.png in Resources */,
 				F69D12C719D3511B00643122 /* recompensas.png in Resources */,
 				F69D12C619D3511B00643122 /* menuzinho branco.png in Resources */,
-				F69D12AB19D3511B00643122 /* vermehlo.png in Resources */,
 				F6414BFB1A02B60B001C3C2E /* $.png in Resources */,
 				F6414C221A02B60B001C3C2E /* icone sair.png in Resources */,
 				F69D12BF19D3511B00643122 /* login.png in Resources */,
 				F6ED61E319DB2870002CCE1E /* seta.png in Resources */,
 				F6414C5F1A02B60B001C3C2E /* papel-recompensa.png in Resources */,
-				F6ED621719DC8A7C002CCE1E /* iconjoguinho.png in Resources */,
 				F6414C2F1A02B60B001C3C2E /* joguinho metal 1.png in Resources */,
 				F76A122819C8ACF700843A9D /* recycle_sign-100.png in Resources */,
 				F76A123219C8ACF700843A9D /* recycle_sign-50.png in Resources */,
@@ -1453,15 +1384,12 @@
 				F6414C041A02B60B001C3C2E /* Cadastre-se.png in Resources */,
 				F6414C4C1A02B60B001C3C2E /* Lixo papão - SENAC-06.png in Resources */,
 				F6ED61B219D5E5F9002CCE1E /* Mapa.png in Resources */,
-				F6414C251A02B60B001C3C2E /* Joguinho - vidro 2.png in Resources */,
+				F6414C251A02B60B001C3C2E /* Joguinho vidro 2.png in Resources */,
 				F6414C171A02B60B001C3C2E /* fundo joguinho.png in Resources */,
 				F76A125319C8ACF700843A9D /* Default.png in Resources */,
 				F69D12C419D3511B00643122 /* conf.png in Resources */,
 				F76A121319C8ACF700843A9D /* mapa-coleta.png in Resources */,
-				F6ED622519DC9EFC002CCE1E /* plastico2.png in Resources */,
-				F6414C1E1A02B60B001C3C2E /* home.png in Resources */,
 				F76A115619C8ACB800843A9D /* InfoPlist.strings in Resources */,
-				F6414C1A1A02B60B001C3C2E /* games.png in Resources */,
 				F6414C441A02B60B001C3C2E /* metal - selecione o lixo.png in Resources */,
 				F6414C2D1A02B60B001C3C2E /* joguinho lixo verde.png in Resources */,
 				F76A122C19C8ACF700843A9D /* recycle_sign-25.png in Resources */,
@@ -1471,7 +1399,6 @@
 				F6414C391A02B60B001C3C2E /* joguinho voltar.png in Resources */,
 				F76A123119C8ACF700843A9D /* settings-32.png in Resources */,
 				F69D12AC19D3511B00643122 /* fundo.png in Resources */,
-				F6ED61B319D5E5F9002CCE1E /* Menuzinho.png in Resources */,
 				F6414C4A1A02B60B001C3C2E /* Lixo papão - SENAC-04.png in Resources */,
 				F6414C6B1A02B60B001C3C2E /* vidro- recompensa.png in Resources */,
 				F76A121419C8ACF700843A9D /* mapa-lixopapao.png in Resources */,
@@ -1480,22 +1407,16 @@
 				F69D12A219D3511B00643122 /* botão.png in Resources */,
 				F6414C461A02B60B001C3C2E /* metal-perfil.png in Resources */,
 				F67ED4E019C8B78000B266BD /* CoinBLEDemo-Info.plist in Resources */,
-				F6ED621F19DC8B50002CCE1E /* lixeira metal.png in Resources */,
-				F69D12A719D3511B00643122 /* amarelo.png in Resources */,
 				F6414C291A02B60B001C3C2E /* joguinho fundo game over.png in Resources */,
 				F6ED61B419D5E5F9002CCE1E /* Ranking.png in Resources */,
 				F6414C6C1A02B60B001C3C2E /* vidro-perfil.png in Resources */,
 				F76A122D19C8ACF700843A9D /* settings-25.png in Resources */,
-				F69D12A919D3511B00643122 /* fundo.png in Resources */,
-				F69D12AA19D3511B00643122 /* verde.png in Resources */,
 				F6414C201A02B60B001C3C2E /* icone perfil.png in Resources */,
 				F76A122A19C8ACF700843A9D /* recycle_sign-128.png in Resources */,
 				F6414C001A02B60B001C3C2E /* Barrinha cinza do perfil (editar, amigos) 640x158.png in Resources */,
 				F69D12CB19D3511B00643122 /* eaeae9.png in Resources */,
 				F69D12D419D3511B00643122 /* 4.png in Resources */,
 				F69D12D219D3511B00643122 /* 2.png in Resources */,
-				F6ED622619DC9EFC002CCE1E /* papel2.png in Resources */,
-				F6ED621B19DC8A7C002CCE1E /* lixeira vidro.png in Resources */,
 				F6414C5E1A02B60B001C3C2E /* papel-perfil.png in Resources */,
 				F76A123519C8ACF700843A9D /* settings-512.png in Resources */,
 				F6414C371A02B60B001C3C2E /* joguinho plastico 3.png in Resources */,
@@ -1503,7 +1424,7 @@
 				F6414C3D1A02B60B001C3C2E /* lixopapao-desconectado.png in Resources */,
 				F6414C351A02B60B001C3C2E /* joguinho plastico 1.png in Resources */,
 				F69D12CD19D3511B00643122 /* metal.png in Resources */,
-				F6414C3A1A02B60B001C3C2E /* Joguinho-vidro1.png in Resources */,
+				F6414C3A1A02B60B001C3C2E /* Joguinho vidro 1.png in Resources */,
 				F69D12CE19D3511B00643122 /* papel.png in Resources */,
 				F6414C431A02B60B001C3C2E /* metal - recompensa.png in Resources */,
 				F6414C141A02B60B001C3C2E /* foto padrão - amigos.png in Resources */,
@@ -1530,7 +1451,7 @@
 				F69D12B419D3511B00643122 /* conectar.png in Resources */,
 				F6414C561A02B60B001C3C2E /* Lixo papão - SENAC-16.png in Resources */,
 				F6414C511A02B60B001C3C2E /* Lixo papão - SENAC-11.png in Resources */,
-				F6414C261A02B60B001C3C2E /* joguinho - vidro 3.png in Resources */,
+				F6414C261A02B60B001C3C2E /* joguinho vidro 3.png in Resources */,
 				F6414C4E1A02B60B001C3C2E /* Lixo papão - SENAC-08.png in Resources */,
 				F6414C021A02B60B001C3C2E /* barrinha transparente joguinho.png in Resources */,
 				F69D12C019D3511B00643122 /* senha.png in Resources */,
@@ -1548,7 +1469,6 @@
 				F6ED61B119D5E5F9002CCE1E /* HOME.png in Resources */,
 				F69E387119D3489200B64629 /* LixoPapao.storyboard in Resources */,
 				F76A121219C8ACF700843A9D /* mapa-$.png in Resources */,
-				F6ED622719DC9EFC002CCE1E /* metal2.png in Resources */,
 				F69D12C219D3511B00643122 /* Logo.png in Resources */,
 				F6414C641A02B60B001C3C2E /* setinha.png in Resources */,
 				F67ED4FB19C8CA2800B266BD /* mapa-melhor$.png in Resources */,
@@ -1565,7 +1485,6 @@
 				F6414C581A02B60B001C3C2E /* Lixo papão - SENAC-18.png in Resources */,
 				F6414C3C1A02B60B001C3C2E /* lixopapao-conectado.png in Resources */,
 				F69D12D719D3511B00643122 /* photos.png in Resources */,
-				F6ED621619DC8A7C002CCE1E /* fundo.png in Resources */,
 				F6414C6F1A02B6BF001C3C2E /* fundo tab selecionado.png in Resources */,
 				F6414C681A02B60B001C3C2E /* plastico-recompensa.png in Resources */,
 				F6414C0B1A02B60B001C3C2E /* convidar-face.png in Resources */,
@@ -1575,8 +1494,6 @@
 				F69D12D519D3511B00643122 /* 5.png in Resources */,
 				F6414C321A02B60B001C3C2E /* joguinho papel 1.png in Resources */,
 				F76A123419C8ACF700843A9D /* recycle_sign-512.png in Resources */,
-				F6ED621519DC8A7C002CCE1E /* lixeira papel.png in Resources */,
-				F69D12A819D3511B00643122 /* azul.png in Resources */,
 				F6414C421A02B60B001C3C2E /* mapa.png in Resources */,
 				F6414C1F1A02B60B001C3C2E /* icone confg.png in Resources */,
 				F6414C501A02B60B001C3C2E /* Lixo papão - SENAC-10.png in Resources */,
@@ -1638,6 +1555,7 @@
 				F67ED4F119C8B78000B266BD /* SVProgressHUD.m in Sources */,
 				F67ED4DE19C8B78000B266BD /* AYVibrantButton.m in Sources */,
 				F6ED61BE19D5EE16002CCE1E /* MinigamesVC.m in Sources */,
+				F6BDD53F1A152ED0004A3403 /* MenuMG1.m in Sources */,
 				F6414CBC1A0BE2DF001C3C2E /* RecompensasViewController.m in Sources */,
 				F67ED4ED19C8B78000B266BD /* WifiNetwork.m in Sources */,
 				F67ED4EC19C8B78000B266BD /* NotificationsViewController.m in Sources */,

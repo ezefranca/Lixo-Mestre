@@ -14,7 +14,7 @@
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
-        [self setBg: [SKSpriteNode spriteNodeWithImageNamed:@"fundo.png"]];
+        [self setBg: [SKSpriteNode spriteNodeWithImageNamed:@"fundo joguinho.png"]];
         CGPoint bgponto = CGPointMake(self.size.width/2, self.size.height/2);
         self.bg.position = bgponto;
         [self addChild: self.bg];
@@ -306,7 +306,7 @@
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         if ([self lixoSendoSegurado]) {
-            if (location.x > [self lixeiraMetal].position.x) {
+            if (location.x < [self lixeiraMetal].position.x) {
                 [[self lixoSelecionado] runAction: [SKAction moveTo:location duration:0.05]];
             }
         }

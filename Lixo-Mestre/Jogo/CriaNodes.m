@@ -15,30 +15,37 @@
     SKSpriteNode *nodeLixeira;
     CGFloat comprimentoLixeira = 75;
     CGFloat alturaLixeira = 100;
-    CGFloat posX = 60;
+    CGFloat posX = frame.size.width - comprimentoLixeira;
     
     
-    if ([material isEqualToString:@"Metal"]) {
-        nodeLixeira = [SKSpriteNode spriteNodeWithImageNamed:@"lixeira metal.png"];
+    if ([material isEqualToString:@"Metal"])
+    {
+        nodeLixeira = [SKSpriteNode spriteNodeWithImageNamed:@"joguinho lixo amarelo.png"];
         
         [nodeLixeira setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(comprimentoLixeira, alturaLixeira)]];
         nodeLixeira.physicsBody.categoryBitMask = lixeiraMetal;
         nodeLixeira.position = CGPointMake(posX, frame.size.height*(4/5.0) );
     }
-    if ([material isEqualToString:@"Papel"]) {
-        nodeLixeira = [SKSpriteNode spriteNodeWithImageNamed:@"lixeira papel.png"];
+    
+    if ([material isEqualToString:@"Papel"])
+    {
+        nodeLixeira = [SKSpriteNode spriteNodeWithImageNamed:@"joguinho lixo azul.png"];
         [nodeLixeira setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(comprimentoLixeira, alturaLixeira)]];
         nodeLixeira.physicsBody.categoryBitMask = lixeiraPapel;
         nodeLixeira.position = CGPointMake(posX, frame.size.height*(3/5.0) );
     }
-    if ([material isEqualToString:@"Vidro"]) {
-        nodeLixeira = [SKSpriteNode spriteNodeWithImageNamed:@"lixeira vidro.png"];
+    
+    if ([material isEqualToString:@"Vidro"])
+    {
+        nodeLixeira = [SKSpriteNode spriteNodeWithImageNamed:@"joguinho lixo verde.png"];
         [nodeLixeira setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(comprimentoLixeira, alturaLixeira)]];
         nodeLixeira.physicsBody.categoryBitMask = lixeiraVidro;
         nodeLixeira.position = CGPointMake(posX, frame.size.height*(2/5.0) );
     }
-    if ([material isEqualToString:@"Plastico"]) {
-        nodeLixeira = [SKSpriteNode spriteNodeWithImageNamed:@"lixeira plastico.png"];
+    
+    if ([material isEqualToString:@"Plastico"])
+    {
+        nodeLixeira = [SKSpriteNode spriteNodeWithImageNamed:@"joguinho lixo vermelho.png"];
         [nodeLixeira setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(comprimentoLixeira, alturaLixeira)]];
         nodeLixeira.physicsBody.categoryBitMask = lixeiraPlastico;
         nodeLixeira.position = CGPointMake(posX, frame.size.height*(1/5.0) );
@@ -60,31 +67,77 @@
     CGSize nodeSize= CGSizeMake(40, 50);
     
     switch (arc4random()%4) { //sorteia o tipo de lixo gerado
-        case 0:
-            nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"metal2.png"];
+        case 0: //metal
+            //sortearia denovo uma imagem aleatoria deste tipo de lixo;
+            switch (arc4random()%3) {
+                case 0:
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"joguinho metal 1.png"];
+                    break;
+                case 1:
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"joguinho metal 2.png"];
+                    break;
+                case 2:
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"joguinho metal 3.png"];
+                    break;
+            }
             [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: nodeSize ]];
             nodeLixoNovo.physicsBody.categoryBitMask = lixoMetal;
             //sortearia denovo uma imagem aleatoria deste tipo de lixo;
             break;
-        case 1:
-            nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"papel2.png"];
+            
+        case 1: //papel
+            switch (arc4random()%3) {
+                case 0:
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"joguinho papel 1.png"];
+                    break;
+                case 1:
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"joguinho papel 2.png"];
+                    break;
+                case 2:
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"joguinho papel 3.png"];
+                    break;
+            }
             [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: nodeSize ]];
             nodeLixoNovo.physicsBody.categoryBitMask = lixoPapel;
             break;
-        case 2:
-            nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"vidro2.png"];
+            
+        case 2: //vidro
+            switch (arc4random()%3) {
+                case 0:
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"Joguinho vidro 1.png"];
+                    break;
+                case 1:
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"Joguinho vidro 2.png"];
+                    break;
+                case 2:
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"Joguinho vidro 3.png"];
+                    break;
+            }
+
             [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: nodeSize ]];
             nodeLixoNovo.physicsBody.categoryBitMask = lixoVidro;
             break;
-        case 3:
-            nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"plastico2.png"];
-            [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: CGSizeMake(40, 66) ]];
+            
+        case 3: //plastico
+            switch (arc4random()%3) {
+                case 0:
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"joguinho plastico 1.png"];
+                    break;
+                case 1:
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"joguinho plastico 2.png"];
+                    break;
+                case 2:
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"joguinho plastico 3.png"];
+                    break;
+            }
+
+            [nodeLixoNovo setPhysicsBody: [SKPhysicsBody bodyWithRectangleOfSize: nodeSize ]];
             nodeLixoNovo.physicsBody.categoryBitMask = lixoPlastico;
             break;
     }
     
     [nodeLixoNovo setSize:nodeSize];
-    nodeLixoNovo.position = CGPointMake( (frame.size.width/2 + 75), (frame.size.height + nodeLixoNovo.frame.size.height/2));
+    nodeLixoNovo.position = CGPointMake( (frame.size.width/2 - 75), (frame.size.height + nodeLixoNovo.frame.size.height/2));
     
     nodeLixoNovo.physicsBody.dynamic = YES;
     nodeLixoNovo.physicsBody.affectedByGravity = NO;

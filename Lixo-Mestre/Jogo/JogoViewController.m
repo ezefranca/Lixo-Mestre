@@ -41,11 +41,10 @@
     
     [self.view addSubview: [self botaoDerp]];
     
-    [self setBotaoVoltar: [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 46, 30)]];
-    [[self botaoVoltar] addTarget:self action:@selector(voltarMenu) forControlEvents: UIControlEventTouchUpInside];
-    [[self botaoVoltar] setTitle:@"Voltar" forState:UIControlStateNormal];
-    
-    [self.view addSubview: [self botaoVoltar]];
+//    [self setBotaoVoltar: [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 46, 30)]];
+//    [[self botaoVoltar] addTarget:self action:@selector(voltarMenu) forControlEvents: UIControlEventTouchUpInside];
+//    [[self botaoVoltar] setTitle:@"Voltar" forState:UIControlStateNormal];
+//    [self.view addSubview: [self botaoVoltar]];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -54,6 +53,11 @@
 }
 
 -(void)viewWillDisappear:(BOOL)animated{
+    [self performSelectorInBackground:@selector(updatePontos) withObject:nil];
+}
+
+
+-(void)updatePontos{
     [preferencias setInteger:[self qteMetal] forKey:@"qteMetal"];
     [preferencias setInteger:[self qtePapel] forKey:@"qtePapel"];
     [preferencias setInteger:[self qteVidro] forKey:@"qteVidro"];
