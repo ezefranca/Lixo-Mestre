@@ -7,8 +7,8 @@
 //
 
 #import "JogoViewController.h"
+#import "MenuMG1.h"
 #import "MyScene.h"
-#import "RankingProvPontos.h"
 #import "webService.h"
 
 @interface JogoViewController ()
@@ -34,21 +34,100 @@
     [self setQtePlastico: (int)[preferencias integerForKey:@"qtePlastico"]];
     [self setMaiorPontuacao: (int)[preferencias integerForKey:@"maiorPontuacao"] ];
     
-    CGSize tamanho = self.view.frame.size;
-    [self setBotaoDerp: [[UIButton alloc] initWithFrame:CGRectMake(tamanho.width/2 -50,tamanho.height/2 -25, 100, 50)]];
-    [[self botaoDerp] addTarget:self action:@selector(abreJoguinhoManeiro) forControlEvents: UIControlEventTouchUpInside];
-    [[self botaoDerp] setTitle:@" " forState:UIControlStateNormal];
     
-    [self.view addSubview: [self botaoDerp]];
+    //coisas do menu
+    self.imgView= [[UIImageView alloc] initWithFrame:CGRectMake(0, 20, 320, 58) ];
+    self.imgView.image = [UIImage imageNamed: @"tirinha.png"];
+    [self.view addSubview: self.imgView];
     
-//    [self setBotaoVoltar: [[UIButton alloc] initWithFrame:CGRectMake(20, 20, 46, 30)]];
-//    [[self botaoVoltar] addTarget:self action:@selector(voltarMenu) forControlEvents: UIControlEventTouchUpInside];
-//    [[self botaoVoltar] setTitle:@"Voltar" forState:UIControlStateNormal];
-//    [self.view addSubview: [self botaoVoltar]];
+    self.voltar = [[UIButton alloc] initWithFrame: CGRectMake(8, 34, 30, 30)];
+    [self.voltar setBackgroundImage: [UIImage imageNamed:@"seta.png"] forState: UIControlStateNormal];
+    [self.voltar addTarget:self action:@selector(voltarMenu) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview: self.voltar];
+    
+    //-----todos os textos
+    self.titulo = [[UILabel alloc] initWithFrame:CGRectMake(50, 34, 240, 29)];
+    self.instrucao1 = [[UILabel alloc] initWithFrame:CGRectMake(25, 135, 270, 21)];
+    self.instrucao2 = [[UILabel alloc] initWithFrame:CGRectMake(25, 159, 270, 21)];
+    self.instrucao3 = [[UILabel alloc] initWithFrame:CGRectMake(25, 185, 270, 21)];
+    self.lembrar = [[UILabel alloc] initWithFrame:CGRectMake(25, 227, 270, 41)];
+    self.record = [[UILabel alloc] initWithFrame:CGRectMake(25, 493, 270, 29)];
+    
+    self.titulo.text = @"Separador de Lixo";
+    self.instrucao1.text = @"O Lixo Papão adora reciclar!";
+    self.instrucao2.text = @"Coloque o lixo na lixeira";
+    self.instrucao3.text = @"correta e alimente-o.";
+    self.lembrar.text = @"Lembre-se:";
+    self.record.text = [NSString stringWithFormat:@"recorde: %d", [[JogoViewController sharedJogoViewController] maiorPontuacao]];
+    
+    self.titulo.textAlignment = NSTextAlignmentLeft ;
+    self.instrucao1.textAlignment = NSTextAlignmentCenter;
+    self.instrucao2.textAlignment = NSTextAlignmentCenter;
+    self.instrucao3.textAlignment = NSTextAlignmentCenter;
+    self.lembrar.textAlignment = NSTextAlignmentLeft;
+    self.record.textAlignment = NSTextAlignmentCenter;
+    
+    UIFont *fonte = [UIFont fontWithName:@"Santor" size:17];
+    self.titulo.font = [UIFont fontWithName:@"Santor" size:20];
+    self.instrucao1.font = fonte;
+    self.instrucao2.font = fonte;
+    self.instrucao3.font = fonte;
+    self.lembrar.font = fonte;
+    self.record.font = [UIFont fontWithName:@"Santor" size:19];
+    
+    UIColor * cor = [UIColor colorWithRed: 0/255.0 green: 127/255.0 blue: 177/255.0 alpha:1.0];
+    self.titulo.textColor = [UIColor whiteColor];
+    self.instrucao1.textColor = cor;
+    self.instrucao2.textColor = cor;
+    self.instrucao3.textColor = cor;
+    self.lembrar.textColor = cor;
+    self.record.textColor = cor;
+    
+    [self.view addSubview: self.titulo];
+    [self.view addSubview: self.instrucao1];
+    [self.view addSubview: self.instrucao2];
+    [self.view addSubview: self.instrucao3];
+    [self.view addSubview: self.lembrar];
+    [self.view addSubview: self.record];
+    //---------
+    
+    //botoes de dica ao usuario
+    self.hintVidro = [[UIButton alloc] initWithFrame: CGRectMake(33, 275, 51, 51)];
+    self.hintPapel = [[UIButton alloc] initWithFrame: CGRectMake(102, 275, 51, 51)];
+    self.hintPlastico = [[UIButton alloc] initWithFrame: CGRectMake(172, 275, 51, 51)];
+    self.hintMetal = [[UIButton alloc] initWithFrame: CGRectMake(238, 275, 51, 51)];
+    
+    self.hintVidro.titleLabel.text = [NSString stringWithFormat:@"Vidro"];
+    self.hintPapel.titleLabel.text = [NSString stringWithFormat:@"Papel"];
+    self.hintPlastico.titleLabel.text = [NSString stringWithFormat:@"Plastico"];
+    self.hintMetal.titleLabel.text = [NSString stringWithFormat:@"Metal"];
+    
+    self.hintVidro.titleLabel.textColor = [UIColor whiteColor];
+    self.hintPapel.titleLabel.textColor = [UIColor whiteColor];
+    self.hintPlastico.titleLabel.textColor = [UIColor whiteColor];
+    self.hintMetal.titleLabel.textColor =[UIColor whiteColor];
+    
+    self.hintVidro.backgroundColor = [UIColor colorWithRed: 0/255.0 green: 116/255.0 blue: 60/255.0 alpha:1.0];
+    self.hintPapel.backgroundColor = [UIColor colorWithRed: 57/255.0 green: 106/255.0 blue: 178/255.0 alpha:1.0];
+    self.hintPlastico.backgroundColor = [UIColor colorWithRed: 220/255.0 green: 54/255.0 blue: 38/255.0 alpha:1.0];
+    self.hintMetal.backgroundColor = [UIColor colorWithRed: 255/255.0 green: 207/255.0 blue: 4/255.0 alpha:1.0];
+
+    [self.view addSubview: self.hintVidro];
+    [self.view addSubview: self.hintPapel];
+    [self.view addSubview: self.hintPlastico];
+    [self.view addSubview: self.hintMetal];
+    
+    self.play = [[UIButton alloc] initWithFrame: CGRectMake(58, 383, 204, 39)];
+    [self.play setBackgroundImage: [UIImage imageNamed:@"joguinho botão play.png"] forState:UIControlStateNormal];
+    [self.play addTarget: self action: @selector(abreJoguinhoManeiro) forControlEvents:UIControlEventTouchDown];
+    [self.view addSubview: self.play];
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    [self performSelector:@selector(abreJoguinhoManeiro) withObject:nil afterDelay:0.05];
+    [self performSelector:@selector(abreMenuManeiro) withObject:nil afterDelay:0.05];
+}
+
+-(void )viewDidAppear:(BOOL)animated{
     
 }
 
@@ -56,6 +135,9 @@
     [self performSelectorInBackground:@selector(updatePontos) withObject:nil];
 }
 
+-(void)viewDidDisappear:(BOOL)animated{
+    [preferencias synchronize];
+}
 
 -(void)updatePontos{
     [preferencias setInteger:[self qteMetal] forKey:@"qteMetal"];
@@ -80,73 +162,75 @@
     }
 }
 
--(void)viewDidDisappear:(BOOL)animated{
-    [preferencias synchronize];
-}
 
--(void )viewDidAppear:(BOOL)animated{
-    
-}
-
-- (BOOL)shouldAutorotate{
-    return NO;
-}
-
-/**
- *  faz exatamente o que o nome diz, volta ao menu
- */
 -(void)voltarMenu{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (void)navegacaoManeira:(UIViewController*)tela{
-    [self presentViewController:tela animated:YES completion:nil];
+-(void)jogoTerminou{
+    [self abreMenuManeiro];
 }
 
-/**
- *  faz exatamente o que o nome diz
- */
--(void)abreJoguinhoManeiro{
+
+-(void)abreMenuManeiro{
+    [self showMenu];
     SKView * skView = (SKView *)self.view;
-   // skView.showsFPS = YES;
-   // skView.showsNodeCount = YES;
+    
+    // Create and configure the scene.
+    SKScene * scene = [MenuMG1 sceneWithSize:skView.bounds.size];
+    scene.scaleMode = SKSceneScaleModeAspectFill;
+    // Present the scene.
+    [skView presentScene:scene];
+}
+
+-(void)abreJoguinhoManeiro{
+    [self hideMenu];
+    SKView * skView = (SKView *)self.view;
     
     // Create and configure the scene.
     SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     // Present the scene.
-    [skView presentScene:scene];
-    [self jogoEmAndamento];
+    [skView presentScene:scene transition: [SKTransition doorwayWithDuration: 1.5]];
 }
 
-/**
- *  quando o jogo comecar a rodar, esconde os elementos da view neste metodo para que eles nao fiquem ativos dirante o jogo
- */
--(void)jogoEmAndamento{
-    [self botaoDerp].alpha = 0.0;
+-(void)showMenu{
+    self.imgView.hidden = NO;
+    self.voltar.hidden = NO;
+    self.titulo.hidden = NO;
+    self.instrucao1.hidden = NO;
+    self.instrucao2.hidden = NO;
+    self.instrucao3.hidden = NO;
+    self.lembrar.hidden = NO;
+    self.play.hidden = NO;
+    self.record.hidden = NO;
+    
+    self.hintVidro.hidden = NO;
+    self.hintPapel.hidden = NO;
+    self.hintPlastico.hidden = NO;
+    self.hintMetal.hidden = NO;
 }
 
-/**
- *  quando o jogo terminar, mostra novamente os elementos da view.
- *  este metodo teve ter o cabecalho no .h para que seja visivel no singleton
- */
--(void)jogoTerminou{
-    [self botaoDerp].alpha = 1.0;
-    [self performSelector:@selector(voltarMenu)];
+-(void)hideMenu{
+    self.imgView.hidden = YES;
+    self.voltar.hidden = YES;
+    self.titulo.hidden = YES;
+    self.instrucao1.hidden = YES;
+    self.instrucao2.hidden = YES;
+    self.instrucao3.hidden = YES;
+    self.lembrar.hidden = YES;
+    self.play.hidden = YES;
+    self.record.hidden = YES;
+    
+    self.hintVidro.hidden = YES;
+    self.hintPapel.hidden = YES;
+    self.hintPlastico.hidden = YES;
+    self.hintMetal.hidden = YES;
 }
 
-- (NSUInteger)supportedInterfaceOrientations{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskAllButUpsideDown;
-    }
-    else {
-        return UIInterfaceOrientationMaskAll;
-    }
-}
 
-- (void)didReceiveMemoryWarning{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
+- (void)navegacaoManeira:(UIViewController*)tela{
+    [self presentViewController:tela animated:YES completion:nil];
 }
 
 /**
@@ -164,6 +248,24 @@
 
 + (id)allocWithZone:(struct _NSZone *)zone{
     return [self sharedJogoViewController];
+}
+
+- (BOOL)shouldAutorotate{
+    return NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskAllButUpsideDown;
+    }
+    else {
+        return UIInterfaceOrientationMaskAll;
+    }
+}
+
+- (void)didReceiveMemoryWarning{
+    [super didReceiveMemoryWarning];
+    // Release any cached data, images, etc that aren't in use.
 }
 
 

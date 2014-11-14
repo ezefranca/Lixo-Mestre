@@ -13,9 +13,32 @@
     NSUserDefaults *preferencias;
 }
 
+//coisas do menu
+@property UIImageView *imgView;
+@property UIButton *voltar;
+
+@property UILabel *titulo;
+@property UILabel *instrucao1;
+@property UILabel *instrucao2;
+@property UILabel *instrucao3;
+@property UILabel *lembrar;
+
+@property UIButton *hintVidro;
+@property UIButton *hintPapel;
+@property UIButton *hintPlastico;
+@property UIButton *hintMetal;
+
+@property UIButton *play;
+
+@property UILabel *record;
+@property int valorPontuacao; //guarda o valor real da pontuacao
+//------
+
+
+
+//coisas usadas no jogo em si
 @property  NSString *usuario;
 
-@property UIButton *botaoDerp;
 @property UIButton *botaoVoltar;
 
 @property int qteMetal;
@@ -24,6 +47,8 @@
 @property int qtePlastico;
 
 @property int maiorPontuacao;
+//------
+
 
 +(JogoViewController *)sharedJogoViewController;
 -(void)jogoTerminou;

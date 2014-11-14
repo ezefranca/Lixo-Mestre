@@ -8,21 +8,8 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface MenuMG1 : SKScene
-
-@property SKSpriteNode *lixeiraMetal;
-@property SKSpriteNode *lixeiraPapel;
-@property SKSpriteNode *lixeiraVidro ;
-@property SKSpriteNode *lixeiraPlastico;
-
-@property NSMutableArray *lixos;
-@property SKSpriteNode *lixoSelecionado;
-
-@property SKLabelNode *labelPontuacao; //para exibir o valor da pontuacao
-@property int valorPontuacao; //guarda o valor real da pontuacao
-
-@property BOOL lixoSendoSegurado;
-
-@property SKSpriteNode *botaoSair; //pseudo-botao para sair do jogo
+@interface MenuMG1 : SKScene{
+    
+}
 
 @end

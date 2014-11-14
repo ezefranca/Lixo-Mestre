@@ -44,7 +44,7 @@
 
         [self setLixoSendoSegurado:false];
         
-        [self animaLixos];
+        [self performSelector:@selector(animaLixos) withObject:nil afterDelay:1.5];
         //[self animaLixosTeste: [NSNumber numberWithInt:2]];
         
         
