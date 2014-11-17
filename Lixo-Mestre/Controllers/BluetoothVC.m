@@ -6,11 +6,8 @@
 //  Copyright (c) 2014 Ezequiel Franca dos Santos. All rights reserved.
 //
 
-
 #import "BluetoothVC.h"
 #import "AppDelegate.h"
-
-
 
 @interface BluetoothVC ()
 
@@ -18,36 +15,26 @@
 
 @implementation BluetoothVC
 
-
-
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
     
-    
     //self.statusLbl.text = @"Desconectado";
-    
-    
-    
-    //    (void)setBackgroundColor:(UIColor*)color; // default is [UIColor whiteColor]
-    //    + (void)setForegroundColor:(UIColor*)color; // default is [UIColor blackColor]
-    //    + (void)setRingThickness:(CGFloat)width; // default is 4 pt
-    //    + (void)setFont:(UIFont*)font; // default is [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline]
-    //    + (void)setSuccessImage:(UIImage*)image; // default is bundled success image from Glyphish
-    //    + (void)setErrorImage:(UIImage*)image; // default is bundled error image from Glyphish
-    
+
     [SVProgressHUD setBackgroundColor:rgb(0, 0, 0)];
     [SVProgressHUD setForegroundColor:rgb(255, 255, 255)];
     [SVProgressHUD setRingThickness:6];
     
-    
 }
 
-- (void)handleNotification:(NSNotification *)notif{
+- (void)handleNotification:(NSNotification *)notif
+{
     NSLog(@"Notification recieved: %@", notif.name);
     NSLog(@"Status user info key: %@", [notif.userInfo objectForKey:SVProgressHUDStatusUserInfoKey]);
 }
 
-- (void)viewDidLoad{
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     self.conectado = FALSE;
@@ -55,60 +42,56 @@
     self.botaoConectar.hidden = FALSE;
     self.viewEscolha.hidden = YES;
 
-    [[CNBluetoothCentral sharedBluetoothCentral] setDelegate:self];
+    [[CNBluetoothCentral sharedBluetoothCentral] setDelegate: self];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleNotification:)
-                                                 name:SVProgressHUDWillAppearNotification
-                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleNotification:)
+                                                 name: SVProgressHUDWillAppearNotification
+                                               object: nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleNotification:)
-                                                 name:SVProgressHUDDidAppearNotification
-                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleNotification:)
+                                                 name: SVProgressHUDDidAppearNotification
+                                               object: nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleNotification:)
-                                                 name:SVProgressHUDWillDisappearNotification
-                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleNotification:)
+                                                 name: SVProgressHUDWillDisappearNotification
+                                               object: nil];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(handleNotification:)
-                                                 name:SVProgressHUDDidDisappearNotification
-                                               object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver: self
+                                             selector: @selector(handleNotification:)
+                                                 name: SVProgressHUDDidDisappearNotification
+                                               object: nil];
 
-//    UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftGesture)];
-//    left.direction = UISwipeGestureRecognizerDirectionLeft;
-//    [[self view] addGestureRecognizer:left];
-//    
-//    UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightGesture)];
-//    right.direction = UISwipeGestureRecognizerDirectionRight;
-//    [[self view] addGestureRecognizer:right];
-    
-    [self.view setUserInteractionEnabled:YES];
+    [self.view setUserInteractionEnabled: YES];
 }
 
 
-- (void)viewWillDisappear:(BOOL)animated{
+- (void)viewWillDisappear:(BOOL)animated
+{
     [super viewWillDisappear:animated];
     [SVProgressHUD dismiss];
     [[CNBluetoothCentral sharedBluetoothCentral] cleanup];
-    [[CNBluetoothCentral sharedBluetoothCentral] setDelegate:nil];
-    [imagemConectar setImage:[UIImage imageNamed:@"lixo papao desconectado.png"]];
+    [[CNBluetoothCentral sharedBluetoothCentral] setDelegate: nil];
+    [imagemConectar setImage:[UIImage imageNamed: @"lixo papao desconectado.png"]];
 }
 
--(void)viewDidAppear:(BOOL)animated{
+-(void)viewDidAppear:(BOOL)animated
+{
     [SVProgressHUD dismiss];
 }
 
-- (IBAction)botaoDissmissEscolha:(id)sender {
+- (IBAction)botaoDissmissEscolha:(id)sender
+{
     self.viewEscolha.hidden = YES;
 }
 
-- (IBAction)botaoConectar:(id)sender {
+- (IBAction)botaoConectar:(id)sender
+{
    // [self.statusLbl.text isEqualToString:@"Conectando..."];
     [[CNBluetoothCentral sharedBluetoothCentral] startCentral];
-    [SVProgressHUD showWithStatus:@"Conectando... aguarde"];
+    [SVProgressHUD showWithStatus: @"Conectando... aguarde"];
     
 }
 
@@ -129,10 +112,7 @@
 }
 
 - (void)centralDidNotStart:(NSString *)errorString {
-    //UIAlert to warn about this error
-    //self.statusLbl.text = [NSString stringWithFormat:@"Erro: - %@", errorString];
-    
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Erro" message: errorString delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Erro" message: errorString delegate:self cancelButtonTitle: @"Ok" otherButtonTitles:nil];
     alert.alertViewStyle = UIAlertViewStyleDefault;
     [alert show];
     
@@ -143,16 +123,16 @@
    // self.statusLbl.text = @"Conectado";
     self.botaoLixo.hidden = FALSE;
     self.botaoConectar.hidden = TRUE;
-    [SVProgressHUD showSuccessWithStatus:@"Conectado com Successo!"];
-    [imagemConectar setImage:[UIImage imageNamed:@"lixopapao conectado.png"]];
-    [self setConectado:TRUE];
+    [SVProgressHUD showSuccessWithStatus: @"Conectado com Successo!"];
+    [imagemConectar setImage:[UIImage imageNamed: @"lixopapao conectado.png"]];
+    [self setConectado: TRUE];
 }
 
 - (void)centralDisconnectwithPeripheral:(CBPeripheral *)peripheral withError:(NSError *)error {
    // self.statusLbl.text = @"Desconectado";
     self.botaoLixo.hidden = TRUE;
     self.botaoConectar.hidden = FALSE;
-    [imagemConectar setImage:[UIImage imageNamed:@"desconectar"]];
+    [imagemConectar setImage:[UIImage imageNamed: @"desconectar"]];
 }
 
 - (void)centralReadCharacteristic:(CBCharacteristic *)characteristic withPeripheral:(CBPeripheral *)peripheral withError:(NSError *)error {
@@ -168,9 +148,9 @@
         if ([temp characterAtIndex:i] != '\0'){
             // Constroe a nova string
             if(i == 0)
-                str = [NSMutableString stringWithFormat:@"%C",[temp characterAtIndex:i]];
+                str = [NSMutableString stringWithFormat: @"%C",[temp characterAtIndex:i]];
             else{
-                str = [NSMutableString stringWithFormat:@"%@%C", str, [temp characterAtIndex:i]];
+                str = [NSMutableString stringWithFormat: @"%@%C", str, [temp characterAtIndex:i]];
             }
         }
     }
@@ -188,20 +168,20 @@
     //Metodo de enviar
     NSString *enviar = @"$";
     preferencias = [NSUserDefaults standardUserDefaults];
-    senhaSalva = [preferencias boolForKey:@"senha"];
-    enviar = [enviar stringByAppendingString:[preferencias stringForKey:@"LoginApp"]];
+    senhaSalva = [preferencias boolForKey: @"senha"];
+    enviar = [enviar stringByAppendingString:[preferencias stringForKey: @"LoginApp"]];
     switch ([self tipo]) {
         case 1://papel
-            enviar = [enviar stringByAppendingString:@"$1"];
+            enviar = [enviar stringByAppendingString: @"$1"];
             break;
         case 2://plastico
-            enviar = [enviar stringByAppendingString:@"$2"];
+            enviar = [enviar stringByAppendingString: @"$2"];
             break;
         case 3://metal
-            enviar = [enviar stringByAppendingString:@"$3"];
+            enviar = [enviar stringByAppendingString: @"$3"];
             break;
         case 4://vidro
-            enviar = [enviar stringByAppendingString:@"$4"];
+            enviar = [enviar stringByAppendingString: @"$4"];
             break;
         default:
             return;
@@ -214,19 +194,19 @@
     //Metodo de enviar
     NSString *enviar = @"$";
     preferencias = [NSUserDefaults standardUserDefaults];
-    senhaSalva = [preferencias boolForKey:@"senha"];
-    enviar = [enviar stringByAppendingString:[preferencias stringForKey:@"LoginApp"]];
-    enviar = [enviar stringByAppendingString:@"$1"];
-    [self enviarDadosBluetooth:enviar];
+    senhaSalva = [preferencias boolForKey: @"senha"];
+    enviar = [enviar stringByAppendingString: [preferencias stringForKey: @"LoginApp"]];
+    enviar = [enviar stringByAppendingString: @"$1"];
+    [self enviarDadosBluetooth: enviar];
 }
 
 - (IBAction)botaoPlastico:(id)sender{
     //Metodo de enviar
     NSString *enviar = @"$";
     preferencias = [NSUserDefaults standardUserDefaults];
-    senhaSalva = [preferencias boolForKey:@"senha"];
-    enviar = [enviar stringByAppendingString:[preferencias stringForKey:@"LoginApp"]];
-    enviar = [enviar stringByAppendingString:@"$2"];
+    senhaSalva = [preferencias boolForKey: @"senha"];
+    enviar = [enviar stringByAppendingString: [preferencias stringForKey: @"LoginApp"]];
+    enviar = [enviar stringByAppendingString: @"$2"];
     [self enviarDadosBluetooth:enviar];
 }
 
@@ -234,9 +214,9 @@
     //Metodo de enviar
     NSString *enviar = @"$";
     preferencias = [NSUserDefaults standardUserDefaults];
-    senhaSalva = [preferencias boolForKey:@"senha"];
-    enviar = [enviar stringByAppendingString:[preferencias stringForKey:@"LoginApp"]];
-    enviar = [enviar stringByAppendingString:@"$3"];
+    senhaSalva = [preferencias boolForKey: @"senha"];
+    enviar = [enviar stringByAppendingString: [preferencias stringForKey: @"LoginApp"]];
+    enviar = [enviar stringByAppendingString: @"$3"];
     [self enviarDadosBluetooth:enviar];
 }
 
@@ -244,9 +224,9 @@
     //Metodo de enviar
     NSString *enviar = @"$";
     preferencias = [NSUserDefaults standardUserDefaults];
-    senhaSalva = [preferencias boolForKey:@"senha"];
-    enviar = [enviar stringByAppendingString:[preferencias stringForKey:@"LoginApp"]];
-    enviar = [enviar stringByAppendingString:@"$4"];
+    senhaSalva = [preferencias boolForKey: @"senha"];
+    enviar = [enviar stringByAppendingString: [preferencias stringForKey: @"LoginApp"]];
+    enviar = [enviar stringByAppendingString: @"$4"];
     [self enviarDadosBluetooth:enviar];
 }
 
@@ -268,9 +248,9 @@
             if ([temp characterAtIndex:i] != '\0'){
                 // Constroe a nova string
                 if(i == 0)
-                    str = [NSMutableString stringWithFormat:@"%C",[temp characterAtIndex:i]];
+                    str = [NSMutableString stringWithFormat: @"%C",[temp characterAtIndex:i]];
                 else{
-                    str = [NSMutableString stringWithFormat:@"%@%C", str, [temp characterAtIndex:i]];
+                    str = [NSMutableString stringWithFormat: @"%@%C", str, [temp characterAtIndex:i]];
                 }
             }
         }
@@ -290,25 +270,9 @@
     
 }
 
-//-(void)leftGesture{
-//    NSUInteger index =  [[self tabBarController] selectedIndex];
-//    [[self tabBarController] setSelectedIndex: index +4]; // vai ao ultimo elemento ta tabBar
-//}
-//
-//-(void)rightGesture{
-//    NSUInteger index =  [[self tabBarController] selectedIndex];
-//    [[self tabBarController] setSelectedIndex: index +1];
-//}
-
 - (void)navegacaoManeira:(UIViewController*)tela{
     [tela setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
     [self presentViewController:tela animated:YES completion:nil];
-}
-
-- (IBAction)botaoSettings:(id)sender {
-//    SettingsViewController *t = [[SettingsViewController alloc]init];
-//    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:t];
-//    [self navegacaoManeira:nc];
 }
 
 - (IBAction)botaoLixo:(id)sender {

@@ -84,7 +84,6 @@
         NSString *url =  @"http://172.246.16.27/lixoPapao/loginManager.php";
         NSString *post = [NSString stringWithFormat:@"type=login&email=%@&pass=",email];
         
-        //NSLog(@"%@" , post);
         
         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
         NSMutableURLRequest *request = [ [ NSMutableURLRequest alloc ] initWithURL: [ NSURL URLWithString: url]];

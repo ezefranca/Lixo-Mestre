@@ -131,9 +131,9 @@
     [super viewWillAppear:animated];
 }
 
--(void)conectar{
-    
-    NSString *url = [NSString stringWithFormat:@"http://172.246.16.27/lixoPapao/retornaPontos.php"];
+-(void)conectar
+{
+    NSString *url = [NSString stringWithFormat: @"http://172.246.16.27/lixoPapao/retornaPontos.php"];
     jsonDados = [[NSData alloc] initWithContentsOfURL:
                  [NSURL URLWithString:url]];
     
@@ -153,18 +153,18 @@
     
      for (id local in arraydaora) {
      CLLocationCoordinate2D coordinate1;
-     coordinate1.latitude = [[local objectForKey:@"latitude"] doubleValue];
-     coordinate1.longitude = [[local objectForKey:@"longitude"] doubleValue];
-     NSString *tipo = [local objectForKey:@"tipo"];
+     coordinate1.latitude = [[local objectForKey: @"latitude"] doubleValue];
+     coordinate1.longitude = [[local objectForKey: @"longitude"] doubleValue];
+     NSString *tipo = [local objectForKey: @"tipo"];
      
-     if ([[local objectForKey:@"nome"] isEqualToString: @"type"]) {
-     [local setObject: tipo forKey:@"nome"];
+     if ([[local objectForKey: @"nome"] isEqualToString: @"type"]) {
+     [local setObject: tipo forKey: @"nome"];
      }
      //        MyAnnotation *annotation = [[MyAnnotation alloc] initWithCoordinate:coordinate1 title:[local objectForKey:@"nome"] subtitle: tipo];
      //        [self.mapa addAnnotation: annotation];
      
      MKPointAnnotation * ann = [[MKPointAnnotation alloc] init];
-     [ann setTitle: [local objectForKey:@"nome"]];
+     [ann setTitle: [local objectForKey: @"nome"]];
      [ann setSubtitle: tipo];
      [ann setCoordinate:coordinate1];
      [self.mapa addAnnotation: ann];
@@ -234,18 +234,18 @@
         annotationView.canShowCallout = YES;
         
         //aki que muda a imagem do pino dependendo do do tipo de ponto
-        if ( [[annotation subtitle] isEqualToString:@"pev"] ||
-            [[annotation subtitle] isEqualToString:@"triagem"] ||
-            [[annotation subtitle] isEqualToString:@"comercio"] ){
-            annotationView.image = [UIImage imageNamed:@"mapa-coleta.png"];
+        if ( [[annotation subtitle] isEqualToString: @"pev"] ||
+            [[annotation subtitle] isEqualToString: @"triagem"] ||
+            [[annotation subtitle] isEqualToString: @"comercio"] ){
+            annotationView.image = [UIImage imageNamed: @"mapa-coleta.png"];
         }
         else{
-            if ( [[annotation subtitle] isEqualToString:@"cooperativa"] ||
-                [[annotation subtitle] isEqualToString:@"associacao"]) {
-                annotationView.image = [UIImage imageNamed:@"mapa-$.png"];
+            if ( [[annotation subtitle] isEqualToString: @"cooperativa"] ||
+                [[annotation subtitle] isEqualToString: @"associacao"]) {
+                annotationView.image = [UIImage imageNamed: @"mapa-$.png"];
             }
             else{
-                annotationView.image = [UIImage imageNamed:@"mapa-lixopapao.png"];
+                annotationView.image = [UIImage imageNamed: @"mapa-lixopapao.png"];
             }
         }
     }
@@ -268,7 +268,7 @@
 
 -(void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(NSError *)error{
     NSLog(@"%@", error);
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Nāo foi possivel encontrar sua localizaçāo." message: error.localizedFailureReason delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nāo foi possivel encontrar sua localizaçāo." message: error.localizedFailureReason delegate:self cancelButtonTitle: @"Ok" otherButtonTitles:nil];
     alert.alertViewStyle = UIAlertViewStyleDefault;
     [alert show];
 }
@@ -414,17 +414,6 @@
     // Add it to the map
     [self.mapa addOverlay:_routeOverlay];
 }
-
-//-(void)leftGesture{
-//    NSUInteger index =  [[self tabBarController] selectedIndex];
-//    [[self tabBarController] setSelectedIndex: index -1];
-//}
-//
-//-(void)rightGesture{
-//    NSUInteger index =  [[self tabBarController] selectedIndex];
-//    [[self tabBarController] setSelectedIndex: index +1];
-//}
-
 
 - (void)appToBackground{
     [self.mapa setShowsUserLocation:NO];

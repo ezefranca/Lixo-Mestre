@@ -34,30 +34,30 @@
     self.foto.layer.borderColor = [UIColor clearColor].CGColor;
     self.foto.clipsToBounds = YES;
     
-    self.titulo.font = [UIFont fontWithName:@"Santor" size:20];
-    self.nome.font = [UIFont fontWithName:@"Santor" size:17];
+    self.titulo.font = [UIFont fontWithName: @"Santor" size:20];
+    self.nome.font = [UIFont fontWithName: @"Santor" size:17];
 
-    self.labelPapel.font = [UIFont fontWithName:@"Santor" size:17];
-    self.labelVidro.font = [UIFont fontWithName:@"Santor" size:17];
-    self.labelPlastico.font = [UIFont fontWithName:@"Santor" size:17];
-    self.labelMetal.font = [UIFont fontWithName:@"Santor" size:17];
+    self.labelPapel.font = [UIFont fontWithName: @"Santor" size:17];
+    self.labelVidro.font = [UIFont fontWithName: @"Santor" size:17];
+    self.labelPlastico.font = [UIFont fontWithName: @"Santor" size:17];
+    self.labelMetal.font = [UIFont fontWithName: @"Santor" size:17];
     
-    self.progressTitulo.font = [UIFont fontWithName:@"Santor" size:30];
+    self.progressTitulo.font = [UIFont fontWithName: @"Santor" size:30];
     
-    int total = [preferencias integerForKey:@"qteMetal"]+
-    [preferencias integerForKey:@"qtePapel"]+
-    [preferencias integerForKey:@"qteVidro"]+
-    [preferencias integerForKey:@"qtePlastico"];
+    int total = [preferencias integerForKey: @"qteMetal"]+
+    [preferencias integerForKey: @"qtePapel"]+
+    [preferencias integerForKey: @"qteVidro"]+
+    [preferencias integerForKey: @"qtePlastico"];
     self.viewDesenho.totalLixos = total;
-    self.progresso.text = [NSString stringWithFormat:@"%d Lixos reciclados",total];
-    self.progresso.font = [UIFont fontWithName:@"Santor" size:17];
+    self.progresso.text = [NSString stringWithFormat: @"%d Lixos reciclados",total];
+    self.progresso.font = [UIFont fontWithName: @"Santor" size:17];
     
 
 }
 
 -(void)viewWillAppear:(BOOL)animated{
     self.foto.image = [LocalData loadFacePicture];
-    self.nome.text = [preferencias objectForKey:@"Nome"];
+    self.nome.text = [preferencias objectForKey: @"Nome"];
     
 }
 
@@ -77,13 +77,43 @@
 }
 */
 
-- (IBAction)voltar:(id)sender {
+- (IBAction)voltar:(id)sender
+{
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-- (IBAction)convidar:(id)sender {
+- (IBAction)convidar:(id)sender
+{
+//    UIActionSheet *popup = [[UIActionSheet alloc] initWithTitle: @"Selecione o tipo de lixo:" delegate: self cancelButtonTitle: @"Cancel" destructiveButtonTitle: nil otherButtonTitles:
+//                            @"Papel",
+//                            @"Plastico",
+//                            @"Metal",
+//                            @"Vidro",
+//                            nil];
+//    popup.tag = 1;
+//    [popup showInView:[UIApplication sharedApplication].keyWindow];
     
 }
+//- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+//    switch (buttonIndex) {
+//        case 0:
+//            [self setTipo:1];
+//            break;
+//        case 1:
+//            [self setTipo:2];
+//            break;
+//        case 2:
+//            [self setTipo:3];
+//            break;
+//        case 3:
+//            [self setTipo:4];
+//            break;
+//        default:
+//            [self setTipo:0];
+//            break;
+//    }
+//    [self enviarLixo];
+//}
 
 - (IBAction)unwindToPerfil:(UIStoryboardSegue *)unwindSegue{
     

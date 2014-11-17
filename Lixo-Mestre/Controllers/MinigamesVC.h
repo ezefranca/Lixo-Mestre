@@ -25,14 +25,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *game9;
 
 
-
-
 - (IBAction)botaoMenu:(id)sender;
-
-
 - (IBAction)jogo1:(id)sender;
-
-
 - (IBAction)bloqueado:(id)sender;
 
 

@@ -58,10 +58,10 @@
     
     [LocalData deleteFacePicture];
     //Customizacao dos TextFields
-    self.logInfo.font = [UIFont fontWithName:@"Santor" size:17];
+    self.logInfo.font = [UIFont fontWithName: @"Santor" size:17];
     self.logInfo.delegate = self;
     
-    self.pass.font = [UIFont fontWithName:@"Santor" size:17];
+    self.pass.font = [UIFont fontWithName: @"Santor" size:17];
     self.pass.delegate = self;
     
     //login do facebook
@@ -152,18 +152,18 @@
     if ([webService login:self.logInfo.text :self.pass.text]) {
         
         //SETAR PREFERENCIAS DO USUARIO LOGADO
-        [preferencias setObject:self.logInfo.text forKey:@"LoginApp"];
-        [preferencias setObject:self.pass.text forKey:@"password"];
-        [preferencias setBool: YES forKey:@"Logado"];
+        [preferencias setObject:self.logInfo.text forKey: @"LoginApp"];
+        [preferencias setObject:self.pass.text forKey: @"password"];
+        [preferencias setBool: YES forKey: @"Logado"];
         [preferencias synchronize];
         //PERFON SEGUE PARA TELA INICIAL
-        [self performSegueWithIdentifier:@"coco" sender:nil];
+        [self performSegueWithIdentifier: @"coco" sender:nil];
     }
     else
     {
         //SE DER ERRADOI  TA UMA MEXIDINHA
         [self shake];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login." message:@"Verifique o usuário ou a senha." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login." message: @"Verifique o usuário ou a senha." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         alert.alertViewStyle = UIAlertViewStyleDefault;
         [alert show];
     }
@@ -212,17 +212,17 @@
     {
         //self.logInfo.text = self.email;
         //self.pass.text = self.facebookUserID;
-        [preferencias setObject: self.nameLabel.text forKey:@"Nome"];
-        [preferencias setObject:self.email forKey:@"LoginApp"];
-        [preferencias setObject:self.facebookUserID forKey:@"password"];
-        [preferencias setBool: YES forKey:@"Logado"];
+        [preferencias setObject: self.nameLabel.text forKey: @"Nome"];
+        [preferencias setObject:self.email forKey: @"LoginApp"];
+        [preferencias setObject:self.facebookUserID forKey: @"password"];
+        [preferencias setBool: YES forKey: @"Logado"];
         [preferencias synchronize];
-        [self performSegueWithIdentifier:@"coco" sender:nil];
+        [self performSegueWithIdentifier: @"coco" sender:nil];
         
     }
     else
     {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login com facebook" message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login com facebook" message:@"" delegate:self cancelButtonTitle: @"Ok" otherButtonTitles:nil];
         alert.alertViewStyle = UIAlertViewStyleDefault;
         [alert show];
         
@@ -234,7 +234,7 @@
 }
 
 -(void)loadImageforUser: (NSString *)email{
-    NSString* path = [NSString stringWithFormat:@"http://172.246.16.27/lixoPapao/perfil/%@.png",email];
+    NSString* path = [NSString stringWithFormat: @"http://172.246.16.27/lixoPapao/perfil/%@.png",email];
     NSURL *url = [NSURL URLWithString:path];
     NSData *data = [NSData dataWithContentsOfURL:url];
     UIImage *img = [[UIImage alloc] initWithData:data];
@@ -268,7 +268,7 @@
     
     self.logInfo.text = @"";
     self.pass.text = @"";
-    [preferencias setBool: NO forKey:@"Logado"];
+    [preferencias setBool: NO forKey: @"Logado"];
 }
 
 // Handle possible errors that can occur during facebook login
@@ -306,11 +306,11 @@
     }
     
     if (alertMessage) {
-        [[[UIAlertView alloc] initWithTitle:alertTitle
-                                    message:alertMessage
-                                   delegate:nil
-                          cancelButtonTitle:@"OK"
-                          otherButtonTitles:nil] show];
+        [[[UIAlertView alloc] initWithTitle: alertTitle
+                                    message: alertMessage
+                                   delegate: nil
+                          cancelButtonTitle: @"OK"
+                          otherButtonTitles: nil] show];
     }
 }
 

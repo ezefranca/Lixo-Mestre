@@ -29,7 +29,7 @@
     
     
     //vai ser util pra designer
-    [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed:@"fundo tab selecionado.png"]];
+    [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed: @"fundo tab selecionado.png"]];
 
 
 }

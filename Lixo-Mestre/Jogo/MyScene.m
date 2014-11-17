@@ -19,40 +19,42 @@
         self.bg.position = bgponto;
         [self addChild: self.bg];
         
+        self.vidas = 3;
+        
         //self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
         self.physicsWorld.contactDelegate = self; // TORNA A COLISAO POSIVEL!!! TINHA ESQUECIDO ISSO >.<
         
-        [self setValorPontuacao:0];
-        [self setLabelPontuacao: [SKLabelNode labelNodeWithFontNamed:@"Verdana"]];
-        [self labelPontuacao].text = [NSString stringWithFormat:@"%d", [self valorPontuacao]];
-        [self labelPontuacao].fontColor = [UIColor blackColor];
-        [self labelPontuacao].position = CGPointMake(self.frame.size.width/2,
-                                                self.frame.size.height - [self labelPontuacao].frame.size.height - 20) ;
+        self.valorPontuacao = 0;
+        self.labelPontuacao = [SKLabelNode labelNodeWithFontNamed:@"Verdana"];
+        self.labelPontuacao.text = [NSString stringWithFormat:@"%d", self.valorPontuacao];
+        self.labelPontuacao.fontColor = [UIColor blackColor];
+        self.labelPontuacao.position = CGPointMake(self.frame.size.width/2,
+                                                self.frame.size.height - self.labelPontuacao.frame.size.height - 20) ;
         [self addChild: [self labelPontuacao]];
         
-        [self setLixeiraMetal: [CriaNodes lixeiraTipo:@"Metal" forFrame: self.frame]];
-        [self setLixeiraPapel: [CriaNodes lixeiraTipo:@"Papel" forFrame: self.frame]];
-        [self setLixeiraVidro: [CriaNodes lixeiraTipo:@"Vidro" forFrame: self.frame]];
-        [self setLixeiraPlastico: [CriaNodes lixeiraTipo:@"Plastico" forFrame: self.frame] ];
+        self.lixeiraMetal = [CriaNodes lixeiraTipo:@"Metal" forFrame: self.frame];
+        self.lixeiraPapel = [CriaNodes lixeiraTipo:@"Papel" forFrame: self.frame];
+        self.lixeiraVidro = [CriaNodes lixeiraTipo:@"Vidro" forFrame: self.frame];
+        self.lixeiraPlastico = [CriaNodes lixeiraTipo:@"Plastico" forFrame: self.frame];
 
-        [self addChild: [self lixeiraMetal]];
-        [self addChild: [self lixeiraPapel]];
-        [self addChild: [self lixeiraVidro]];
-        [self addChild: [self lixeiraPlastico]];
+        [self addChild: self.lixeiraMetal];
+        [self addChild: self.lixeiraPapel];
+        [self addChild: self.lixeiraVidro];
+        [self addChild: self.lixeiraPlastico];
         
-        [self setLixos: [[NSMutableArray alloc] init]];
+        self.lixos = [[NSMutableArray alloc] init];
 
-        [self setLixoSendoSegurado:false];
+        self.lixoSendoSegurado = false;
         
         [self performSelector:@selector(animaLixos) withObject:nil afterDelay:1.5];
         //[self animaLixosTeste: [NSNumber numberWithInt:2]];
         
         
-        [self setBotaoSair: [SKSpriteNode spriteNodeWithImageNamed:@"icone voltar.png"]];
-        [[self botaoSair] setSize: CGSizeMake(30, 30)];
-        [self botaoSair].position = CGPointMake(self.frame.size.width/2, [self botaoSair].frame.size.height *1.5);
+        self.botaoSair = [SKSpriteNode spriteNodeWithImageNamed:@"icone voltar.png"];
+        self.botaoSair.size = CGSizeMake(30, 30);
+        self.botaoSair.position = CGPointMake(self.frame.size.width/2, [self botaoSair].frame.size.height *1.5);
         
-        [self addChild: [self botaoSair]];
+        [self addChild: self.botaoSair];
         
     }
     return self;
@@ -65,10 +67,10 @@
 -(void)animaLixos{
 
     SKSpriteNode *lixo = [CriaNodes lixoAleatorioNoFrame: self.frame];
-    [[self lixos] addObject: lixo];
+    [self.lixos addObject: lixo];
     [self addChild:lixo];
 
-    for (SKSpriteNode *nodeLixo in [self lixos] ){
+    for ( SKSpriteNode *nodeLixo in self.lixos ){
         if (nodeLixo.position.y + nodeLixo.size.height/2  < 0) {
             [nodeLixo removeFromParent];
         }
@@ -88,25 +90,25 @@
 -(void)animaLixosTeste: (NSNumber* )animacao{    
     switch ([animacao intValue]) {
         case 1:
-            for (SKSpriteNode *node in [self lixos]){
+            for (SKSpriteNode *node in self.lixos){
                 [node runAction: [SKAction moveBy:CGVectorMake(0, -100) duration:2]];
                 [node runAction: [SKAction rotateByAngle:-(M_PI/2) duration:0.3]];
             }
             break;
         case 2:
-            for (SKSpriteNode *node in [self lixos]){
+            for (SKSpriteNode *node in self.lixos){
                 [node runAction: [SKAction moveBy:CGVectorMake(-100, 0) duration:2]];
                 [node runAction: [SKAction rotateByAngle:-(M_PI/2) duration:0.3]];
             }
             break;
         case 3:
-            for (SKSpriteNode *node in [self lixos]){
+            for (SKSpriteNode *node in self.lixos){
                 [node runAction: [SKAction moveBy:CGVectorMake(0, 100) duration:2]];
                 [node runAction: [SKAction rotateByAngle:-(M_PI/2) duration:0.3]];
             }
             break;
         case 4:
-            for (SKSpriteNode *node in [self lixos]){
+            for (SKSpriteNode *node in self.lixos){
                 [node runAction: [SKAction moveBy:CGVectorMake(100, 0) duration:2]];
                 [node runAction: [SKAction rotateByAngle:-(M_PI/2) duration:0.3]];
             }
@@ -232,9 +234,9 @@
         [self performSelector:@selector(removeNode:) withObject: secondBody.node afterDelay:0.3];
     }
     
-    [self setValorPontuacao: [self valorPontuacao] -20];
-    [self labelPontuacao].text = [NSString stringWithFormat:@"%d", [self valorPontuacao]];
-    [self setLixoSendoSegurado:false];
+    self.valorPontuacao = self.valorPontuacao -20;
+    self.labelPontuacao.text = [NSString stringWithFormat:@"%d", self.valorPontuacao ];
+    self.lixoSendoSegurado = false;
     
 }
 /**
@@ -242,9 +244,9 @@
  *  @param lixo Node do lixo que deve ser removido com animacao apos a colisao
  */
 -(void)aumetanPontuacao: (SKSpriteNode *)lixo{
-    [self setValorPontuacao: [self valorPontuacao]+50];
-    [self labelPontuacao].text = [NSString stringWithFormat:@"%d", [self valorPontuacao]];
-    [self setLixoSendoSegurado:false];
+    self.valorPontuacao = self.valorPontuacao + 50;
+    self.labelPontuacao.text = [NSString stringWithFormat:@"%d", self.valorPontuacao];
+    self.lixoSendoSegurado = false;
     [self performSelector:@selector(removeNode:) withObject:lixo afterDelay:0.3];
 }
 /**
@@ -266,17 +268,17 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
-        for (SKSpriteNode *node in [self lixos] ){
+        for (SKSpriteNode *node in self.lixos ){
             if (CGRectContainsPoint(node.frame, location)) {
-                [[self lixos] removeObject: node];
+                [self.lixos removeObject: node];
                 [node removeAllActions];
                 [node runAction: [SKAction moveTo:location duration:0.05]];
                 node.position = location;
-                [self setLixoSelecionado: node];
-                [self setLixoSendoSegurado:true];
+                self.lixoSelecionado = node;
+                self.lixoSendoSegurado = true;
                 break;
             }
-            if (CGRectContainsPoint([self botaoSair].frame, location)) {
+            if (CGRectContainsPoint(self.botaoSair.frame, location)) {
                 [self sairDaCena];
             }
         }
@@ -287,7 +289,7 @@
  *  metodo do pseudo-botao para sair do jogo com auxilio do touchesBegan
  */
 -(void)sairDaCena{
-    if ([self valorPontuacao] > [[JogoViewController sharedJogoViewController] maiorPontuacao]) {
+    if ( self.valorPontuacao > [[JogoViewController sharedJogoViewController] maiorPontuacao] ) {
         [[JogoViewController sharedJogoViewController] setMaiorPontuacao: [self valorPontuacao]];
     }
     
@@ -305,9 +307,9 @@
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event{
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
-        if ([self lixoSendoSegurado]) {
-            if (location.x < [self lixeiraMetal].position.x) {
-                [[self lixoSelecionado] runAction: [SKAction moveTo:location duration:0.05]];
+        if ( self.lixoSendoSegurado ) {
+            if (location.x < self.lixeiraMetal.position.x) {
+                [self.lixoSelecionado runAction: [SKAction moveTo:location duration:0.05]];
             }
         }
     }
@@ -320,14 +322,14 @@
  *  @param event
  */
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event{
-    if ([self lixoSendoSegurado]) {
-        [self setValorPontuacao: [self valorPontuacao] -15];
-        [self labelPontuacao].text = [NSString stringWithFormat:@"%d", [self valorPontuacao]];
-        [self setLixoSendoSegurado:false];
+    if ( self.lixoSendoSegurado ) {
+        self.valorPontuacao = self.valorPontuacao -15;
+        self.labelPontuacao.text = [NSString stringWithFormat:@"%d", [self valorPontuacao]];
+        self.lixoSendoSegurado = false;
     }
-    [[self lixoSelecionado] runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
-    [self performSelector:@selector(removeNode:) withObject:[self lixoSelecionado] afterDelay:0.3];
-    [[self lixos] removeObject: [self lixoSelecionado]];
+    [self.lixoSelecionado runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
+    [self performSelector:@selector(removeNode:) withObject: self.lixoSelecionado afterDelay:0.3];
+    [self.lixos removeObject: self.lixoSelecionado];
 }
 
 -(void)update:(CFTimeInterval)currentTime {

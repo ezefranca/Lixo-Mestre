@@ -38,7 +38,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.titulo.font = [UIFont fontWithName:@"Santor" size:20];
+    self.titulo.font = [UIFont fontWithName: @"Santor" size:20];
     
     self.labelNome.delegate = self;
     self.labelEmail.delegate = self;
@@ -105,7 +105,7 @@
             //[webService uploadImage:self.profileImage.image:self.labelUser.text];
             if(x == 0){//erro
                 NSLog(@"Algum erro");
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"culpa do servidor do viera" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message: @"culpa do servidor do viera" delegate:self cancelButtonTitle: @"Ok" otherButtonTitles:nil];
                 alert.alertViewStyle = UIAlertViewStyleDefault;
                 [alert show];
                 
@@ -115,20 +115,20 @@
             }
             if(x == 2){//ja existe
                 NSLog(@"Erro");
-                UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"o email ja esta sendo usado" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message: @"o email ja esta sendo usado" delegate:self cancelButtonTitle: @"Ok" otherButtonTitles:nil];
                 alert.alertViewStyle = UIAlertViewStyleDefault;
                 [alert show];
             }
         }
         else{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"email invalido" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message: @"email invalido" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
             alert.alertViewStyle = UIAlertViewStyleDefault;
             [alert show];
 
         }
     }
     else{
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message:@"as senhas nao sao iguais" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"O cadastro falhou!" message: @"as senhas nao sao iguais" delegate:self cancelButtonTitle: @"Ok" otherButtonTitles:nil];
         alert.alertViewStyle = UIAlertViewStyleDefault;
         [alert show];
     }

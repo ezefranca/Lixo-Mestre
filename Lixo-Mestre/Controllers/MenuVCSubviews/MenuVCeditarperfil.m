@@ -43,10 +43,10 @@
     self.foto.clipsToBounds = YES;
     
     
-    self.titulo.font = [UIFont fontWithName:@"Santor" size:17];
-    self.nome.font = [UIFont fontWithName:@"Santor" size:17];
-    self.email.font = [UIFont fontWithName:@"Santor" size:17];
-    self.senha.font = [UIFont fontWithName:@"Santor" size:17];
+    self.titulo.font = [UIFont fontWithName: @"Santor" size:17];
+    self.nome.font = [UIFont fontWithName: @"Santor" size:17];
+    self.email.font = [UIFont fontWithName: @"Santor" size:17];
+    self.senha.font = [UIFont fontWithName: @"Santor" size:17];
     
     self.nome.enabled = FALSE;
     self.email.enabled = FALSE;
@@ -60,8 +60,8 @@
     self.email.delegate = self;
     self.senha.delegate = self;
     
-    self.botaoUnselected = [UIImage imageNamed:@"editar.png"];
-    self.botaoSelected = [UIImage imageNamed:@"confirmar.png"];
+    self.botaoUnselected = [UIImage imageNamed: @"editar.png"];
+    self.botaoSelected = [UIImage imageNamed: @"confirmar.png"];
 
 }
 
@@ -94,7 +94,7 @@
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     
-    [self presentViewController:picker animated:YES completion:NULL];
+    [self presentViewController: picker animated: YES completion: NULL];
 }
 
 #pragma mark - Image Picker Controller delegate methods
@@ -107,12 +107,12 @@
 
     [LocalData saveFacePic: chosenImage];
     
-    [picker dismissViewControllerAnimated:YES completion:NULL];
+    [picker dismissViewControllerAnimated: YES completion: NULL];
     
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [picker dismissViewControllerAnimated:YES completion:NULL];
+    [picker dismissViewControllerAnimated: YES completion: NULL];
 }
 
 
@@ -127,15 +127,14 @@
     {
         [self.editNome setBackgroundImage: self.botaoUnselected forState:UIControlStateNormal];
         
-        if ( [webService updateNomeUser:self.nome.text :self.senha.text : [preferencias objectForKey:@"LoginApp"] ] )
+        if ( [webService updateNomeUser:self.nome.text :self.senha.text : [preferencias objectForKey: @"LoginApp"] ] )
         {
-            [preferencias setObject:self.nome.text forKey:@"Nome"];
+            [preferencias setObject:self.nome.text forKey: @"Nome"];
 
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nome alterado com sucesso." message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nome alterado com sucesso." message: @"" delegate:self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
             alert.alertViewStyle = UIAlertViewStyleDefault;
             [alert show];
         }
-
 
     }
 }
@@ -150,11 +149,11 @@
     else{
         [self.editSenha setBackgroundImage: self.botaoUnselected forState:UIControlStateNormal];
         
-        if ( [webService updatePassUser: self.nome.text :self.senha.text : [preferencias objectForKey:@"LoginApp"] ] )
+        if ( [webService updatePassUser: self.nome.text :self.senha.text : [preferencias objectForKey: @"LoginApp"] ] )
         {
-            [preferencias setObject:self.nome.text forKey:@"password"];
+            [preferencias setObject:self.nome.text forKey: @"password"];
             
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Senha alterada com sucesso." message:@"" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Senha alterada com sucesso." message: @"" delegate: self cancelButtonTitle: @"Ok" otherButtonTitles: nil];
             alert.alertViewStyle = UIAlertViewStyleDefault;
             [alert show];
         }
@@ -164,12 +163,12 @@
 
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    [self.view endEditing:YES] ;
+    [self.view endEditing: YES] ;
 
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [self.view endEditing:YES];
+    [self.view endEditing: YES];
     return NO;
 }
 

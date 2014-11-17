@@ -182,6 +182,7 @@
 		F69E387019D3388F00B64629 /* santor 1.002.otf in Resources */ = {isa = PBXBuildFile; fileRef = F69E386F19D3388F00B64629 /* santor 1.002.otf */; };
 		F69E387119D3489200B64629 /* LixoPapao.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F69E387319D3489200B64629 /* LixoPapao.storyboard */; };
 		F6BDD53F1A152ED0004A3403 /* MenuMG1.m in Sources */ = {isa = PBXBuildFile; fileRef = F6BDD53E1A152ED0004A3403 /* MenuMG1.m */; };
+		F6BDD5441A1A5CB7004A3403 /* GameOverMG1.m in Sources */ = {isa = PBXBuildFile; fileRef = F6BDD5431A1A5CB7004A3403 /* GameOverMG1.m */; };
 		F6ED61B019D5E5F9002CCE1E /* Games.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61AA19D5E5F9002CCE1E /* Games.png */; };
 		F6ED61B119D5E5F9002CCE1E /* HOME.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61AB19D5E5F9002CCE1E /* HOME.png */; };
 		F6ED61B219D5E5F9002CCE1E /* Mapa.png in Resources */ = {isa = PBXBuildFile; fileRef = F6ED61AC19D5E5F9002CCE1E /* Mapa.png */; };
@@ -464,6 +465,8 @@
 		F69E387219D3489200B64629 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/LixoPapao.storyboard; sourceTree = "<group>"; };
 		F6BDD53D1A152ED0004A3403 /* MenuMG1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuMG1.h; sourceTree = "<group>"; };
 		F6BDD53E1A152ED0004A3403 /* MenuMG1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuMG1.m; sourceTree = "<group>"; };
+		F6BDD5421A1A5CB7004A3403 /* GameOverMG1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameOverMG1.h; sourceTree = "<group>"; };
+		F6BDD5431A1A5CB7004A3403 /* GameOverMG1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameOverMG1.m; sourceTree = "<group>"; };
 		F6ED61AA19D5E5F9002CCE1E /* Games.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Games.png; sourceTree = "<group>"; };
 		F6ED61AB19D5E5F9002CCE1E /* HOME.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HOME.png; sourceTree = "<group>"; };
 		F6ED61AC19D5E5F9002CCE1E /* Mapa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mapa.png; sourceTree = "<group>"; };
@@ -958,13 +961,7 @@
 				F69E384E19D09A4300B64629 /* CriaNodes.h */,
 				F69E384F19D09A4300B64629 /* CriaNodes.m */,
 				F69E385019D09A4300B64629 /* imagens */,
-				F69E385A19D09A4300B64629 /* JogoViewController.h */,
-				F69E385B19D09A4300B64629 /* JogoViewController.m */,
-				F69E385C19D09A4300B64629 /* MascarasColisao.h */,
-				F69E385D19D09A4300B64629 /* MyScene.h */,
-				F69E385E19D09A4300B64629 /* MyScene.m */,
-				F6BDD53D1A152ED0004A3403 /* MenuMG1.h */,
-				F6BDD53E1A152ED0004A3403 /* MenuMG1.m */,
+				F6BDD5451A1A5CD2004A3403 /* Minigame1 */,
 			);
 			path = Jogo;
 			sourceTree = "<group>";
@@ -975,6 +972,22 @@
 				F69E385119D09A4300B64629 /* icone voltar.png */,
 			);
 			path = imagens;
+			sourceTree = "<group>";
+		};
+		F6BDD5451A1A5CD2004A3403 /* Minigame1 */ = {
+			isa = PBXGroup;
+			children = (
+				F69E385A19D09A4300B64629 /* JogoViewController.h */,
+				F69E385B19D09A4300B64629 /* JogoViewController.m */,
+				F69E385C19D09A4300B64629 /* MascarasColisao.h */,
+				F69E385D19D09A4300B64629 /* MyScene.h */,
+				F69E385E19D09A4300B64629 /* MyScene.m */,
+				F6BDD53D1A152ED0004A3403 /* MenuMG1.h */,
+				F6BDD53E1A152ED0004A3403 /* MenuMG1.m */,
+				F6BDD5421A1A5CB7004A3403 /* GameOverMG1.h */,
+				F6BDD5431A1A5CB7004A3403 /* GameOverMG1.m */,
+			);
+			name = Minigame1;
 			sourceTree = "<group>";
 		};
 		F6ED61A919D5E5F9002CCE1E /* Redimensionados */ = {
@@ -1569,6 +1582,7 @@
 				F6ED61E119DA039B002CCE1E /* MenuVCperfilAmigo.m in Sources */,
 				F67ED4E819C8B78000B266BD /* JMStaticContentTableViewCell.m in Sources */,
 				F67ED4DF19C8B78000B266BD /* CNBluetoothCentral.m in Sources */,
+				F6BDD5441A1A5CB7004A3403 /* GameOverMG1.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

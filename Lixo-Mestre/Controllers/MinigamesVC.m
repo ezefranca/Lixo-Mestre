@@ -28,7 +28,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.label.font = [UIFont fontWithName:@"Santor" size:17];
+    self.label.font = [UIFont fontWithName: @"Santor" size:17];
 }
 
 - (void)didReceiveMemoryWarning{
@@ -80,7 +80,7 @@
             string = @"faca x para desbloquear!";
             break;
     }
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Jogo bloqueado!" message:string delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Jogo bloqueado!" message: string delegate:self cancelButtonTitle: @"Ok" otherButtonTitles:nil];
     alert.alertViewStyle = UIAlertViewStyleDefault;
     [alert show];
     
@@ -88,7 +88,7 @@
 
 - (void)navegacaoManeira:(UIViewController*)tela{
     [tela setModalTransitionStyle: UIModalTransitionStyleCrossDissolve];
-    [self presentViewController:tela animated:YES completion:nil];
+    [self presentViewController: tela animated: YES completion: nil];
 }
 /*
 #pragma mark - Navigation

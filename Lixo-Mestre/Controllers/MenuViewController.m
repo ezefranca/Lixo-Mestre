@@ -43,7 +43,7 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    self.nomeUsuario.text = [preferencias objectForKey:@"Nome"];
+    self.nomeUsuario.text = [preferencias objectForKey: @"Nome"];
     self.imagemPerfil.image = [LocalData loadFacePicture];
 }
 
@@ -55,10 +55,10 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *simpleTableIdentifier = @"SimpleTableItem";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier: simpleTableIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: simpleTableIdentifier];
     }
     
 //    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 200, 40)];
@@ -69,22 +69,22 @@
     
     switch (indexPath.row) {
         case 0:
-            imagem = [UIImage imageNamed:@"icone perfil.png"];
+            imagem = [UIImage imageNamed: @"icone perfil.png"];
             break;
         case 1:
-            imagem = [UIImage imageNamed:@"icone recompensa.png"];
+            imagem = [UIImage imageNamed: @"icone recompensa.png"];
             break;
         case 2:
-            imagem = [UIImage imageNamed:@"atividade.png"];
+            imagem = [UIImage imageNamed: @"atividade.png"];
             break;
         case 3:
-            imagem = [UIImage imageNamed:@"icone confg.png"];
+            imagem = [UIImage imageNamed: @"icone confg.png"];
             break;
         case 4:
-            imagem = [UIImage imageNamed:@"icone sair.png"];
+            imagem = [UIImage imageNamed: @"icone sair.png"];
             break;
         default:
-            imagem = [UIImage imageNamed:@"settings-100.png"];
+            imagem = [UIImage imageNamed: @"settings-100.png"];
             break;
     }
     imgview.image = imagem;
@@ -94,10 +94,10 @@
     cell.textLabel.text = [itemsMenu objectAtIndex:indexPath.row];
     
     if (indexPath.row%2 == 0){
-        cell.backgroundColor = [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
+        cell.backgroundColor = [UIColor colorWithRed: 1.0 green: 1.0 blue: 1.0 alpha: 1.0];
     }
     else{
-        cell.backgroundColor = [UIColor colorWithRed:234/255.0 green:232/255.0 blue:232/255.0 alpha:1.0];
+        cell.backgroundColor = [UIColor colorWithRed: 234/255.0 green: 232/255.0 blue: 232/255.0 alpha:1.0];
     }
     
 
@@ -117,12 +117,12 @@
 
     switch (indexPath.row) {
         case 0:{
-            [self performSegueWithIdentifier:@"aoPerfil" sender:nil];
+            [self performSegueWithIdentifier: @"aoPerfil" sender:nil];
             
             break;
         }
         case 1:{
-            [self performSegueWithIdentifier:@"aoRecompensas" sender:nil];
+            [self performSegueWithIdentifier: @"aoRecompensas" sender:nil];
 
             break;
         }
@@ -131,7 +131,7 @@
             break;
         }
         case 3:{
-            [self performSegueWithIdentifier:@"aoConfiguracoes" sender:nil];
+            [self performSegueWithIdentifier: @"aoConfiguracoes" sender:nil];
 
             break;
         }
@@ -140,8 +140,8 @@
             [FBSession.activeSession close];
             [FBSession setActiveSession:nil];
             [LocalData deleteFacePicture];
-            [preferencias setBool: NO forKey:@"Logado"];
-            [self performSegueWithIdentifier:@"unwindLogout" sender:Nil];
+            [preferencias setBool: NO forKey: @"Logado"];
+            [self performSegueWithIdentifier: @"unwindLogout" sender:Nil];
             break;
         }
     }

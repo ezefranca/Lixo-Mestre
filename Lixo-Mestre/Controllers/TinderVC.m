@@ -37,27 +37,27 @@
 //PRIMEIRO LOAD (CARREGA AS 3 PRIMEIRAS)
 -(void)loadCards{
     NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
-    NSString* usuario = [preferencias stringForKey:@"LoginApp"];
-    NSDictionary *d = [webService carregarTinder:usuario];
+    NSString* usuario = [preferencias stringForKey: @"LoginApp"];
+    NSDictionary *d = [webService carregarTinder: usuario];
     NSArray *a = (NSArray *)d;
 
     if (d){
         for (int i = 0 ; i < 3; i++) {
-            NSDictionary *new = [a objectAtIndex:i];
+            NSDictionary *new = [a objectAtIndex: i];
 
-            NSInteger coco = [[new objectForKey:@"id"] integerValue] ;
+            NSInteger coco = [[new objectForKey: @"id"] integerValue] ;
             NSLog(@"%ld", (long)coco);
 
             NSString *s = @"http://172.246.16.27/fotos/";
 
-            NSString *url = [s stringByAppendingString:[new objectForKey:@"picture_path"]];
+            NSString *url = [s stringByAppendingString: [new objectForKey: @"picture_path"]];
 
 
-            NSURL *imageURL = [NSURL URLWithString:url];
-            NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-            UIImage *image = [UIImage imageWithData:imageData];
+            NSURL *imageURL = [NSURL URLWithString: url];
+            NSData *imageData = [NSData dataWithContentsOfURL: imageURL];
+            UIImage *image = [UIImage imageWithData: imageData];
 
-            [self.view insertSubview:[self createDraggableView : image : coco ] atIndex:i];
+            [self.view insertSubview:[self createDraggableView : image : coco ] atIndex: i];
         }
     }
 }
@@ -67,7 +67,7 @@
     draggableView = [[DraggableView alloc]initWithFrame:CGRectMake(60, 140, 200, 260)];
     draggableView.information.text = [allCards objectAtIndex:index]; //%%% placeholder for card-specific information
 
-    draggableView.img.image= imagem;
+    draggableView.img.image = imagem;
     draggableView.idImg = idImg ;
 
     NSLog(@"%ld" , (long)draggableView.idImg);
@@ -83,7 +83,7 @@
 -(void)tinderCarregaManeiro{
     //CARREGA O USUARIO PARA CONSULTA - LO NO BANCO DE DADOS;
     NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
-    NSString* usuario = [preferencias stringForKey:@"LoginApp"];
+    NSString* usuario = [preferencias stringForKey: @"LoginApp"];
     //WEB SERVICE Q RETORNA UMA IMAGEM SE ESTIVER DISPONIVEL;
     NSDictionary *d = [webService carregarUmaFotoTinder:usuario];
     //SE O RETORNAR CORRETAMENTE;
@@ -93,58 +93,53 @@
 
         NSDictionary *new = [a objectAtIndex:0];
 
-        NSInteger coco = [[new objectForKey:@"id"] integerValue] ;
+        NSInteger coco = [[new objectForKey: @"id"] integerValue] ;
         NSLog(@"%ld", (long)coco);
 
         NSString *s = @"http://172.246.16.27/fotos/";
 
-        NSString *url = [s stringByAppendingString:[new objectForKey:@"picture_path"]];
+        NSString *url = [s stringByAppendingString: [new objectForKey: @"picture_path"]];
         //CARREGA A IMAGEM NO FINAL DA FILA;
-        NSURL *imageURL = [NSURL URLWithString:url];
-        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
-        UIImage *image = [UIImage imageWithData:imageData];
+        NSURL *imageURL = [NSURL URLWithString: url];
+        NSData *imageData = [NSData dataWithContentsOfURL: imageURL];
+        UIImage *image = [UIImage imageWithData: imageData];
 
-        [self.view insertSubview:[self createDraggableView : image : coco] atIndex:0];
+        [self.view insertSubview: [self createDraggableView : image : coco] atIndex: 0];
     }
 
 }
 
 //OCORRE DEPOIS DE QUITAR A GORDINHA
 -(void)cardSwipedLeft:(UIView *)card;{
-    [self performSelectorInBackground:@selector(tinderCarregaManeiro) withObject:nil];
+    [self performSelectorInBackground: @selector(tinderCarregaManeiro) withObject: nil];
     DraggableView *c = (DraggableView*)card;
     NSNumber *i = [NSNumber numberWithInt:0];
     NSNumber *j = [NSNumber numberWithInteger:c.idImg];
 
     NSArray *a = @[i, j];
 
-    [self performSelectorInBackground:@selector(updateTinder:) withObject:a];
+    [self performSelectorInBackground: @selector(updateTinder:) withObject: a];
 
 }
 
 //OCORRE APOS ACEITAR A BONITINHA
 -(void)cardSwipedRight:(UIView *)card{
-    [self performSelectorInBackground:@selector(tinderCarregaManeiro) withObject:nil];
+    [self performSelectorInBackground: @selector(tinderCarregaManeiro) withObject: nil];
     DraggableView *c = (DraggableView*)card;
-    NSNumber *i = [NSNumber numberWithInt:1];
-    NSNumber *j = [NSNumber numberWithInteger:c.idImg];
+    NSNumber *i = [NSNumber numberWithInt: 1];
+    NSNumber *j = [NSNumber numberWithInteger: c.idImg];
 
     NSArray *a = @[i, j];
 
-    [self performSelectorInBackground:@selector(updateTinder:) withObject:a];
+    [self performSelectorInBackground:@selector(updateTinder:) withObject: a];
 }
 
 - (IBAction)botaoDislike:(id)sender {
-    
-    
-    
-    [self performSelector:@selector(cardSwipedLeft:)
-               withObject: [[self.view subviews] lastObject]];
+//    [self performSelector:@selector(cardSwipedLeft:)
+//               withObject: [[self.view subviews] lastObject]];
 }
 
 - (IBAction)botaoLike:(id)sender {
-    
-    
     /*
     [self performSelector:@selector(cardSwipedRight:)
                withObject: [[self.view subviews]  lastObject]];
@@ -152,7 +147,7 @@
 }
 
 -(void)updateTinder : (NSArray*)parans{
-    [webService updateTinder:[[parans objectAtIndex:0] integerValue]:[[parans objectAtIndex:1] integerValue] ];
+    [webService updateTinder:[[parans objectAtIndex:0] integerValue]:[[parans objectAtIndex: 1] integerValue] ];
 }
 
 - (IBAction)botaoMenu:(id)sender {

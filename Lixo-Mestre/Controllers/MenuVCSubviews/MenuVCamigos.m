@@ -25,8 +25,7 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.titulo.font = [UIFont fontWithName:@"Santor" size:20];
-    
+    self.titulo.font = [UIFont fontWithName: @"Santor" size:20];
     
     self.tableView.delegate = self;
     

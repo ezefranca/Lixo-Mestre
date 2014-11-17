@@ -1,15 +1,14 @@
 //
-//  MenuMG1.m
+//  GameOverMG1.m
 //  Lixo-Mestre
 //
-//  Created by Alessandro Camillo Gimenez de Menezes on 13/11/14.
+//  Created by Alessandro Camillo Gimenez de Menezes on 17/11/14.
 //  Copyright (c) 2014 Ezequiel Franca dos Santos. All rights reserved.
 //
 
-#import "MenuMG1.h"
-#import "MyScene.h"
+#import "GameOverMG1.h"
 
-@implementation MenuMG1
+@implementation GameOverMG1
 
 //r 216  g 241  b 241
 -(id)initWithSize:(CGSize)size {

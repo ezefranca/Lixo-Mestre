@@ -29,4 +29,8 @@
 
 @property SKSpriteNode *botaoSair; //pseudo-botao para sair do jogo
 
+
+@property int vidas;
+
+
 @end

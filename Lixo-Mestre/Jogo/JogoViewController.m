@@ -176,10 +176,8 @@
     [self showMenu];
     SKView * skView = (SKView *)self.view;
     
-    // Create and configure the scene.
     SKScene * scene = [MenuMG1 sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
-    // Present the scene.
     [skView presentScene:scene];
 }
 
@@ -187,10 +185,8 @@
     [self hideMenu];
     SKView * skView = (SKView *)self.view;
     
-    // Create and configure the scene.
     SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
-    // Present the scene.
     [skView presentScene:scene transition: [SKTransition doorwayWithDuration: 1.5]];
 }
 

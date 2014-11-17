@@ -17,11 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *titulo;
 @property (weak, nonatomic) IBOutlet UIImageView *foto;
 
-
 @property (weak, nonatomic) IBOutlet UITextField *nome;
 @property (weak, nonatomic) IBOutlet UITextField *email;
 @property (weak, nonatomic) IBOutlet UITextField *senha;
-
 
 @property (weak, nonatomic) IBOutlet UIButton *editNome;
 @property (weak, nonatomic) IBOutlet UIButton *editEmail;
