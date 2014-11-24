@@ -8,6 +8,9 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface GameOverMG1 : SKScene
+@interface GameOverMG1 : SKScene{
+    
+}
+
 
 @end

@@ -14,6 +14,9 @@
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         self.backgroundColor = [SKColor colorWithRed:216/255.0 green:241/255.0 blue:241/255.0 alpha:1.0];
+        
+        
+        //joguinho fundo game over.png
     }
     return self;
 }

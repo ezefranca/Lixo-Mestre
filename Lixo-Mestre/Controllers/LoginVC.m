@@ -184,6 +184,53 @@
 
 -(void)logarDoFace
 {
+    //com delay pq se nao vai pegar a imagem errada
+    [self performSelector :@selector(snipaFotoDoFace) withObject: nil afterDelay:1];
+    
+    //CADASTRA O CARA DO FACEBOOK
+    int x = [CadastroVC cadastraID: self.nameLabel.text
+                          password: self.facebookUserID
+                             login: self.email
+                             image: _image];
+    
+    //VER SE RETORNA VERDADEIRO
+    
+    
+    
+    switch (x) {
+        case 1:{
+            [preferencias setObject: self.nameLabel.text forKey: @"Nome"];
+            [preferencias setObject: self.email forKey: @"LoginApp"];
+            [preferencias setObject: self.facebookUserID forKey: @"password"];
+            [preferencias setBool: YES forKey: @"Logado"];
+            [preferencias synchronize];
+            [self performSegueWithIdentifier: @"coco" sender:nil];
+            break;
+        }
+            
+        case 2:{
+            [webService nameOfUserForEmail: self.email ];
+            [preferencias setObject: self.email forKey: @"LoginApp"];
+            [preferencias setObject: self.facebookUserID forKey: @"password"];
+            [preferencias setBool: YES forKey: @"Logado"];
+            [preferencias synchronize];
+            [self performSegueWithIdentifier: @"coco" sender:nil];
+            
+            break;
+        }
+            
+        default:{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login com facebook" message:@"" delegate:self cancelButtonTitle: @"Ok" otherButtonTitles:nil];
+            alert.alertViewStyle = UIAlertViewStyleDefault;
+            [alert show];
+            
+            break;
+        }
+    }
+    
+}
+
+- (void)snipaFotoDoFace{
     _image = nil;
     //pega a imagem de perfil do face
     for (NSObject *obj in [self.profilePictureView subviews]) {
@@ -195,38 +242,12 @@
     }
     //teste pra ver se eh a imagem certa
     UIImageView *imgv = [[UIImageView alloc] initWithImage:_image];
-//    imgv.center = self.view.center;
-//    [self.view addSubview: imgv];
-
+    //    imgv.center = self.view.center;
+    //    [self.view addSubview: imgv];
+    
     //SALVA A IMAGEM DO PERFIL
     [LocalData saveFacePic: imgv.image];
     
-    //CADASTRA O CARA DO FACEBOOK
-    int x = [CadastroVC cadastraID: self.nameLabel.text
-                          password: self.facebookUserID
-                             login: self.email
-                             image: _image];
-    
-    //VER SE RETORNA VERDADEIRO
-    if ( x == 2  || x == 1)
-    {
-        //self.logInfo.text = self.email;
-        //self.pass.text = self.facebookUserID;
-        [preferencias setObject: self.nameLabel.text forKey: @"Nome"];
-        [preferencias setObject:self.email forKey: @"LoginApp"];
-        [preferencias setObject:self.facebookUserID forKey: @"password"];
-        [preferencias setBool: YES forKey: @"Logado"];
-        [preferencias synchronize];
-        [self performSegueWithIdentifier: @"coco" sender:nil];
-        
-    }
-    else
-    {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login com facebook" message:@"" delegate:self cancelButtonTitle: @"Ok" otherButtonTitles:nil];
-        alert.alertViewStyle = UIAlertViewStyleDefault;
-        [alert show];
-        
-    }
 }
 
 - (IBAction)unwindToLogin:(UIStoryboardSegue *)unwindSegue{
@@ -285,24 +306,28 @@
         // This code will handle session closures that happen outside of the app
         // You can take a look at our error handling guide to know more about it
         // https://developers.facebook.com/docs/ios/errors
-    } else if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryAuthenticationReopenSession) {
-        alertTitle = @"Session Error";
-        alertMessage = @"Your current session is no longer valid. Please log in again.";
-        
-        // If the user has cancelled a login, we will do nothing.
-        // You can also choose to show the user a message if cancelling login will result in
-        // the user not being able to complete a task they had initiated in your app
-        // (like accessing FB-stored information or posting to Facebook)
-    } else if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryUserCancelled) {
-        NSLog(@"user cancelled login");
-        
-        // For simplicity, this sample handles other errors with a generic message
-        // You can checkout our error handling guide for more detailed information
-        // https://developers.facebook.com/docs/ios/errors
-    } else {
-        alertTitle  = @"Something went wrong";
-        alertMessage = @"Please try again later.";
-        NSLog(@"Unexpected error:%@", error);
+    }else{
+        if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryAuthenticationReopenSession) {
+            alertTitle = @"Session Error";
+            alertMessage = @"Your current session is no longer valid. Please log in again.";
+            
+            // If the user has cancelled a login, we will do nothing.
+            // You can also choose to show the user a message if cancelling login will result in
+            // the user not being able to complete a task they had initiated in your app
+            // (like accessing FB-stored information or posting to Facebook)
+        } else{
+                if ([FBErrorUtility errorCategoryForError:error] == FBErrorCategoryUserCancelled) {
+                    NSLog(@"user cancelled login");
+                    
+                    // For simplicity, this sample handles other errors with a generic message
+                    // You can checkout our error handling guide for more detailed information
+                // https://developers.facebook.com/docs/ios/errors
+                } else {
+                    alertTitle  = @"Something went wrong";
+                    alertMessage = @"Please try again later.";
+                    NSLog(@"Unexpected error:%@", error);
+                }
+        }
     }
     
     if (alertMessage) {

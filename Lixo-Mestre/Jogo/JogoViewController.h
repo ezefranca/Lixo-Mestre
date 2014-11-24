@@ -50,8 +50,19 @@
 //------
 
 
+//coisas gameover
+@property UIImageView *deadLixo;
+@property UILabel *gg;
+@property UILabel *pontosDaUiltimaPartida;
+@property UIImageView *pontosBg;
+@property UIButton *jogarDenovo;
+@property UIButton *quit;
+@property UILabel *record2;
+
+
 +(JogoViewController *)sharedJogoViewController;
--(void)jogoTerminou;
+-(void)jogoTerminouDesistencia;
+- (void)morreuNoJogo;
 -(void)abreJoguinhoManeiro;
 -(void)voltarMenu;
 

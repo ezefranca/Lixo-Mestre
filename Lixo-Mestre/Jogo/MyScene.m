@@ -46,7 +46,7 @@
 
         self.lixoSendoSegurado = false;
         
-        [self performSelector:@selector(animaLixos) withObject:nil afterDelay:1.5];
+        [self performSelector:@selector(animaLixos) withObject:nil afterDelay:0.5];
         //[self animaLixosTeste: [NSNumber numberWithInt:2]];
         
         
@@ -72,11 +72,14 @@
 
     for ( SKSpriteNode *nodeLixo in self.lixos ){
         if (nodeLixo.position.y + nodeLixo.size.height/2  < 0) {
-            [nodeLixo removeFromParent];
+            [self penaliza: nodeLixo];
+            //[self.lixos removeObject: nodeLixo];
+            
+
         }
         else{
-            [nodeLixo runAction: [SKAction moveBy:CGVectorMake(0, -150) duration:2]];
-            [nodeLixo runAction: [SKAction rotateByAngle:arc4random()%7 duration:arc4random()%10+0.5]];
+            [nodeLixo runAction: [SKAction moveBy: CGVectorMake(0, -150) duration: 2]];
+            [nodeLixo runAction: [SKAction rotateByAngle: arc4random()%7 duration: arc4random()%10+0.5]];
         }
         
     }
@@ -139,8 +142,7 @@
     //somete o fato de ter a colisao nao me diz quem é quem
     if (firstBody.categoryBitMask == lixeiraMetal) {
         if (secondBody.categoryBitMask == lixoMetal) {
-            [secondBody.node runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
-            [self aumetanPontuacao: (SKSpriteNode *)secondBody.node];
+            [self aumentaPontuacao: (SKSpriteNode *)secondBody.node];
             int metal = [[JogoViewController sharedJogoViewController] qteMetal];
             [[JogoViewController sharedJogoViewController] setQteMetal: metal + 1];
             return;
@@ -149,8 +151,7 @@
     else{
         if (firstBody.categoryBitMask == lixoMetal) {
             if (secondBody.categoryBitMask == lixeiraMetal) {
-                [firstBody.node runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
-                [self aumetanPontuacao: (SKSpriteNode *)firstBody.node];
+                [self aumentaPontuacao: (SKSpriteNode *)firstBody.node];
                 int metal = [[JogoViewController sharedJogoViewController] qteMetal];
                 [[JogoViewController sharedJogoViewController] setQteMetal: metal + 1];
                 return;
@@ -160,8 +161,7 @@
     //verifica a colisao foi entre lixo deo tipo papel e a lixeira de papel
     if (firstBody.categoryBitMask == lixeiraPapel) {
         if (secondBody.categoryBitMask == lixoPapel) {
-            [secondBody.node runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
-            [self aumetanPontuacao: (SKSpriteNode *)secondBody.node];
+            [self aumentaPontuacao: (SKSpriteNode *)secondBody.node];
             int papel = [[JogoViewController sharedJogoViewController] qtePapel];
             [[JogoViewController sharedJogoViewController] setQtePapel: papel + 1];
             return;
@@ -170,8 +170,7 @@
     else{
         if (firstBody.categoryBitMask == lixoPapel) {
             if (secondBody.categoryBitMask == lixeiraPapel) {
-                [firstBody.node runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
-                [self aumetanPontuacao: (SKSpriteNode *)firstBody.node];
+                [self aumentaPontuacao: (SKSpriteNode *)firstBody.node];
                 int papel = [[JogoViewController sharedJogoViewController] qtePapel];
                 [[JogoViewController sharedJogoViewController] setQtePapel: papel + 1];
                 return;
@@ -181,8 +180,7 @@
     //verifica a colisao foi entre lixo deo tipo metal e a lixeira de vidro
     if (firstBody.categoryBitMask == lixeiraVidro) {
         if (secondBody.categoryBitMask == lixoVidro) {
-            [secondBody.node runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
-            [self aumetanPontuacao: (SKSpriteNode *)secondBody.node];
+            [self aumentaPontuacao: (SKSpriteNode *)secondBody.node];
             int vidro = [[JogoViewController sharedJogoViewController] qteVidro];
             [[JogoViewController sharedJogoViewController] setQteVidro: vidro + 1];
             return;
@@ -191,8 +189,7 @@
     else{
         if (firstBody.categoryBitMask == lixoVidro) {
             if (secondBody.categoryBitMask == lixeiraVidro) {
-                [firstBody.node runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
-                [self aumetanPontuacao: (SKSpriteNode *)firstBody.node];
+                [self aumentaPontuacao: (SKSpriteNode *)firstBody.node];
                 int vidro = [[JogoViewController sharedJogoViewController] qteVidro];
                 [[JogoViewController sharedJogoViewController] setQteVidro: vidro + 1];
                 return;
@@ -202,8 +199,7 @@
     //verifica a colisao foi entre lixo deo tipo metal e a lixeira de plastico
     if (firstBody.categoryBitMask == lixeiraPlastico) {
         if (secondBody.categoryBitMask == lixoPlastico) {
-            [secondBody.node runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
-            [self aumetanPontuacao: (SKSpriteNode *)secondBody.node];
+            [self aumentaPontuacao: (SKSpriteNode *)secondBody.node];
             int plastico = [[JogoViewController sharedJogoViewController] qtePlastico];
             [[JogoViewController sharedJogoViewController] setQtePlastico: plastico + 1];
             return;
@@ -212,8 +208,7 @@
     else{
         if (firstBody.categoryBitMask == lixoPlastico) {
             if (secondBody.categoryBitMask == lixeiraPlastico) {
-                [firstBody.node runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
-                [self aumetanPontuacao: (SKSpriteNode *)firstBody.node];
+                [self aumentaPontuacao: (SKSpriteNode *)firstBody.node];
                 int plastico = [[JogoViewController sharedJogoViewController] qtePlastico];
                 [[JogoViewController sharedJogoViewController] setQtePlastico: plastico + 1];
                 return;
@@ -224,14 +219,14 @@
     //teve colisao mas nao acertou, remove o lixo da cena mesmo assim e tira ponto
     if ( !(firstBody.categoryBitMask == lixeiraMetal || firstBody.categoryBitMask == lixeiraPapel ||
            firstBody.categoryBitMask == lixeiraVidro || firstBody.categoryBitMask == lixeiraPlastico) ) {
-        [firstBody.node runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
-        [self performSelector:@selector(removeNode:) withObject: firstBody.node afterDelay:0.3];
+        [self penaliza: firstBody.node];
+        [self removeNode: firstBody.node];
     }
     
     if ( !(secondBody.categoryBitMask == lixeiraMetal || secondBody.categoryBitMask == lixeiraPapel ||
            secondBody.categoryBitMask == lixeiraVidro || secondBody.categoryBitMask == lixeiraPlastico) ) {
-        [secondBody.node runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
-        [self performSelector:@selector(removeNode:) withObject: secondBody.node afterDelay:0.3];
+        [self penaliza: secondBody.node];
+        [self removeNode: secondBody.node];
     }
     
     self.valorPontuacao = self.valorPontuacao -20;
@@ -243,11 +238,11 @@
  *  Metodo para incremento da pontuacao quando confirmado a colisao com a lixeira e o lixo correto e exclusao do mesmo *
  *  @param lixo Node do lixo que deve ser removido com animacao apos a colisao
  */
--(void)aumetanPontuacao: (SKSpriteNode *)lixo{
+-(void)aumentaPontuacao: (SKSpriteNode *)lixo{
     self.valorPontuacao = self.valorPontuacao + 50;
     self.labelPontuacao.text = [NSString stringWithFormat:@"%d", self.valorPontuacao];
     self.lixoSendoSegurado = false;
-    [self performSelector:@selector(removeNode:) withObject:lixo afterDelay:0.3];
+    [self removeNode: lixo];
 }
 /**
  *  Faz apenas a remocao do node, mas esta em um metodo a parte para poder ser chamado com um delay
@@ -255,7 +250,23 @@
  *  @param node Node que deve ser removido
  */
 -(void)removeNode: (SKSpriteNode *)node{
-    [node removeFromParent];
+    [node runAction: [SKAction fadeAlphaTo: 0.0 duration:0.3] completion:^{
+        [node removeFromParent];
+    }];
+    
+}
+-(void)penaliza: (SKSpriteNode *)node{
+    self.vidas = self.vidas -1;
+
+    
+    if (self.vidas <= 0) {
+        [JogoViewController sharedJogoViewController].pontosDaUiltimaPartida.text = [NSString stringWithFormat:@"%d", self.valorPontuacao] ;
+        
+        [[JogoViewController sharedJogoViewController] morreuNoJogo];
+        [self.view presentScene:nil];
+        
+    }
+
 }
 
 /**
@@ -289,11 +300,12 @@
  *  metodo do pseudo-botao para sair do jogo com auxilio do touchesBegan
  */
 -(void)sairDaCena{
-    if ( self.valorPontuacao > [[JogoViewController sharedJogoViewController] maiorPontuacao] ) {
-        [[JogoViewController sharedJogoViewController] setMaiorPontuacao: [self valorPontuacao]];
+    if ( self.valorPontuacao > [JogoViewController sharedJogoViewController].maiorPontuacao ) {
+        [JogoViewController sharedJogoViewController].maiorPontuacao = self.valorPontuacao;
     }
+    [JogoViewController sharedJogoViewController].pontosDaUiltimaPartida.text = [NSString stringWithFormat:@"%d", self.valorPontuacao] ;
     
-    [[JogoViewController sharedJogoViewController] jogoTerminou];
+    [[JogoViewController sharedJogoViewController] jogoTerminouDesistencia];
     [self.view presentScene:nil];
     //aparentemente esse comando faz o equivalente ao dismiss na cena
 }
@@ -327,8 +339,7 @@
         self.labelPontuacao.text = [NSString stringWithFormat:@"%d", [self valorPontuacao]];
         self.lixoSendoSegurado = false;
     }
-    [self.lixoSelecionado runAction:[SKAction fadeAlphaTo:0.0 duration:0.3]];
-    [self performSelector:@selector(removeNode:) withObject: self.lixoSelecionado afterDelay:0.3];
+    [self removeNode: self.lixoSelecionado];
     [self.lixos removeObject: self.lixoSelecionado];
 }
 

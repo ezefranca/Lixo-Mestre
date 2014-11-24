@@ -16,6 +16,7 @@ extern NSString *usuarioUniversal;
 +(BOOL)check;
 +(int)newUser : (NSString *)user :  (NSString *)pass : (NSString *)nickName;
 
++(NSString*)nameOfUserForEmail : (NSString *)email;
 +(int)updateNomeUser:(NSString *)user :(NSString *)pass :(NSString *)email;
 +(int)updatePassUser:(NSString *)user :(NSString *)pass :(NSString *)email;
 

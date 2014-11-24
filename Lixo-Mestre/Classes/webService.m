@@ -81,8 +81,8 @@
 
 +(NSString*)nameOfUserForEmail : (NSString *)email{
     if ([self check]){
-        NSString *url =  @"http://172.246.16.27/lixoPapao/loginManager.php";
-        NSString *post = [NSString stringWithFormat:@"type=login&email=%@&pass=",email];
+        NSString *url =  @"http://172.246.16.27/lixoPapao/info.php";
+        NSString *post = [NSString stringWithFormat:@"type=name&email=%@",email];
         
         
         NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
@@ -98,34 +98,11 @@
         
         NSString *content = [NSString stringWithUTF8String:[returnData bytes]];
         
-        //se precisar de um json maneiro
-        /*
-         NSError* error;
-         NSDictionary* json = [NSJSONSerialization
-         JSONObjectWithData:returnData //1
-         
-         options:kNilOptions
-         error:&error];
-         
-         NSString *ret ;
-         
-         for (NSString *s in json) {
-         ret = s;
-         }
-         */
-        int x = (int)[content integerValue];
         
-        if (x){
-            NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
-            if (preferencias) {
-                [preferencias setObject:email forKey:@"LoginApp"];
-                [preferencias synchronize];
-            }
-            return @"oi";
-        }
+        NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
+        [preferencias setObject: content forKey: @"Nome"];        
+        return @"oi";
     }
-
-    
     return @"oi";
 }
 
@@ -194,23 +171,6 @@
         NSString *content = [NSString stringWithUTF8String:[returnData bytes]];
         
         x = (int)[content integerValue];
-        
-        //se precisar de um json maneiro
-        
-        /*
-         NSError* error;
-         NSDictionary* json = [NSJSONSerialization
-         JSONObjectWithData:returnData //1
-         
-         options:kNilOptions
-         error:&error];
-         
-         NSString *ret ;
-         
-         for (NSString *s in json) {
-         ret = s;
-         }
-         */
     }
     return x;
 }
@@ -237,26 +197,10 @@
         NSString *content = [NSString stringWithUTF8String:[returnData bytes]];
         
         x = (int)[content integerValue];
-        
-        //se precisar de um json maneiro
-        
-        /*
-         NSError* error;
-         NSDictionary* json = [NSJSONSerialization
-         JSONObjectWithData:returnData //1
-         
-         options:kNilOptions
-         error:&error];
-         
-         NSString *ret ;
-         
-         for (NSString *s in json) {
-         ret = s;
-         }
-         */
     }
     return x;
 }
+
 
 +(void)uploadImage: (UIImage *)imagemDoPerfil : (NSString *)username{
     NSData *imageData = UIImagePNGRepresentation(imagemDoPerfil);
