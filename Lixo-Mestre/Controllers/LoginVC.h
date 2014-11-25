@@ -35,6 +35,7 @@
 @property UILabel *statusLabel;
 @property NSString *email;
 
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *processando;
 
 
 - (IBAction)botaoLogin:(id)sender;

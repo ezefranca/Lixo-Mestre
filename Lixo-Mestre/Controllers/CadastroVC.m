@@ -151,4 +151,8 @@
     return NO;
 }
 
+-(BOOL)shouldAutorotate{
+    return NO;
+}
+
 @end

@@ -145,10 +145,15 @@
             break;
         }
     }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (IBAction)unwindToMenu:(UIStoryboardSegue *)unwindSegue{
 
+}
+
+-(BOOL)shouldAutorotate{
+    return NO;
 }
 
 @end

@@ -14,7 +14,7 @@
 		<string>https://github.com/ezefranca/Lixo-Mestre.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Lixo-Mestre.xcodeproj/project.xcworkspace</string>
+	<string>Lixo-Mestre.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>915E7BB64064B25B733F3FB7246493420161D49C</key>

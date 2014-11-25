@@ -299,7 +299,7 @@
     
     SKView * skView = (SKView *)self.view;
     
-    SKScene * scene = [GameOverMG1 sceneWithSize: skView.bounds.size];
+    GameOverMG1 * scene = [GameOverMG1 sceneWithSize: skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     [skView presentScene: scene];
     
@@ -312,7 +312,7 @@
     [self hideGameOver];
     SKView * skView = (SKView *)self.view;
     
-    SKScene * scene = [MenuMG1 sceneWithSize: skView.bounds.size];
+    MenuMG1 * scene = [MenuMG1 sceneWithSize: skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     [skView presentScene: scene];
 }
@@ -322,8 +322,10 @@
     [self hideGameOver];
     SKView * skView = (SKView *)self.view;
     
-    SKScene * scene = [MyScene sceneWithSize: skView.bounds.size];
+    MyScene * scene = [MyScene sceneWithSize: skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
+    scene.lixos = [[NSMutableArray alloc] init];
+    
     [skView presentScene: scene transition: [SKTransition fadeWithColor: [UIColor whiteColor] duration:0.5]];
 }
 

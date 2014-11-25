@@ -21,6 +21,17 @@
         
         self.vidas = 3;
         
+        self.coracoes = [[NSMutableArray alloc] init];
+        int posX = self.size.width/2 + 50;
+        for (int i = 0; i < 3; i++) {
+            SKSpriteNode*coracao = [SKSpriteNode spriteNodeWithImageNamed:@"coração.png"];
+            coracao.size = CGSizeMake(20, 20);
+            coracao.position = CGPointMake( posX, self.size.height - coracao.size.height -15);
+            [self addChild: coracao];
+            [self.coracoes addObject:coracao];
+            posX += coracao.size.width + 15;
+        }
+        
         //self.backgroundColor = [SKColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0];
         self.physicsWorld.contactDelegate = self; // TORNA A COLISAO POSIVEL!!! TINHA ESQUECIDO ISSO >.<
         
@@ -69,11 +80,12 @@
     SKSpriteNode *lixo = [CriaNodes lixoAleatorioNoFrame: self.frame];
     [self.lixos addObject: lixo];
     [self addChild:lixo];
+    NSMutableArray* aRemover = [[NSMutableArray alloc] init];
 
     for ( SKSpriteNode *nodeLixo in self.lixos ){
         if (nodeLixo.position.y + nodeLixo.size.height/2  < 0) {
             [self penaliza: nodeLixo];
-            //[self.lixos removeObject: nodeLixo];
+            [aRemover addObject: nodeLixo];
             
 
         }
@@ -83,6 +95,14 @@
         }
         
     }
+    
+    for ( SKSpriteNode *nodeLixo in aRemover){
+        if (nodeLixo.position.y + nodeLixo.size.height/2  < 0) {
+            [self.lixos removeObject: nodeLixo];
+            
+        }
+    }
+    
     [self performSelector:@selector(animaLixos) withObject:nil afterDelay:2];
 }
 
@@ -256,19 +276,19 @@
     
 }
 -(void)penaliza: (SKSpriteNode *)node{
-    self.vidas = self.vidas -1;
-
+    self.vidas--;
+    [self removeNode: [self.coracoes lastObject]];
+    [self.coracoes removeLastObject];
     
     if (self.vidas <= 0) {
         [JogoViewController sharedJogoViewController].pontosDaUiltimaPartida.text = [NSString stringWithFormat:@"%d", self.valorPontuacao] ;
-        
+        self.vidas = 3;
         [[JogoViewController sharedJogoViewController] morreuNoJogo];
         [self.view presentScene:nil];
         
     }
-
+    
 }
-
 /**
  *  quando ocorre um toque, verifica se este aconteceu em algum dos nodes de lixo.
  *  se houver um toque encima de um node, guarda-o em uma propriedade do VC para atualizar a posicao posteriormente no touches moved

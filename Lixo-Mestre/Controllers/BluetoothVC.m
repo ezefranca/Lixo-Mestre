@@ -314,4 +314,8 @@
 - (IBAction)botaoMenu:(id)sender {
         [[NSNotificationCenter defaultCenter] postNotificationName:kShowHideMenuNotification object:self];
 }
+
+-(BOOL)shouldAutorotate{
+    return NO;
+}
 @end

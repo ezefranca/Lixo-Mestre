@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-@interface ConfiguracoesVC : UIViewController<UITextFieldDelegate>{
+@interface ConfiguracoesVC : UIViewController <UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource>{
     NSUserDefaults *preferencias;
 }
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 
 - (IBAction)voltar:(id)sender;
 

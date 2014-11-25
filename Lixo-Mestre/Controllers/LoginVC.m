@@ -25,24 +25,6 @@
 }
 
 -(void)viewWillAppear:(BOOL)animated{
-    /*
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:SVProgressHUDWillAppearNotification object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:SVProgressHUDDidAppearNotification object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:SVProgressHUDWillDisappearNotification object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleNotification:) name:SVProgressHUDDidDisappearNotification object:nil];
-    
-    [SVProgressHUD setBackgroundColor:rgb(41, 128, 185)];
-    [SVProgressHUD setForegroundColor:rgb(236, 240, 241)];
-    [SVProgressHUD setRingThickness:6];
-    
-    M13Checkbox *tint = [[M13Checkbox alloc] initWithTitle:@"Custom Tint Color"];
-    tint.tintColor = [UIColor colorWithRed: 0.608 green: 0.967 blue: 0.646 alpha: 1];
-    tint.frame = CGRectMake(1, self.view.frame.origin.y + self.view.frame.size.height + 8, tint.frame.size.width, tint.frame.size.height);
-    [self.view addSubview:tint];
-    */
    
     self.logInfo.text = @"";
     self.pass.text = @"";
@@ -55,6 +37,8 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
+    [self.processando startAnimating];
+    self.processando.hidden = YES;
     
     [LocalData deleteFacePicture];
     //Customizacao dos TextFields
@@ -96,49 +80,8 @@
 
 #pragma Login
 
-/*
-- (BOOL)Login{
-    preferencias = [NSUserDefaults standardUserDefaults];
-    
-    if([webService login:self.logInfo.text :self.pass.text])
-    {
-        
-        NSLog(@"%@", [webService rankingUser:@"load" : self.logInfo.text]);
 
-        // salvando a senha se a opcao estiver habilitada
-        [preferencias setObject:self.logInfo.text forKey:@"LoginApp"];
-        [preferencias setObject:self.pass.text forKey:@"password"];
 
-    
-        if (![webService carregarPontosUsuario: self.logInfo.text])
-        {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Sem internet" message:@"nao foi possivel sincronizar os dados com o servidor" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-            alert.alertViewStyle = UIAlertViewStyleDefault;
-            [alert show];
-        }
-        
-        [preferencias setBool: YES forKey:@"Logado"];
-        [preferencias synchronize];
-        
-        [self loadImageforUser: self.email];
-        //tudo certo, vai pro resto do app
-        
-        
-        [self performSegueWithIdentifier:@"coco" sender:nil];
-        
-    }
-    else
-    {
-        [self shake];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login." message:@"Verifique o usuário ou a senha." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        alert.alertViewStyle = UIAlertViewStyleDefault;
-        [alert show];
-        return FALSE;
-    }
-    
-    return TRUE;
-}
-*/
 
 #pragma cadastro
 //- (IBAction)botaoCadastro:(id)sender {
@@ -147,6 +90,7 @@
 //    [self presentViewController:cad animated:YES completion:nil];
 //}
 - (IBAction)botaoLogin:(id)sender {
+    self.processando.hidden = NO;
     
     //VERIFICAR SE O USUARIO EXISTE NO BANCO
     if ([webService login:self.logInfo.text :self.pass.text]) {
@@ -166,6 +110,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login." message: @"Verifique o usuário ou a senha." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         alert.alertViewStyle = UIAlertViewStyleDefault;
         [alert show];
+        self.processando.hidden = YES;
     }
 }
 
@@ -184,6 +129,7 @@
 
 -(void)logarDoFace
 {
+    self.processando.hidden = NO;
     //com delay pq se nao vai pegar a imagem errada
     [self performSelector :@selector(snipaFotoDoFace) withObject: nil afterDelay:1];
     
@@ -227,6 +173,7 @@
             break;
         }
     }
+    self.processando.hidden = YES;
     
 }
 
@@ -266,12 +213,13 @@
 #pragma  facebook methods
 - (void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user
 {
+    self.processando.hidden = NO;
     preferencias = [NSUserDefaults standardUserDefaults];
     self.profilePictureView.profileID = [user objectID];
     self.nameLabel.text = user.name;
     [self setFacebookUserID: [user objectID]];
     self.email =  user[@"email"];
-
+    
     [self performSelector:@selector(logarDoFace) withObject:nil afterDelay:1]; //com delay pq se nao vai pegar a imagem errada
     
 }
@@ -339,5 +287,8 @@
     }
 }
 
+-(BOOL)shouldAutorotate{
+    return NO;
+}
 
 @end

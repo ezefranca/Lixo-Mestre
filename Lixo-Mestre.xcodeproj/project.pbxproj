@@ -67,7 +67,6 @@
 		F6414C3D1A02B60B001C3C2E /* lixopapao-desconectado.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BC91A02B60B001C3C2E /* lixopapao-desconectado.png */; };
 		F6414C3E1A02B60B001C3C2E /* login.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BCA1A02B60B001C3C2E /* login.png */; };
 		F6414C3F1A02B60B001C3C2E /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BCB1A02B60B001C3C2E /* logo.png */; };
-		F6414C421A02B60B001C3C2E /* mapa.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BCE1A02B60B001C3C2E /* mapa.png */; };
 		F6414C431A02B60B001C3C2E /* metal - recompensa.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BCF1A02B60B001C3C2E /* metal - recompensa.png */; };
 		F6414C441A02B60B001C3C2E /* metal - selecione o lixo.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BD01A02B60B001C3C2E /* metal - selecione o lixo.png */; };
 		F6414C451A02B60B001C3C2E /* metal certificado.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414BD11A02B60B001C3C2E /* metal certificado.png */; };
@@ -320,7 +319,6 @@
 		F6414BC91A02B60B001C3C2E /* lixopapao-desconectado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lixopapao-desconectado.png"; sourceTree = "<group>"; };
 		F6414BCA1A02B60B001C3C2E /* login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login.png; sourceTree = "<group>"; };
 		F6414BCB1A02B60B001C3C2E /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		F6414BCE1A02B60B001C3C2E /* mapa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mapa.png; sourceTree = "<group>"; };
 		F6414BCF1A02B60B001C3C2E /* metal - recompensa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal - recompensa.png"; sourceTree = "<group>"; };
 		F6414BD01A02B60B001C3C2E /* metal - selecione o lixo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal - selecione o lixo.png"; sourceTree = "<group>"; };
 		F6414BD11A02B60B001C3C2E /* metal certificado.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "metal certificado.png"; sourceTree = "<group>"; };
@@ -642,7 +640,6 @@
 				F6414BC91A02B60B001C3C2E /* lixopapao-desconectado.png */,
 				F6414BCA1A02B60B001C3C2E /* login.png */,
 				F6414BCB1A02B60B001C3C2E /* logo.png */,
-				F6414BCE1A02B60B001C3C2E /* mapa.png */,
 				F6414BCF1A02B60B001C3C2E /* metal - recompensa.png */,
 				F6414BD01A02B60B001C3C2E /* metal - selecione o lixo.png */,
 				F6414BD11A02B60B001C3C2E /* metal certificado.png */,
@@ -1507,7 +1504,6 @@
 				F69D12D519D3511B00643122 /* 5.png in Resources */,
 				F6414C321A02B60B001C3C2E /* joguinho papel 1.png in Resources */,
 				F76A123419C8ACF700843A9D /* recycle_sign-512.png in Resources */,
-				F6414C421A02B60B001C3C2E /* mapa.png in Resources */,
 				F6414C1F1A02B60B001C3C2E /* icone confg.png in Resources */,
 				F6414C501A02B60B001C3C2E /* Lixo papão - SENAC-10.png in Resources */,
 				F69E387019D3388F00B64629 /* santor 1.002.otf in Resources */,

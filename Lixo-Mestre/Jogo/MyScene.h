@@ -19,6 +19,8 @@
 @property SKSpriteNode *lixeiraVidro ;
 @property SKSpriteNode *lixeiraPlastico;
 
+@property NSMutableArray *coracoes;
+
 @property NSMutableArray *lixos;
 @property SKSpriteNode *lixoSelecionado;
 

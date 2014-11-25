@@ -124,5 +124,8 @@
 //-(void)drawRect:(CGRect)rect{
 //}
 
+-(BOOL)shouldAutorotate{
+    return NO;
+}
 
 @end
