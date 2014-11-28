@@ -190,7 +190,7 @@
 
     self.gg.text = @"GAME OVER!";
     self.pontosDaUiltimaPartida.text = @"ioioio";
-    [self.jogarDenovo setTitle: @"jogar denovo" forState: UIControlStateNormal];
+    [self.jogarDenovo setTitle: @"jogar novamente" forState: UIControlStateNormal];
     [self.quit setTitle: @"voltar" forState: UIControlStateNormal];
     self.record2.text = [NSString stringWithFormat: @"recorde: %d", self.maiorPontuacao];
     

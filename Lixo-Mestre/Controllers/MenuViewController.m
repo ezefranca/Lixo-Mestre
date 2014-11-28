@@ -127,11 +127,11 @@
             break;
         }
         case 2:{
-
+            [self performSegueWithIdentifier: @"aoConfiguracoes" sender:nil];
             break;
         }
         case 3:{
-            [self performSegueWithIdentifier: @"aoConfiguracoes" sender:nil];
+
 
             break;
         }

@@ -37,16 +37,7 @@
 
     [self performSelectorInBackground:@selector(conectar) withObject:nil];
     
-//    UISwipeGestureRecognizer *left = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(leftGesture)];
-//    left.direction = UISwipeGestureRecognizerDirectionLeft;
-//    [[self view] addGestureRecognizer:left];
-//    
-//    UISwipeGestureRecognizer *right = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(rightGesture)];
-//    right.direction = UISwipeGestureRecognizerDirectionRight;
-//    [[self view] addGestureRecognizer:right];
     
-    
-    /*
     BOOL first = TRUE;
     double x1,x2,y1,y2;
     double dx ;
@@ -112,7 +103,7 @@
         _currentRoute = [response.routes firstObject];
         [self plotRouteOnMap:_currentRoute];
     }];
-    */
+    
     
     CLLocationCoordinate2D zoomLocation;
     zoomLocation.latitude = -23.669569;
@@ -147,33 +138,29 @@
     NSMutableArray *arraydaora;
     arraydaora = [[NSMutableArray alloc] init];
     arraydaora = (NSMutableArray *)jsonDadosUsuario;
-    //NSLog(@"%@", [arraydaora[1]objectForKey:@"latitude"]);
-    //NSLog(@"%@", [arraydaora[1]objectForKey:@"longitude"]);
     
-    
-     for (id local in arraydaora) {
-     CLLocationCoordinate2D coordinate1;
-     coordinate1.latitude = [[local objectForKey: @"latitude"] doubleValue];
-     coordinate1.longitude = [[local objectForKey: @"longitude"] doubleValue];
-     NSString *tipo = [local objectForKey: @"tipo"];
-     
-     if ([[local objectForKey: @"nome"] isEqualToString: @"type"]) {
-     [local setObject: tipo forKey: @"nome"];
-     }
-     //        MyAnnotation *annotation = [[MyAnnotation alloc] initWithCoordinate:coordinate1 title:[local objectForKey:@"nome"] subtitle: tipo];
-     //        [self.mapa addAnnotation: annotation];
-     
-     MKPointAnnotation * ann = [[MKPointAnnotation alloc] init];
-     [ann setTitle: [local objectForKey: @"nome"]];
-     [ann setSubtitle: tipo];
-     [ann setCoordinate:coordinate1];
-     [self.mapa addAnnotation: ann];
-     }
-    
+    for (id local in arraydaora) {
+        CLLocationCoordinate2D coordinate1;
+        coordinate1.latitude = [[local objectForKey: @"latitude"] doubleValue];
+        coordinate1.longitude = [[local objectForKey: @"longitude"] doubleValue];
+        NSString *tipo = [local objectForKey: @"tipo"];
+
+        if ([[local objectForKey: @"nome"] isEqualToString: @"type"]) {
+            [local setObject: tipo forKey: @"nome"];
+        }
+
+        if ( ![[local objectForKey: @"tipo"] isEqualToString: @"comercio"] &&
+             ![[local objectForKey: @"tipo"] isEqualToString: @"cooperativa"] &&
+             ![[local objectForKey: @"tipo"] isEqualToString: @"associacao"]) {
+            MKPointAnnotation * ann = [[MKPointAnnotation alloc] init];
+            [ann setTitle: [local objectForKey: @"nome"]];
+            [ann setSubtitle: tipo];
+            [ann setCoordinate:coordinate1];
+            [self.mapa addAnnotation: ann];
+        }
+    }
     
     [self setViewDasAnnotations: [self.mapa annotations]];
-    //[SVProgressHUD dismiss];
-    //float x = [arraydaora objectAtIndex:0];
 }
 
   /*

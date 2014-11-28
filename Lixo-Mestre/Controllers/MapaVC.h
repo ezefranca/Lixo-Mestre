@@ -11,7 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "AppDelegate.h"
 
-@interface MapaVC : UIViewController<MKMapViewDelegate, CLLocationManagerDelegate>{
+@interface MapaVC : UIViewController <MKMapViewDelegate, CLLocationManagerDelegate>{
     NSData *jsonDados;
 }
 
@@ -20,7 +20,7 @@
 @property MKPolyline *routeOverlay;
 @property MKRoute *currentRoute;
 
-- (IBAction)botaoMenu:(id)sender;
+
 
 - (IBAction)botaoMapaLixoPapao:(id)sender;
 - (IBAction)botaoMapaColeta:(id)sender;

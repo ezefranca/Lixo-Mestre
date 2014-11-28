@@ -96,6 +96,7 @@
     if ([webService login:self.logInfo.text :self.pass.text]) {
         
         //SETAR PREFERENCIAS DO USUARIO LOGADO
+        [webService nameOfUserForEmail: self.email ];
         [preferencias setObject:self.logInfo.text forKey: @"LoginApp"];
         [preferencias setObject:self.pass.text forKey: @"password"];
         [preferencias setBool: YES forKey: @"Logado"];

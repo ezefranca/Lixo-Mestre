@@ -53,28 +53,28 @@
     
     switch (num) {
         case 2:
-            string = @"recicle 5 papeis para desbloquear!";
+            string = @"recicle 10 papeis para desbloquear!";
             break;
         case 3:
-            string = @"recicle 5 metais para desbloquear!";
+            string = @"recicle 10 metais para desbloquear!";
             break;
         case 4:
-            string = @"recicle 5 vidros papeis para desbloquear!";
+            string = @"recicle 10 vidros papeis para desbloquear!";
             break;
         case 5:
-            string = @"recicle 5 plasticos para desbloquear!";
+            string = @"recicle 10 plasticos para desbloquear!";
             break;
         case 6:
-            string = @"conecte-se com 3 lixeiras diferentes para desbloquear!";
+            string = @"conecte-se com 4 lixeiras diferentes para desbloquear!";
             break;
         case 7:
-            string = @"avalie 20 fotos para desbloquear!";
+            string = @"avalie 30 fotos para desbloquear!";
             break;
         case 8:
-            string = @"faca x para desbloquear!";
+            string = @"use 10 estrelas para desbloquear!";
             break;
         case 9:
-            string = @"faca x para desbloquear!";
+            string = @"use 2000 pontos para desbloquear!";
             break;
         default:
             string = @"faca x para desbloquear!";
