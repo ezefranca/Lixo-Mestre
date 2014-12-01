@@ -26,7 +26,7 @@
 
     self.nomeUsuario.font = [UIFont fontWithName:@"Santor" size:17];
     
-    itemsMenu = [NSArray arrayWithObjects:@"          Perfil",@"          Recompensas", @"          Estatistica", @"         Configuracoes", @"          Sair",nil];
+    itemsMenu = [NSArray arrayWithObjects:@"          Perfil",@"          Recompensas", @"         Configuracoes", @"          Sair",nil];
     self.view.backgroundColor = [UIColor colorWithRed:0.0
                                                  green:128/255.0
                                                   blue:176/255.0
@@ -75,12 +75,9 @@
             imagem = [UIImage imageNamed: @"icone recompensa.png"];
             break;
         case 2:
-            imagem = [UIImage imageNamed: @"atividade.png"];
-            break;
-        case 3:
             imagem = [UIImage imageNamed: @"icone confg.png"];
             break;
-        case 4:
+        case 3:
             imagem = [UIImage imageNamed: @"icone sair.png"];
             break;
         default:
@@ -109,7 +106,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 4;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -130,11 +127,7 @@
             [self performSegueWithIdentifier: @"aoConfiguracoes" sender:nil];
             break;
         }
-        case 3:{
 
-
-            break;
-        }
         default:{
             [FBSession.activeSession closeAndClearTokenInformation];
             [FBSession.activeSession close];

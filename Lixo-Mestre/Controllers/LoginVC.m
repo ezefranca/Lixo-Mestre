@@ -96,11 +96,8 @@
     if ([webService login:self.logInfo.text :self.pass.text]) {
         
         //SETAR PREFERENCIAS DO USUARIO LOGADO
-        [webService nameOfUserForEmail: self.email ];
-        [preferencias setObject:self.logInfo.text forKey: @"LoginApp"];
-        [preferencias setObject:self.pass.text forKey: @"password"];
-        [preferencias setBool: YES forKey: @"Logado"];
-        [preferencias synchronize];
+        [self performSelectorOnMainThread: @selector(updateUserInfo) withObject: nil waitUntilDone: YES];
+        
         //PERFON SEGUE PARA TELA INICIAL
         [self performSegueWithIdentifier: @"coco" sender:nil];
     }
@@ -111,8 +108,17 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login." message: @"Verifique o usuário ou a senha." delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         alert.alertViewStyle = UIAlertViewStyleDefault;
         [alert show];
-        self.processando.hidden = YES;
+       
     }
+    self.processando.hidden = YES;
+}
+-(void)updateUserInfo{
+    [webService nameOfUserForEmail: self.logInfo.text];
+    [webService IdOfUserForEmail: self.logInfo.text];
+    [preferencias setObject: self.logInfo.text forKey: @"LoginApp"];
+    [preferencias setObject: self.pass.text forKey: @"password"];
+    [preferencias setBool: YES forKey: @"Logado"];
+    [preferencias synchronize];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -143,24 +149,28 @@
     //VER SE RETORNA VERDADEIRO
     
     
-    
     switch (x) {
         case 1:{
             [preferencias setObject: self.nameLabel.text forKey: @"Nome"];
             [preferencias setObject: self.email forKey: @"LoginApp"];
             [preferencias setObject: self.facebookUserID forKey: @"password"];
             [preferencias setBool: YES forKey: @"Logado"];
+            [webService IdOfUserForEmail: self.email  ];
             [preferencias synchronize];
             [self performSegueWithIdentifier: @"coco" sender:nil];
             break;
         }
             
         case 2:{
-            [webService nameOfUserForEmail: self.email ];
-            [preferencias setObject: self.email forKey: @"LoginApp"];
-            [preferencias setObject: self.facebookUserID forKey: @"password"];
+            self.logInfo.text = self.email;
+            self.pass.text = self.facebookUserID;
+            [webService nameOfUserForEmail: self.logInfo.text  ];
+            [webService IdOfUserForEmail: self.logInfo.text  ];
+            [preferencias setObject: self.logInfo.text forKey: @"LoginApp"];
+            [preferencias setObject: self.pass.text forKey: @"password"];
             [preferencias setBool: YES forKey: @"Logado"];
             [preferencias synchronize];
+            
             [self performSegueWithIdentifier: @"coco" sender:nil];
             
             break;

@@ -169,7 +169,7 @@
     NSString *enviar = @"$";
     preferencias = [NSUserDefaults standardUserDefaults];
     senhaSalva = [preferencias boolForKey: @"senha"];
-    enviar = [enviar stringByAppendingString:[preferencias stringForKey: @"LoginApp"]];
+    enviar = [enviar stringByAppendingString:[preferencias stringForKey: @"ID"]];
     switch ([self tipo]) {
         case 1://papel
             enviar = [enviar stringByAppendingString: @"$1"];
@@ -195,7 +195,7 @@
     NSString *enviar = @"$";
     preferencias = [NSUserDefaults standardUserDefaults];
     senhaSalva = [preferencias boolForKey: @"senha"];
-    enviar = [enviar stringByAppendingString: [preferencias stringForKey: @"LoginApp"]];
+    enviar = [enviar stringByAppendingString: [preferencias stringForKey: @"ID"]];
     enviar = [enviar stringByAppendingString: @"$1"];
     [self enviarDadosBluetooth: enviar];
 }
@@ -205,7 +205,7 @@
     NSString *enviar = @"$";
     preferencias = [NSUserDefaults standardUserDefaults];
     senhaSalva = [preferencias boolForKey: @"senha"];
-    enviar = [enviar stringByAppendingString: [preferencias stringForKey: @"LoginApp"]];
+    enviar = [enviar stringByAppendingString: [preferencias stringForKey: @"ID"]];
     enviar = [enviar stringByAppendingString: @"$2"];
     [self enviarDadosBluetooth:enviar];
 }
@@ -215,7 +215,7 @@
     NSString *enviar = @"$";
     preferencias = [NSUserDefaults standardUserDefaults];
     senhaSalva = [preferencias boolForKey: @"senha"];
-    enviar = [enviar stringByAppendingString: [preferencias stringForKey: @"LoginApp"]];
+    enviar = [enviar stringByAppendingString: [preferencias stringForKey: @"ID"]];
     enviar = [enviar stringByAppendingString: @"$3"];
     [self enviarDadosBluetooth:enviar];
 }
@@ -225,7 +225,7 @@
     NSString *enviar = @"$";
     preferencias = [NSUserDefaults standardUserDefaults];
     senhaSalva = [preferencias boolForKey: @"senha"];
-    enviar = [enviar stringByAppendingString: [preferencias stringForKey: @"LoginApp"]];
+    enviar = [enviar stringByAppendingString: [preferencias stringForKey: @"ID"]];
     enviar = [enviar stringByAppendingString: @"$4"];
     [self enviarDadosBluetooth:enviar];
 }

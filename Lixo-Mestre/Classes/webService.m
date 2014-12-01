@@ -79,7 +79,7 @@
     return NO;
 }
 
-+(NSString*)nameOfUserForEmail : (NSString *)email{
++(NSString *)nameOfUserForEmail : (NSString *)email{
     if ([self check]){
         NSString *url =  @"http://172.246.16.27/lixoPapao/info.php";
         NSString *post = [NSString stringWithFormat:@"type=name&email=%@",email];
@@ -100,10 +100,39 @@
         
         
         NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
-        [preferencias setObject: content forKey: @"Nome"];        
+        [preferencias setObject: content forKey: @"Nome"];
+        
         return @"oi";
     }
-    return @"oi";
+    return @"error";
+}
+
++(NSString *)IdOfUserForEmail : (NSString *)email{
+    if ([self check]){
+        NSString *url =  @"http://172.246.16.27/lixoPapao/info.php";
+        NSString *post = [NSString stringWithFormat:@"type=id&email=%@",email];
+        
+        
+        NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+        NSMutableURLRequest *request = [ [ NSMutableURLRequest alloc ] initWithURL: [ NSURL URLWithString: url]];
+        
+        [ request setHTTPMethod: @"POST"];
+        [ request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"content-type"];
+        
+        [ request setHTTPBody: postData ];
+        NSURLResponse *response;
+        NSError *err;
+        NSData *returnData = [ NSURLConnection sendSynchronousRequest: request returningResponse:&response error:&err];
+        
+        NSString *content = [NSString stringWithUTF8String:[returnData bytes]];
+        
+        
+        NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
+        [preferencias setObject: content forKey: @"ID"];
+        
+        return @"oi";
+    }
+    return @"error";
 }
 
 +(int)newUser:(NSString *)user :(NSString *)pass :(NSString *)email{
