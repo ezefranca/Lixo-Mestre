@@ -27,11 +27,8 @@
     // Custom initialization
     [self.tabBar setSelectedImageTintColor: [UIColor whiteColor]];
     
-    
     //vai ser util pra designer
     [[UITabBar appearance] setSelectionIndicatorImage:[UIImage imageNamed: @"fundo tab selecionado.png"]];
-
-
 }
 
 - (void)didReceiveMemoryWarning{
@@ -50,8 +47,12 @@
 }
 */
 
--(BOOL)shouldAutorotate{
-    return NO;
+- (NSUInteger)supportedInterfaceOrientations{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskPortrait;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
 }
 
 @end

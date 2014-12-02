@@ -149,12 +149,12 @@
 -(void)updateTinder : (NSArray*)parans{
     [webService updateTinder:[[parans objectAtIndex:0] integerValue]:[[parans objectAtIndex: 1] integerValue] ];
 }
-
-- (IBAction)botaoMenu:(id)sender {
-            [[NSNotificationCenter defaultCenter] postNotificationName:kShowHideMenuNotification object:self];
+- (NSUInteger)supportedInterfaceOrientations{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskPortrait;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
 }
 
--(BOOL)shouldAutorotate{
-    return NO;
-}
 @end

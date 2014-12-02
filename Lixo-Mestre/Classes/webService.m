@@ -98,7 +98,6 @@
         
         NSString *content = [NSString stringWithUTF8String:[returnData bytes]];
         
-        
         NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
         [preferencias setObject: content forKey: @"Nome"];
         
@@ -125,7 +124,6 @@
         NSData *returnData = [ NSURLConnection sendSynchronousRequest: request returningResponse:&response error:&err];
         
         NSString *content = [NSString stringWithUTF8String:[returnData bytes]];
-        
         
         NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
         [preferencias setObject: content forKey: @"ID"];
@@ -424,11 +422,11 @@
 
         int x = (int)[content integerValue];
         if (x){
-            NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
-            if (preferencias) {
-                [preferencias setObject:user forKey:@"LoginApp"];
-                [preferencias synchronize];
-            }
+//            NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
+//            if (preferencias) {
+//                [preferencias setObject:user forKey:@"LoginApp"];
+//                [preferencias synchronize];
+//            }
             return YES;
         }
     }

@@ -353,16 +353,14 @@
     return [self sharedJogoViewController];
 }
 
-- (BOOL)shouldAutorotate{
-    return NO;
-}
 
 - (NSUInteger)supportedInterfaceOrientations{
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskAllButUpsideDown;
+        return UIInterfaceOrientationMaskPortrait;
     }
-    else {
-        return UIInterfaceOrientationMaskAll;
+    else
+    {
+        return UIInterfaceOrientationMaskPortrait;
     }
 }
 

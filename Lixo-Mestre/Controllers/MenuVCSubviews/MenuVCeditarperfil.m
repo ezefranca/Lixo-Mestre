@@ -164,12 +164,19 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [self.view endEditing: YES] ;
-
 }
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [self.view endEditing: YES];
     return NO;
 }
+
+- (NSUInteger)supportedInterfaceOrientations{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskPortrait;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
+}
+
 
 @end

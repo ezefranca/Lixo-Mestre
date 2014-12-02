@@ -24,12 +24,6 @@
     return self;
 }
 
--(void)viewWillAppear:(BOOL)animated{
-   
-    self.logInfo.text = @"";
-    self.pass.text = @"";
-}
-
 - (void)handleNotification:(NSNotification *)notif{
     //NSLog(@"Notification recieved: %@", notif.name);
     //NSLog(@"Status user info key: %@", [notif.userInfo objectForKey:SVProgressHUDStatusUserInfoKey]);
@@ -68,6 +62,15 @@
     _nameLabel.frame = CGRectMake(30, 140, self.view.frame.size.width, 30);
     //[self.view addSubview: _nameLabel];
 }
+
+
+-(void)viewWillAppear:(BOOL)animated{
+    
+    self.logInfo.text = @"";
+    self.pass.text = @"";
+}
+
+
 
 -(void)viewDidAppear:(BOOL)animated{
     
@@ -147,8 +150,6 @@
                              image: _image];
     
     //VER SE RETORNA VERDADEIRO
-    
-    
     switch (x) {
         case 1:{
             [preferencias setObject: self.nameLabel.text forKey: @"Nome"];
@@ -163,14 +164,10 @@
             
         case 2:{
             self.logInfo.text = self.email;
+            //NSLog(@"%@",self.logInfo.text);
             self.pass.text = self.facebookUserID;
-            [webService nameOfUserForEmail: self.logInfo.text  ];
-            [webService IdOfUserForEmail: self.logInfo.text  ];
-            [preferencias setObject: self.logInfo.text forKey: @"LoginApp"];
-            [preferencias setObject: self.pass.text forKey: @"password"];
-            [preferencias setBool: YES forKey: @"Logado"];
-            [preferencias synchronize];
-            
+            [self performSelectorOnMainThread: @selector(updateUserInfo) withObject: nil waitUntilDone: YES];
+
             [self performSegueWithIdentifier: @"coco" sender:nil];
             
             break;
@@ -180,6 +177,11 @@
             UIAlertView *alert = [[UIAlertView alloc] initWithTitle: @"Nao foi possível efetuar o login com facebook" message:@"" delegate:self cancelButtonTitle: @"Ok" otherButtonTitles:nil];
             alert.alertViewStyle = UIAlertViewStyleDefault;
             [alert show];
+            [FBSession.activeSession closeAndClearTokenInformation];
+            [FBSession.activeSession close];
+            [FBSession setActiveSession:nil];
+            [preferencias setBool: NO forKey:@"Logado"];
+            [preferencias synchronize];
             
             break;
         }
@@ -298,8 +300,12 @@
     }
 }
 
--(BOOL)shouldAutorotate{
-    return NO;
+- (NSUInteger)supportedInterfaceOrientations{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskPortrait;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
 }
 
 @end
