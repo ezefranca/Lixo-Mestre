@@ -12,7 +12,9 @@
 
 @end
 
-@implementation ConfiguracoesVC
+@implementation ConfiguracoesVC{
+    NSArray *itemsMenu;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil{
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -25,12 +27,17 @@
 - (void)viewDidLoad{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
+    preferencias = [NSUserDefaults standardUserDefaults];
+    
+    itemsMenu = [NSArray arrayWithObjects:@"Tutorial", @"Notificações", @"Sons",nil];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
-    
-
 }
 
 - (void)didReceiveMemoryWarning{
@@ -46,43 +53,16 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: simpleTableIdentifier];
     }
     
-    //    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(10, 70, 200, 40)];
-    //    label.text = [itemsMenu objectAtIndex:indexPath.row];
     
-    UIImageView *imgview= [[UIImageView alloc] initWithFrame: CGRectMake(10, 15, 40, 40)];
-    UIImage *imagem;
+    cell.textLabel.text = [itemsMenu objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName: @"Santor" size: 19];
+    cell.textLabel.textColor = [UIColor colorWithRed: 0/255.0 green: 127/255.0 blue: 177/255.0 alpha: 1.0];;
     
-    switch (indexPath.row) {
-        case 0:
-            imagem = [UIImage imageNamed: @"icone perfil.png"];
-            break;
-        case 1:
-            imagem = [UIImage imageNamed: @"icone recompensa.png"];
-            break;
-        case 2:
-            imagem = [UIImage imageNamed: @"atividade.png"];
-            break;
-        case 3:
-            imagem = [UIImage imageNamed: @"icone confg.png"];
-            break;
-        case 4:
-            imagem = [UIImage imageNamed: @"icone sair.png"];
-            break;
-        default:
-            imagem = [UIImage imageNamed: @"settings-100.png"];
-            break;
-    }
-    imgview.image = imagem;
-    [cell addSubview: imgview];
+    UISwitch * switchManero = [[UISwitch alloc] initWithFrame:CGRectMake(200, 10, 0, 0)];
     
-
+    [self setActionForSwitch: switchManero forIndex: indexPath.row];
     
-    if (indexPath.row%2 == 0){
-        cell.backgroundColor = [UIColor colorWithRed: 1.0 green: 1.0 blue: 1.0 alpha: 1.0];
-    }
-    else{
-        cell.backgroundColor = [UIColor colorWithRed: 234/255.0 green: 232/255.0 blue: 232/255.0 alpha:1.0];
-    }
+    [cell addSubview: switchManero];
     
     
     return cell;
@@ -93,37 +73,66 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 5;
+    return 3;
+}
+
+-(void)setActionForSwitch:(UISwitch*)sanduiche forIndex:(NSInteger)index{
+    bool estado;
+    
+    switch (index) {
+        //MUDAR OS METODOS PROS CERTOS QUANDO FAZER ELES!!!!!!
+        case 0:
+            estado = [preferencias boolForKey :@"Tutotial"];
+            sanduiche.enabled = NO;
+            [sanduiche addTarget: self action:@selector(toggleTutorial:) forControlEvents: UIControlEventAllTouchEvents ];
+            break;
+        case 1:
+            estado = [preferencias boolForKey: @"Notificacoes"];
+            sanduiche.enabled = NO;
+            [sanduiche addTarget: self action:@selector(toggleNotificacoes:) forControlEvents: UIControlEventAllTouchEvents ];
+            break;
+        case 2:
+            estado = [preferencias boolForKey: @"Sons"];
+            sanduiche.enabled = YES;
+            [sanduiche addTarget: self action:@selector(toggleSons:) forControlEvents: UIControlEventAllTouchEvents ];
+            break;
+        default:
+            break;
+    }
+    
+    sanduiche.selected = estado;
+}
+
+-(void)toggleTutorial:(id)sender{
+    UISwitch * sanduiche = (UISwitch*)sender;
+    bool estado = [preferencias boolForKey: @"Tutotial"];
+    estado = !estado;
+    
+    sanduiche.selected = estado;
+    [preferencias setBool: estado forKey: @"Tutorial"];
+}
+
+-(void)toggleNotificacoes:(id)sender{
+    UISwitch * sanduiche = (UISwitch*)sender;
+    bool estado = [preferencias boolForKey: @"Notificacoes"];
+    estado = !estado;
+    
+    sanduiche.selected = estado;
+    [preferencias setBool: estado forKey: @"Notificacoes"];
+}
+
+-(void)toggleSons:(id)sender{
+    UISwitch * sanduiche = (UISwitch*)sender;
+    bool estado = [preferencias boolForKey: @"Sons"];
+    estado = !estado;
+    
+    sanduiche.selected = estado;
+    [preferencias setBool: estado forKey: @"Sons"];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    //NSLog(@"Clicou em %ld", (long)indexPath.row);
-    
-    switch (indexPath.row) {
-        case 0:{
-            
-            break;
-        }
-        case 1:{
-            
-            break;
-        }
-        case 2:{
-            
-            break;
-        }
-        case 3:{
-            
-            break;
-        }
-        default:{
-
-            break;
-        }
-    }
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-
 
 /*
 #pragma mark - Navigation
@@ -140,8 +149,6 @@
 - (IBAction)voltar:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-
 
 -(IBAction)logouty{
     [FBSession.activeSession closeAndClearTokenInformation];

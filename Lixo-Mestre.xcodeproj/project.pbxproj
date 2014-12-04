@@ -8,6 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		252A91A219CCBADF004229F3 /* MenuTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 252A91A119CCBADF004229F3 /* MenuTableViewCell.m */; };
+		F62C2D5A1A2F6CE30019D4CD /* Icon-60.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D481A2F6CE30019D4CD /* Icon-60.png */; };
+		F62C2D5B1A2F6CE30019D4CD /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D491A2F6CE30019D4CD /* Icon-60@2x.png */; };
+		F62C2D5C1A2F6CE30019D4CD /* Icon-60@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D4A1A2F6CE30019D4CD /* Icon-60@3x.png */; };
+		F62C2D5D1A2F6CE30019D4CD /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D4B1A2F6CE30019D4CD /* Icon-72.png */; };
+		F62C2D5E1A2F6CE30019D4CD /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D4C1A2F6CE30019D4CD /* Icon-72@2x.png */; };
+		F62C2D5F1A2F6CE30019D4CD /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D4D1A2F6CE30019D4CD /* Icon-76.png */; };
+		F62C2D601A2F6CE30019D4CD /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D4E1A2F6CE30019D4CD /* Icon-76@2x.png */; };
+		F62C2D611A2F6CE30019D4CD /* Icon-Small-40.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D4F1A2F6CE30019D4CD /* Icon-Small-40.png */; };
+		F62C2D621A2F6CE30019D4CD /* Icon-Small-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D501A2F6CE30019D4CD /* Icon-Small-40@2x.png */; };
+		F62C2D631A2F6CE30019D4CD /* Icon-Small-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D511A2F6CE30019D4CD /* Icon-Small-40@3x.png */; };
+		F62C2D641A2F6CE30019D4CD /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D521A2F6CE30019D4CD /* Icon-Small-50.png */; };
+		F62C2D651A2F6CE30019D4CD /* Icon-Small-50@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D531A2F6CE30019D4CD /* Icon-Small-50@2x.png */; };
+		F62C2D661A2F6CE30019D4CD /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D541A2F6CE30019D4CD /* Icon-Small.png */; };
+		F62C2D671A2F6CE30019D4CD /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D551A2F6CE30019D4CD /* Icon-Small@2x.png */; };
+		F62C2D681A2F6CE30019D4CD /* Icon-Small@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D561A2F6CE30019D4CD /* Icon-Small@3x.png */; };
+		F62C2D691A2F6CE30019D4CD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D571A2F6CE30019D4CD /* Icon.png */; };
+		F62C2D6A1A2F6CE30019D4CD /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D581A2F6CE30019D4CD /* Icon@2x.png */; };
+		F62C2D6B1A2F6CE30019D4CD /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F62C2D591A2F6CE30019D4CD /* iTunesArtwork@2x.png */; };
 		F63A7F3419CB55220076D574 /* CadastroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = F63A7F3319CB55220076D574 /* CadastroVC.m */; };
 		F6414BFB1A02B60B001C3C2E /* $.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414B871A02B60B001C3C2E /* $.png */; };
 		F6414BFD1A02B60B001C3C2E /* atividade.png in Resources */ = {isa = PBXBuildFile; fileRef = F6414B891A02B60B001C3C2E /* atividade.png */; };
@@ -259,6 +277,24 @@
 /* Begin PBXFileReference section */
 		252A91A019CCBADF004229F3 /* MenuTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewCell.h; sourceTree = "<group>"; };
 		252A91A119CCBADF004229F3 /* MenuTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewCell.m; sourceTree = "<group>"; };
+		F62C2D481A2F6CE30019D4CD /* Icon-60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60.png"; sourceTree = "<group>"; };
+		F62C2D491A2F6CE30019D4CD /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		F62C2D4A1A2F6CE30019D4CD /* Icon-60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-60@3x.png"; sourceTree = "<group>"; };
+		F62C2D4B1A2F6CE30019D4CD /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		F62C2D4C1A2F6CE30019D4CD /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		F62C2D4D1A2F6CE30019D4CD /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		F62C2D4E1A2F6CE30019D4CD /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		F62C2D4F1A2F6CE30019D4CD /* Icon-Small-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40.png"; sourceTree = "<group>"; };
+		F62C2D501A2F6CE30019D4CD /* Icon-Small-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@2x.png"; sourceTree = "<group>"; };
+		F62C2D511A2F6CE30019D4CD /* Icon-Small-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-40@3x.png"; sourceTree = "<group>"; };
+		F62C2D521A2F6CE30019D4CD /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		F62C2D531A2F6CE30019D4CD /* Icon-Small-50@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50@2x.png"; sourceTree = "<group>"; };
+		F62C2D541A2F6CE30019D4CD /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		F62C2D551A2F6CE30019D4CD /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		F62C2D561A2F6CE30019D4CD /* Icon-Small@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@3x.png"; sourceTree = "<group>"; };
+		F62C2D571A2F6CE30019D4CD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		F62C2D581A2F6CE30019D4CD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		F62C2D591A2F6CE30019D4CD /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		F63A7F3219CB55220076D574 /* CadastroVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CadastroVC.h; sourceTree = "<group>"; };
 		F63A7F3319CB55220076D574 /* CadastroVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CadastroVC.m; sourceTree = "<group>"; };
 		F6414B871A02B60B001C3C2E /* $.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = $.png; sourceTree = "<group>"; };
@@ -575,6 +611,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F62C2D471A2F6CE30019D4CD /* App Icon [Squared] */ = {
+			isa = PBXGroup;
+			children = (
+				F62C2D481A2F6CE30019D4CD /* Icon-60.png */,
+				F62C2D491A2F6CE30019D4CD /* Icon-60@2x.png */,
+				F62C2D4A1A2F6CE30019D4CD /* Icon-60@3x.png */,
+				F62C2D4B1A2F6CE30019D4CD /* Icon-72.png */,
+				F62C2D4C1A2F6CE30019D4CD /* Icon-72@2x.png */,
+				F62C2D4D1A2F6CE30019D4CD /* Icon-76.png */,
+				F62C2D4E1A2F6CE30019D4CD /* Icon-76@2x.png */,
+				F62C2D4F1A2F6CE30019D4CD /* Icon-Small-40.png */,
+				F62C2D501A2F6CE30019D4CD /* Icon-Small-40@2x.png */,
+				F62C2D511A2F6CE30019D4CD /* Icon-Small-40@3x.png */,
+				F62C2D521A2F6CE30019D4CD /* Icon-Small-50.png */,
+				F62C2D531A2F6CE30019D4CD /* Icon-Small-50@2x.png */,
+				F62C2D541A2F6CE30019D4CD /* Icon-Small.png */,
+				F62C2D551A2F6CE30019D4CD /* Icon-Small@2x.png */,
+				F62C2D561A2F6CE30019D4CD /* Icon-Small@3x.png */,
+				F62C2D571A2F6CE30019D4CD /* Icon.png */,
+				F62C2D581A2F6CE30019D4CD /* Icon@2x.png */,
+				F62C2D591A2F6CE30019D4CD /* iTunesArtwork@2x.png */,
+			);
+			path = "App Icon [Squared]";
+			sourceTree = "<group>";
+		};
 		F6414B861A02B60B001C3C2E /* Lixo Papão 3.0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1123,6 +1184,7 @@
 		F76A118C19C8ACF700843A9D /* Recursos */ = {
 			isa = PBXGroup;
 			children = (
+				F62C2D471A2F6CE30019D4CD /* App Icon [Squared] */,
 				F6414B861A02B60B001C3C2E /* Lixo Papão 3.0 */,
 				F69D125B19D3511A00643122 /* imagens Lixo Papao 2.0 */,
 				F69E386F19D3388F00B64629 /* santor 1.002.otf */,
@@ -1337,6 +1399,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F62C2D5C1A2F6CE30019D4CD /* Icon-60@3x.png in Resources */,
 				F69D12A319D3511B00643122 /* Email.png in Resources */,
 				F6414C331A02B60B001C3C2E /* joguinho papel 2.png in Resources */,
 				F6414CB81A0A969F001C3C2E /* editarfundo.png in Resources */,
@@ -1347,7 +1410,9 @@
 				F67ED4FA19C8CA2800B266BD /* mapa-melhorcoleta.png in Resources */,
 				F6414C471A02B60B001C3C2E /* Lixo papão - SENAC-01.png in Resources */,
 				F6414C491A02B60B001C3C2E /* Lixo papão - SENAC-03.png in Resources */,
+				F62C2D5F1A2F6CE30019D4CD /* Icon-76.png in Resources */,
 				F69E386019D09A4300B64629 /* icone voltar.png in Resources */,
+				F62C2D6B1A2F6CE30019D4CD /* iTunesArtwork@2x.png in Resources */,
 				F76A125019C8ACF700843A9D /* USUARIO-02.png in Resources */,
 				F76A122B19C8ACF700843A9D /* settings-128.png in Resources */,
 				F6414C161A02B60B001C3C2E /* fundo F3F4F4.png in Resources */,
@@ -1363,10 +1428,12 @@
 				F76A125219C8ACF700843A9D /* Default-568h@2x.png in Resources */,
 				F76A122719C8ACF700843A9D /* exit.png in Resources */,
 				F69D12CF19D3511B00643122 /* plasticoo.png in Resources */,
+				F62C2D5E1A2F6CE30019D4CD /* Icon-72@2x.png in Resources */,
 				F69D12D019D3511B00643122 /* vidro.png in Resources */,
 				F6414C341A02B60B001C3C2E /* joguinho papel 3.png in Resources */,
 				F6414C4D1A02B60B001C3C2E /* Lixo papão - SENAC-07.png in Resources */,
 				F69D12C519D3511B00643122 /* estatistica.png in Resources */,
+				F62C2D6A1A2F6CE30019D4CD /* Icon@2x.png in Resources */,
 				F6414C531A02B60B001C3C2E /* Lixo papão - SENAC-13.png in Resources */,
 				F6414C5C1A02B60B001C3C2E /* ok.png in Resources */,
 				F6414BFF1A02B60B001C3C2E /* barrinha 639,751 x 121,939.png in Resources */,
@@ -1391,6 +1458,7 @@
 				F76A123219C8ACF700843A9D /* recycle_sign-50.png in Resources */,
 				F76A122E19C8ACF700843A9D /* recycle_sign-256.png in Resources */,
 				F69D12B319D3511B00643122 /* tirinha.png in Resources */,
+				F62C2D671A2F6CE30019D4CD /* Icon-Small@2x.png in Resources */,
 				F6414C041A02B60B001C3C2E /* Cadastre-se.png in Resources */,
 				F6414C4C1A02B60B001C3C2E /* Lixo papão - SENAC-06.png in Resources */,
 				F6ED61B219D5E5F9002CCE1E /* Mapa.png in Resources */,
@@ -1401,6 +1469,7 @@
 				F76A121319C8ACF700843A9D /* mapa-coleta.png in Resources */,
 				F76A115619C8ACB800843A9D /* InfoPlist.strings in Resources */,
 				F6414C441A02B60B001C3C2E /* metal - selecione o lixo.png in Resources */,
+				F62C2D691A2F6CE30019D4CD /* Icon.png in Resources */,
 				F6414C2D1A02B60B001C3C2E /* joguinho lixo verde.png in Resources */,
 				F76A122C19C8ACF700843A9D /* recycle_sign-25.png in Resources */,
 				F6414C711A040127001C3C2E /* hamburguer.png in Resources */,
@@ -1444,9 +1513,13 @@
 				F6414BFD1A02B60B001C3C2E /* atividade.png in Resources */,
 				F6414C0C1A02B60B001C3C2E /* coração.png in Resources */,
 				F6414C011A02B60B001C3C2E /* barrinha final da tela do perfil 640x121.png in Resources */,
+				F62C2D661A2F6CE30019D4CD /* Icon-Small.png in Resources */,
+				F62C2D5A1A2F6CE30019D4CD /* Icon-60.png in Resources */,
 				F6414C6A1A02B60B001C3C2E /* vidro certificado.png in Resources */,
 				F6414C121A02B60B001C3C2E /* faixa-perfiletal.png in Resources */,
 				F6414C071A02B60B001C3C2E /* canfig.png in Resources */,
+				F62C2D651A2F6CE30019D4CD /* Icon-Small-50@2x.png in Resources */,
+				F62C2D641A2F6CE30019D4CD /* Icon-Small-50.png in Resources */,
 				F6414C541A02B60B001C3C2E /* Lixo papão - SENAC-14.png in Resources */,
 				F6414C4F1A02B60B001C3C2E /* Lixo papão - SENAC-09.png in Resources */,
 				F69D12C919D3511B00643122 /* b1bbbe.png in Resources */,
@@ -1469,6 +1542,7 @@
 				F6414C4B1A02B60B001C3C2E /* Lixo papão - SENAC-05.png in Resources */,
 				F6414C211A02B60B001C3C2E /* icone recompensa.png in Resources */,
 				F6414C5A1A02B60B001C3C2E /* Lixo papão - SENAC-20.png in Resources */,
+				F62C2D631A2F6CE30019D4CD /* Icon-Small-40@3x.png in Resources */,
 				F67ED4F919C8CA2800B266BD /* mapa-melhorlixopapao.png in Resources */,
 				F6414C281A02B60B001C3C2E /* joguinho botão pontos.png in Resources */,
 				F76A122919C8ACF700843A9D /* settings-100.png in Resources */,
@@ -1476,6 +1550,7 @@
 				F76A123819C8ACF700843A9D /* tutorial.png in Resources */,
 				F6414C451A02B60B001C3C2E /* metal certificado.png in Resources */,
 				F69D12A619D3511B00643122 /* editar.png in Resources */,
+				F62C2D5D1A2F6CE30019D4CD /* Icon-72.png in Resources */,
 				F6414C381A02B60B001C3C2E /* joguinho replay.png in Resources */,
 				F6ED61B119D5E5F9002CCE1E /* HOME.png in Resources */,
 				F69E387119D3489200B64629 /* LixoPapao.storyboard in Resources */,
@@ -1489,8 +1564,10 @@
 				F6414C611A02B60B001C3C2E /* pause.png in Resources */,
 				F6414C691A02B60B001C3C2E /* vidro - selecione o lixo.png in Resources */,
 				F76A123019C8ACF700843A9D /* recycle_sign-32.png in Resources */,
+				F62C2D621A2F6CE30019D4CD /* Icon-Small-40@2x.png in Resources */,
 				F6414C3F1A02B60B001C3C2E /* logo.png in Resources */,
 				F67ED4F019C8B78000B266BD /* SVProgressHUD.bundle in Resources */,
+				F62C2D601A2F6CE30019D4CD /* Icon-76@2x.png in Resources */,
 				F69D12CA19D3511B00643122 /* convidar.png in Resources */,
 				F6414C581A02B60B001C3C2E /* Lixo papão - SENAC-18.png in Resources */,
 				F6414C3C1A02B60B001C3C2E /* lixopapao-conectado.png in Resources */,
@@ -1507,6 +1584,9 @@
 				F6414C1F1A02B60B001C3C2E /* icone confg.png in Resources */,
 				F6414C501A02B60B001C3C2E /* Lixo papão - SENAC-10.png in Resources */,
 				F69E387019D3388F00B64629 /* santor 1.002.otf in Resources */,
+				F62C2D611A2F6CE30019D4CD /* Icon-Small-40.png in Resources */,
+				F62C2D681A2F6CE30019D4CD /* Icon-Small@3x.png in Resources */,
+				F62C2D5B1A2F6CE30019D4CD /* Icon-60@2x.png in Resources */,
 				F76A125419C8ACF700843A9D /* Default@2x.png in Resources */,
 				F6414C631A02B60B001C3C2E /* plastico-perfil.png in Resources */,
 				F76A123319C8ACF700843A9D /* settings-50.png in Resources */,

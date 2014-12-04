@@ -29,7 +29,7 @@
 @property BOOL conectado;
 @property (weak, nonatomic) IBOutlet UIButton *botaoLixo;
 @property (weak, nonatomic) IBOutlet UIButton *botaoConectar;
-//@property (weak, nonatomic) IBOutlet UILabel *statusLbl;
+@property (weak, nonatomic) IBOutlet UIButton *botaoDissmissEscolha;
 
 @property (weak, nonatomic) IBOutlet UIView *viewEscolha;
 
@@ -40,6 +40,5 @@
 
 - (void)enviarLixo;
 
-- (IBAction)botaoMenu:(id)sender;
 
 @end

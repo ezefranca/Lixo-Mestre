@@ -35,7 +35,7 @@
     self.foto.clipsToBounds = YES;
     
     self.titulo.font = [UIFont fontWithName: @"Santor" size:20];
-    self.nome.font = [UIFont fontWithName: @"Santor" size:17];
+    self.nome.font = [UIFont fontWithName: @"Santor" size:20];
 
     self.labelPapel.font = [UIFont fontWithName: @"Santor" size:17];
     self.labelVidro.font = [UIFont fontWithName: @"Santor" size:17];

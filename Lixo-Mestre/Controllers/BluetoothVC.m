@@ -37,12 +37,15 @@
 {
     [super viewDidLoad];
     
-    self.conectado = FALSE;
-    self.botaoLixo.hidden = TRUE;
-    self.botaoConectar.hidden = FALSE;
+    self.conectado = NO;
+    self.botaoConectar.hidden = NO;
+    self.botaoLixo.hidden = YES;
     self.viewEscolha.hidden = YES;
+    self.botaoDissmissEscolha.hidden = YES;
 
     [[CNBluetoothCentral sharedBluetoothCentral] setDelegate: self];
+    
+    self.botaoDissmissEscolha.hidden = YES;
     
     [[NSNotificationCenter defaultCenter] addObserver: self
                                              selector: @selector(handleNotification:)
@@ -84,7 +87,14 @@
 
 - (IBAction)botaoDissmissEscolha:(id)sender
 {
+    self.conectado = NO;
+    self.botaoConectar.hidden = NO;
+    self.botaoLixo.hidden = YES;
     self.viewEscolha.hidden = YES;
+    self.botaoDissmissEscolha.hidden = YES;
+    [[CNBluetoothCentral sharedBluetoothCentral] cleanup];
+    [[CNBluetoothCentral sharedBluetoothCentral] setDelegate: nil];
+    [imagemConectar setImage:[UIImage imageNamed: @"lixo papao desconectado.png"]];
 }
 
 - (IBAction)botaoConectar:(id)sender
@@ -286,6 +296,8 @@
 //        popup.tag = 1;
 //        [popup showInView:[UIApplication sharedApplication].keyWindow];
         self.viewEscolha.hidden = NO;
+        self.botaoDissmissEscolha.hidden = NO;
+        
     }
 }
 

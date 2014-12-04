@@ -24,7 +24,7 @@
 
     preferencias = [NSUserDefaults standardUserDefaults];
 
-    self.nomeUsuario.font = [UIFont fontWithName:@"Santor" size:17];
+    self.nomeUsuario.font = [UIFont fontWithName:@"Santor" size:22];
     
     itemsMenu = [NSArray arrayWithObjects:@"          Perfil",@"          Recompensas", @"         Configuracoes", @"          Sair",nil];
     self.view.backgroundColor = [UIColor colorWithRed:0.0
@@ -89,6 +89,8 @@
     
     
     cell.textLabel.text = [itemsMenu objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont fontWithName: @"Santor" size: 19];
+    cell.textLabel.textColor = [UIColor colorWithRed: 0/255.0 green: 127/255.0 blue: 177/255.0 alpha: 1.0];
     
     if (indexPath.row%2 == 0){
         cell.backgroundColor = [UIColor colorWithRed: 1.0 green: 1.0 blue: 1.0 alpha: 1.0];
