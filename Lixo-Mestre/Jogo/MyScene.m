@@ -83,21 +83,22 @@
     NSMutableArray* aRemover = [[NSMutableArray alloc] init];
 
     for ( SKSpriteNode *nodeLixo in self.lixos ){
-        if (nodeLixo.position.y + nodeLixo.size.height/2  < 0) {
+        if (nodeLixo.position.y   < 0) {
             [self penaliza: nodeLixo];
             [aRemover addObject: nodeLixo];
             
 
         }
         else{
-            [nodeLixo runAction: [SKAction moveBy: CGVectorMake(0, -150) duration: 2]];
-            [nodeLixo runAction: [SKAction rotateByAngle: arc4random()%7 duration: arc4random()%10+0.5]];
+
         }
+        [nodeLixo runAction: [SKAction moveBy: CGVectorMake(0, -150) duration: 2]];
+        [nodeLixo runAction: [SKAction rotateByAngle: arc4random()%7 duration: arc4random()%10+0.5]];
         
     }
     
     for ( SKSpriteNode *nodeLixo in aRemover){
-        if (nodeLixo.position.y + nodeLixo.size.height/2  < 0) {
+        if (nodeLixo.position.y  < 0) {
             [self.lixos removeObject: nodeLixo];
             
         }
