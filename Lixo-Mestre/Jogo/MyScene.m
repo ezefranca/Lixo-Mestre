@@ -67,6 +67,12 @@
         
         [self addChild: self.botaoSair];
         
+        
+        NSURL *introURL = [[NSBundle mainBundle]URLForResource:@"if at first" withExtension:@"mp3"];
+        self.buzzerWrong = [[AVAudioPlayer alloc] initWithContentsOfURL: introURL error:nil];
+        self.buzzerWrong.numberOfLoops = 0;
+
+        
     }
     return self;
 }
@@ -288,6 +294,9 @@
         [self.view presentScene:nil];
         
     }
+    [self.buzzerWrong stop];
+    [self.buzzerWrong prepareToPlay];
+    [self.buzzerWrong play];
     
 }
 /**

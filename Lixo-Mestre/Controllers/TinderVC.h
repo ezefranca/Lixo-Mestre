@@ -12,14 +12,18 @@
 #import "webService.h"
 
 @interface TinderVC : UIViewController<DraggableViewDelegate>
+
+@property NSMutableArray *idCards;
+@property (weak, nonatomic) IBOutlet UILabel *titulo;
+
+@property (retain,nonatomic)NSArray* allCards;
+
 - (IBAction)botaoMenu:(id)sender;
 
 //methods called in DraggableView
 -(void)cardSwipedLeft:(UIView *)card;
 -(void)cardSwipedRight:(UIView *)card;
 
-@property NSMutableArray *idCards;
 
-@property (retain,nonatomic)NSArray* allCards;
 
 @end

@@ -23,11 +23,13 @@
     self.nomeUsuario.font = [UIFont fontWithName:@"Santor" size:17];
     self.nomeUsuario.text = [preferencias objectForKey:@"Nome"];
     
-    self.qteMoedas.font = [UIFont fontWithName:@"Santor" size:14];
-    self.qteMoedas.text = [NSString stringWithFormat:@"%ld moedas", (long)[preferencias integerForKey:@"userMoedas"]];
+    self.qteMoedas.font = [UIFont fontWithName:@"Santor" size:15];
+//    self.qteMoedas.text = [NSString stringWithFormat:@"%ld moedas", (long)[preferencias integerForKey:@"userMoedas"]];
+    self.qteMoedas.text = @"550 moedas";
     
-    self.qteEstrelas.font = [UIFont fontWithName:@"Santor" size:14];
-    self.qteEstrelas.text = [NSString stringWithFormat:@"%ld estrelas", (long)[preferencias integerForKey:@"userEstrelas"]];
+    self.qteEstrelas.font = [UIFont fontWithName:@"Santor" size:15];
+//    self.qteEstrelas.text = [NSString stringWithFormat:@"%ld estrelas", (long)[preferencias integerForKey:@"userEstrelas"]];
+    self.qteEstrelas.text = @"8 estrelas";
     
     [self setAllProgressViews: [NSArray arrayWithObjects:
                              self.papel,
@@ -112,23 +114,35 @@
     //coloca os valores nas progressview
     CGFloat npapel = [preferencias integerForKey: @"qtePapel"];
     CGFloat nplastico = [preferencias integerForKey: @"qtePlastico"];
-    CGFloat nvidro = [preferencias integerForKey: @"qteVidro"] ;
-    CGFloat nmetal = [preferencias integerForKey: @"qtePapel"] ;
+    CGFloat nvidro = [preferencias integerForKey: @"qteVidro"];
+    CGFloat nmetal = [preferencias integerForKey: @"qtePapel"];
     
-    CGFloat nPapelC = [preferencias integerForKey: @"qtePapelCerto"];
-    CGFloat nPlasticoC = [preferencias integerForKey: @"qtePlasticoCerto"];
-    CGFloat nVidroC = [preferencias integerForKey: @"qteVidroCerto"] ;
-    CGFloat nMetalC = [preferencias integerForKey: @"qtePapelCerto"] ;
+//    CGFloat nPapelC = [preferencias integerForKey: @"qtePapelCerto"];
+//    CGFloat nPlasticoC = [preferencias integerForKey: @"qtePlasticoCerto"];
+//    CGFloat nVidroC = [preferencias integerForKey: @"qteVidroCerto"];
+//    CGFloat nMetalC = [preferencias integerForKey: @"qtePapelCerto"];
+    CGFloat nPapelC = 2;
+    CGFloat nPlasticoC = 4;
+    CGFloat nVidroC = 1;
+    CGFloat nMetalC = 3;
     
-    CGFloat tpapel = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosPapel"]] integerValue];
-    CGFloat tplastico = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosPlastico"]] integerValue];
-    CGFloat tvidro = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosVidro"]] integerValue];
-    CGFloat tmetal = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosMetal"]] integerValue];
+//    CGFloat tpapel = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosPapel"]] integerValue];
+//    CGFloat tplastico = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosPlastico"]] integerValue];
+//    CGFloat tvidro = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosVidro"]] integerValue];
+//    CGFloat tmetal = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosMetal"]] integerValue];
+    CGFloat tpapel =    [[qteLixosAmounts objectAtIndex: 2] integerValue];
+    CGFloat tplastico = [[qteLixosAmounts objectAtIndex: 3] integerValue];
+    CGFloat tvidro =    [[qteLixosAmounts objectAtIndex: 4] integerValue];
+    CGFloat tmetal =    [[qteLixosAmounts objectAtIndex: 2] integerValue];
     
-    CGFloat tPapelC = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosPapelCert"]] integerValue];
-    CGFloat tPlasticoC = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosPapelCert"]] integerValue];
-    CGFloat tVidroC = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosPapelCert"]] integerValue];
-    CGFloat tMetalC = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey:@"qteCiclosPapelCert"]] integerValue];
+//    CGFloat tPapelC = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosPapelCert"]] integerValue];
+//    CGFloat tPlasticoC = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosPapelCert"]] integerValue];
+//    CGFloat tVidroC = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey: @"qteCiclosPapelCert"]] integerValue];
+//    CGFloat tMetalC = [[qteLixosAmounts objectAtIndex: [preferencias integerForKey:@"qteCiclosPapelCert"]] integerValue];
+    CGFloat tPapelC =    [[qteLixosAmounts objectAtIndex: 0] integerValue];
+    CGFloat tPlasticoC = [[qteLixosAmounts objectAtIndex: 0] integerValue];
+    CGFloat tVidroC =    [[qteLixosAmounts objectAtIndex: 0] integerValue];
+    CGFloat tMetalC =    [[qteLixosAmounts objectAtIndex: 0] integerValue];
     
     
     [self.papel setProgress: npapel/tpapel animated: YES];
@@ -165,8 +179,12 @@
 }
 */
 
--(BOOL)shouldAutorotate{
-    return NO;
+- (NSUInteger)supportedInterfaceOrientations{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskPortrait;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
 }
 
 @end

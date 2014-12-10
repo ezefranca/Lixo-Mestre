@@ -9,17 +9,19 @@
 #import <SpriteKit/SpriteKit.h>
 #import "MascarasColisao.h"
 #import "JogoViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface MyScene : SKScene <SKPhysicsContactDelegate>
 
 @property SKSpriteNode * bg;
 
+@property NSMutableArray *coracoes;
 @property SKSpriteNode *lixeiraMetal;
 @property SKSpriteNode *lixeiraPapel;
 @property SKSpriteNode *lixeiraVidro ;
 @property SKSpriteNode *lixeiraPlastico;
 
-@property NSMutableArray *coracoes;
+@property SKSpriteNode *botaoSair; //pseudo-botao para sair do jogo
 
 @property NSMutableArray *lixos;
 @property SKSpriteNode *lixoSelecionado;
@@ -28,11 +30,8 @@
 @property int valorPontuacao; //guarda o valor real da pontuacao
 
 @property BOOL lixoSendoSegurado;
-
-@property SKSpriteNode *botaoSair; //pseudo-botao para sair do jogo
-
-
 @property int vidas;
 
+@property AVAudioPlayer *buzzerWrong;
 
 @end

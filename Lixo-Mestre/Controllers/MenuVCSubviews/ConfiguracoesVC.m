@@ -39,6 +39,9 @@
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
 }
+- (void)viewWillDisappear:(BOOL)animated{
+    [preferencias synchronize];
+}
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
@@ -54,7 +57,7 @@
     }
     
     
-    cell.textLabel.text = [itemsMenu objectAtIndex:indexPath.row];
+    cell.textLabel.text = [itemsMenu objectAtIndex: indexPath.row];
     cell.textLabel.font = [UIFont fontWithName: @"Santor" size: 19];
     cell.textLabel.textColor = [UIColor colorWithRed: 0/255.0 green: 127/255.0 blue: 177/255.0 alpha: 1.0];;
     
@@ -84,16 +87,22 @@
         case 0:
             estado = [preferencias boolForKey :@"Tutotial"];
             sanduiche.enabled = NO;
+            [sanduiche setOn: estado animated: YES];
+            
             [sanduiche addTarget: self action:@selector(toggleTutorial:) forControlEvents: UIControlEventAllTouchEvents ];
             break;
         case 1:
             estado = [preferencias boolForKey: @"Notificacoes"];
             sanduiche.enabled = NO;
+            [sanduiche setOn: estado animated: YES];
+            
             [sanduiche addTarget: self action:@selector(toggleNotificacoes:) forControlEvents: UIControlEventAllTouchEvents ];
             break;
         case 2:
             estado = [preferencias boolForKey: @"Sons"];
             sanduiche.enabled = YES;
+            [sanduiche setOn: estado animated: YES];
+            
             [sanduiche addTarget: self action:@selector(toggleSons:) forControlEvents: UIControlEventAllTouchEvents ];
             break;
         default:
@@ -105,29 +114,26 @@
 
 -(void)toggleTutorial:(id)sender{
     UISwitch * sanduiche = (UISwitch*)sender;
-    bool estado = [preferencias boolForKey: @"Tutotial"];
-    estado = !estado;
-    
-    sanduiche.selected = estado;
+    bool estado = [sanduiche isOn];
+
     [preferencias setBool: estado forKey: @"Tutorial"];
+    [preferencias synchronize];
 }
 
 -(void)toggleNotificacoes:(id)sender{
     UISwitch * sanduiche = (UISwitch*)sender;
-    bool estado = [preferencias boolForKey: @"Notificacoes"];
-    estado = !estado;
-    
-    sanduiche.selected = estado;
+    bool estado = [sanduiche isOn];
+
     [preferencias setBool: estado forKey: @"Notificacoes"];
+    [preferencias synchronize];
 }
 
 -(void)toggleSons:(id)sender{
     UISwitch * sanduiche = (UISwitch*)sender;
-    bool estado = [preferencias boolForKey: @"Sons"];
-    estado = !estado;
-    
-    sanduiche.selected = estado;
+    bool estado = [sanduiche isOn];
+
     [preferencias setBool: estado forKey: @"Sons"];
+    [preferencias synchronize];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -159,8 +165,12 @@
     [self performSegueWithIdentifier:@"unwindProLogin" sender:Nil];
 }
 
--(BOOL)shouldAutorotate{
-    return NO;
+- (NSUInteger)supportedInterfaceOrientations{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskPortrait;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
 }
 
 @end

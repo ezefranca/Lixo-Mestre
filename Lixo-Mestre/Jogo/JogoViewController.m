@@ -294,6 +294,8 @@
 - (void)morreuNoJogo{
     [self performSelectorInBackground: @selector(updatePontos) withObject: nil];
     
+    self.record.text = [NSString stringWithFormat: @"recorde: %d", self.maiorPontuacao];
+    
     [self hideMenu];
     [self showGameOver];
     

@@ -28,7 +28,8 @@
 //CARREGA A PAGINA
 - (void)viewDidLoad{
     [super viewDidLoad];
-
+    
+    self.titulo.font = [UIFont fontWithName: @"Santor" size: 17];
 
     [self performSelectorInBackground:@selector(loadCards) withObject:nil];
     // Do any additional setup after loading the view, typically from a nib.

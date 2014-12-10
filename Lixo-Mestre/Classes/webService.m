@@ -101,6 +101,8 @@
         NSUserDefaults *preferencias = [NSUserDefaults standardUserDefaults];
         [preferencias setObject: content forKey: @"Nome"];
         
+        NSLog(@"%@", content);
+        
         return @"oi";
     }
     return @"error";

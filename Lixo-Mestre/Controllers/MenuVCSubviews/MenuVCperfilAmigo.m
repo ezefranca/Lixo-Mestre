@@ -47,4 +47,13 @@
 - (IBAction)voltar:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (NSUInteger)supportedInterfaceOrientations{
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+        return UIInterfaceOrientationMaskPortrait;
+    } else {
+        return UIInterfaceOrientationMaskPortrait;
+    }
+}
+
 @end

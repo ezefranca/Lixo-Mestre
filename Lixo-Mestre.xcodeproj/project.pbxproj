@@ -636,6 +636,13 @@
 			path = "App Icon [Squared]";
 			sourceTree = "<group>";
 		};
+		F62C2D731A38B5510019D4CD /* Audios */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Audios;
+			sourceTree = "<group>";
+		};
 		F6414B861A02B60B001C3C2E /* Lixo Papão 3.0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1184,6 +1191,7 @@
 		F76A118C19C8ACF700843A9D /* Recursos */ = {
 			isa = PBXGroup;
 			children = (
+				F62C2D731A38B5510019D4CD /* Audios */,
 				F62C2D471A2F6CE30019D4CD /* App Icon [Squared] */,
 				F6414B861A02B60B001C3C2E /* Lixo Papão 3.0 */,
 				F69D125B19D3511A00643122 /* imagens Lixo Papao 2.0 */,
