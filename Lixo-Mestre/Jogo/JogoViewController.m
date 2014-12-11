@@ -295,6 +295,7 @@
     [self performSelectorInBackground: @selector(updatePontos) withObject: nil];
     
     self.record.text = [NSString stringWithFormat: @"recorde: %d", self.maiorPontuacao];
+    self.record2.text = self.record.text;
     
     [self hideMenu];
     [self showGameOver];

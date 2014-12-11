@@ -11,7 +11,10 @@
 #import "JogoViewController.h"
 #import <AVFoundation/AVFoundation.h>
 
-@interface MyScene : SKScene <SKPhysicsContactDelegate>
+@interface MyScene : SKScene <SKPhysicsContactDelegate>{
+    NSUserDefaults *preferencias;
+}
+
 
 @property SKSpriteNode * bg;
 
@@ -33,5 +36,6 @@
 @property int vidas;
 
 @property AVAudioPlayer *buzzerWrong;
+@property AVAudioPlayer *buzzerCorrect;
 
 @end

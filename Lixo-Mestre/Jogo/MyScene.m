@@ -67,10 +67,15 @@
         
         [self addChild: self.botaoSair];
         
+        preferencias = [NSUserDefaults standardUserDefaults];
         
-        NSURL *introURL = [[NSBundle mainBundle]URLForResource:@"if at first" withExtension:@"mp3"];
-        self.buzzerWrong = [[AVAudioPlayer alloc] initWithContentsOfURL: introURL error:nil];
+        NSURL *wrongURL = [[NSBundle mainBundle]URLForResource:@"Wrong Buzzer Sound Effect" withExtension:@"mp3"];
+        self.buzzerWrong = [[AVAudioPlayer alloc] initWithContentsOfURL: wrongURL error:nil];
         self.buzzerWrong.numberOfLoops = 0;
+        
+        NSURL *correctURL = [[NSBundle mainBundle]URLForResource:@"Correct Answer Sound" withExtension:@"mp3"];
+        self.buzzerCorrect = [[AVAudioPlayer alloc] initWithContentsOfURL: correctURL error:nil];
+        self.buzzerCorrect.numberOfLoops = 0;
 
         
     }
@@ -270,6 +275,12 @@
     self.labelPontuacao.text = [NSString stringWithFormat:@"%d", self.valorPontuacao];
     self.lixoSendoSegurado = false;
     [self removeNode: lixo];
+    
+    if ( [preferencias boolForKey: @"Sons"]) {
+        [self.buzzerCorrect stop];
+        [self.buzzerCorrect prepareToPlay];
+        [self.buzzerCorrect play];
+    }
 }
 /**
  *  Faz apenas a remocao do node, mas esta em um metodo a parte para poder ser chamado com um delay
@@ -288,15 +299,21 @@
     [self.coracoes removeLastObject];
     
     if (self.vidas <= 0) {
-        [JogoViewController sharedJogoViewController].pontosDaUiltimaPartida.text = [NSString stringWithFormat:@"%d", self.valorPontuacao] ;
+        if ( self.valorPontuacao > [JogoViewController sharedJogoViewController].maiorPontuacao ) {
+            [JogoViewController sharedJogoViewController].maiorPontuacao = self.valorPontuacao;
+        }
+        [JogoViewController sharedJogoViewController].pontosDaUiltimaPartida.text = [NSString stringWithFormat:@"%d", self.valorPontuacao];
+        
         self.vidas = 3;
         [[JogoViewController sharedJogoViewController] morreuNoJogo];
         [self.view presentScene:nil];
         
     }
-    [self.buzzerWrong stop];
-    [self.buzzerWrong prepareToPlay];
-    [self.buzzerWrong play];
+    if ( [preferencias boolForKey: @"Sons"]) {
+        [self.buzzerWrong stop];
+        [self.buzzerWrong prepareToPlay];
+        [self.buzzerWrong play];
+    }
     
 }
 /**

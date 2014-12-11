@@ -104,13 +104,13 @@
         case 2: //vidro
             switch (arc4random()%3) {
                 case 0:
-                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"Joguinho vidro 1.png"];
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"joguinho vidro 1.png"];
                     break;
                 case 1:
-                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"Joguinho vidro 2.png"];
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"joguinho vidro 2.png"];
                     break;
                 case 2:
-                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"Joguinho vidro 3.png"];
+                    nodeLixoNovo =  [SKSpriteNode spriteNodeWithImageNamed:@"joguinho vidro 3.png"];
                     break;
             }
 
